@@ -47,6 +47,7 @@ required_files = [
     'tools/runtime_context_builder.py',
     'tools/citation_validator.py',
     'tools/validate_semantic_tables.py',
+    'tools/generate_semantic_tables.py',
     'docs/semantic_table_repair_validation.json',
     'docs/external_references.md',
     'config/standards_registry.yaml',
