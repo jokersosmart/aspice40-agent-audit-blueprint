@@ -1,0 +1,605 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "MLE.1",
+  "process_name": "Machine Learning Requirements Analysis",
+  "process_group": "MLE",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.6.1",
+    "source_page_hint": 62,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to refine the machine learning-related software requirements into a set of ML requirements.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) The ML requirements including ML data requirements are identified and specified based on the software requirements and the components of the software architecture."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) ML requirements are structured and prioritized."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) ML requirements are analyzed for correctness and verifiability."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) The impact of ML requirements on the ML operating environment is analyzed."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Consistency and bidirectional traceability are established between ML requirements and software requirements, and between ML requirements and software architecture."
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) The ML requirements are agreed and communicated to all affected parties."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "MLE.1.BP1: Specify ML requirements. Use the software requirements and the software architecture to identify and specify functional and non-functional ML requirements, as well as ML data requirements specifying data characteristics (e.g., gender, weather conditions, street conditions within the ODD) and their expected distributions. Note 1: Non-functional requirements may include relevant characteristics of the ODD and KPIs as robustness, performance, and level of trustworthiness. Note 2: The ML data requirements are input for SUP.11 Machine Learning Data Management but also for other MLE processes. Note 3: In case of ML development only, stakeholder requirements represent the software requirements.",
+        "title": "Specify ML requirements. Use the software requirements and the software architecture to identify and specify functional and non-functional ML requirements, as well as ML data requirements specifying data characteristics (e.g., gender, weather conditions, street conditions within the ODD) and their expected distributions. Note 1: Non-functional requirements may include relevant characteristics of the ODD and KPIs as robustness, performance, and level of trustworthiness. Note 2: The ML data requirements are input for SUP.11 Machine Learning Data Management but also for other MLE processes. Note 3: In case of ML development only, stakeholder requirements represent the software requirements."
+      },
+      {
+        "id": "BP2",
+        "text": "MLE.1.BP2: Structure ML requirements. Structure and prioritize the ML requirements. Note 4: Examples for structuring criteria can be grouping (e.g., by functionality) or variants identification. Note 5: Prioritization can be done according to project or stakeholder needs via e.g., definition of release scopes. Refer to SPL.2.BP1.",
+        "title": "Structure ML requirements. Structure and prioritize the ML requirements. Note 4: Examples for structuring criteria can be grouping (e.g., by functionality) or variants identification. Note 5: Prioritization can be done according to project or stakeholder needs via e.g., definition of release scopes. Refer to SPL.2.BP1."
+      },
+      {
+        "id": "BP3",
+        "text": "MLE.1.BP3: Analyze ML requirements. Analyze the specified ML requirements including their interdependencies to ensure correctness, technical feasibility, and ability for machine learning model testing, and to support project management regarding project estimates. Note 6: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates.",
+        "title": "Analyze ML requirements. Analyze the specified ML requirements including their interdependencies to ensure correctness, technical feasibility, and ability for machine learning model testing, and to support project management regarding project estimates. Note 6: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates."
+      },
+      {
+        "id": "BP4",
+        "text": "MLE.1.BP4: Analyze the impact on the ML operating environment. Analyze the impact that the ML requirements will have on interfaces of software components and the ML operating environment. Note 7: The ML operating environment is defined as the infrastructure and information which both the trained ML model and the deployed ML model need for execution.",
+        "title": "Analyze the impact on the ML operating environment. Analyze the impact that the ML requirements will have on interfaces of software components and the ML operating environment. Note 7: The ML operating environment is defined as the infrastructure and information which both the trained ML model and the deployed ML model need for execution."
+      },
+      {
+        "id": "BP5",
+        "text": "MLE.1.BP5: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between ML requirements and software requirements and between ML requirements and the software architecture. Note 8: Bidirectional traceability supports consistency, facilitates impact analyses of change requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 9: Redundant traceability is not intended, but at least one out of the given traceability paths. Outcome 6 Outcome 5 X Outcome 4 X Outcome 3 Outcome 2 MLE.1 Machine Learning Requirements Analysis Outcome 1",
+        "title": "Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between ML requirements and software requirements and between ML requirements and the software architecture. Note 8: Bidirectional traceability supports consistency, facilitates impact analyses of change requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 9: Redundant traceability is not intended, but at least one out of the given traceability paths. Outcome 6 Outcome 5 X Outcome 4 X Outcome 3 Outcome 2 MLE.1 Machine Learning Requirements Analysis Outcome 1"
+      },
+      {
+        "id": "BP6",
+        "text": "MLE.1.BP6: Communicate agreed ML requirements and impact on the operating environment. Communicate the agreed ML requirements, and the results of the impact analysis on the ML operating environment to all affected parties. Output Information Items 17-00 Requirement 17-54 Requirement attribute X X 13-52 Communication evidence X 13-51 Consistency evidence X 15-51 Analysis results X X Base Practices BP1: Specify ML requirements X BP2: Structure ML requirements X BP3: Analyze ML requirements X BP4: Analyze the impact on the ML operating environment BP5: Ensure consistency and establish bidirectional traceability X X BP6: Communicate agreed ML requirements X",
+        "title": "Communicate agreed ML requirements and impact on the operating environment. Communicate the agreed ML requirements, and the results of the impact analysis on the ML operating environment to all affected parties. Output Information Items 17-00 Requirement 17-54 Requirement attribute X X 13-52 Communication evidence X 13-51 Consistency evidence X 15-51 Analysis results X X Base Practices BP1: Specify ML requirements X BP2: Structure ML requirements X BP3: Analyze ML requirements X BP4: Analyze the impact on the ML operating environment BP5: Ensure consistency and establish bidirectional traceability X X BP6: Communicate agreed ML requirements X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-MLE1-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": null,
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3995,
+        "source_line_end": 3996
+      },
+      "verbatim_text": "The purpose is to refine the machine learning-related software requirements into a set of ML requirements.",
+      "verbatim_text_sha256": "885ef613eb93b6d531bad4c80bfde5eede85c697bbdcf469c842bdc18c5b2237",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of MLE.1.",
+      "interpretation": "This is the PAM purpose statement for MLE.1; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "OUTCOME.1",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3998,
+        "source_line_end": 3999
+      },
+      "verbatim_text": "1) The ML requirements including ML data requirements are identified and specified based on the software requirements and the components of the software architecture.",
+      "verbatim_text_sha256": "ef5ec0e2f0e63f0bfd7446f3da965a259430025cdd032c64786080d9737f1ae0",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.1 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "OUTCOME.2",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4000,
+        "source_line_end": 4000
+      },
+      "verbatim_text": "2) ML requirements are structured and prioritized.",
+      "verbatim_text_sha256": "7deccf6bbde80b86bc586bc6eab623e3e188d6badc847bc947c4b2cbc5cd4f4c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.1 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "OUTCOME.3",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4001,
+        "source_line_end": 4001
+      },
+      "verbatim_text": "3) ML requirements are analyzed for correctness and verifiability.",
+      "verbatim_text_sha256": "53748e27e81a8f5baf1cfad0416c11131c4cadfcf0b73b382703cbcbb0f79462",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.1 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "OUTCOME.4",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4002,
+        "source_line_end": 4002
+      },
+      "verbatim_text": "4) The impact of ML requirements on the ML operating environment is analyzed.",
+      "verbatim_text_sha256": "7409cb5e0944d50a6e63c4487dba1d074f3b0a2fd77a4f9dc0dd723d34688b5b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.1 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "OUTCOME.5",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4003,
+        "source_line_end": 4004
+      },
+      "verbatim_text": "5) Consistency and bidirectional traceability are established between ML requirements and software requirements, and between ML requirements and software architecture.",
+      "verbatim_text_sha256": "c1afb827aeec98159c05db9fca915b11300d7e6bdfc0496593b31a252174504b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.1 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "OUTCOME.6",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4005,
+        "source_line_end": 4005
+      },
+      "verbatim_text": "6) The ML requirements are agreed and communicated to all affected parties.",
+      "verbatim_text_sha256": "4f5f43827693017d6f62a81891b8441fd36c4dc60ea17e6faae1b824416a6248",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.1 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "BP1",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4007,
+        "source_line_end": 4017
+      },
+      "verbatim_text": "MLE.1.BP1: Specify ML requirements. Use the software requirements and the software architecture to identify and specify functional and non-functional ML requirements, as well as ML data requirements specifying data characteristics (e.g., gender, weather conditions, street conditions within the ODD) and their expected distributions. Note 1: Non-functional requirements may include relevant characteristics of the ODD and KPIs as robustness, performance, and level of trustworthiness. Note 2: The ML data requirements are input for SUP.11 Machine Learning Data Management but also for other MLE processes. Note 3: In case of ML development only, stakeholder requirements represent the software requirements.",
+      "verbatim_text_sha256": "66d812e50f90eaf74768ddb8e341f8d1f04fceaceb054e14f001344ce70f6994",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "BP2",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4018,
+        "source_line_end": 4023
+      },
+      "verbatim_text": "MLE.1.BP2: Structure ML requirements. Structure and prioritize the ML requirements. Note 4: Examples for structuring criteria can be grouping (e.g., by functionality) or variants identification. Note 5: Prioritization can be done according to project or stakeholder needs via e.g., definition of release scopes. Refer to SPL.2.BP1.",
+      "verbatim_text_sha256": "0ab6eea8730c01ce972c033eab8ed8ea5fdfbf3afef1e58f63675b96f06406b9",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "BP3",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4024,
+        "source_line_end": 4029
+      },
+      "verbatim_text": "MLE.1.BP3: Analyze ML requirements. Analyze the specified ML requirements including their interdependencies to ensure correctness, technical feasibility, and ability for machine learning model testing, and to support project management regarding project estimates. Note 6: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates.",
+      "verbatim_text_sha256": "c4f4a9474ff35255ee724e8823a72262f7fe389e1f6b455e344e7b09cc2c8a74",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "BP4",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4030,
+        "source_line_end": 4035
+      },
+      "verbatim_text": "MLE.1.BP4: Analyze the impact on the ML operating environment. Analyze the impact that the ML requirements will have on interfaces of software components and the ML operating environment. Note 7: The ML operating environment is defined as the infrastructure and information which both the trained ML model and the deployed ML model need for execution.",
+      "verbatim_text_sha256": "ec48fcb3c3069e7f9f03bd44d2569a355123e8a9d6fccebaca67514ad0f7590b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "BP5",
+        "page": 62,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4036,
+        "source_line_end": 4061
+      },
+      "verbatim_text": "MLE.1.BP5: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between ML requirements and software requirements and between ML requirements and the software architecture. Note 8: Bidirectional traceability supports consistency, facilitates impact analyses of change requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 9: Redundant traceability is not intended, but at least one out of the given traceability paths. Outcome 6 Outcome 5 X Outcome 4 X Outcome 3 Outcome 2 MLE.1 Machine Learning Requirements Analysis Outcome 1",
+      "verbatim_text_sha256": "6594b85bd9907aaaef6660272efc01cf90d71cd9bed01296f28acc43a520b515",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE1-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.1",
+        "process_id": "MLE.1",
+        "indicator_id": "BP6",
+        "page": 63,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4062,
+        "source_line_end": 4112
+      },
+      "verbatim_text": "MLE.1.BP6: Communicate agreed ML requirements and impact on the operating environment. Communicate the agreed ML requirements, and the results of the impact analysis on the ML operating environment to all affected parties. Output Information Items 17-00 Requirement 17-54 Requirement attribute X X 13-52 Communication evidence X 13-51 Consistency evidence X 15-51 Analysis results X X Base Practices BP1: Specify ML requirements X BP2: Structure ML requirements X BP3: Analyze ML requirements X BP4: Analyze the impact on the ML operating environment BP5: Ensure consistency and establish bidirectional traceability X X BP6: Communicate agreed ML requirements X",
+      "verbatim_text_sha256": "db7cc7ca145290ec49b8089613f3e1db5dbb8ae1cad56d50321646b909b5585d",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.1.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 2638,
+    "output_information_items": [
+      {
+        "id": "17-00",
+        "name": "Requirement",
+        "outcomes": [
+          "O1",
+          "O2"
+        ]
+      },
+      {
+        "id": "17-54",
+        "name": "Requirement attribute",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication evidence",
+        "outcomes": [
+          "O6"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency evidence",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "15-51",
+        "name": "Analysis results",
+        "outcomes": [
+          "O3",
+          "O4"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Specify ML requirements",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Structure ML requirements",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Analyze ML requirements",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Analyze the impact on the ML operating environment",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Ensure consistency and establish bidirectional traceability",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Communicate agreed ML requirements",
+        "outcomes": [
+          "O6"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

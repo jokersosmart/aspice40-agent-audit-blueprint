@@ -1,0 +1,736 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "PIM.3",
+  "process_name": "Process Improvement",
+  "process_group": "PIM",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.10.1",
+    "source_page_hint": 96,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to continually improve the organization’s effectiveness and efficiency through the processes used and ensure alignment of the processes with the business needs.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) Commitment is established to provide resources to sustain improvement measures."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) Issues arising from the organization's internal or external environment are identified as improvement opportunities and justified as reasons for change."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) Analysis of the current status of the existing process is performed."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) Improvement goals are identified and prioritized, and consequent changes to the process are defined, documented and implemented."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) The effects of process implementation are monitored, measured and confirmed against the identified improvement goals."
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) Knowledge gained from the improvement is communicated within the organization."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "PIM.3.BP1: Establish commitment. Establish commitment to support the process improvement staff, to provide resources and further enablers to sustain improvement actions. Note 1: The process improvement process is a generic process, which can be used at all levels (e.g, organizational level, process level, project level, etc.) and which can be used to improve all processes. Note 2: Commitment at all levels of management may support process improvement. Note 3: Enablers for improvement measures may include trainings, methods, infrastructure, etc.",
+        "title": "Establish commitment. Establish commitment to support the process improvement staff, to provide resources and further enablers to sustain improvement actions. Note 1: The process improvement process is a generic process, which can be used at all levels (e.g, organizational level, process level, project level, etc.) and which can be used to improve all processes. Note 2: Commitment at all levels of management may support process improvement. Note 3: Enablers for improvement measures may include trainings, methods, infrastructure, etc."
+      },
+      {
+        "id": "BP2",
+        "text": "PIM.3.BP2: Identify improvement measures. Identify issues from the analysis of process performance and derive improvement opportunities with justified reasons for change. Note 4: Analysis may include problem report trend analysis (see SUP.9), analysis from Quality Assurance and Verification results and records (see SUP.1), validation results and records, and product quality metrics like defect rate. Note 5: Issues and improvement suggestions may be addressed by the customer. Note 6: Sources for identification of issues may include: process assessment results, audits, customer's satisfaction reports, measurements of organizational effectiveness/efficiency, costs of quality.",
+        "title": "Identify improvement measures. Identify issues from the analysis of process performance and derive improvement opportunities with justified reasons for change. Note 4: Analysis may include problem report trend analysis (see SUP.9), analysis from Quality Assurance and Verification results and records (see SUP.1), validation results and records, and product quality metrics like defect rate. Note 5: Issues and improvement suggestions may be addressed by the customer. Note 6: Sources for identification of issues may include: process assessment results, audits, customer's satisfaction reports, measurements of organizational effectiveness/efficiency, costs of quality."
+      },
+      {
+        "id": "BP3",
+        "text": "PIM.3.BP3: Establish process improvement goals. Analyze the current status of the existing processes and establish improvement goals. Note 7: The current status of processes may be determined by process assessment.",
+        "title": "Establish process improvement goals. Analyze the current status of the existing processes and establish improvement goals. Note 7: The current status of processes may be determined by process assessment."
+      },
+      {
+        "id": "BP4",
+        "text": "PIM.3.BP4: Prioritize improvements. Prioritize the improvement goals and improvement measures.",
+        "title": "Prioritize improvements. Prioritize the improvement goals and improvement measures."
+      },
+      {
+        "id": "BP5",
+        "text": "PIM.3.BP5: Define process improvement measures. Process improvement measures are defined. Note 8: Improvements may be documented in incremental steps.",
+        "title": "Define process improvement measures. Process improvement measures are defined. Note 8: Improvements may be documented in incremental steps."
+      },
+      {
+        "id": "BP6",
+        "text": "PIM.3.BP6: Implement process improvement measures. Implement and apply the improvements to the processes. Update the Process documentation and train people as needed. Note 9: Process application can be supported by establishing policies, adequate process infrastructure, process training, process coaching and tailoring processes to local needs. Note 10: Improvements may be piloted before roll out within the organization.",
+        "title": "Implement process improvement measures. Implement and apply the improvements to the processes. Update the Process documentation and train people as needed. Note 9: Process application can be supported by establishing policies, adequate process infrastructure, process training, process coaching and tailoring processes to local needs. Note 10: Improvements may be piloted before roll out within the organization."
+      },
+      {
+        "id": "BP7",
+        "text": "PIM.3.BP7: Confirm process improvement. The effects of process implementation are monitored and measured, and the achievement of defined improvement goals is confirmed. Outcome 6 Outcome 5 Outcome 4 Outcome 3 PIM.3 Process Improvement Outcome 2 Outcome 1",
+        "title": "Confirm process improvement. The effects of process implementation are monitored and measured, and the achievement of defined improvement goals is confirmed. Outcome 6 Outcome 5 Outcome 4 Outcome 3 PIM.3 Process Improvement Outcome 2 Outcome 1"
+      },
+      {
+        "id": "BP8",
+        "text": "PIM.3.BP8: Communicate results of improvement. Knowledge gained from the improvements and progress of the improvement implementation is communicated to affected parties. Output Information Items 02-01 Commitment/agreement X 06-04 Training material X 07-04 Process metric X X 10-00 Process description X X 13-52 Communication evidence X 13-16 Change request X 15-51 Analysis result X 15-13 Assessment/audit report X X X 15-16 Improvement opportunity X X 16-06 Process repository X X X X Base Practices BP1: Establish commitment X BP2: Identify improvement measures X BP3: Establish process improvement goals X X BP4: Prioritize improvements X BP5: Define process improvement measures X BP6: Implement process improvement measures X BP7: Confirm process improvement X BP8: Communicate results of improvement X 4.11. Reuse process group (REU)",
+        "title": "Communicate results of improvement. Knowledge gained from the improvements and progress of the improvement implementation is communicated to affected parties. Output Information Items 02-01 Commitment/agreement X 06-04 Training material X 07-04 Process metric X X 10-00 Process description X X 13-52 Communication evidence X 13-16 Change request X 15-51 Analysis result X 15-13 Assessment/audit report X X X 15-16 Improvement opportunity X X 16-06 Process repository X X X X Base Practices BP1: Establish commitment X BP2: Identify improvement measures X BP3: Establish process improvement goals X X BP4: Prioritize improvements X BP5: Define process improvement measures X BP6: Implement process improvement measures X BP7: Confirm process improvement X BP8: Communicate results of improvement X 4.11. Reuse process group (REU)"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-PIM3-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": null,
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6328,
+        "source_line_end": 6329
+      },
+      "verbatim_text": "The purpose is to continually improve the organization’s effectiveness and efficiency through the processes used and ensure alignment of the processes with the business needs.",
+      "verbatim_text_sha256": "3c6c2d8215aece11ab90366b30bfe9ea3b5b38de512a454b3368ff07a3805015",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of PIM.3.",
+      "interpretation": "This is the PAM purpose statement for PIM.3; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "OUTCOME.1",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6331,
+        "source_line_end": 6331
+      },
+      "verbatim_text": "1) Commitment is established to provide resources to sustain improvement measures.",
+      "verbatim_text_sha256": "7939fc8b5a2ff9d27522e0177cf5cbe50ac648fc401e5f32ad6d9e2f0d8132ca",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for PIM.3 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "OUTCOME.2",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6332,
+        "source_line_end": 6333
+      },
+      "verbatim_text": "2) Issues arising from the organization's internal or external environment are identified as improvement opportunities and justified as reasons for change.",
+      "verbatim_text_sha256": "274bdf623f9c271f441b1cb258e07fd0ce0556963963b4fb9c7546ea30ea153f",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for PIM.3 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "OUTCOME.3",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6334,
+        "source_line_end": 6334
+      },
+      "verbatim_text": "3) Analysis of the current status of the existing process is performed.",
+      "verbatim_text_sha256": "cecea5c7e0cace7b9f4d1597d6758671a6ed47751f621c7aa492228f52a00cea",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for PIM.3 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "OUTCOME.4",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6335,
+        "source_line_end": 6336
+      },
+      "verbatim_text": "4) Improvement goals are identified and prioritized, and consequent changes to the process are defined, documented and implemented.",
+      "verbatim_text_sha256": "f6a190a284b8e9e1f95aa8a049c2d25b29e17c67c42dfe062cb79114e374ec9e",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for PIM.3 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "OUTCOME.5",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6337,
+        "source_line_end": 6338
+      },
+      "verbatim_text": "5) The effects of process implementation are monitored, measured and confirmed against the identified improvement goals.",
+      "verbatim_text_sha256": "08bfc814a3a7a590d38c066c02d5e689772851964e740fd3f62b480f28b80b39",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for PIM.3 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "OUTCOME.6",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6339,
+        "source_line_end": 6339
+      },
+      "verbatim_text": "6) Knowledge gained from the improvement is communicated within the organization.",
+      "verbatim_text_sha256": "cc430ba39e94430db75389d4c94119d007e49684bc20565c86e8b93ae9e0846b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for PIM.3 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "BP1",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6341,
+        "source_line_end": 6348
+      },
+      "verbatim_text": "PIM.3.BP1: Establish commitment. Establish commitment to support the process improvement staff, to provide resources and further enablers to sustain improvement actions. Note 1: The process improvement process is a generic process, which can be used at all levels (e.g, organizational level, process level, project level, etc.) and which can be used to improve all processes. Note 2: Commitment at all levels of management may support process improvement. Note 3: Enablers for improvement measures may include trainings, methods, infrastructure, etc.",
+      "verbatim_text_sha256": "6f425e74ae89927c7f4ad60577cd705d2f6d40ce3899cba4846cf497a01f8058",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "BP2",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6349,
+        "source_line_end": 6358
+      },
+      "verbatim_text": "PIM.3.BP2: Identify improvement measures. Identify issues from the analysis of process performance and derive improvement opportunities with justified reasons for change. Note 4: Analysis may include problem report trend analysis (see SUP.9), analysis from Quality Assurance and Verification results and records (see SUP.1), validation results and records, and product quality metrics like defect rate. Note 5: Issues and improvement suggestions may be addressed by the customer. Note 6: Sources for identification of issues may include: process assessment results, audits, customer's satisfaction reports, measurements of organizational effectiveness/efficiency, costs of quality.",
+      "verbatim_text_sha256": "c0662cf04b8af82ea435c002514c7c7a85d2e5d14b5671230a4fb105bfbb089b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "BP3",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6359,
+        "source_line_end": 6364
+      },
+      "verbatim_text": "PIM.3.BP3: Establish process improvement goals. Analyze the current status of the existing processes and establish improvement goals. Note 7: The current status of processes may be determined by process assessment.",
+      "verbatim_text_sha256": "4477c9d36965c1a93f07864c960b276c9ac3968330caadd5ba8e55c0576a4ded",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "BP4",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6365,
+        "source_line_end": 6366
+      },
+      "verbatim_text": "PIM.3.BP4: Prioritize improvements. Prioritize the improvement goals and improvement measures.",
+      "verbatim_text_sha256": "7fe79f5181c0bc11dff8b0a2c6edaf5bdca2a249097215d03f098522d0ad7b98",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "BP5",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6367,
+        "source_line_end": 6370
+      },
+      "verbatim_text": "PIM.3.BP5: Define process improvement measures. Process improvement measures are defined. Note 8: Improvements may be documented in incremental steps.",
+      "verbatim_text_sha256": "a33760246aafad0eb1225c1589900472e172ac75ad0aeee28132e08c0e15296d",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "BP6",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6371,
+        "source_line_end": 6377
+      },
+      "verbatim_text": "PIM.3.BP6: Implement process improvement measures. Implement and apply the improvements to the processes. Update the Process documentation and train people as needed. Note 9: Process application can be supported by establishing policies, adequate process infrastructure, process training, process coaching and tailoring processes to local needs. Note 10: Improvements may be piloted before roll out within the organization.",
+      "verbatim_text_sha256": "a427cddb644e6ce7afbf4c5c2b1762fe7d34aa5e6534fa03ed305b40d67c60c6",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-BP-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "BP7",
+        "page": 96,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6378,
+        "source_line_end": 6394
+      },
+      "verbatim_text": "PIM.3.BP7: Confirm process improvement. The effects of process implementation are monitored and measured, and the achievement of defined improvement goals is confirmed. Outcome 6 Outcome 5 Outcome 4 Outcome 3 PIM.3 Process Improvement Outcome 2 Outcome 1",
+      "verbatim_text_sha256": "40e95f9338d749d62c10049b17c03f26981b3452b045138c1ce7fac315730479",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3.BP7 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-PIM3-BP-08",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.10.1",
+        "process_id": "PIM.3",
+        "indicator_id": "BP8",
+        "page": 97,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6395,
+        "source_line_end": 6488
+      },
+      "verbatim_text": "PIM.3.BP8: Communicate results of improvement. Knowledge gained from the improvements and progress of the improvement implementation is communicated to affected parties. Output Information Items 02-01 Commitment/agreement X 06-04 Training material X 07-04 Process metric X X 10-00 Process description X X 13-52 Communication evidence X 13-16 Change request X 15-51 Analysis result X 15-13 Assessment/audit report X X X 15-16 Improvement opportunity X X 16-06 Process repository X X X X Base Practices BP1: Establish commitment X BP2: Identify improvement measures X BP3: Establish process improvement goals X X BP4: Prioritize improvements X BP5: Define process improvement measures X BP6: Implement process improvement measures X BP7: Confirm process improvement X BP8: Communicate results of improvement X 4.11. Reuse process group (REU)",
+      "verbatim_text_sha256": "7f770fb5ee7042fcc495073d17bc1359d5f99156ea31c45a8c05aa9a5dd47390",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete PIM.3.BP8 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "PIM.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 4249,
+    "output_information_items": [
+      {
+        "id": "02-01",
+        "name": "Commitment/agreement",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "06-04",
+        "name": "Training material",
+        "outcomes": [
+          "O4",
+          "O6"
+        ]
+      },
+      {
+        "id": "07-04",
+        "name": "Process metric",
+        "outcomes": [
+          "O5",
+          "O6"
+        ]
+      },
+      {
+        "id": "10-00",
+        "name": "Process description",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication evidence",
+        "outcomes": [
+          "O6"
+        ]
+      },
+      {
+        "id": "13-16",
+        "name": "Change request",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "15-51",
+        "name": "Analysis result",
+        "outcomes": [
+          "O2",
+          "O3",
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "15-13",
+        "name": "Assessment/audit report",
+        "outcomes": [
+          "O3",
+          "O5"
+        ]
+      },
+      {
+        "id": "15-16",
+        "name": "Improvement opportunity",
+        "outcomes": [
+          "O2",
+          "O3",
+          "O4"
+        ]
+      },
+      {
+        "id": "16-06",
+        "name": "Process repository",
+        "outcomes": [
+          "O4"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Establish commitment",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Identify improvement measures",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Establish process improvement goals",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Prioritize improvements",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Define process improvement measures",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Implement process improvement measures",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP7",
+        "name": "Confirm process improvement",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP8",
+        "name": "Communicate results of improvement",
+        "outcomes": [
+          "O4"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

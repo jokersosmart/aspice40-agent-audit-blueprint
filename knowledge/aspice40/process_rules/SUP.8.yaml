@@ -1,0 +1,793 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "SUP.8",
+  "process_name": "Configuration Management",
+  "process_group": "SUP",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.8.2",
+    "source_page_hint": 82,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose of the Configuration Management Process is to establish and maintain the integrity of relevant configuration items and baselines, and make them available to affected parties.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1)"
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2)"
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3)"
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4)"
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5)"
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6)"
+      },
+      {
+        "id": "OUTCOME.7",
+        "text": "7)"
+      },
+      {
+        "id": "OUTCOME.8",
+        "text": "8) Selection criteria for configuration items are defined and applied. Configuration item properties are defined. Configuration management is established. Modifications are controlled. Baselining is applied. The status of the configuration items is recorded and reported. The completeness and consistency of the baselines is ensured. The availability of backup and recovery mechanisms is verified."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "SUP.8.BP1: Identify configuration items. Define selection criteria for identifying relevant work products to be subject to configuration management. Identify and document configuration items according to the defined selection criteria. NOTE 1: Configuration items are representing work products or group of work products which are subject to configuration management as a single entity. NOTE 2: Configuration items may vary in complexity, size, and type, ranging from an entire system including all system, hardware, and software documentation down to a single element or document. NOTE 3: The selection criteria may be applied to single work products or a group of work products.",
+        "title": "Identify configuration items. Define selection criteria for identifying relevant work products to be subject to configuration management. Identify and document configuration items according to the defined selection criteria. NOTE 1: Configuration items are representing work products or group of work products which are subject to configuration management as a single entity. NOTE 2: Configuration items may vary in complexity, size, and type, ranging from an entire system including all system, hardware, and software documentation down to a single element or document. NOTE 3: The selection criteria may be applied to single work products or a group of work products."
+      },
+      {
+        "id": "BP2",
+        "text": "SUP.8.BP2: Define configuration item properties. Define the necessary properties needed for the modification and control of configuration items. NOTE 4: The configuration item properties may be defined for single configuration items or a group of items. NOTE 5: Configuration item properties may include a status model (e.g., Under Work, Tested, Released, etc.), storage location, access rights, etc. NOTE 6: The application of properties may be implemented by attributes of configuration items.",
+        "title": "Define configuration item properties. Define the necessary properties needed for the modification and control of configuration items. NOTE 4: The configuration item properties may be defined for single configuration items or a group of items. NOTE 5: Configuration item properties may include a status model (e.g., Under Work, Tested, Released, etc.), storage location, access rights, etc. NOTE 6: The application of properties may be implemented by attributes of configuration items."
+      },
+      {
+        "id": "BP3",
+        "text": "SUP.8.BP3: Establish configuration management. Establish configuration management mechanisms for control of identified configuration items including the configuration item properties, including mechanisms for controlling parallel modifications of configuration items. NOTE 7: This may include specific mechanisms for different configuration item types, such as branch and merge management, or checkout control.",
+        "title": "Establish configuration management. Establish configuration management mechanisms for control of identified configuration items including the configuration item properties, including mechanisms for controlling parallel modifications of configuration items. NOTE 7: This may include specific mechanisms for different configuration item types, such as branch and merge management, or checkout control."
+      },
+      {
+        "id": "BP4",
+        "text": "SUP.8.BP4: Control modifications. Control modifications using the configuration management mechanisms. NOTE 8: This may include the application of a defined status model for configuration items.",
+        "title": "Control modifications. Control modifications using the configuration management mechanisms. NOTE 8: This may include the application of a defined status model for configuration items."
+      },
+      {
+        "id": "BP5",
+        "text": "SUP.8.BP5: Establish baselines. Define and establish baselines for internal purposes, and for external product delivery, for all relevant configuration items.",
+        "title": "Establish baselines. Define and establish baselines for internal purposes, and for external product delivery, for all relevant configuration items."
+      },
+      {
+        "id": "BP6",
+        "text": "SUP.8.BP6: Summarize and communicate configuration status. Record, summarize, and communicate the status of configuration items and established baselines to affected parties in order to support the monitoring of progress and status. NOTE 9: Regular communication of the configuration status, e.g., based on a defined status model supports project management, quality activities, and dedicated project phases such as software integration.",
+        "title": "Summarize and communicate configuration status. Record, summarize, and communicate the status of configuration items and established baselines to affected parties in order to support the monitoring of progress and status. NOTE 9: Regular communication of the configuration status, e.g., based on a defined status model supports project management, quality activities, and dedicated project phases such as software integration."
+      },
+      {
+        "id": "BP7",
+        "text": "SUP.8.BP7: Ensure completeness and consistency. Ensure that the information about configuration items is correct and complete including configuration item properties. Ensure the completeness and consistency of baselines. NOTE 10: Completeness and consistency of a baseline means that all required configuration items are included and consistent, and have the required status. This can be used to support e.g., project gate approval.",
+        "title": "Ensure completeness and consistency. Ensure that the information about configuration items is correct and complete including configuration item properties. Ensure the completeness and consistency of baselines. NOTE 10: Completeness and consistency of a baseline means that all required configuration items are included and consistent, and have the required status. This can be used to support e.g., project gate approval."
+      },
+      {
+        "id": "BP8",
+        "text": "SUP.8.BP8: Verify backup and recovery mechanisms availability. Verify the availability of appropriate backup and recovery mechanisms for the configuration management including the controlled configuration items. Initiate measures in case of insufficient backup and recovery mechanisms. Outcome 8 Outcome 7 Outcome 6 Outcome 5 Outcome 4 Outcome 3 SUP.8 Configuration Management Outcome 2 Outcome 1 NOTE 11: Backup and recovery mechanisms may be defined and implemented by organizational units outside the project team. This may include references to corresponding procedures or regulations. Output Information Items 18-53 Configuration item selection criteria X 01-52 Configuration item list X 16-03 Configuration management system X X 13-08 Baseline X X X X X 14-01 Change history X X X 15-56 Configuration status X 13-51 Consistency Evidence X 06-52 Backup and recovery mechanism information X Base Practices BP1: Identify configuration items X BP2: Define configuration item properties X BP3: Establish configuration management X BP4: Control modifications X X BP5: Establish baselines X BP6: Summarize and communicate configuration status BP7: Ensure completeness and consistency X X BP8: Verify backup and recovery mechanisms availability X",
+        "title": "Verify backup and recovery mechanisms availability. Verify the availability of appropriate backup and recovery mechanisms for the configuration management including the controlled configuration items. Initiate measures in case of insufficient backup and recovery mechanisms. Outcome 8 Outcome 7 Outcome 6 Outcome 5 Outcome 4 Outcome 3 SUP.8 Configuration Management Outcome 2 Outcome 1 NOTE 11: Backup and recovery mechanisms may be defined and implemented by organizational units outside the project team. This may include references to corresponding procedures or regulations. Output Information Items 18-53 Configuration item selection criteria X 01-52 Configuration item list X 16-03 Configuration management system X X 13-08 Baseline X X X X X 14-01 Change history X X X 15-56 Configuration status X 13-51 Consistency Evidence X 06-52 Backup and recovery mechanism information X Base Practices BP1: Identify configuration items X BP2: Define configuration item properties X BP3: Establish configuration management X BP4: Control modifications X X BP5: Establish baselines X BP6: Summarize and communicate configuration status BP7: Ensure completeness and consistency X X BP8: Verify backup and recovery mechanisms availability X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-SUP8-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": null,
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5313,
+        "source_line_end": 5314
+      },
+      "verbatim_text": "The purpose of the Configuration Management Process is to establish and maintain the integrity of relevant configuration items and baselines, and make them available to affected parties.",
+      "verbatim_text_sha256": "75fd808215026c2ee924267e297fd5cee75d4c8d90f3845fc80df71e89b0091b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of SUP.8.",
+      "interpretation": "This is the PAM purpose statement for SUP.8; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "OUTCOME.1",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5316,
+        "source_line_end": 5316
+      },
+      "verbatim_text": "1)",
+      "verbatim_text_sha256": "d1f47e5a47cb4cb2f0639dabef187d1ed63dab221280869d910c9f60be38df47",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.8 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "OUTCOME.2",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5317,
+        "source_line_end": 5317
+      },
+      "verbatim_text": "2)",
+      "verbatim_text_sha256": "4ddcdc3195dacd1e53e11029a707abeb4d797912220af1b51f5c2af6e6eb925b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.8 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "OUTCOME.3",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5318,
+        "source_line_end": 5318
+      },
+      "verbatim_text": "3)",
+      "verbatim_text_sha256": "6180669a9fb9d0e8d30055aa57b3ba6c43646a98d88caf1b2f906b8119f7a55b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.8 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "OUTCOME.4",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5319,
+        "source_line_end": 5319
+      },
+      "verbatim_text": "4)",
+      "verbatim_text_sha256": "2ad75c4c49eb98f340f9287d58069cfec60a90aecd3b9f13ffe411febfe8b187",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.8 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "OUTCOME.5",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5320,
+        "source_line_end": 5320
+      },
+      "verbatim_text": "5)",
+      "verbatim_text_sha256": "6d2e493279dd15fce4c54c4f97b329691d6ce83d724997ecaceba4902c9c67cc",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.8 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "OUTCOME.6",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5321,
+        "source_line_end": 5321
+      },
+      "verbatim_text": "6)",
+      "verbatim_text_sha256": "0dc603ce6f05b39e1bd0ddaf9178c9f7380f124e593f7c078807b9fc66d2b324",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.8 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-OUTCOME-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "OUTCOME.7",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5322,
+        "source_line_end": 5322
+      },
+      "verbatim_text": "7)",
+      "verbatim_text_sha256": "59eae0f8092612cfb7f84f33c7c0e6806cee47fa789fb1a80b47fd92990899d7",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8 outcome 7 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.8 outcome 7; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-OUTCOME-08",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "OUTCOME.8",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5323,
+        "source_line_end": 5333
+      },
+      "verbatim_text": "8) Selection criteria for configuration items are defined and applied. Configuration item properties are defined. Configuration management is established. Modifications are controlled. Baselining is applied. The status of the configuration items is recorded and reported. The completeness and consistency of the baselines is ensured. The availability of backup and recovery mechanisms is verified.",
+      "verbatim_text_sha256": "0d8aaebfb8f10915545d6c1a0e340779e5ad14c7306b701caec6f72170a99f83",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8 outcome 8 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.8 outcome 8; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "BP1",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5335,
+        "source_line_end": 5343
+      },
+      "verbatim_text": "SUP.8.BP1: Identify configuration items. Define selection criteria for identifying relevant work products to be subject to configuration management. Identify and document configuration items according to the defined selection criteria. NOTE 1: Configuration items are representing work products or group of work products which are subject to configuration management as a single entity. NOTE 2: Configuration items may vary in complexity, size, and type, ranging from an entire system including all system, hardware, and software documentation down to a single element or document. NOTE 3: The selection criteria may be applied to single work products or a group of work products.",
+      "verbatim_text_sha256": "6447d7c6680ea560cec352f11a655bfa8bacba60413f7da2dff2b98873d577ca",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "BP2",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5344,
+        "source_line_end": 5352
+      },
+      "verbatim_text": "SUP.8.BP2: Define configuration item properties. Define the necessary properties needed for the modification and control of configuration items. NOTE 4: The configuration item properties may be defined for single configuration items or a group of items. NOTE 5: Configuration item properties may include a status model (e.g., Under Work, Tested, Released, etc.), storage location, access rights, etc. NOTE 6: The application of properties may be implemented by attributes of configuration items.",
+      "verbatim_text_sha256": "dc5f909a7f528eb641ef5e11cd3d874d3df1f97085372df20218d056eb546cff",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "BP3",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5353,
+        "source_line_end": 5358
+      },
+      "verbatim_text": "SUP.8.BP3: Establish configuration management. Establish configuration management mechanisms for control of identified configuration items including the configuration item properties, including mechanisms for controlling parallel modifications of configuration items. NOTE 7: This may include specific mechanisms for different configuration item types, such as branch and merge management, or checkout control.",
+      "verbatim_text_sha256": "4c4aef00ceb0cfd9f3aba0d17bb06b306e077fc18ec0c6de5c007562b2c6ec81",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "BP4",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5359,
+        "source_line_end": 5362
+      },
+      "verbatim_text": "SUP.8.BP4: Control modifications. Control modifications using the configuration management mechanisms. NOTE 8: This may include the application of a defined status model for configuration items.",
+      "verbatim_text_sha256": "4904c5d3fb6a4aafbeef43f35bbdecbd91b1d241757c173bee3d860be8901456",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "BP5",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5363,
+        "source_line_end": 5364
+      },
+      "verbatim_text": "SUP.8.BP5: Establish baselines. Define and establish baselines for internal purposes, and for external product delivery, for all relevant configuration items.",
+      "verbatim_text_sha256": "3d8ecff3edec939e317cbcd647e7f6970e40798685fb3fd13d70c7d832306deb",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "BP6",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5365,
+        "source_line_end": 5371
+      },
+      "verbatim_text": "SUP.8.BP6: Summarize and communicate configuration status. Record, summarize, and communicate the status of configuration items and established baselines to affected parties in order to support the monitoring of progress and status. NOTE 9: Regular communication of the configuration status, e.g., based on a defined status model supports project management, quality activities, and dedicated project phases such as software integration.",
+      "verbatim_text_sha256": "aba8d7efe7e969296d2b3fe48125ce6a20ba077bd033874be38073d70718cf31",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-BP-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "BP7",
+        "page": 82,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5372,
+        "source_line_end": 5378
+      },
+      "verbatim_text": "SUP.8.BP7: Ensure completeness and consistency. Ensure that the information about configuration items is correct and complete including configuration item properties. Ensure the completeness and consistency of baselines. NOTE 10: Completeness and consistency of a baseline means that all required configuration items are included and consistent, and have the required status. This can be used to support e.g., project gate approval.",
+      "verbatim_text_sha256": "63edcb71b29ef8aad2c7e19f10c481bba4d45d045cffa6d23c31d159b8571710",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8.BP7 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP8-BP-08",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.2",
+        "process_id": "SUP.8",
+        "indicator_id": "BP8",
+        "page": 83,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5379,
+        "source_line_end": 5483
+      },
+      "verbatim_text": "SUP.8.BP8: Verify backup and recovery mechanisms availability. Verify the availability of appropriate backup and recovery mechanisms for the configuration management including the controlled configuration items. Initiate measures in case of insufficient backup and recovery mechanisms. Outcome 8 Outcome 7 Outcome 6 Outcome 5 Outcome 4 Outcome 3 SUP.8 Configuration Management Outcome 2 Outcome 1 NOTE 11: Backup and recovery mechanisms may be defined and implemented by organizational units outside the project team. This may include references to corresponding procedures or regulations. Output Information Items 18-53 Configuration item selection criteria X 01-52 Configuration item list X 16-03 Configuration management system X X 13-08 Baseline X X X X X 14-01 Change history X X X 15-56 Configuration status X 13-51 Consistency Evidence X 06-52 Backup and recovery mechanism information X Base Practices BP1: Identify configuration items X BP2: Define configuration item properties X BP3: Establish configuration management X BP4: Control modifications X X BP5: Establish baselines X BP6: Summarize and communicate configuration status BP7: Ensure completeness and consistency X X BP8: Verify backup and recovery mechanisms availability X",
+      "verbatim_text_sha256": "2d9b3aa1903c67a3a72041d73ff1571781866d0940564e2dae0521b629b613a0",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.8.BP8 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.8"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 3588,
+    "output_information_items": [
+      {
+        "id": "18-53",
+        "name": "Configuration item selection criteria",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "01-52",
+        "name": "Configuration item list",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O7"
+        ]
+      },
+      {
+        "id": "16-03",
+        "name": "Configuration management system",
+        "outcomes": [
+          "O3",
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "13-08",
+        "name": "Baseline",
+        "outcomes": [
+          "O5",
+          "O7"
+        ]
+      },
+      {
+        "id": "14-01",
+        "name": "Change history",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "15-56",
+        "name": "Configuration status",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency Evidence",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "06-52",
+        "name": "Backup and recovery mechanism information",
+        "outcomes": [
+          "O3"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Identify configuration items",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Define configuration item properties",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Establish configuration management",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Control modifications",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Establish baselines",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Summarize and communicate configuration status",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP7",
+        "name": "Ensure completeness and consistency",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP8",
+        "name": "Verify backup and recovery mechanisms availability",
+        "outcomes": [
+          "O3"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

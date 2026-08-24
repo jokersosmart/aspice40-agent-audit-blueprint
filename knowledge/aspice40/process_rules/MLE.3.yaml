@@ -1,0 +1,527 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "MLE.3",
+  "process_name": "Machine Learning Training",
+  "process_group": "MLE",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.6.3",
+    "source_page_hint": 65,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to optimize the ML model to meet the defined ML requirements.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) A ML training and validation approach is specified."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) The data set for ML training and ML validation is created."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) The ML model, including hyperparameter values, is optimized to meet the defined ML requirements."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) Consistency and bidirectional traceability are established between the ML training and validation data set and the ML data requirements."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Results of optimization are summarized, and the trained ML model is agreed and communicated to all affected parties."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "MLE.3.BP1: Specify ML training and validation approach. Specify an approach which supports the training and validation of the ML model to meet the defined ML requirements. The ML training and validation approach includes • entry and exit criteria of the training and validation, • approaches for hyperparameter tuning / optimization, • approach for data set creation and modification, and • training and validation environment Note 1: The ML training and validation approach may include random dropout and other robustification methods. Note 2: ML validation is the optimization of the hyperparameters during Machine Learning Training (MLE.3). The term “validation” has a different meaning than VAL.1. Note 3: The training environment should reflect the environment of the deployed model.",
+        "title": "Specify ML training and validation approach. Specify an approach which supports the training and validation of the ML model to meet the defined ML requirements. The ML training and validation approach includes • entry and exit criteria of the training and validation, • approaches for hyperparameter tuning / optimization, • approach for data set creation and modification, and • training and validation environment Note 1: The ML training and validation approach may include random dropout and other robustification methods. Note 2: ML validation is the optimization of the hyperparameters during Machine Learning Training (MLE.3). The term “validation” has a different meaning than VAL.1. Note 3: The training environment should reflect the environment of the deployed model."
+      },
+      {
+        "id": "BP2",
+        "text": "MLE.3.BP2: Create ML training and validation data set. Select data from the ML data collection provided by SUP.11 and assign them to the data set for training and validation of the ML model according to the specified ML training and validation approach. Note 4: The ML training and validation data set may include corner cases, unexpected cases, and normal cases depending on the ML requirements. Note 5: A separated data set for training and validation might not be required in some cases (e.g., kfold cross validation, no optimization of hyperparameters).",
+        "title": "Create ML training and validation data set. Select data from the ML data collection provided by SUP.11 and assign them to the data set for training and validation of the ML model according to the specified ML training and validation approach. Note 4: The ML training and validation data set may include corner cases, unexpected cases, and normal cases depending on the ML requirements. Note 5: A separated data set for training and validation might not be required in some cases (e.g., kfold cross validation, no optimization of hyperparameters)."
+      },
+      {
+        "id": "BP3",
+        "text": "MLE.3.BP3: Create and optimize ML model. Create the ML model according to the ML architecture and train it, using the identified ML training and validation data set according to the ML training and validation approach to meet the defined ML requirements, and training and validation exit criteria.",
+        "title": "Create and optimize ML model. Create the ML model according to the ML architecture and train it, using the identified ML training and validation data set according to the ML training and validation approach to meet the defined ML requirements, and training and validation exit criteria."
+      },
+      {
+        "id": "BP4",
+        "text": "MLE.3.BP4: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the ML training and validation data set and the ML data requirements. Note 6: Bidirectional traceability supports consistency and facilitates impact analyses of change requests. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Outcome 5 Outcome 4 Outcome 3 MLE.3 Machine Learning Training Outcome 2 Outcome 1",
+        "title": "Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the ML training and validation data set and the ML data requirements. Note 6: Bidirectional traceability supports consistency and facilitates impact analyses of change requests. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Outcome 5 Outcome 4 Outcome 3 MLE.3 Machine Learning Training Outcome 2 Outcome 1"
+      },
+      {
+        "id": "BP5",
+        "text": "MLE.3.BP5: Summarize and communicate agreed trained ML model. Summarize the results of the optimization and inform all affected parties about the agreed trained ML model. Output Information Items 08-65 ML training and validation approach X 03-51 ML data set X 01-53 Trained ML model X 01-54 Hyperparameter X 13-51 Consistency evidence X 13-52 Communication evidence X Base Practices BP1: Specify ML training and validation approach BP2: Create ML training and validation data set BP3: Create and optimize ML model X X BP4: Ensure consistency and establish bidirectional traceability X X BP5: Summarize and communicate agreed trained ML model X",
+        "title": "Summarize and communicate agreed trained ML model. Summarize the results of the optimization and inform all affected parties about the agreed trained ML model. Output Information Items 08-65 ML training and validation approach X 03-51 ML data set X 01-53 Trained ML model X 01-54 Hyperparameter X 13-51 Consistency evidence X 13-52 Communication evidence X Base Practices BP1: Specify ML training and validation approach BP2: Create ML training and validation data set BP3: Create and optimize ML model X X BP4: Ensure consistency and establish bidirectional traceability X X BP5: Summarize and communicate agreed trained ML model X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-MLE3-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": null,
+        "page": 65,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4243,
+        "source_line_end": 4245
+      },
+      "verbatim_text": "The purpose is to optimize the ML model to meet the defined ML requirements.",
+      "verbatim_text_sha256": "c7e2a532598e66cd4013645e0bae6376b8655049bcbfc8e7ed6c9283ae28643d",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of MLE.3.",
+      "interpretation": "This is the PAM purpose statement for MLE.3; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE3-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": "OUTCOME.1",
+        "page": 65,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4247,
+        "source_line_end": 4247
+      },
+      "verbatim_text": "1) A ML training and validation approach is specified.",
+      "verbatim_text_sha256": "7fd0084985fe5f9bf8c09fc8af0e95bad217431464e2b960cf43c58fc7e67608",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.3 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.3 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE3-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": "OUTCOME.2",
+        "page": 65,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4248,
+        "source_line_end": 4248
+      },
+      "verbatim_text": "2) The data set for ML training and ML validation is created.",
+      "verbatim_text_sha256": "ea60d2425675dc6ba1c6b88201c51f83bd153a48b6f8963d44f2f8e72231baf1",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.3 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.3 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE3-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": "OUTCOME.3",
+        "page": 65,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4249,
+        "source_line_end": 4250
+      },
+      "verbatim_text": "3) The ML model, including hyperparameter values, is optimized to meet the defined ML requirements.",
+      "verbatim_text_sha256": "e848abc5fcde39a77baaf4220c8133033425ab133c2944db2fac3bfba03b7334",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.3 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.3 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE3-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": "OUTCOME.4",
+        "page": 65,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4251,
+        "source_line_end": 4252
+      },
+      "verbatim_text": "4) Consistency and bidirectional traceability are established between the ML training and validation data set and the ML data requirements.",
+      "verbatim_text_sha256": "453ad0e1826d4bddf9718332c22bf6ffcd8ba317689de95b2d22c5ecaca56185",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.3 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.3 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE3-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": "OUTCOME.5",
+        "page": 65,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4253,
+        "source_line_end": 4254
+      },
+      "verbatim_text": "5) Results of optimization are summarized, and the trained ML model is agreed and communicated to all affected parties.",
+      "verbatim_text_sha256": "be7b1e9ece46d0b379b366bf384473ab42e6494c4eed9bede5fdd67df822d675",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.3 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.3 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE3-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": "BP1",
+        "page": 65,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4256,
+        "source_line_end": 4280
+      },
+      "verbatim_text": "MLE.3.BP1: Specify ML training and validation approach. Specify an approach which supports the training and validation of the ML model to meet the defined ML requirements. The ML training and validation approach includes • entry and exit criteria of the training and validation, • approaches for hyperparameter tuning / optimization, • approach for data set creation and modification, and • training and validation environment Note 1: The ML training and validation approach may include random dropout and other robustification methods. Note 2: ML validation is the optimization of the hyperparameters during Machine Learning Training (MLE.3). The term “validation” has a different meaning than VAL.1. Note 3: The training environment should reflect the environment of the deployed model.",
+      "verbatim_text_sha256": "35c814695093b4940ab07f1112ec012ca91a1c0678af1982d2a2163a837cf1e4",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.3.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE3-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": "BP2",
+        "page": 65,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4281,
+        "source_line_end": 4287
+      },
+      "verbatim_text": "MLE.3.BP2: Create ML training and validation data set. Select data from the ML data collection provided by SUP.11 and assign them to the data set for training and validation of the ML model according to the specified ML training and validation approach. Note 4: The ML training and validation data set may include corner cases, unexpected cases, and normal cases depending on the ML requirements. Note 5: A separated data set for training and validation might not be required in some cases (e.g., kfold cross validation, no optimization of hyperparameters).",
+      "verbatim_text_sha256": "cd01ed4333186073f512532b171041e4e0ea1c3005040738de5b6021239288e6",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.3.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE3-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": "BP3",
+        "page": 65,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4288,
+        "source_line_end": 4291
+      },
+      "verbatim_text": "MLE.3.BP3: Create and optimize ML model. Create the ML model according to the ML architecture and train it, using the identified ML training and validation data set according to the ML training and validation approach to meet the defined ML requirements, and training and validation exit criteria.",
+      "verbatim_text_sha256": "260c57095f184e57550cbdbbc349aa9f93d3f965b639815f3e2d8e804e4dea92",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.3.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE3-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": "BP4",
+        "page": 66,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4292,
+        "source_line_end": 4312
+      },
+      "verbatim_text": "MLE.3.BP4: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the ML training and validation data set and the ML data requirements. Note 6: Bidirectional traceability supports consistency and facilitates impact analyses of change requests. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Outcome 5 Outcome 4 Outcome 3 MLE.3 Machine Learning Training Outcome 2 Outcome 1",
+      "verbatim_text_sha256": "34496445d75ad9c77afb28b9716ba27434d38bb5f5261736133e2f173891b360",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.3.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE3-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.3",
+        "process_id": "MLE.3",
+        "indicator_id": "BP5",
+        "page": 67,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4313,
+        "source_line_end": 4360
+      },
+      "verbatim_text": "MLE.3.BP5: Summarize and communicate agreed trained ML model. Summarize the results of the optimization and inform all affected parties about the agreed trained ML model. Output Information Items 08-65 ML training and validation approach X 03-51 ML data set X 01-53 Trained ML model X 01-54 Hyperparameter X 13-51 Consistency evidence X 13-52 Communication evidence X Base Practices BP1: Specify ML training and validation approach BP2: Create ML training and validation data set BP3: Create and optimize ML model X X BP4: Ensure consistency and establish bidirectional traceability X X BP5: Summarize and communicate agreed trained ML model X",
+      "verbatim_text_sha256": "f042b5cd52ffb3e2635917a204c0afa02a2e9901fd5e0f44c199d8e7198d6f6c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.3.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 2826,
+    "output_information_items": [
+      {
+        "id": "08-65",
+        "name": "ML training and validation approach",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "03-51",
+        "name": "ML data set",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "01-53",
+        "name": "Trained ML model",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "01-54",
+        "name": "Hyperparameter",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency evidence",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication evidence",
+        "outcomes": [
+          "O5"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Specify ML training and validation approach",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Create ML training and validation data set",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Create and optimize ML model",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Ensure consistency and establish bidirectional traceability",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Summarize and communicate agreed trained ML model",
+        "outcomes": [
+          "O5"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

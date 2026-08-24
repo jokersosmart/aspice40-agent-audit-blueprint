@@ -1,0 +1,527 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "SWE.4",
+  "process_name": "Software Unit Verification",
+  "process_group": "SWE",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.4.4",
+    "source_page_hint": 52,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to verify that software units are consistent with the software detailed design.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) Verification measures for software unit verification are specified."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) Software unit verification measures are selected according to the release scope, including criteria for regression verification."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) Software units are verified using the selected verification measures, and results are recorded."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) Consistency and bidirectional traceability are established between verification measures and software units; and bidirectional traceability is established between verification results and verification measures."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Results of the software unit verification are summarized and communicated to all affected parties."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "SWE.4.BP1: Specify software unit verification measures. Specify verification measures for each software unit defined in the software detailed design, including • pass/fail criteria for verification measures, • entry and exit criteria for verification measures, and • the required verification infrastructure. Note 1: Examples for unit verification measures are static analysis, code reviews, and unit testing. Note 2: Static analysis can be done based on MISRA rulesets and other coding standards.",
+        "title": "Specify software unit verification measures. Specify verification measures for each software unit defined in the software detailed design, including • pass/fail criteria for verification measures, • entry and exit criteria for verification measures, and • the required verification infrastructure. Note 1: Examples for unit verification measures are static analysis, code reviews, and unit testing. Note 2: Static analysis can be done based on MISRA rulesets and other coding standards."
+      },
+      {
+        "id": "BP2",
+        "text": "SWE.4.BP2: Select software unit verification measures. Document the selection of verification measures considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope.",
+        "title": "Select software unit verification measures. Document the selection of verification measures considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope."
+      },
+      {
+        "id": "BP3",
+        "text": "SWE.4.BP3: Verify software units. Perform software unit verification using the selected verification measures. Record the verification results including pass/fail status and corresponding verification measure data. Note 3: See SUP.9 for handling of verification results that deviate from expected results.",
+        "title": "Verify software units. Perform software unit verification using the selected verification measures. Record the verification results including pass/fail status and corresponding verification measure data. Note 3: See SUP.9 for handling of verification results that deviate from expected results."
+      },
+      {
+        "id": "BP4",
+        "text": "SWE.4.BP4: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between verification measures and the software units defined in the detailed design. Establish bidirectional traceability between the verification results and the verification measures. Note 4: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+        "title": "Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between verification measures and the software units defined in the detailed design. Establish bidirectional traceability between the verification results and the verification measures. Note 4: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other."
+      },
+      {
+        "id": "BP5",
+        "text": "SWE.4.BP5: Summarize and communicate results. Summarize the results of software unit verification and communicate them to all affected parties. Outcome 5 Outcome 4 Outcome 3 SWE.4 Software Unit Verification Outcome 2 Outcome 1 Note 5: Providing all necessary information from the test case execution in a summary enables other parties to judge the consequences. Output Information Items 08-60 Verification Measure X 03-50 Verification Measure Data X 08-58 Verification Measure Selection Set X 15-52 Verification Results X 13-51 Consistency Evidence X 13-52 Communication Evidence X Base Practices BP1: Specify software unit verification measures X BP2: Select software unit verification measures BP3: Verify software units X X BP4: Ensure consistency and establish bidirectional traceability for software unit verification BP5: Summarize and communicate results X X",
+        "title": "Summarize and communicate results. Summarize the results of software unit verification and communicate them to all affected parties. Outcome 5 Outcome 4 Outcome 3 SWE.4 Software Unit Verification Outcome 2 Outcome 1 Note 5: Providing all necessary information from the test case execution in a summary enables other parties to judge the consequences. Output Information Items 08-60 Verification Measure X 03-50 Verification Measure Data X 08-58 Verification Measure Selection Set X 15-52 Verification Results X 13-51 Consistency Evidence X 13-52 Communication Evidence X Base Practices BP1: Specify software unit verification measures X BP2: Select software unit verification measures BP3: Verify software units X X BP4: Ensure consistency and establish bidirectional traceability for software unit verification BP5: Summarize and communicate results X X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-SWE4-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": null,
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3407,
+        "source_line_end": 3407
+      },
+      "verbatim_text": "The purpose is to verify that software units are consistent with the software detailed design.",
+      "verbatim_text_sha256": "3e9635692d9b45b64970d4a98cb46d861d4ff93477c70b93230f88b831077305",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of SWE.4.",
+      "interpretation": "This is the PAM purpose statement for SWE.4; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE4-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": "OUTCOME.1",
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3409,
+        "source_line_end": 3409
+      },
+      "verbatim_text": "1) Verification measures for software unit verification are specified.",
+      "verbatim_text_sha256": "efe5375224b8fa69d6ad19525f80f1d410f70839843391e006b3ee7bd2f59822",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.4 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.4 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE4-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": "OUTCOME.2",
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3410,
+        "source_line_end": 3411
+      },
+      "verbatim_text": "2) Software unit verification measures are selected according to the release scope, including criteria for regression verification.",
+      "verbatim_text_sha256": "d4970f8542892fa9d9141886aadd8ce56b82f2ca655d3bf62e1145185ba44c2e",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.4 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.4 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE4-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": "OUTCOME.3",
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3412,
+        "source_line_end": 3413
+      },
+      "verbatim_text": "3) Software units are verified using the selected verification measures, and results are recorded.",
+      "verbatim_text_sha256": "f8b5f087f7fcf0ee4ec3622d95584432605122aab3b3734832ad8e098245a22c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.4 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.4 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE4-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": "OUTCOME.4",
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3414,
+        "source_line_end": 3416
+      },
+      "verbatim_text": "4) Consistency and bidirectional traceability are established between verification measures and software units; and bidirectional traceability is established between verification results and verification measures.",
+      "verbatim_text_sha256": "d489650014d672f9194d213855653a9c3c64fcc4352df2158776642d95958c47",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.4 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.4 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE4-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": "OUTCOME.5",
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3417,
+        "source_line_end": 3418
+      },
+      "verbatim_text": "5) Results of the software unit verification are summarized and communicated to all affected parties.",
+      "verbatim_text_sha256": "4631cc9851bda5a40479265e3cf2bdf2f969af83d3820d1f6bbebd597f2cfacc",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.4 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.4 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE4-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": "BP1",
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3420,
+        "source_line_end": 3436
+      },
+      "verbatim_text": "SWE.4.BP1: Specify software unit verification measures. Specify verification measures for each software unit defined in the software detailed design, including • pass/fail criteria for verification measures, • entry and exit criteria for verification measures, and • the required verification infrastructure. Note 1: Examples for unit verification measures are static analysis, code reviews, and unit testing. Note 2: Static analysis can be done based on MISRA rulesets and other coding standards.",
+      "verbatim_text_sha256": "68d57ce28712354daa86b5dd274155100d5ad7e3830badc42d02ae39c9730f90",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.4.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE4-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": "BP2",
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3437,
+        "source_line_end": 3440
+      },
+      "verbatim_text": "SWE.4.BP2: Select software unit verification measures. Document the selection of verification measures considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope.",
+      "verbatim_text_sha256": "8c5f00466975949159e03c1ca672e2908677d3fa76f2f44b45150bebbd96f284",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.4.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE4-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": "BP3",
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3441,
+        "source_line_end": 3446
+      },
+      "verbatim_text": "SWE.4.BP3: Verify software units. Perform software unit verification using the selected verification measures. Record the verification results including pass/fail status and corresponding verification measure data. Note 3: See SUP.9 for handling of verification results that deviate from expected results.",
+      "verbatim_text_sha256": "636e49e978bee9cbd55866968a3990a385e80f7b399f686d8300c0aa2b53f08f",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.4.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE4-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": "BP4",
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3447,
+        "source_line_end": 3454
+      },
+      "verbatim_text": "SWE.4.BP4: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between verification measures and the software units defined in the detailed design. Establish bidirectional traceability between the verification results and the verification measures. Note 4: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+      "verbatim_text_sha256": "c0cfadfe58c5fe143229c028ded922121b6c88096d569d54fece0018dabd6fb5",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.4.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE4-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.4",
+        "process_id": "SWE.4",
+        "indicator_id": "BP5",
+        "page": 52,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3455,
+        "source_line_end": 3515
+      },
+      "verbatim_text": "SWE.4.BP5: Summarize and communicate results. Summarize the results of software unit verification and communicate them to all affected parties. Outcome 5 Outcome 4 Outcome 3 SWE.4 Software Unit Verification Outcome 2 Outcome 1 Note 5: Providing all necessary information from the test case execution in a summary enables other parties to judge the consequences. Output Information Items 08-60 Verification Measure X 03-50 Verification Measure Data X 08-58 Verification Measure Selection Set X 15-52 Verification Results X 13-51 Consistency Evidence X 13-52 Communication Evidence X Base Practices BP1: Specify software unit verification measures X BP2: Select software unit verification measures BP3: Verify software units X X BP4: Ensure consistency and establish bidirectional traceability for software unit verification BP5: Summarize and communicate results X X",
+      "verbatim_text_sha256": "275a2f06462390284ba036c87e6ee5e3360e09048568d13787ffde99313d1656",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.4.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 2190,
+    "output_information_items": [
+      {
+        "id": "08-60",
+        "name": "Verification Measure",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "03-50",
+        "name": "Verification Measure Data",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "08-58",
+        "name": "Verification Measure Selection Set",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "15-52",
+        "name": "Verification Results",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency Evidence",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication Evidence",
+        "outcomes": [
+          "O5"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Specify software unit verification measures",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Select software unit verification measures",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Verify software units",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Ensure consistency and establish bidirectional traceability for software unit verification",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Summarize and communicate results",
+        "outcomes": [
+          "O5"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

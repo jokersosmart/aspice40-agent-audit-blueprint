@@ -1,0 +1,601 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "SUP.9",
+  "process_name": "Problem Resolution Management",
+  "process_group": "SUP",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.8.3",
+    "source_page_hint": 84,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose of the Problem Resolution Management Process is to ensure that problems are identified, recorded, analyzed, and their resolution is managed and controlled.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1)"
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2)"
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3)"
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4)"
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Problems are uniquely identified, recorded and classified. Problems are analyzed and assessed to determine an appropriate solution. Problem resolution is initiated. Problems are tracked to closure. The status of problems including trends identified are reported to stakeholders."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "SUP.9.BP1: Identify and record the problem. Each problem is uniquely identified, described and recorded. A status is assigned to each problem to facilitate tracking. Supporting information is provided to reproduce and diagnose the problem. NOTE 1: Problems may relate to e.g., product, resources, or methods. NOTE 2: Example values for the problem status are “new”, “solved”, “closed”, etc. NOTE 3: Supporting information may include e.g, the origin of the problem, how it can be reproduced, environmental information, by whom it has been detected. NOTE 4: Unique identification supports traceability to changes made as needed by the change request management process (SUP.10).",
+        "title": "Identify and record the problem. Each problem is uniquely identified, described and recorded. A status is assigned to each problem to facilitate tracking. Supporting information is provided to reproduce and diagnose the problem. NOTE 1: Problems may relate to e.g., product, resources, or methods. NOTE 2: Example values for the problem status are “new”, “solved”, “closed”, etc. NOTE 3: Supporting information may include e.g, the origin of the problem, how it can be reproduced, environmental information, by whom it has been detected. NOTE 4: Unique identification supports traceability to changes made as needed by the change request management process (SUP.10)."
+      },
+      {
+        "id": "BP2",
+        "text": "SUP.9.BP2: Determine the cause and the impact of the problem. Analyze the problem, determine its cause, including common causes if existing, and impact. Involve relevant parties. Categorize the problem. NOTE 5: Problem categorization (e.g., light, medium, severe) may be based on severity, criticality, urgency, etc.",
+        "title": "Determine the cause and the impact of the problem. Analyze the problem, determine its cause, including common causes if existing, and impact. Involve relevant parties. Categorize the problem. NOTE 5: Problem categorization (e.g., light, medium, severe) may be based on severity, criticality, urgency, etc."
+      },
+      {
+        "id": "BP3",
+        "text": "SUP.9.BP3: Authorize urgent resolution action. Obtain authorization for immediate action if a problem requires an urgent resolution according to the categorization.",
+        "title": "Authorize urgent resolution action. Obtain authorization for immediate action if a problem requires an urgent resolution according to the categorization."
+      },
+      {
+        "id": "BP4",
+        "text": "SUP.9.BP4: Raise alert notifications. If according to the categorization the problem has a high impact on other systems or other affected parties, an alert notification needs to be raised accordingly.",
+        "title": "Raise alert notifications. If according to the categorization the problem has a high impact on other systems or other affected parties, an alert notification needs to be raised accordingly."
+      },
+      {
+        "id": "BP5",
+        "text": "SUP.9.BP5: Initiate problem resolution. Initiate appropriate actions according to the categorization to resolve the problem long-term, including review of those actions or initiate a change request. This includes synchronization and consistency with short-term urgent resolution actions, if applicable.",
+        "title": "Initiate problem resolution. Initiate appropriate actions according to the categorization to resolve the problem long-term, including review of those actions or initiate a change request. This includes synchronization and consistency with short-term urgent resolution actions, if applicable."
+      },
+      {
+        "id": "BP6",
+        "text": "SUP.9.BP6: Track problems to closure. Track the status of problems to closure including all related change requests. The closure of problems is accepted by relevant stakeholders.",
+        "title": "Track problems to closure. Track the status of problems to closure including all related change requests. The closure of problems is accepted by relevant stakeholders."
+      },
+      {
+        "id": "BP7",
+        "text": "SUP.9.BP7: Report the status of problem resolution activities. Collect and analyze problem resolution management data, identify trends, and initiate related actions. Regularly report the results of data analysis, the identified trends and the status of problem resolution activities to relevant stakeholders. Outcome 3 Outcome 4 X X X X Outcome 5 Outcome 2 SUP.9 Problem Resolution Management Outcome 1 NOTE 6: Collected data may contain information about where the problems occurred, how and when they were found, what their impacts were, etc. Output Information Items 13-07 Problem 15-55 Problem analysis evidence X 15-12 Problem status X Base Practices BP1: Identify and record the problem X BP2: Determine the cause and the impact of the problem X X X BP3: Authorize urgent resolution action X BP4: Raise alert notifications X BP5: Initiate problem resolution X BP6: Track problems to closure X BP7: Report the status of problem resolution activities X X",
+        "title": "Report the status of problem resolution activities. Collect and analyze problem resolution management data, identify trends, and initiate related actions. Regularly report the results of data analysis, the identified trends and the status of problem resolution activities to relevant stakeholders. Outcome 3 Outcome 4 X X X X Outcome 5 Outcome 2 SUP.9 Problem Resolution Management Outcome 1 NOTE 6: Collected data may contain information about where the problems occurred, how and when they were found, what their impacts were, etc. Output Information Items 13-07 Problem 15-55 Problem analysis evidence X 15-12 Problem status X Base Practices BP1: Identify and record the problem X BP2: Determine the cause and the impact of the problem X X X BP3: Authorize urgent resolution action X BP4: Raise alert notifications X BP5: Initiate problem resolution X BP6: Track problems to closure X BP7: Report the status of problem resolution activities X X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-SUP9-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": null,
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5490,
+        "source_line_end": 5491
+      },
+      "verbatim_text": "The purpose of the Problem Resolution Management Process is to ensure that problems are identified, recorded, analyzed, and their resolution is managed and controlled.",
+      "verbatim_text_sha256": "a4d50e7bdfc6b244934b5a6e4abf31028a649905b50c07062b938b5c31bf296a",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of SUP.9.",
+      "interpretation": "This is the PAM purpose statement for SUP.9; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "OUTCOME.1",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5493,
+        "source_line_end": 5493
+      },
+      "verbatim_text": "1)",
+      "verbatim_text_sha256": "d1f47e5a47cb4cb2f0639dabef187d1ed63dab221280869d910c9f60be38df47",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.9 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "OUTCOME.2",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5494,
+        "source_line_end": 5494
+      },
+      "verbatim_text": "2)",
+      "verbatim_text_sha256": "4ddcdc3195dacd1e53e11029a707abeb4d797912220af1b51f5c2af6e6eb925b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.9 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "OUTCOME.3",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5495,
+        "source_line_end": 5495
+      },
+      "verbatim_text": "3)",
+      "verbatim_text_sha256": "6180669a9fb9d0e8d30055aa57b3ba6c43646a98d88caf1b2f906b8119f7a55b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.9 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "OUTCOME.4",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5496,
+        "source_line_end": 5496
+      },
+      "verbatim_text": "4)",
+      "verbatim_text_sha256": "2ad75c4c49eb98f340f9287d58069cfec60a90aecd3b9f13ffe411febfe8b187",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.9 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "OUTCOME.5",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5497,
+        "source_line_end": 5504
+      },
+      "verbatim_text": "5) Problems are uniquely identified, recorded and classified. Problems are analyzed and assessed to determine an appropriate solution. Problem resolution is initiated. Problems are tracked to closure. The status of problems including trends identified are reported to stakeholders.",
+      "verbatim_text_sha256": "ff95cdcefbaaafa05c14d41da719eabe59e7b97146497a6a776da24fab9f9435",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.9 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "BP1",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5508,
+        "source_line_end": 5517
+      },
+      "verbatim_text": "SUP.9.BP1: Identify and record the problem. Each problem is uniquely identified, described and recorded. A status is assigned to each problem to facilitate tracking. Supporting information is provided to reproduce and diagnose the problem. NOTE 1: Problems may relate to e.g., product, resources, or methods. NOTE 2: Example values for the problem status are “new”, “solved”, “closed”, etc. NOTE 3: Supporting information may include e.g, the origin of the problem, how it can be reproduced, environmental information, by whom it has been detected. NOTE 4: Unique identification supports traceability to changes made as needed by the change request management process (SUP.10).",
+      "verbatim_text_sha256": "4236ef92a4b99c8f0a9441f37e48d0c4dd82fab9b92c6f9cdc6564ead2d246be",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "BP2",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5518,
+        "source_line_end": 5523
+      },
+      "verbatim_text": "SUP.9.BP2: Determine the cause and the impact of the problem. Analyze the problem, determine its cause, including common causes if existing, and impact. Involve relevant parties. Categorize the problem. NOTE 5: Problem categorization (e.g., light, medium, severe) may be based on severity, criticality, urgency, etc.",
+      "verbatim_text_sha256": "3438a7615ce3a27430c353d3c0c0bfd738228afd0f4478276136032cd2945ae3",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "BP3",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5524,
+        "source_line_end": 5525
+      },
+      "verbatim_text": "SUP.9.BP3: Authorize urgent resolution action. Obtain authorization for immediate action if a problem requires an urgent resolution according to the categorization.",
+      "verbatim_text_sha256": "7aecf3e00812f9d7807a016db3451b3e5a1f7bd205601b8bd05a4418b86358a2",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "BP4",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5526,
+        "source_line_end": 5528
+      },
+      "verbatim_text": "SUP.9.BP4: Raise alert notifications. If according to the categorization the problem has a high impact on other systems or other affected parties, an alert notification needs to be raised accordingly.",
+      "verbatim_text_sha256": "5101e1bfd7161ca387cb0d3c6723a2b14d0d69ec70ce0a93e8f54490649ceb5b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "BP5",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5529,
+        "source_line_end": 5532
+      },
+      "verbatim_text": "SUP.9.BP5: Initiate problem resolution. Initiate appropriate actions according to the categorization to resolve the problem long-term, including review of those actions or initiate a change request. This includes synchronization and consistency with short-term urgent resolution actions, if applicable.",
+      "verbatim_text_sha256": "1a823ac5da7b1f031bd09ca5914adfff74150d8c429e6fd94baa96fbcd8fe5ad",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "BP6",
+        "page": 84,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5533,
+        "source_line_end": 5534
+      },
+      "verbatim_text": "SUP.9.BP6: Track problems to closure. Track the status of problems to closure including all related change requests. The closure of problems is accepted by relevant stakeholders.",
+      "verbatim_text_sha256": "aa4993ba09e9197da99756ad18f4b93aa774673399ab4c1a7b87ab0c921df706",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP9-BP-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.3",
+        "process_id": "SUP.9",
+        "indicator_id": "BP7",
+        "page": 85,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5535,
+        "source_line_end": 5606
+      },
+      "verbatim_text": "SUP.9.BP7: Report the status of problem resolution activities. Collect and analyze problem resolution management data, identify trends, and initiate related actions. Regularly report the results of data analysis, the identified trends and the status of problem resolution activities to relevant stakeholders. Outcome 3 Outcome 4 X X X X Outcome 5 Outcome 2 SUP.9 Problem Resolution Management Outcome 1 NOTE 6: Collected data may contain information about where the problems occurred, how and when they were found, what their impacts were, etc. Output Information Items 13-07 Problem 15-55 Problem analysis evidence X 15-12 Problem status X Base Practices BP1: Identify and record the problem X BP2: Determine the cause and the impact of the problem X X X BP3: Authorize urgent resolution action X BP4: Raise alert notifications X BP5: Initiate problem resolution X BP6: Track problems to closure X BP7: Report the status of problem resolution activities X X",
+      "verbatim_text_sha256": "49e2508030fae00f29e74cf63d3cc2075bb56079311654e1879466729372583b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.9.BP7 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.9"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 3683,
+    "output_information_items": [
+      {
+        "id": "13-07",
+        "name": "Problem",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O3",
+          "O4"
+        ]
+      },
+      {
+        "id": "15-55",
+        "name": "Problem analysis evidence",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "15-12",
+        "name": "Problem status",
+        "outcomes": [
+          "O3"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Identify and record the problem",
+        "outcomes": [
+          "O1",
+          "O2"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Determine the cause and the impact of the problem",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Authorize urgent resolution action",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Raise alert notifications",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Initiate problem resolution",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Track problems to closure",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "BP7",
+        "name": "Report the status of problem resolution activities",
+        "outcomes": [
+          "O3"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

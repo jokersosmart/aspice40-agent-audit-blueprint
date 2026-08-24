@@ -1,0 +1,56 @@
+schema_version: "1.0"
+project_id: "REPLACE-ME"
+assessment_context:
+  assessment_type: "project_self_assessment"
+  assessment_class: "REPLACE-ME"
+  customer_or_oem: "REPLACE-ME"
+  target_capability_profile: "REPLACE-ME"
+  rating_method: "lead_assessor_to_confirm"
+  product_scope: "SSD Controller"
+  lifecycle_scope: "REPLACE-ME"
+  release_or_baseline: "REPLACE-ME"
+  scope_owner: "REPLACE-ME"
+  qa_reviewer: "REPLACE-ME"
+  lead_assessor: "REPLACE-ME"
+
+# Never use missing evidence as a reason for not_in_scope.
+# Allowed values: in_scope, conditional, not_in_scope, out_of_scope, unknown.
+process_scope:
+  ACQ.4: {status: conditional, rationale: "Confirm supplier / external IP / EDA / NAND / PHY responsibility", approved_by: "REPLACE-ME"}
+  SPL.2: {status: in_scope, rationale: "Product release package and release approval", approved_by: "REPLACE-ME"}
+  SYS.1: {status: in_scope, rationale: "System stakeholder and intended-use requirements", approved_by: "REPLACE-ME"}
+  SYS.2: {status: in_scope, rationale: "System requirements analysis", approved_by: "REPLACE-ME"}
+  SYS.3: {status: in_scope, rationale: "System architecture and interfaces", approved_by: "REPLACE-ME"}
+  SYS.4: {status: in_scope, rationale: "System integration and integration verification", approved_by: "REPLACE-ME"}
+  SYS.5: {status: in_scope, rationale: "System verification", approved_by: "REPLACE-ME"}
+  SWE.1: {status: in_scope, rationale: "Firmware / software requirements", approved_by: "REPLACE-ME"}
+  SWE.2: {status: in_scope, rationale: "Firmware / software architecture", approved_by: "REPLACE-ME"}
+  SWE.3: {status: in_scope, rationale: "Firmware detailed design and unit construction", approved_by: "REPLACE-ME"}
+  SWE.4: {status: in_scope, rationale: "Software unit verification", approved_by: "REPLACE-ME"}
+  SWE.5: {status: in_scope, rationale: "Software component and integration verification", approved_by: "REPLACE-ME"}
+  SWE.6: {status: in_scope, rationale: "Software verification", approved_by: "REPLACE-ME"}
+  VAL.1: {status: in_scope, rationale: "Validation in intended / target environment", approved_by: "REPLACE-ME"}
+  MLE.1: {status: conditional, rationale: "Confirm whether controller includes ML requirements / model", approved_by: "REPLACE-ME"}
+  MLE.2: {status: conditional, rationale: "Confirm whether controller includes ML architecture", approved_by: "REPLACE-ME"}
+  MLE.3: {status: conditional, rationale: "Confirm whether training data / training exists", approved_by: "REPLACE-ME"}
+  MLE.4: {status: conditional, rationale: "Confirm whether ML model testing exists", approved_by: "REPLACE-ME"}
+  HWE.1: {status: in_scope, rationale: "Hardware requirements analysis", approved_by: "REPLACE-ME"}
+  HWE.2: {status: in_scope, rationale: "Digital / analog / mixed-signal design and production data", approved_by: "REPLACE-ME"}
+  HWE.3: {status: in_scope, rationale: "Hardware design verification", approved_by: "REPLACE-ME"}
+  HWE.4: {status: in_scope, rationale: "Hardware requirements verification", approved_by: "REPLACE-ME"}
+  SUP.1: {status: in_scope, rationale: "Independent QA and process assurance", approved_by: "REPLACE-ME"}
+  SUP.8: {status: in_scope, rationale: "Configuration and baseline management", approved_by: "REPLACE-ME"}
+  SUP.9: {status: in_scope, rationale: "Problem resolution", approved_by: "REPLACE-ME"}
+  SUP.10: {status: in_scope, rationale: "Change request management", approved_by: "REPLACE-ME"}
+  SUP.11: {status: conditional, rationale: "Confirm whether ML data exists", approved_by: "REPLACE-ME"}
+  MAN.3: {status: in_scope, rationale: "Project management", approved_by: "REPLACE-ME"}
+  MAN.5: {status: in_scope, rationale: "Risk management", approved_by: "REPLACE-ME"}
+  MAN.6: {status: in_scope, rationale: "Measurement", approved_by: "REPLACE-ME"}
+  PIM.3: {status: in_scope, rationale: "Process improvement", approved_by: "REPLACE-ME"}
+  REU.2: {status: conditional, rationale: "Confirm reuse of IP / EDA / design / software products", approved_by: "REPLACE-ME"}
+
+tailoring_rules:
+  - rule_id: TAILOR-001
+    statement: "Any tailoring must identify impacted Process IDs, rationale, substitute control, affected parties, approval and review date."
+    owner: "REPLACE-ME"
+    status: draft

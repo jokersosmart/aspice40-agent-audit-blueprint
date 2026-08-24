@@ -1,0 +1,476 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "SWE.2",
+  "process_name": "Software Architectural Design",
+  "process_group": "SWE",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.4.2",
+    "source_page_hint": 48,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to establish an analyzed software architecture, comprising static and dynamic aspects, consistent with the software requirements.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) A software architecture is designed including static and dynamic aspects."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) The software architecture is analyzed against defined criteria."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) Consistency and bidirectional traceability are established between software architecture and software requirements."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) The software architecture is agreed and communicated to all affected parties."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "SWE.2.BP1: Specify static aspects of the software architecture. Specify and document the static aspects of the software architecture with respect to the functional and non-functional software requirements, including external interfaces and a defined set of software components with their interfaces and relationships. Note 1: The hardware-software-interface (HSI) definition puts in context the hardware design and therefore is an aspect of system design (SYS.3).",
+        "title": "Specify static aspects of the software architecture. Specify and document the static aspects of the software architecture with respect to the functional and non-functional software requirements, including external interfaces and a defined set of software components with their interfaces and relationships. Note 1: The hardware-software-interface (HSI) definition puts in context the hardware design and therefore is an aspect of system design (SYS.3)."
+      },
+      {
+        "id": "BP2",
+        "text": "SWE.2.BP2: Specify dynamic aspects of the software architecture. Specify and document the dynamic aspects of the software architecture with respect to the functional and nonfunctional software requirements, including the behavior of the software components and their interaction in different software modes, and concurrency aspects. Note 2: Examples for concurrency aspects are application-relevant interrupt handling, preemptive processing, multi-threading. Note 3: Examples for behavioral descriptions are natural language or semi-formal notation (e.g, SysML, UML).",
+        "title": "Specify dynamic aspects of the software architecture. Specify and document the dynamic aspects of the software architecture with respect to the functional and nonfunctional software requirements, including the behavior of the software components and their interaction in different software modes, and concurrency aspects. Note 2: Examples for concurrency aspects are application-relevant interrupt handling, preemptive processing, multi-threading. Note 3: Examples for behavioral descriptions are natural language or semi-formal notation (e.g, SysML, UML)."
+      },
+      {
+        "id": "BP3",
+        "text": "SWE.2.BP3: Analyze software architecture. Analyze the software architecture regarding relevant technical design aspects and to support project management regarding project estimates. Document a rationale for the software architectural design decision. Note 4: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates. Note 5: The analysis may include the suitability of pre-existing software components for the current application. Note 6: Examples of methods suitable for analyzing technical aspects are prototypes, simulations, qualitative analyses. Note 7: Examples of technical aspects are functionality, timings, and resource consumption (e.g, ROM, RAM, external / internal EEPROM or Data Flash or CPU load). Note 8: Design rationales can include arguments such as proven-in-use, reuse of a software framework or software product line, a make-or-buy decision, or found in an evolutionary way (e.g, set-based design).",
+        "title": "Analyze software architecture. Analyze the software architecture regarding relevant technical design aspects and to support project management regarding project estimates. Document a rationale for the software architectural design decision. Note 4: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates. Note 5: The analysis may include the suitability of pre-existing software components for the current application. Note 6: Examples of methods suitable for analyzing technical aspects are prototypes, simulations, qualitative analyses. Note 7: Examples of technical aspects are functionality, timings, and resource consumption (e.g, ROM, RAM, external / internal EEPROM or Data Flash or CPU load). Note 8: Design rationales can include arguments such as proven-in-use, reuse of a software framework or software product line, a make-or-buy decision, or found in an evolutionary way (e.g, set-based design)."
+      },
+      {
+        "id": "BP4",
+        "text": "SWE.2.BP4: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the software architecture and the software requirements. Note 9: There may be non-functional software requirements that the software architectural design does not trace to. Examples are development process requirements. Such requirements are still subject to verification. Note 10: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g, the existence of links, does not necessarily mean that the information is consistent with each other. Outcome 4 Outcome 3 SWE.2 Software Architectural Design Outcome 2 Outcome 1",
+        "title": "Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the software architecture and the software requirements. Note 9: There may be non-functional software requirements that the software architectural design does not trace to. Examples are development process requirements. Such requirements are still subject to verification. Note 10: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g, the existence of links, does not necessarily mean that the information is consistent with each other. Outcome 4 Outcome 3 SWE.2 Software Architectural Design Outcome 2 Outcome 1"
+      },
+      {
+        "id": "BP5",
+        "text": "SWE.2.BP5: Communicate agreed software architecture. Communicate the agreed software architecture to all affected parties. Output Information Items 04-04 Software Architecture X 13-51 Consistency Evidence X 13-52 Communication Evidence X 15-51 Analysis Results X Base Practices BP1: Specify static aspects of software architecture X BP2: Specify dynamic aspects of software architecture X BP3: Analyze software architecture X BP4: Ensure consistency and establish bidirectional traceability X BP5: Communicate agreed software architecture X",
+        "title": "Communicate agreed software architecture. Communicate the agreed software architecture to all affected parties. Output Information Items 04-04 Software Architecture X 13-51 Consistency Evidence X 13-52 Communication Evidence X 15-51 Analysis Results X Base Practices BP1: Specify static aspects of software architecture X BP2: Specify dynamic aspects of software architecture X BP3: Analyze software architecture X BP4: Ensure consistency and establish bidirectional traceability X BP5: Communicate agreed software architecture X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-SWE2-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.4.2",
+        "process_id": "SWE.2",
+        "indicator_id": null,
+        "page": 48,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3170,
+        "source_line_end": 3171
+      },
+      "verbatim_text": "The purpose is to establish an analyzed software architecture, comprising static and dynamic aspects, consistent with the software requirements.",
+      "verbatim_text_sha256": "f0c8259e9244f10da9b08aba54ad157da19fe4af25552ea6a28c7364c3f2dd9e",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of SWE.2.",
+      "interpretation": "This is the PAM purpose statement for SWE.2; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE2-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.2",
+        "process_id": "SWE.2",
+        "indicator_id": "OUTCOME.1",
+        "page": 48,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3173,
+        "source_line_end": 3173
+      },
+      "verbatim_text": "1) A software architecture is designed including static and dynamic aspects.",
+      "verbatim_text_sha256": "6ddaad0ad3bf42991eb545efa8900965d624374b60507739b3e0e32b5e90cfe5",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.2 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.2 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE2-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.2",
+        "process_id": "SWE.2",
+        "indicator_id": "OUTCOME.2",
+        "page": 48,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3174,
+        "source_line_end": 3174
+      },
+      "verbatim_text": "2) The software architecture is analyzed against defined criteria.",
+      "verbatim_text_sha256": "02184d5d3a50d20140e1b200bfcb55b60b16d0c6e032e1b857a41ad81b8d37de",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.2 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.2 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE2-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.2",
+        "process_id": "SWE.2",
+        "indicator_id": "OUTCOME.3",
+        "page": 48,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3175,
+        "source_line_end": 3176
+      },
+      "verbatim_text": "3) Consistency and bidirectional traceability are established between software architecture and software requirements.",
+      "verbatim_text_sha256": "56738d63575a45599b7c1dc831fe6926f43f6cef037c17edb7552c28f31d7f72",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.2 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.2 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE2-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.2",
+        "process_id": "SWE.2",
+        "indicator_id": "OUTCOME.4",
+        "page": 48,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3177,
+        "source_line_end": 3177
+      },
+      "verbatim_text": "4) The software architecture is agreed and communicated to all affected parties.",
+      "verbatim_text_sha256": "7ec8d5f9dd27ba61fbf0a1a903f70bee386c68348c404c49fbe5988c6d874357",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.2 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.2 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE2-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.2",
+        "process_id": "SWE.2",
+        "indicator_id": "BP1",
+        "page": 48,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3179,
+        "source_line_end": 3185
+      },
+      "verbatim_text": "SWE.2.BP1: Specify static aspects of the software architecture. Specify and document the static aspects of the software architecture with respect to the functional and non-functional software requirements, including external interfaces and a defined set of software components with their interfaces and relationships. Note 1: The hardware-software-interface (HSI) definition puts in context the hardware design and therefore is an aspect of system design (SYS.3).",
+      "verbatim_text_sha256": "cd88905bd25f5e1827c8417c22df04915aa08eaf71afbec8b66838ca830f52a9",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.2.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE2-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.2",
+        "process_id": "SWE.2",
+        "indicator_id": "BP2",
+        "page": 48,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3186,
+        "source_line_end": 3194
+      },
+      "verbatim_text": "SWE.2.BP2: Specify dynamic aspects of the software architecture. Specify and document the dynamic aspects of the software architecture with respect to the functional and nonfunctional software requirements, including the behavior of the software components and their interaction in different software modes, and concurrency aspects. Note 2: Examples for concurrency aspects are application-relevant interrupt handling, preemptive processing, multi-threading. Note 3: Examples for behavioral descriptions are natural language or semi-formal notation (e.g, SysML, UML).",
+      "verbatim_text_sha256": "5fd0897722952dd6a6ad606516e858b7dac0b4c31fcbc710863b11f90e43a4ec",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.2.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE2-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.2",
+        "process_id": "SWE.2",
+        "indicator_id": "BP3",
+        "page": 48,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3195,
+        "source_line_end": 3208
+      },
+      "verbatim_text": "SWE.2.BP3: Analyze software architecture. Analyze the software architecture regarding relevant technical design aspects and to support project management regarding project estimates. Document a rationale for the software architectural design decision. Note 4: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates. Note 5: The analysis may include the suitability of pre-existing software components for the current application. Note 6: Examples of methods suitable for analyzing technical aspects are prototypes, simulations, qualitative analyses. Note 7: Examples of technical aspects are functionality, timings, and resource consumption (e.g, ROM, RAM, external / internal EEPROM or Data Flash or CPU load). Note 8: Design rationales can include arguments such as proven-in-use, reuse of a software framework or software product line, a make-or-buy decision, or found in an evolutionary way (e.g, set-based design).",
+      "verbatim_text_sha256": "b8bdb4b222909f1bd007b7c0a38a2cbe9ac912b401077d76b8cfb13d63207cfb",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.2.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE2-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.2",
+        "process_id": "SWE.2",
+        "indicator_id": "BP4",
+        "page": 48,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3209,
+        "source_line_end": 3228
+      },
+      "verbatim_text": "SWE.2.BP4: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the software architecture and the software requirements. Note 9: There may be non-functional software requirements that the software architectural design does not trace to. Examples are development process requirements. Such requirements are still subject to verification. Note 10: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g, the existence of links, does not necessarily mean that the information is consistent with each other. Outcome 4 Outcome 3 SWE.2 Software Architectural Design Outcome 2 Outcome 1",
+      "verbatim_text_sha256": "4e10446e5e0a4fb65bd549c89bb855341e1cecf2bd576f25097219b3740d37b4",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.2.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE2-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.2",
+        "process_id": "SWE.2",
+        "indicator_id": "BP5",
+        "page": 49,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3229,
+        "source_line_end": 3271
+      },
+      "verbatim_text": "SWE.2.BP5: Communicate agreed software architecture. Communicate the agreed software architecture to all affected parties. Output Information Items 04-04 Software Architecture X 13-51 Consistency Evidence X 13-52 Communication Evidence X 15-51 Analysis Results X Base Practices BP1: Specify static aspects of software architecture X BP2: Specify dynamic aspects of software architecture X BP3: Analyze software architecture X BP4: Ensure consistency and establish bidirectional traceability X BP5: Communicate agreed software architecture X",
+      "verbatim_text_sha256": "f488830ca9de0b1910a434919fef8c508d6789a26c70c92fe1191899fda57e08",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.2.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 2008,
+    "output_information_items": [
+      {
+        "id": "04-04",
+        "name": "Software Architecture",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency Evidence",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication Evidence",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "15-51",
+        "name": "Analysis Results",
+        "outcomes": [
+          "O2"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Specify static aspects of software architecture",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Specify dynamic aspects of software architecture",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Analyze software architecture",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Ensure consistency and establish bidirectional traceability",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Communicate agreed software architecture",
+        "outcomes": [
+          "O4"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

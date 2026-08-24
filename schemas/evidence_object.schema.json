@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/aspice/evidence-object.schema.json",
+  "title": "ASPICE Evidence Object",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["artifact_id", "project_id", "artifact_type", "uri_or_path", "revision", "baseline", "owner", "source_system", "review_status", "content_hash", "captured_at"],
+  "properties": {
+    "artifact_id": {"type": "string", "minLength": 1},
+    "project_id": {"type": "string", "minLength": 1},
+    "artifact_type": {"type": "string", "enum": ["requirement", "architecture", "detailed_design", "source_code", "rtl", "schematic", "layout", "netlist", "bom", "production_data", "verification_measure", "simulation_protocol", "simulation_log", "measurement_data", "calculation", "analysis", "test_result", "validation_result", "release_package", "change_request", "problem_record", "risk_record", "metric", "review_record", "approval_record", "training_data", "model", "other"]},
+    "name": {"type": "string"},
+    "uri_or_path": {"type": "string", "minLength": 1},
+    "source_system": {"type": "string", "minLength": 1},
+    "revision": {"type": "string", "minLength": 1},
+    "baseline": {"type": "string", "minLength": 1},
+    "owner": {"type": "string", "minLength": 1},
+    "review_status": {"type": "string", "enum": ["approved", "reviewed", "draft", "rejected", "unknown"]},
+    "approval_authority": {"type": ["string", "null"]},
+    "content_hash": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "captured_at": {"type": "string", "format": "date-time"},
+    "created_at": {"type": ["string", "null"], "format": "date-time"},
+    "modified_at": {"type": ["string", "null"], "format": "date-time"},
+    "confidentiality": {"type": "string", "enum": ["public", "internal", "restricted", "confidential", "unknown"]},
+    "characteristics": {"type": "array", "items": {"type": "string"}},
+    "source_anchor": {"$ref": "audit-finding.schema.json#/$defs/source_anchor"},
+    "related_artifact_ids": {"type": "array", "items": {"type": "string"}},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "extraction_status": {"type": "string", "enum": ["native", "parsed", "ocr", "manual", "unknown"]},
+    "notes": {"type": "string"}
+  }
+}

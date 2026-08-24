@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/cognitive-decision-record.schema.json",
+  "title": "Cognitive Decision Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["record_id", "agent_id", "run_id", "decision_statement", "scope", "constraints", "claims", "assumptions", "options", "verification_plan", "risk_and_escalation", "human_gate", "reuse_record"],
+  "properties": {
+    "record_id": {"type": "string"},
+    "agent_id": {"type": "string"},
+    "run_id": {"type": "string"},
+    "decision_statement": {"type": "string", "minLength": 1},
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project_id", "release_or_baseline", "in_scope", "out_of_scope"],
+      "properties": {
+        "project_id": {"type": "string"},
+        "release_or_baseline": {"type": "string"},
+        "in_scope": {"type": "array", "items": {"type": "string"}},
+        "out_of_scope": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "constraints": {"type": "array", "items": {"type": "string"}},
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim_id", "statement", "claim_type", "evidence_status"],
+        "properties": {
+          "claim_id": {"type": "string"},
+          "statement": {"type": "string"},
+          "claim_type": {"enum": ["pam_explicit", "company_rule", "customer_specific", "product_context", "inference"]},
+          "evidence_status": {"enum": ["supported", "partial", "unknown", "conflict", "rejected"]},
+          "evidence_refs": {"type": "array", "items": {"type": "string"}},
+          "spec_citation_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["assumption", "supporting_evidence", "falsifier", "status"],
+        "properties": {
+          "assumption": {"type": "string"},
+          "supporting_evidence": {"type": "array", "items": {"type": "string"}},
+          "falsifier": {"type": "string"},
+          "status": {"enum": ["open", "supported", "rejected", "human_review_required"]}
+        }
+      }
+    },
+    "options": {"type": "array", "items": {"type": "object", "additionalProperties": true}},
+    "verification_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "success_criteria", "failure_criteria", "reversibility", "owner", "independent_verifier"],
+      "properties": {
+        "method": {"type": "string"},
+        "success_criteria": {"type": "array", "items": {"type": "string"}},
+        "failure_criteria": {"type": "array", "items": {"type": "string"}},
+        "reversibility": {"enum": ["reversible", "partially_reversible", "irreversible"]},
+        "owner": {"type": "string"},
+        "independent_verifier": {"type": "string"}
+      }
+    },
+    "risk_and_escalation": {"type": "array", "items": {"type": "string"}},
+    "human_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "authority", "decision_status"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "authority": {"type": "string"},
+        "decision_status": {"enum": ["not_required", "pending", "approved", "rejected"]}
+      }
+    },
+    "reuse_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reusable", "context_boundary", "version", "retrieval_key"],
+      "properties": {
+        "reusable": {"type": "boolean"},
+        "context_boundary": {"type": "string"},
+        "version": {"type": "string"},
+        "retrieval_key": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+schema_version: "1.0"
+registry_version: "2026.08.24"
+runtimes:
+  - runtime_id: R01
+    name: Spec Text Integrity Runtime
+    logical_agents: [C01]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/30_control_agents_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    input_types: [aspice_pdf, source_url, version_metadata]
+    output_schemas: [schemas/text-integrity-certificate.schema.json]
+    write_permissions: [knowledge/aspice40/raw, knowledge/aspice40/page_aware, knowledge/aspice40/semantic]
+    human_gate: [source_version, OCR_corrections, release_of_spec_baseline]
+  - runtime_id: R02
+    name: ASPICE Knowledge Librarian Runtime
+    logical_agents: [C02]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/30_control_agents_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    input_types: [page_aware_text, reflowed_text, tables, figures, approved_source]
+    output_schemas: [schemas/knowledge-chunk.schema.json]
+    write_permissions: [knowledge/aspice40/semantic, knowledge/aspice40/index]
+    human_gate: [semantic_chunk_sample, source_conflict]
+  - runtime_id: R03
+    name: Evidence and Information Item Runtime
+    logical_agents: [C03, C04]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/30_control_agents_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    input_types: [documents, repositories, ci_results, test_results, simulation_results, lab_results, tapeout_data]
+    output_schemas: [schemas/evidence_object.schema.json, schemas/information_item_mapping.schema.json]
+    write_permissions: [evidence/normalized, evidence/index]
+    human_gate: [artifact_owner_mapping, restricted_source_access]
+  - runtime_id: R04
+    name: Scope and Tailoring Runtime
+    logical_agents: [C05]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/30_control_agents_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    input_types: [assessment_context, customer_scope, product_scope, organization_scope, tailoring_rules]
+    output_schemas: [schemas/process-scope.schema.json]
+    write_permissions: [config/process_scope.yaml, runs/scope]
+    human_gate: [scope_owner, qa, lead_assessor]
+  - runtime_id: R05
+    name: Traceability and Consistency Runtime
+    logical_agents: [C06]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/30_control_agents_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    input_types: [evidence_objects, requirements, architecture, design, rtl, code, verification, release, change]
+    output_schemas: [schemas/traceability-edge.schema.json, schemas/traceability-report.schema.json]
+    write_permissions: [evidence/graph, runs/traceability]
+    human_gate: [technical_consistency_conflict, critical_chain_break]
+  - runtime_id: R06
+    name: Process Audit Runtime
+    logical_agents: [ACQ.4, SPL.2, SYS.1, SYS.2, SYS.3, SYS.4, SYS.5, SWE.1, SWE.2, SWE.3, SWE.4, SWE.5, SWE.6, VAL.1, MLE.1, MLE.2, MLE.3, MLE.4, HWE.1, HWE.2, HWE.3, HWE.4, SUP.1, SUP.8, SUP.9, SUP.10, SUP.11, MAN.3, MAN.5, MAN.6, PIM.3, REU.2]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/10_process_auditor_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    profile_files: [profiles/process_agents.yaml, knowledge/aspice40/process_rules/*.yaml]
+    input_types: [process_scope, evidence_objects, traceability_graph, company_processes, findings]
+    output_schemas: [schemas/process-audit-result.schema.json, schemas/audit-finding.schema.json]
+    write_permissions: [runs/process_audit, runs/findings]
+    human_gate: [technical_correctness, verification_adequacy, formal_rating, major_finding_closure]
+  - runtime_id: R07
+    name: Capability Preparation Runtime
+    logical_agents: [C07]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/30_control_agents_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    input_types: [process_audit_results, validated_evidence, pa_profiles, assessment_context]
+    output_schemas: [schemas/capability-preparation.schema.json]
+    write_permissions: [runs/capability_preparation]
+    human_gate: [rating_method, formal_rating, process_level]
+  - runtime_id: R08
+    name: Audit Orchestrator Runtime
+    logical_agents: [C08]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/30_control_agents_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    input_types: [all_run_outputs, scope, findings, conflicts, approvals]
+    output_schemas: [schemas/audit-run-report.schema.json]
+    write_permissions: [runs/reports, runs/human_review_queue]
+    human_gate: [report_release, open_issue_disposition]
+  - runtime_id: R09
+    name: Manager Coordination Runtime
+    logical_agents: [M01, M02, M03, M04, M05, M06, M07, M08, M09, M10, M11, M12, M13, M14]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/20_manager_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    profile_files: [profiles/manager_agents.yaml]
+    input_types: [process_audit_results, findings, evidence_objects, traceability_graph, rasic, project_constraints]
+    output_schemas: [schemas/manager-work-package.schema.json]
+    write_permissions: [runs/work_packages, runs/escalations]
+    human_gate: [owner_assignment, resource_commitment, closure_authority]
+  - runtime_id: R10
+    name: Human Review and Approval Gateway
+    logical_agents: []
+    prompt_files: []
+    input_types: [human_review_queue, evidence, findings, conflict_records]
+    output_schemas: [schemas/human-decision.schema.json]
+    write_permissions: [runs/approvals]
+    human_gate: [all]

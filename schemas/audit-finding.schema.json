@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/aspice/audit-finding.schema.json",
+  "title": "ASPICE Audit Finding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["finding_id", "project_id", "process_id", "source_anchor", "requirement_type", "spec_citations", "citation_missing", "evidence_refs", "status", "rationale", "impact", "human_confirmation_required", "confidence"],
+  "$defs": {
+    "source_anchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["document_id", "version"],
+      "properties": {
+        "document_id": {"type": "string"},
+        "version": {"type": "string"},
+        "page": {"type": ["integer", "null"], "minimum": 1},
+        "section": {"type": ["string", "null"]},
+        "chunk_id": {"type": ["string", "null"]},
+        "table_or_figure": {"type": ["string", "null"]},
+        "source_hash": {"type": ["string", "null"]}
+      }
+    },
+    "evidence_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_id", "uri_or_path", "revision", "baseline", "owner", "review_status"],
+      "properties": {
+        "artifact_id": {"type": "string"},
+        "uri_or_path": {"type": "string"},
+        "revision": {"type": "string"},
+        "baseline": {"type": "string"},
+        "owner": {"type": "string"},
+        "review_status": {"type": "string", "enum": ["approved", "reviewed", "draft", "rejected", "unknown"]},
+        "content_anchor": {"type": ["string", "null"]}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"citation_missing": {"const": false}}, "required": ["citation_missing"]},
+      "then": {"properties": {"spec_citations": {"minItems": 1}}}
+    }
+  ],
+  "properties": {
+    "finding_id": {"type": "string", "pattern": "^AF-[A-Za-z0-9._-]+$"},
+    "agent_id": {"type": "string"},
+    "agent_version": {"type": "string"},
+    "run_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "release_or_baseline": {"type": ["string", "null"]},
+    "process_id": {"type": "string", "pattern": "^(ACQ|SPL|SYS|SWE|MLE|HWE|VAL|SUP|MAN|PIM|REU)\\.[0-9]+$"},
+    "pa_or_level": {"type": ["string", "null"]},
+    "source_anchor": {"$ref": "#/$defs/source_anchor"},
+    "requirement_type": {"type": "string", "enum": ["pam_explicit", "company_rule", "customer_specific", "product_context", "inference"]},
+    "requirement_id": {"type": ["string", "null"]},
+    "requirement_summary": {"type": "string"},
+    "spec_citations": {
+      "type": "array",
+      "minItems": 0,
+      "items": {"$ref": "direct-spec-citation.schema.json"},
+      "description": "Every finding must include at least one complete verbatim ASPICE paragraph or complete table/row excerpt with interpretation. A link alone is invalid."
+    },
+    "citation_missing": {"type": "boolean", "default": false},
+    "evidence_refs": {"type": "array", "items": {"$ref": "#/$defs/evidence_ref"}},
+    "traceability_refs": {"type": "array", "items": {"type": "string"}},
+    "status": {"type": "string", "enum": ["satisfied", "partial", "gap", "unknown", "not_in_scope", "out_of_scope", "conflict"]},
+    "rationale": {"type": "string"},
+    "missing_or_conflicting_evidence": {"type": "array", "items": {"type": "string"}},
+    "impact": {"type": "string", "enum": ["low", "medium", "high", "critical"]},
+    "recommended_action": {"type": "string"},
+    "owner_manager": {"type": ["string", "null"]},
+    "verification_owner": {"type": ["string", "null"]},
+    "human_confirmation_required": {"type": "boolean"},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+    "created_at": {"type": "string", "format": "date-time"},
+    "updated_at": {"type": ["string", "null"], "format": "date-time"}
+  }
+}

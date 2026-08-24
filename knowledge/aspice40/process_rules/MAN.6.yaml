@@ -1,0 +1,576 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "MAN.6",
+  "process_name": "Measurement",
+  "process_group": "MAN",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.9.3",
+    "source_page_hint": 94,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to Collect and analyze data relating to the development results and processes implemented within the organization and its projects, to support effective management of the processes.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) The measurement information needs that are necessary to evaluate the achievement of process objectives and the achievement of desired work products are identified."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) An appropriate set of metrics, driven by the information needs are identified and/or developed."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) Measurement activities are identified and performed."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) The required metrics are collected, stored, analyzed, and the results interpreted."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Metrics are used to support decisions and provide an objective basis for communication."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "MAN.6.BP1: Identify information needs. Identify the measurement information needs that are necessary to evaluate the achievement of process objectives and work products. Note 1: Information needs may change over time. Therefore, the measurement process may be used in an iterative way.",
+        "title": "Identify information needs. Identify the measurement information needs that are necessary to evaluate the achievement of process objectives and work products. Note 1: Information needs may change over time. Therefore, the measurement process may be used in an iterative way."
+      },
+      {
+        "id": "BP2",
+        "text": "MAN.6.BP2: Specify metrics. Identify and develop an appropriate set of metrics based on measurement information needs. Note 2: Metrics may be related to processes or development results.",
+        "title": "Specify metrics. Identify and develop an appropriate set of metrics based on measurement information needs. Note 2: Metrics may be related to processes or development results."
+      },
+      {
+        "id": "BP3",
+        "text": "MAN.6.BP3: Collect and store metrics. Collect and store both base and derived metrics, including any context information necessary to verify and understand the metrics. Note 3: Base metrics in the context of this process are directly gathered metrics like “number of defects found” or “number of lines of code”, where derived metrics are two or more metrics that are brought in relation to each other like “number of defects found per line of code”.",
+        "title": "Collect and store metrics. Collect and store both base and derived metrics, including any context information necessary to verify and understand the metrics. Note 3: Base metrics in the context of this process are directly gathered metrics like “number of defects found” or “number of lines of code”, where derived metrics are two or more metrics that are brought in relation to each other like “number of defects found per line of code”."
+      },
+      {
+        "id": "BP4",
+        "text": "MAN.6.BP4: Analyze collected metrics. Analyze, interpret and review measured values to support decision-making.",
+        "title": "Analyze collected metrics. Analyze, interpret and review measured values to support decision-making."
+      },
+      {
+        "id": "BP5",
+        "text": "MAN.6.BP5: Communicate analysis results. Communicate analysis results to all affected parties. Outcome 4 Outcome 5 Outcome 3 03-03 Benchmarking data X X 03-04 Customer satisfaction data X X 03-06 Process performance information X X X X X X MAN.6 Measurement Outcome 2 Outcome 1",
+        "title": "Communicate analysis results. Communicate analysis results to all affected parties. Outcome 4 Outcome 5 Outcome 3 03-03 Benchmarking data X X 03-04 Customer satisfaction data X X 03-06 Process performance information X X X X X X MAN.6 Measurement Outcome 2 Outcome 1"
+      },
+      {
+        "id": "BP6",
+        "text": "MAN.6.BP6: Use metrics for decision-making. Make accessible and use information from collected metrics and analysis results for any decision-making process for which it is relevant. Output Information Items 07-51 Measurement result X 15-51 Analysis results X X Base Practices BP1: Identify information needs X BP2: Specify metrics X BP3: Collect and store metrics X BP4: Analyze collected metrics X X X X BP5: Communicate measurement information X BP6: Use metrics for decision-making X 4.10. Process improvement process group (PIM)",
+        "title": "Use metrics for decision-making. Make accessible and use information from collected metrics and analysis results for any decision-making process for which it is relevant. Output Information Items 07-51 Measurement result X 15-51 Analysis results X X Base Practices BP1: Identify information needs X BP2: Specify metrics X BP3: Collect and store metrics X BP4: Analyze collected metrics X X X X BP5: Communicate measurement information X BP6: Use metrics for decision-making X 4.10. Process improvement process group (PIM)"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-MAN6-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": null,
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6204,
+        "source_line_end": 6206
+      },
+      "verbatim_text": "The purpose is to Collect and analyze data relating to the development results and processes implemented within the organization and its projects, to support effective management of the processes.",
+      "verbatim_text_sha256": "05a64d43b135800e14cf6399d3a271b3252e9d575a2c29e1c52979ee4f98be99",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of MAN.6.",
+      "interpretation": "This is the PAM purpose statement for MAN.6; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "OUTCOME.1",
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6208,
+        "source_line_end": 6209
+      },
+      "verbatim_text": "1) The measurement information needs that are necessary to evaluate the achievement of process objectives and the achievement of desired work products are identified.",
+      "verbatim_text_sha256": "8bff7bc46890b11e658e71e7ee6ab43127feff83f19e2d06c8438068307300e0",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.6 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "OUTCOME.2",
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6210,
+        "source_line_end": 6211
+      },
+      "verbatim_text": "2) An appropriate set of metrics, driven by the information needs are identified and/or developed.",
+      "verbatim_text_sha256": "669f82b6c431dcd1911da99e7d8282c2917cbaf35bdcf09dfcbc2b74cf2bb4db",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.6 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "OUTCOME.3",
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6212,
+        "source_line_end": 6212
+      },
+      "verbatim_text": "3) Measurement activities are identified and performed.",
+      "verbatim_text_sha256": "d0be44e869bdd84e37e220ba9ccfc246e3e7a98032a5007ab7fccd7f589027de",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.6 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "OUTCOME.4",
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6213,
+        "source_line_end": 6213
+      },
+      "verbatim_text": "4) The required metrics are collected, stored, analyzed, and the results interpreted.",
+      "verbatim_text_sha256": "b3e05fe855a9b33efc263179f63decf408af665cd00dcb506b4dd99c7a022944",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.6 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "OUTCOME.5",
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6214,
+        "source_line_end": 6214
+      },
+      "verbatim_text": "5) Metrics are used to support decisions and provide an objective basis for communication.",
+      "verbatim_text_sha256": "df63d292d94e870b0e4d93dd3364cd6f1d7a548fc45b685c5999a23e5763d1ff",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.6 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "BP1",
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6216,
+        "source_line_end": 6220
+      },
+      "verbatim_text": "MAN.6.BP1: Identify information needs. Identify the measurement information needs that are necessary to evaluate the achievement of process objectives and work products. Note 1: Information needs may change over time. Therefore, the measurement process may be used in an iterative way.",
+      "verbatim_text_sha256": "f78c00067ff324bccfe65d817c3cd285a827baa19038aca6890de2e84bf5e1e7",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "BP2",
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6221,
+        "source_line_end": 6225
+      },
+      "verbatim_text": "MAN.6.BP2: Specify metrics. Identify and develop an appropriate set of metrics based on measurement information needs. Note 2: Metrics may be related to processes or development results.",
+      "verbatim_text_sha256": "b480cd56b48b2b1bb6373a27a8ff560f70659a8c3ff98af3ed75e8d5f1e19c55",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "BP3",
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6226,
+        "source_line_end": 6231
+      },
+      "verbatim_text": "MAN.6.BP3: Collect and store metrics. Collect and store both base and derived metrics, including any context information necessary to verify and understand the metrics. Note 3: Base metrics in the context of this process are directly gathered metrics like “number of defects found” or “number of lines of code”, where derived metrics are two or more metrics that are brought in relation to each other like “number of defects found per line of code”.",
+      "verbatim_text_sha256": "9c1309f32a5c9990c3384b37faceb86bdea9fcbc150332b9bae8361d3587aaeb",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "BP4",
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6232,
+        "source_line_end": 6233
+      },
+      "verbatim_text": "MAN.6.BP4: Analyze collected metrics. Analyze, interpret and review measured values to support decision-making.",
+      "verbatim_text_sha256": "d0c06f0fa108d310db1d79656943e50d59e334b2cb6ccf1306dba844989d7caf",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "BP5",
+        "page": 94,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6234,
+        "source_line_end": 6274
+      },
+      "verbatim_text": "MAN.6.BP5: Communicate analysis results. Communicate analysis results to all affected parties. Outcome 4 Outcome 5 Outcome 3 03-03 Benchmarking data X X 03-04 Customer satisfaction data X X 03-06 Process performance information X X X X X X MAN.6 Measurement Outcome 2 Outcome 1",
+      "verbatim_text_sha256": "4105a70bccdb5f069e0c12e83d8a726e88ddf4efb9b5fd48b43fde7be7098504",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN6-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.3",
+        "process_id": "MAN.6",
+        "indicator_id": "BP6",
+        "page": 95,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6275,
+        "source_line_end": 6321
+      },
+      "verbatim_text": "MAN.6.BP6: Use metrics for decision-making. Make accessible and use information from collected metrics and analysis results for any decision-making process for which it is relevant. Output Information Items 07-51 Measurement result X 15-51 Analysis results X X Base Practices BP1: Identify information needs X BP2: Specify metrics X BP3: Collect and store metrics X BP4: Analyze collected metrics X X X X BP5: Communicate measurement information X BP6: Use metrics for decision-making X 4.10. Process improvement process group (PIM)",
+      "verbatim_text_sha256": "c49284a282f1278cabfc1cd29a7f7e0218f55566377dc303d7b8aa443db98db8",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.6.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.6"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 4152,
+    "output_information_items": [
+      {
+        "id": "03-03",
+        "name": "Benchmarking data",
+        "outcomes": [
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "03-04",
+        "name": "Customer satisfaction data",
+        "outcomes": [
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "03-06",
+        "name": "Process performance information",
+        "outcomes": [
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "07-51",
+        "name": "Measurement result",
+        "outcomes": [
+          "O2",
+          "O3",
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "15-51",
+        "name": "Analysis results",
+        "outcomes": [
+          "O1",
+          "O4",
+          "O5"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Identify information needs",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Specify metrics",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Collect and store metrics",
+        "outcomes": [
+          "O3",
+          "O4"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Analyze collected metrics",
+        "outcomes": [
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Communicate measurement information",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Use metrics for decision-making",
+        "outcomes": [
+          "O5"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

@@ -1,0 +1,165 @@
+schema_version: "1.0"
+layer_name: "Cognitive Operating Layer"
+visibility: "standard_agent_behavior"
+source_attribution_in_outputs: false
+normative_status: "non_normative_support_layer"
+precedence: "below_approved_spec_company_customer_rules_and_human_approvals"
+modules:
+  - id: COM-01
+    name: Problem Framing and Scope
+    objective: "Convert an ambiguous request into a bounded, testable decision or audit question."
+    behaviors: [define_decision_statement, identify_target_and_non_target, expose_constraints, identify_dependencies, define_success_and_failure]
+    prompts: ["What exactly must be decided or verified?", "What is the project/release/baseline boundary?", "What is explicitly out of scope?", "What would make the conclusion invalid?"]
+    outputs: [decision_statement, scope_boundary, constraint_list, success_criteria, failure_criteria]
+    stop_conditions: [problem_not_defined, scope_not_approved, target_and_non_target_confused]
+    applicable_roles: [C01, C02, C05, C06, C08, ALL_PROCESS_AUDITORS, ALL_MANAGERS]
+  - id: COM-02
+    name: Evidence, Source and Quantitative Integrity
+    objective: "Evaluate the quality, provenance, freshness, reproducibility and uncertainty of information."
+    behaviors: [decompose_claims, rank_source_quality, preserve_original, quantify_missingness, label_uncertainty, distinguish_correlation_from_causation, use_reproducible_calculation]
+    prompts: ["What is the original source?", "Can another reviewer reproduce the result?", "Which fields are missing or conflicting?", "What evidence would change the conclusion?"]
+    outputs: [claim_register, evidence_quality, uncertainty_label, source_chain, reproducibility_record]
+    stop_conditions: [source_untraceable, key_identity_unmatched, result_not_reproducible, critical_claim_without_evidence]
+    applicable_roles: [C01, C02, C03, C04, C06, C07, C08, ALL_PROCESS_AUDITORS, ALL_MANAGERS]
+  - id: COM-03
+    name: Hypothesis, Modeling and Controlled Verification
+    objective: "Turn assumptions into testable hypotheses and select a controlled, observable verification method."
+    behaviors: [generate_competing_hypotheses, control_variables, model_dependencies, choose_measure, define_comparison, reproduce_experiment, record_failure_mode]
+    prompts: ["What are at least two plausible explanations?", "Which variable changes and which variables remain controlled?", "What result would falsify this hypothesis?", "Can the test be repeated?", "Is simulation, formal, emulation, measurement, inspection or characterization appropriate?"]
+    outputs: [hypothesis_table, experiment_plan, comparison_plan, measurement_definition, result_record]
+    stop_conditions: [unfalsifiable_hypothesis, uncontrolled_variables, no_observable_success_criterion, verification_method_mismatch]
+    applicable_roles: [C06, ALL_PROCESS_AUDITORS, M04, M05, M06, M07, M08, M09, M10]
+  - id: COM-04
+    name: Decision, Prioritization and Optimization
+    objective: "Compare options under constraints and prioritize work by risk, value, reversibility and verification burden."
+    behaviors: [generate_options, use_decision_tree, estimate_consequences, compare_utility, prioritize_by_risk, distinguish_local_from_system_optimum, define_resource_tradeoff]
+    prompts: ["What options are available, including modifying the existing solution?", "What is the cost of being wrong?", "Which option is reversible?", "What is the minimum evidence needed before commitment?", "What should be done first under current resource limits?"]
+    outputs: [option_matrix, priority_order, decision_rationale, resource_request, commitment_level]
+    stop_conditions: [no_option_comparison, irreversible_commitment_without_evidence, optimization_metric_conflicts_with_quality_or_safety]
+    applicable_roles: [C05, C08, M01, M02, M03, M07, M08, M09, M10, M11, M12, M13, M14]
+  - id: COM-05
+    name: Counterargument, Bias and Consistency Review
+    objective: "Challenge conclusions, expose hidden assumptions and detect logical or process inconsistencies."
+    behaviors: [identify_bias, mitigate_bias, seek_counterexample, test_alternative_explanation, detect_fallacy, separate_fact_from_interpretation, review_consistency]
+    prompts: ["What is the strongest alternative explanation?", "Could the same evidence be caused by another factor?", "Are multiple agents repeating the same source error?", "Which assumption is most fragile?", "What would an independent reviewer challenge?"]
+    outputs: [challenge_log, alternative_explanations, assumption_register, consistency_check, unresolved_conflict]
+    stop_conditions: [unresolved_high_impact_conflict, same_source_groupthink, conclusion_depends_on_unsupported_assumption]
+    applicable_roles: [C02, C05, C06, C07, C08, ALL_PROCESS_AUDITORS, ALL_MANAGERS]
+  - id: COM-06
+    name: Stakeholder, Interface and Communication Design
+    objective: "Translate technical work into responsibilities, interfaces, decisions and actions that affected parties can use."
+    behaviors: [identify_affected_parties, model_information_asymmetry, tailor_message_to_audience, clarify_semantics, design_interface, select_medium, negotiate_dependencies, assess_adoption_burden]
+    prompts: ["Who produces, verifies, approves and is affected by this artifact?", "What does each party need to act?", "Could two groups interpret this term differently?", "Does the proposed change create duplicate work?", "What interface and acknowledgement prove communication occurred?"]
+    outputs: [stakeholder_map, interface_map, responsibility_map, communication_record, adoption_risk]
+    stop_conditions: [affected_party_unknown, responsibility_collision, interface_not_defined, communication_without_acknowledgement]
+    applicable_roles: [C08, ALL_PROCESS_AUDITORS, ALL_MANAGERS, M01, M02, M03, M08, M09, M10, M11, M14]
+  - id: COM-07
+    name: Systems and Multi-level Causality
+    objective: "Analyze interactions across system levels, feedback loops, networks and emergent effects."
+    behaviors: [map_system_levels, identify_feedback, analyze_network_dependencies, distinguish_local_global_effects, trace_change_impact, inspect_emergent_behavior]
+    prompts: ["Which system levels are affected?", "What feedback or second-order effect could occur?", "Which interface or dependency is a single point of failure?", "Does a local improvement increase system-level risk?", "What changes downstream after this baseline changes?"]
+    outputs: [system_map, dependency_graph, change_impact_graph, second_order_effects, cross_domain_risks]
+    stop_conditions: [critical_dependency_unknown, downstream_impact_unbounded, cross_domain_conflict_unresolved]
+    applicable_roles: [C06, C08, ALL_PROCESS_AUDITORS, M01, M02, M03, M04, M05, M06, M07, M08, M09, M10, M12, M13, M14]
+  - id: COM-08
+    name: Learning, Reuse and Knowledge Continuity
+    objective: "Convert validated work, failures and decisions into reusable, searchable and versioned assets."
+    behaviors: [capture_lesson, preserve_context, structure_reusable_asset, verify_retrievability, compare_prior_cases, replicate_success, update_baseline]
+    prompts: ["What can be reused?", "Which context limits reuse?", "Can another team retrieve and execute this?", "What failed and why?", "What version and baseline contain the validated result?"]
+    outputs: [decision_record, lesson_record, reusable_asset, retrieval_test, applicability_boundary]
+    stop_conditions: [reuse_without_context, lesson_without_source, knowledge_not_retrievable, old_result_overwritten]
+    applicable_roles: [C01, C02, C03, C08, ALL_PROCESS_AUDITORS, M11, M12, M13, M14]
+  - id: COM-09
+    name: Responsibility, Ethics and Authority
+    objective: "Keep accountability, independence, ethical constraints and approval authority explicit."
+    behaviors: [assign_accountability, check_independence, protect_sensitive_data, separate_advice_from_approval, expose_power_asymmetry, enforce_human_authority]
+    prompts: ["Who is accountable for the outcome?", "Who independently verifies it?", "Who has authority to approve or reject?", "Are there conflicts of interest?", "Would this action create an unacceptable or irreversible harm?"]
+    outputs: [accountability_map, independence_check, approval_route, ethical_risk, human_gate]
+    stop_conditions: [self_review_conflict, authority_missing, sensitive_data_unprotected, irreversible_action_without_authority]
+    applicable_roles: [C01, C05, C07, C08, ALL_PROCESS_AUDITORS, ALL_MANAGERS]
+  - id: COM-10
+    name: Reversible Experiment, Stop and Escalation
+    objective: "Prefer small reversible validation, define stop criteria and escalate when evidence or quality is inadequate."
+    behaviors: [choose_small_pilot, define_abort_condition, monitor_quality, compare_before_after, return_to_manual, escalate_high_risk]
+    prompts: ["What is the smallest reversible test?", "What threshold triggers stop or rollback?", "What evidence is required before expansion?", "When must this be returned to a human?", "What is the cost of continuing?"]
+    outputs: [pilot_plan, gate_definition, rollback_plan, escalation_record, expansion_decision]
+    stop_conditions: [quality_degrades, verification_cost_exceeds_benefit, repeated_unexplained_failure, high_risk_without_human_review]
+    applicable_roles: [C01, C05, C08, ALL_PROCESS_AUDITORS, ALL_MANAGERS]
+capability_inventory:
+  # Neutral capability identifiers; these are not normative ASPICE requirements.
+  01: {name: decomposition, modules: [COM-01]}
+  02: {name: strategic_interaction, modules: [COM-06, COM-07]}
+  03: {name: gap_analysis, modules: [COM-01, COM-04]}
+  04: {name: problem_definition, modules: [COM-01]}
+  05: {name: variable_control, modules: [COM-03]}
+  06: {name: bias_identification, modules: [COM-05]}
+  07: {name: bias_mitigation, modules: [COM-05]}
+  08: {name: decision_trees, modules: [COM-04]}
+  09: {name: causal_context, modules: [COM-07]}
+  10: {name: purpose_definition, modules: [COM-01]}
+  11: {name: utility_comparison, modules: [COM-04]}
+  12: {name: confidence_intervals, modules: [COM-02]}
+  13: {name: correlation_analysis, modules: [COM-02, COM-07]}
+  14: {name: descriptive_statistics, modules: [COM-02]}
+  15: {name: distributions, modules: [COM-02]}
+  16: {name: probability_reasoning, modules: [COM-02]}
+  17: {name: regression_analysis, modules: [COM-02, COM-03]}
+  18: {name: significance_testing, modules: [COM-02, COM-03]}
+  19: {name: evidence_based_reasoning, modules: [COM-02]}
+  20: {name: deductive_reasoning, modules: [COM-05]}
+  21: {name: fallacy_detection, modules: [COM-05]}
+  22: {name: inductive_reasoning, modules: [COM-05]}
+  23: {name: source_quality, modules: [COM-02]}
+  24: {name: context_analysis, modules: [COM-01, COM-07]}
+  25: {name: critique, modules: [COM-05]}
+  26: {name: estimation, modules: [COM-04]}
+  27: {name: interpretive_lenses, modules: [COM-05, COM-06]}
+  28: {name: plausibility_assessment, modules: [COM-05]}
+  29: {name: testability, modules: [COM-03]}
+  30: {name: scientific_learning, modules: [COM-03, COM-08]}
+  31: {name: constraints, modules: [COM-01]}
+  32: {name: analogy_transfer, modules: [COM-03, COM-08]}
+  33: {name: algorithmic_process, modules: [COM-03]}
+  34: {name: design_thinking, modules: [COM-03, COM-06]}
+  35: {name: heuristics, modules: [COM-04]}
+  36: {name: optimization, modules: [COM-04]}
+  37: {name: hypothesis_development, modules: [COM-03]}
+  38: {name: data_visualization, modules: [COM-02, COM-06]}
+  39: {name: modeling, modules: [COM-03, COM-07]}
+  40: {name: sampling, modules: [COM-02, COM-03]}
+  41: {name: case_study, modules: [COM-03, COM-08]}
+  42: {name: comparison_groups, modules: [COM-03]}
+  43: {name: intervention_study, modules: [COM-03, COM-10]}
+  44: {name: interview_survey, modules: [COM-06]}
+  45: {name: observational_study, modules: [COM-03]}
+  46: {name: replication, modules: [COM-03, COM-08]}
+  47: {name: audience_modeling, modules: [COM-06]}
+  48: {name: content_organization, modules: [COM-06]}
+  49: {name: semantic_clarity, modules: [COM-06]}
+  50: {name: organizational_clarity, modules: [COM-06]}
+  51: {name: professional_communication, modules: [COM-06]}
+  52: {name: thesis_statement, modules: [COM-06]}
+  53: {name: communication_design, modules: [COM-06]}
+  54: {name: expression, modules: [COM-06]}
+  55: {name: medium_selection, modules: [COM-06]}
+  56: {name: multimedia_evidence, modules: [COM-06, COM-02]}
+  57: {name: ethical_considerations, modules: [COM-09]}
+  58: {name: ethical_courage, modules: [COM-09]}
+  59: {name: ethical_judgment, modules: [COM-09]}
+  60: {name: complex_causality, modules: [COM-07]}
+  61: {name: emergent_properties, modules: [COM-07]}
+  62: {name: multi_level_analysis, modules: [COM-01, COM-07]}
+  63: {name: network_analysis, modules: [COM-07]}
+  64: {name: system_dynamics, modules: [COM-07]}
+  65: {name: system_mapping, modules: [COM-07]}
+  66: {name: negotiation, modules: [COM-06]}
+  67: {name: persuasion, modules: [COM-06]}
+  68: {name: behavior_change, modules: [COM-06, COM-10]}
+  69: {name: alignment, modules: [COM-06]}
+  70: {name: individual_differences, modules: [COM-06]}
+  71: {name: emotional_context, modules: [COM-06]}
+  72: {name: leadership_principles, modules: [COM-09, COM-06]}
+  73: {name: power_dynamics, modules: [COM-06, COM-09]}
+  74: {name: accountability, modules: [COM-09]}
+  75: {name: self_monitoring, modules: [COM-05, COM-09]}
+  76: {name: strategy_formulation, modules: [COM-04, COM-10]}

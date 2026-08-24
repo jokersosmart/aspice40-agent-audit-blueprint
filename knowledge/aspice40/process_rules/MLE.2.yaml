@@ -1,0 +1,690 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "MLE.2",
+  "process_name": "Machine Learning Architecture",
+  "process_group": "MLE",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.6.2",
+    "source_page_hint": 64,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to establish an ML architecture supporting training and deployment, consistent with the ML requirements, and to evaluate the ML architecture against defined criteria.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) A ML architecture is developed."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) Hyperparameter ranges and initial values are determined as a basis for the training."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) Evaluation of ML architectural elements is conducted."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) Interfaces of the ML architectural elements are defined."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Resource consumption objectives for the ML architectural elements are defined."
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) Consistency and bidirectional traceability are established between the ML architectural elements and the ML requirements."
+      },
+      {
+        "id": "OUTCOME.7",
+        "text": "7) The ML architecture is agreed and communicated to all affected parties."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "MLE.2.BP1: Develop ML architecture. Develop and document the ML architecture that specifies ML architectural elements including details of the ML model, pre- and postprocessing, and hyperparameters which are required to create, train, test, and deploy the ML model. Note 1: Necessary details of the ML model may include layers, activation functions, and backpropagation. The level of detail of the ML model may not need to cover aspects like single neurons. Note 2: The details of the ML model may differ between the ML model used during training and the deployed ML model.",
+        "title": "Develop ML architecture. Develop and document the ML architecture that specifies ML architectural elements including details of the ML model, pre- and postprocessing, and hyperparameters which are required to create, train, test, and deploy the ML model. Note 1: Necessary details of the ML model may include layers, activation functions, and backpropagation. The level of detail of the ML model may not need to cover aspects like single neurons. Note 2: The details of the ML model may differ between the ML model used during training and the deployed ML model."
+      },
+      {
+        "id": "BP2",
+        "text": "MLE.2.BP2: Determine hyperparameter ranges and initial values. Determine and document the hyperparameter ranges and the initial values as a basis for the training.",
+        "title": "Determine hyperparameter ranges and initial values. Determine and document the hyperparameter ranges and the initial values as a basis for the training."
+      },
+      {
+        "id": "BP3",
+        "text": "MLE.2.BP3: Analyze ML architectural elements. Define criteria for analysis of the ML architectural elements. Analyze ML architectural elements according to the defined criteria. Note 3: Trustworthiness and explainability might be criteria for the analysis of the ML architectural elements.",
+        "title": "Analyze ML architectural elements. Define criteria for analysis of the ML architectural elements. Analyze ML architectural elements according to the defined criteria. Note 3: Trustworthiness and explainability might be criteria for the analysis of the ML architectural elements."
+      },
+      {
+        "id": "BP4",
+        "text": "MLE.2.BP4: Define interfaces of the ML architectural elements. Determine and document the internal and external interfaces of each ML architectural element including its interfaces to related software components.",
+        "title": "Define interfaces of the ML architectural elements. Determine and document the internal and external interfaces of each ML architectural element including its interfaces to related software components."
+      },
+      {
+        "id": "BP5",
+        "text": "MLE.2.BP5: Define resource consumption objectives for the ML architectural elements. Determine and document the resource consumption objectives for all relevant ML architectural elements during training and deployment.",
+        "title": "Define resource consumption objectives for the ML architectural elements. Determine and document the resource consumption objectives for all relevant ML architectural elements during training and deployment."
+      },
+      {
+        "id": "BP6",
+        "text": "MLE.2.BP6: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the ML architectural elements and the ML requirements. Note 4: Bidirectional traceability supports consistency, and facilitates impact analyses of change requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 5: The bidirectional traceability should be established on a reasonable level of abstraction to the ML architectural elements. Outcome 4 Outcome 5 X X X X Outcome 7 Outcome 3 X Outcome 6 Outcome 2 MLE.2 Machine Learning Architecture Outcome 1",
+        "title": "Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the ML architectural elements and the ML requirements. Note 4: Bidirectional traceability supports consistency, and facilitates impact analyses of change requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 5: The bidirectional traceability should be established on a reasonable level of abstraction to the ML architectural elements. Outcome 4 Outcome 5 X X X X Outcome 7 Outcome 3 X Outcome 6 Outcome 2 MLE.2 Machine Learning Architecture Outcome 1"
+      },
+      {
+        "id": "BP7",
+        "text": "MLE.2.BP7: Communicate agreed ML architecture. Inform all affected parties about the agreed ML architecture including the details of the ML model and the initial hyperparameter values. Output Information Items 04-51 ML architecture 13-52 Communication evidence X 13-51 Consistency evidence X 01-54 Hyperparameter X 15-51 Analysis results X X X Base Practices BP1: Develop ML architecture X BP2: Determine hyperparameter ranges and initial values. BP3: Evaluate ML architectural elements X X BP4: Define interfaces of the ML architectural elements BP5: Define resource consumption objectives for the ML architectural elements BP6: Ensure consistency and establish bidirectional traceability BP7: Communicate agreed ML architecture X X X X",
+        "title": "Communicate agreed ML architecture. Inform all affected parties about the agreed ML architecture including the details of the ML model and the initial hyperparameter values. Output Information Items 04-51 ML architecture 13-52 Communication evidence X 13-51 Consistency evidence X 01-54 Hyperparameter X 15-51 Analysis results X X X Base Practices BP1: Develop ML architecture X BP2: Determine hyperparameter ranges and initial values. BP3: Evaluate ML architectural elements X X BP4: Define interfaces of the ML architectural elements BP5: Define resource consumption objectives for the ML architectural elements BP6: Ensure consistency and establish bidirectional traceability BP7: Communicate agreed ML architecture X X X X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-MLE2-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": null,
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4119,
+        "source_line_end": 4120
+      },
+      "verbatim_text": "The purpose is to establish an ML architecture supporting training and deployment, consistent with the ML requirements, and to evaluate the ML architecture against defined criteria.",
+      "verbatim_text_sha256": "b50d660ab2ca439503e9e4278ff0a26954dff5a015144c3ad81d807db86f5176",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of MLE.2.",
+      "interpretation": "This is the PAM purpose statement for MLE.2; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "OUTCOME.1",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4122,
+        "source_line_end": 4122
+      },
+      "verbatim_text": "1) A ML architecture is developed.",
+      "verbatim_text_sha256": "37ed574d85ab309916ac3d7f02a600831c4e2447ae5bd934608710bffa57d49f",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.2 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "OUTCOME.2",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4123,
+        "source_line_end": 4123
+      },
+      "verbatim_text": "2) Hyperparameter ranges and initial values are determined as a basis for the training.",
+      "verbatim_text_sha256": "d8bfae89be8a885d9209790469021ef45df247e4b59f9f4e3d9b42205a717931",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.2 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "OUTCOME.3",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4124,
+        "source_line_end": 4124
+      },
+      "verbatim_text": "3) Evaluation of ML architectural elements is conducted.",
+      "verbatim_text_sha256": "b19a80897dfeac42ea39877178e096fd1b6ce6fa3b2e85cd22da7ff30e414f85",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.2 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "OUTCOME.4",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4125,
+        "source_line_end": 4125
+      },
+      "verbatim_text": "4) Interfaces of the ML architectural elements are defined.",
+      "verbatim_text_sha256": "4fbffd84ef3b5604b32e365d79d69ae9939966f3dc241ad4651cee0b91a0a620",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.2 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "OUTCOME.5",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4126,
+        "source_line_end": 4126
+      },
+      "verbatim_text": "5) Resource consumption objectives for the ML architectural elements are defined.",
+      "verbatim_text_sha256": "cf44a239723030e1db93b446cf589cc6f581437aea95b7d8332d3c633e4dc6c2",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.2 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "OUTCOME.6",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4127,
+        "source_line_end": 4128
+      },
+      "verbatim_text": "6) Consistency and bidirectional traceability are established between the ML architectural elements and the ML requirements.",
+      "verbatim_text_sha256": "c0c8927d1a6a46bf32515d75d03d0e6c537a7930176427d9b49b5c2a5ff00e53",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.2 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-OUTCOME-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "OUTCOME.7",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4129,
+        "source_line_end": 4129
+      },
+      "verbatim_text": "7) The ML architecture is agreed and communicated to all affected parties.",
+      "verbatim_text_sha256": "82abda55e961182dd897483430b34e31b352a0dd61507886ba3486127e61d4d0",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2 outcome 7 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.2 outcome 7; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "BP1",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4131,
+        "source_line_end": 4139
+      },
+      "verbatim_text": "MLE.2.BP1: Develop ML architecture. Develop and document the ML architecture that specifies ML architectural elements including details of the ML model, pre- and postprocessing, and hyperparameters which are required to create, train, test, and deploy the ML model. Note 1: Necessary details of the ML model may include layers, activation functions, and backpropagation. The level of detail of the ML model may not need to cover aspects like single neurons. Note 2: The details of the ML model may differ between the ML model used during training and the deployed ML model.",
+      "verbatim_text_sha256": "b2ce36ad4852b68abfec91b97cea51726512c5f1c0218944411f78833eccf8dd",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "BP2",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4140,
+        "source_line_end": 4141
+      },
+      "verbatim_text": "MLE.2.BP2: Determine hyperparameter ranges and initial values. Determine and document the hyperparameter ranges and the initial values as a basis for the training.",
+      "verbatim_text_sha256": "dd3e6b8c56c3ac6f132fcad7dafa013377c8b8808d8e280926aaa5eb118a57fc",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "BP3",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4142,
+        "source_line_end": 4146
+      },
+      "verbatim_text": "MLE.2.BP3: Analyze ML architectural elements. Define criteria for analysis of the ML architectural elements. Analyze ML architectural elements according to the defined criteria. Note 3: Trustworthiness and explainability might be criteria for the analysis of the ML architectural elements.",
+      "verbatim_text_sha256": "34e6b8ce00412f18468091725a190a84db5be4afb6e71f985c74ad5604eac42a",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "BP4",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4147,
+        "source_line_end": 4149
+      },
+      "verbatim_text": "MLE.2.BP4: Define interfaces of the ML architectural elements. Determine and document the internal and external interfaces of each ML architectural element including its interfaces to related software components.",
+      "verbatim_text_sha256": "8138a138421e131ff0989f482493a0bfd029e99344eb5f4839d9c4438db47aae",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "BP5",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4150,
+        "source_line_end": 4154
+      },
+      "verbatim_text": "MLE.2.BP5: Define resource consumption objectives for the ML architectural elements. Determine and document the resource consumption objectives for all relevant ML architectural elements during training and deployment.",
+      "verbatim_text_sha256": "45c077f2a399b54b28f5e44b7a8b28e895c117b8e3b27550e21f341459de780b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "BP6",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4155,
+        "source_line_end": 4189
+      },
+      "verbatim_text": "MLE.2.BP6: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the ML architectural elements and the ML requirements. Note 4: Bidirectional traceability supports consistency, and facilitates impact analyses of change requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 5: The bidirectional traceability should be established on a reasonable level of abstraction to the ML architectural elements. Outcome 4 Outcome 5 X X X X Outcome 7 Outcome 3 X Outcome 6 Outcome 2 MLE.2 Machine Learning Architecture Outcome 1",
+      "verbatim_text_sha256": "4933364f6361f46c6a3fc9ce3f190f3d0751407e6a8d649191b860a6cfee331d",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE2-BP-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.2",
+        "process_id": "MLE.2",
+        "indicator_id": "BP7",
+        "page": 64,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4190,
+        "source_line_end": 4236
+      },
+      "verbatim_text": "MLE.2.BP7: Communicate agreed ML architecture. Inform all affected parties about the agreed ML architecture including the details of the ML model and the initial hyperparameter values. Output Information Items 04-51 ML architecture 13-52 Communication evidence X 13-51 Consistency evidence X 01-54 Hyperparameter X 15-51 Analysis results X X X Base Practices BP1: Develop ML architecture X BP2: Determine hyperparameter ranges and initial values. BP3: Evaluate ML architectural elements X X BP4: Define interfaces of the ML architectural elements BP5: Define resource consumption objectives for the ML architectural elements BP6: Ensure consistency and establish bidirectional traceability BP7: Communicate agreed ML architecture X X X X",
+      "verbatim_text_sha256": "e712c0bc4fd33e4d12b949d7c2d0c8302a9cb483819ff0d60372f4add00566fd",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.2.BP7 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 2733,
+    "output_information_items": [
+      {
+        "id": "04-51",
+        "name": "ML architecture",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O3",
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication evidence",
+        "outcomes": [
+          "O7"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency evidence",
+        "outcomes": [
+          "O6"
+        ]
+      },
+      {
+        "id": "01-54",
+        "name": "Hyperparameter",
+        "outcomes": [
+          "O1",
+          "O2"
+        ]
+      },
+      {
+        "id": "15-51",
+        "name": "Analysis results",
+        "outcomes": [
+          "O1",
+          "O3"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Develop ML architecture",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Determine hyperparameter ranges and initial values.",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Evaluate ML architectural elements",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Define interfaces of the ML architectural elements",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Define resource consumption objectives for the ML architectural elements",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Ensure consistency and establish bidirectional traceability",
+        "outcomes": [
+          "O6"
+        ]
+      },
+      {
+        "id": "BP7",
+        "name": "Communicate agreed ML architecture",
+        "outcomes": [
+          "O7"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

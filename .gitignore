@@ -1,0 +1,26 @@
+# Local environments and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.token
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Local generated archives and temporary outputs
+*.zip
+*.tmp
+*.bak

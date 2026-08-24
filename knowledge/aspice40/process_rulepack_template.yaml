@@ -1,0 +1,53 @@
+schema_version: "1.0"
+aspice_version: "4.0"
+process_id: "REPLACE-ME"
+process_name: "REPLACE-ME"
+process_group: "REPLACE-ME"
+source:
+  document_id: "Automotive-SPICE-PAM-v40"
+  version: "4.0"
+  source_hash: "REPLACE-ME"
+  sections: ["REPLACE-ME"]
+  pages: ["REPLACE-ME"]
+pam:
+  purpose: "COPY FROM APPROVED PAM SEMANTIC CHUNK"
+  outcomes:
+    - id: OUTCOME.1
+      text: "COPY FROM APPROVED PAM SEMANTIC CHUNK"
+  base_practices:
+    - id: BP1
+      title: "COPY FROM APPROVED PAM SEMANTIC CHUNK"
+      text: "COPY FROM APPROVED PAM SEMANTIC CHUNK"
+  expected_information_items:
+    - id: "00-00"
+      name: "COPY FROM PAM / ANNEX B"
+      characteristics: []
+  generic_practice_dependencies:
+    - pa: "PA 1.1"
+      indicators: []
+    - pa: "PA 2.1"
+      indicators: []
+    - pa: "PA 2.2"
+      indicators: []
+product_context:
+  evidence_domains: []
+  product_questions: []
+  explicit_non_requirements: []
+interfaces:
+  upstream_processes: []
+  downstream_processes: []
+  affected_managers: []
+  independent_verification_managers: []
+interpretation:
+  pam_explicit: []
+  company_rule: []
+  customer_specific: []
+  product_context: []
+  inference: []
+known_conflicts: []
+human_gates:
+  - scope_and_na
+  - technical_correctness
+  - verification_adequacy
+  - formal_rating
+  - major_finding_closure

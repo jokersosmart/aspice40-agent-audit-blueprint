@@ -1,0 +1,617 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "MLE.4",
+  "process_name": "Machine Learning Model Testing",
+  "process_group": "MLE",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.6.4",
+    "source_page_hint": 68,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to ensure compliance of the trained ML model and the deployed ML model with the ML requirements.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1)"
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2)"
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3)"
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4)"
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) A ML test approach is defined. A ML test data set is created. The trained ML model is tested. The deployed ML model is derived from the trained ML model and tested. Consistency and bidirectional traceability are established between the ML test approach and the ML requirements, and the ML test data set and the ML data requirements; and bidirectional traceability is established between the ML test approach and ML test results."
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) Results of the ML model testing are summarized and communicated with the deployed ML model to all affected parties."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "MLE.4.BP1: Specify an ML test approach. Specify an ML test approach suitable to provide evidence for compliance of the trained ML model and the deployed ML model with the ML requirements. The ML test approach includes • ML test scenarios with distribution of data characteristics (e.g., gender, weather conditions, street conditions within the ODD) defined by ML requirements, • distribution and frequency of each ML test scenario inside the ML test data set, • expected test result per test datum, • entry and exit criteria of the testing, • approach for data set creation and modification, and • the required testing infrastructure and environment setup. Note 1: Expected test result per test datum might require labeling of test data to support comparison of output of the ML model with the expected output. Note 2: Test datum is the smallest amount of data which is processed by the ML model into only one output. E.g., one image in photo processing or an audio sequence in voice recognition. Note 3: Data characteristic is one property of the data that may have different expressions in the ODD. E.g., weather condition may contain expressions like sunny, foggy or rainy. Note 4: An ML test scenario is a combination of expressions of all defined data characteristics e.g., weather conditions = sunny, street conditions = gravel road.",
+        "title": "Specify an ML test approach. Specify an ML test approach suitable to provide evidence for compliance of the trained ML model and the deployed ML model with the ML requirements. The ML test approach includes • ML test scenarios with distribution of data characteristics (e.g., gender, weather conditions, street conditions within the ODD) defined by ML requirements, • distribution and frequency of each ML test scenario inside the ML test data set, • expected test result per test datum, • entry and exit criteria of the testing, • approach for data set creation and modification, and • the required testing infrastructure and environment setup. Note 1: Expected test result per test datum might require labeling of test data to support comparison of output of the ML model with the expected output. Note 2: Test datum is the smallest amount of data which is processed by the ML model into only one output. E.g., one image in photo processing or an audio sequence in voice recognition. Note 3: Data characteristic is one property of the data that may have different expressions in the ODD. E.g., weather condition may contain expressions like sunny, foggy or rainy. Note 4: An ML test scenario is a combination of expressions of all defined data characteristics e.g., weather conditions = sunny, street conditions = gravel road."
+      },
+      {
+        "id": "BP2",
+        "text": "MLE.4.BP2: Create ML test data set. Create the ML test data set needed for testing of the trained ML model and testing of the deployed ML model from the ML data collection provided by SUP.11 considering the ML test approach. The ML test data set shall not be used for training. Note 5: The ML test data set for the trained ML model might differ from the test data set of the deployed ML model. Note 6: Additional data sets might be used for special purposes like assurance of safety, fairness, robustness.",
+        "title": "Create ML test data set. Create the ML test data set needed for testing of the trained ML model and testing of the deployed ML model from the ML data collection provided by SUP.11 considering the ML test approach. The ML test data set shall not be used for training. Note 5: The ML test data set for the trained ML model might differ from the test data set of the deployed ML model. Note 6: Additional data sets might be used for special purposes like assurance of safety, fairness, robustness."
+      },
+      {
+        "id": "BP3",
+        "text": "MLE.4.BP3: Test trained ML model. Test the trained ML model according to the ML test approach using the created ML test data set. Record and evaluate the ML test results. Note 7: Evaluation of test logs might include pattern analysis of failed test data to support e.g., trustworthiness.",
+        "title": "Test trained ML model. Test the trained ML model according to the ML test approach using the created ML test data set. Record and evaluate the ML test results. Note 7: Evaluation of test logs might include pattern analysis of failed test data to support e.g., trustworthiness."
+      },
+      {
+        "id": "BP4",
+        "text": "MLE.4.BP4: Derive deployed ML model. Derive the deployed ML model from the trained ML model according to the ML architecture. The deployed ML model shall be used for testing and delivery to software integration. Note 8: The deployed ML model will be integrated into the target system and may differ from the trained ML model which often requires powerful hardware and uses interpretative languages. MLE4.BP5: Test deployed ML model. Test the deployed ML model according to the ML test approach using the created ML test data set. Record and evaluate the ML test results.",
+        "title": "Derive deployed ML model. Derive the deployed ML model from the trained ML model according to the ML architecture. The deployed ML model shall be used for testing and delivery to software integration. Note 8: The deployed ML model will be integrated into the target system and may differ from the trained ML model which often requires powerful hardware and uses interpretative languages. MLE4.BP5: Test deployed ML model. Test the deployed ML model according to the ML test approach using the created ML test data set. Record and evaluate the ML test results."
+      },
+      {
+        "id": "BP6",
+        "text": "MLE.4.BP6: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the ML test approach and the ML requirements, and the ML test data set and the ML data requirements; and bidirectional traceability is established between the ML test approach and ML test results. Note 9: Bidirectional traceability supports consistency, and facilitates impact analyses of change requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. X Outcome 6 Outcome 4 X Outcome 5 Outcome 3 MLE.4 Machine Learning Model Testing Outcome 2 Outcome 1",
+        "title": "Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the ML test approach and the ML requirements, and the ML test data set and the ML data requirements; and bidirectional traceability is established between the ML test approach and ML test results. Note 9: Bidirectional traceability supports consistency, and facilitates impact analyses of change requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. X Outcome 6 Outcome 4 X Outcome 5 Outcome 3 MLE.4 Machine Learning Model Testing Outcome 2 Outcome 1"
+      },
+      {
+        "id": "BP7",
+        "text": "MLE.4.BP7: Summarize and communicate results. Summarize the ML test results of the ML model. Inform all affected parties about the agreed results and the deployed ML model. Output Information Items 08-64 ML test approach X 03-51 ML data set X 13-50 ML test results 11-50 Deployed ML model X 13-51 Consistency evidence X 13-52 Communication evidence X Base Practices BP1: Specify an ML test approach X BP2: Create ML test data set X BP3: Test trained ML model X BP4: Derive deployed ML model X BP5: Test deployed ML model X BP6: Ensure consistency and establish bidirectional traceability X BP7: Summarize and communicate results X 4.7. Hardware Engineering process group (HWE)",
+        "title": "Summarize and communicate results. Summarize the ML test results of the ML model. Inform all affected parties about the agreed results and the deployed ML model. Output Information Items 08-64 ML test approach X 03-51 ML data set X 13-50 ML test results 11-50 Deployed ML model X 13-51 Consistency evidence X 13-52 Communication evidence X Base Practices BP1: Specify an ML test approach X BP2: Create ML test data set X BP3: Test trained ML model X BP4: Derive deployed ML model X BP5: Test deployed ML model X BP6: Ensure consistency and establish bidirectional traceability X BP7: Summarize and communicate results X 4.7. Hardware Engineering process group (HWE)"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-MLE4-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": null,
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4367,
+        "source_line_end": 4368
+      },
+      "verbatim_text": "The purpose is to ensure compliance of the trained ML model and the deployed ML model with the ML requirements.",
+      "verbatim_text_sha256": "96648d64bcc2c024a2b8f6790faa1c5931fd34a9c425f6682525b6b6fa74065c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of MLE.4.",
+      "interpretation": "This is the PAM purpose statement for MLE.4; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "OUTCOME.1",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4370,
+        "source_line_end": 4370
+      },
+      "verbatim_text": "1)",
+      "verbatim_text_sha256": "d1f47e5a47cb4cb2f0639dabef187d1ed63dab221280869d910c9f60be38df47",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.4 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "OUTCOME.2",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4371,
+        "source_line_end": 4371
+      },
+      "verbatim_text": "2)",
+      "verbatim_text_sha256": "4ddcdc3195dacd1e53e11029a707abeb4d797912220af1b51f5c2af6e6eb925b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.4 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "OUTCOME.3",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4372,
+        "source_line_end": 4372
+      },
+      "verbatim_text": "3)",
+      "verbatim_text_sha256": "6180669a9fb9d0e8d30055aa57b3ba6c43646a98d88caf1b2f906b8119f7a55b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.4 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "OUTCOME.4",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4373,
+        "source_line_end": 4373
+      },
+      "verbatim_text": "4)",
+      "verbatim_text_sha256": "2ad75c4c49eb98f340f9287d58069cfec60a90aecd3b9f13ffe411febfe8b187",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.4 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "OUTCOME.5",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4374,
+        "source_line_end": 4382
+      },
+      "verbatim_text": "5) A ML test approach is defined. A ML test data set is created. The trained ML model is tested. The deployed ML model is derived from the trained ML model and tested. Consistency and bidirectional traceability are established between the ML test approach and the ML requirements, and the ML test data set and the ML data requirements; and bidirectional traceability is established between the ML test approach and ML test results.",
+      "verbatim_text_sha256": "da44374b42a02d04f03ad04b937e30e183c0b6deb94d37e9d19dc02322b6036f",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.4 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "OUTCOME.6",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4383,
+        "source_line_end": 4385
+      },
+      "verbatim_text": "6) Results of the ML model testing are summarized and communicated with the deployed ML model to all affected parties.",
+      "verbatim_text_sha256": "33d588a295cb9ae733b4e3486151497d74bd9842461cbcf2dc34342af8bcb789",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MLE.4 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "BP1",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4387,
+        "source_line_end": 4424
+      },
+      "verbatim_text": "MLE.4.BP1: Specify an ML test approach. Specify an ML test approach suitable to provide evidence for compliance of the trained ML model and the deployed ML model with the ML requirements. The ML test approach includes • ML test scenarios with distribution of data characteristics (e.g., gender, weather conditions, street conditions within the ODD) defined by ML requirements, • distribution and frequency of each ML test scenario inside the ML test data set, • expected test result per test datum, • entry and exit criteria of the testing, • approach for data set creation and modification, and • the required testing infrastructure and environment setup. Note 1: Expected test result per test datum might require labeling of test data to support comparison of output of the ML model with the expected output. Note 2: Test datum is the smallest amount of data which is processed by the ML model into only one output. E.g., one image in photo processing or an audio sequence in voice recognition. Note 3: Data characteristic is one property of the data that may have different expressions in the ODD. E.g., weather condition may contain expressions like sunny, foggy or rainy. Note 4: An ML test scenario is a combination of expressions of all defined data characteristics e.g., weather conditions = sunny, street conditions = gravel road.",
+      "verbatim_text_sha256": "8c1452a4a45268f8aa760a27085966ea6bd920b051ae95ecd2f275b0f107a5fa",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "BP2",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4425,
+        "source_line_end": 4432
+      },
+      "verbatim_text": "MLE.4.BP2: Create ML test data set. Create the ML test data set needed for testing of the trained ML model and testing of the deployed ML model from the ML data collection provided by SUP.11 considering the ML test approach. The ML test data set shall not be used for training. Note 5: The ML test data set for the trained ML model might differ from the test data set of the deployed ML model. Note 6: Additional data sets might be used for special purposes like assurance of safety, fairness, robustness.",
+      "verbatim_text_sha256": "7d9c3729a58e8abc7cef5899e12664824fb55707d0076c4c4d69b5d0df06edbc",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "BP3",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4433,
+        "source_line_end": 4437
+      },
+      "verbatim_text": "MLE.4.BP3: Test trained ML model. Test the trained ML model according to the ML test approach using the created ML test data set. Record and evaluate the ML test results. Note 7: Evaluation of test logs might include pattern analysis of failed test data to support e.g., trustworthiness.",
+      "verbatim_text_sha256": "838647899ffbc608a7e6e952887dd09fb5266e7b7dd480046e09eeb950a177cc",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "BP4",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4438,
+        "source_line_end": 4445
+      },
+      "verbatim_text": "MLE.4.BP4: Derive deployed ML model. Derive the deployed ML model from the trained ML model according to the ML architecture. The deployed ML model shall be used for testing and delivery to software integration. Note 8: The deployed ML model will be integrated into the target system and may differ from the trained ML model which often requires powerful hardware and uses interpretative languages. MLE4.BP5: Test deployed ML model. Test the deployed ML model according to the ML test approach using the created ML test data set. Record and evaluate the ML test results.",
+      "verbatim_text_sha256": "337fe1d8a838b8feef4deee68806fdf3e891aaf0205264c17c67829b092db78b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "BP6",
+        "page": 68,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4446,
+        "source_line_end": 4471
+      },
+      "verbatim_text": "MLE.4.BP6: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between the ML test approach and the ML requirements, and the ML test data set and the ML data requirements; and bidirectional traceability is established between the ML test approach and ML test results. Note 9: Bidirectional traceability supports consistency, and facilitates impact analyses of change requests, and verification coverage demonstration. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. X Outcome 6 Outcome 4 X Outcome 5 Outcome 3 MLE.4 Machine Learning Model Testing Outcome 2 Outcome 1",
+      "verbatim_text_sha256": "aea7f7cc23b6c8045236258b991a6ca82bb288a54084a0f5db631f596f673e2b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MLE4-BP-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.6.4",
+        "process_id": "MLE.4",
+        "indicator_id": "BP7",
+        "page": 69,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4472,
+        "source_line_end": 4530
+      },
+      "verbatim_text": "MLE.4.BP7: Summarize and communicate results. Summarize the ML test results of the ML model. Inform all affected parties about the agreed results and the deployed ML model. Output Information Items 08-64 ML test approach X 03-51 ML data set X 13-50 ML test results 11-50 Deployed ML model X 13-51 Consistency evidence X 13-52 Communication evidence X Base Practices BP1: Specify an ML test approach X BP2: Create ML test data set X BP3: Test trained ML model X BP4: Derive deployed ML model X BP5: Test deployed ML model X BP6: Ensure consistency and establish bidirectional traceability X BP7: Summarize and communicate results X 4.7. Hardware Engineering process group (HWE)",
+      "verbatim_text_sha256": "0954f3cf30e3b1b8001a000da711caa9e9d23453f13510b88fd6e348a1466377",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MLE.4.BP7 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MLE.4"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 2932,
+    "output_information_items": [
+      {
+        "id": "08-64",
+        "name": "ML test approach",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "03-51",
+        "name": "ML data set",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "13-50",
+        "name": "ML test results",
+        "outcomes": [
+          "O3",
+          "O4"
+        ]
+      },
+      {
+        "id": "11-50",
+        "name": "Deployed ML model",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency evidence",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication evidence",
+        "outcomes": [
+          "O6"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Specify an ML test approach",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Create ML test data set",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Test trained ML model",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Derive deployed ML model",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Test deployed ML model",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Ensure consistency and establish bidirectional traceability",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP7",
+        "name": "Summarize and communicate results",
+        "outcomes": [
+          "O1"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

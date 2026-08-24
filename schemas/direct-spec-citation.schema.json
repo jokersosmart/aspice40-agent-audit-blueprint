@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/aspice/direct-spec-citation.schema.json",
+  "title": "Direct ASPICE Specification Citation",
+  "description": "A citation must contain the verbatim source paragraph, not merely a reference link or identifier.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["citation_id", "document_id", "document_version", "citation_kind", "source_anchor", "verbatim_text", "verbatim_text_sha256", "why_this_text_applies", "interpretation", "interpretation_type", "verified_status", "human_confirmation_required"],
+  "properties": {
+    "citation_id": {"type": "string", "pattern": "^SPEC-[A-Za-z0-9._-]+$"},
+    "document_id": {"type": "string", "minLength": 1},
+    "document_version": {"type": "string", "minLength": 1},
+    "citation_kind": {"type": "string", "enum": ["purpose", "outcome", "base_practice", "generic_practice", "process_attribute", "information_item", "definition", "assessment_guidance", "annex_guidance", "table_or_figure_caption", "source_conflict"]},
+    "source_anchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["section"],
+      "properties": {
+        "section": {"type": "string", "minLength": 1},
+        "process_id": {"type": ["string", "null"]},
+        "indicator_id": {"type": ["string", "null"]},
+        "page": {"type": ["integer", "null"], "minimum": 1},
+        "table_or_figure": {"type": ["string", "null"]},
+        "source_file": {"type": ["string", "null"]},
+        "source_line_start": {"type": ["integer", "null"], "minimum": 1},
+        "source_line_end": {"type": ["integer", "null"], "minimum": 1}
+      }
+    },
+    "verbatim_text": {"type": "string", "minLength": 1, "description": "The complete paragraph or complete table cell/row text copied from the approved source extraction. Do not paraphrase or truncate."},
+    "verbatim_text_sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "text_normalization": {"type": "string", "enum": ["none", "whitespace_only", "verified_ocr_correction", "table_reconstruction"], "default": "none"},
+    "original_text_if_corrected": {"type": ["string", "null"]},
+    "why_this_text_applies": {"type": "string", "minLength": 1},
+    "interpretation": {"type": "string", "minLength": 1},
+    "interpretation_type": {"type": "string", "enum": ["literal_requirement_meaning", "evidence_mapping", "scope_mapping", "traceability_mapping", "quality_explanation", "product_context_application", "conflict_explanation"]},
+    "requirement_type": {"type": "string", "enum": ["pam_explicit", "company_rule", "customer_specific", "product_context", "inference"]},
+    "applies_to": {"type": "array", "items": {"type": "string"}},
+    "not_implied": {"type": "array", "items": {"type": "string"}},
+    "verified_status": {"type": "string", "enum": ["verified_against_pdf", "verified_against_approved_text", "ocr_pending", "human_review_required", "conflict_pending"]},
+    "verified_by": {"type": ["string", "null"]},
+    "verified_at": {"type": ["string", "null"], "format": "date-time"},
+    "human_confirmation_required": {"type": "boolean"}
+  }
+}

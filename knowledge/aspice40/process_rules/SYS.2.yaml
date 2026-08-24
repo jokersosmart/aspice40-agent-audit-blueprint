@@ -1,0 +1,605 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "SYS.2",
+  "process_name": "System Requirements Analysis",
+  "process_group": "SYS",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.3.2",
+    "source_page_hint": 37,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to establish a structured and analyzed set of system requirements consistent with the stakeholder requirements.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1)"
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2)"
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3)"
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4)"
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) System requirements are specified. System requirements are structured and prioritized. System requirements are analyzed for correctness and technical feasibility. The impact of system requirements on the operating environment is analyzed. Consistency and bidirectional traceability are established between system requirements and stakeholder requirements."
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) The system requirements are agreed and communicated to all affected parties."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "SYS.2.BP1: Specify system requirements. Use the stakeholder requirements to identify and document the functional and non-functional requirements for the system according to defined characteristics for requirements. Note 1: Characteristics of requirements are defined in standards such as ISO IEEE 29148, ISO 26262-8:2018, or the INCOSE Guide For Writing Requirements. Note 2: Examples for defined characteristics of requirements shared by technical standards are verifiability (i.e., verification criteria being inherent in the requirements text), unambiguity/comprehensibility, freedom from design and implementation, and not contradicting any other requirement).",
+        "title": "Specify system requirements. Use the stakeholder requirements to identify and document the functional and non-functional requirements for the system according to defined characteristics for requirements. Note 1: Characteristics of requirements are defined in standards such as ISO IEEE 29148, ISO 26262-8:2018, or the INCOSE Guide For Writing Requirements. Note 2: Examples for defined characteristics of requirements shared by technical standards are verifiability (i.e., verification criteria being inherent in the requirements text), unambiguity/comprehensibility, freedom from design and implementation, and not contradicting any other requirement)."
+      },
+      {
+        "id": "BP2",
+        "text": "SYS.2.BP2: Structure system requirements. Structure and prioritize the system requirements. Note 3: Examples for structuring criteria can be grouping (e.g., by functionality) or product variants identification. Note 4: Prioritization can be done according to project or stakeholder needs via e.g., definition of release scopes. Please refer to SPL.2.BP1.",
+        "title": "Structure system requirements. Structure and prioritize the system requirements. Note 3: Examples for structuring criteria can be grouping (e.g., by functionality) or product variants identification. Note 4: Prioritization can be done according to project or stakeholder needs via e.g., definition of release scopes. Please refer to SPL.2.BP1."
+      },
+      {
+        "id": "BP3",
+        "text": "SYS.2.BP3: Analyze system requirements. Analyze the specified system requirements including their interdependencies to ensure correctness, technical feasibility, and to support project management regarding project estimates. Note 5: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates. Note 6: Technical feasibility can be evaluated based on e.g., platform or product line, or by means of prototype development or product demonstrators.",
+        "title": "Analyze system requirements. Analyze the specified system requirements including their interdependencies to ensure correctness, technical feasibility, and to support project management regarding project estimates. Note 5: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates. Note 6: Technical feasibility can be evaluated based on e.g., platform or product line, or by means of prototype development or product demonstrators."
+      },
+      {
+        "id": "BP4",
+        "text": "SYS.2.BP4: Analyze the impact on the system context. Analyze the impact that the system requirements will have on elements in the relevant system context.",
+        "title": "Analyze the impact on the system context. Analyze the impact that the system requirements will have on elements in the relevant system context."
+      },
+      {
+        "id": "BP5",
+        "text": "SYS.2.BP5: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between system requirements and stakeholder requirements. Note 7: Bidirectional traceability supports consistency, facilitates impact analyses of change requests, and supports the demonstration of coverage of stakeholder requirements. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 8: There may be non-functional stakeholder requirements that the system requirements do not trace to. Examples are process requirements. Such stakeholder requirements are still subject to verification. Outcome 6 Outcome 5 X Outcome 4 X Outcome 3 Outcome 2 SYS.2 System Requirements Analysis Outcome 1",
+        "title": "Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between system requirements and stakeholder requirements. Note 7: Bidirectional traceability supports consistency, facilitates impact analyses of change requests, and supports the demonstration of coverage of stakeholder requirements. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 8: There may be non-functional stakeholder requirements that the system requirements do not trace to. Examples are process requirements. Such stakeholder requirements are still subject to verification. Outcome 6 Outcome 5 X Outcome 4 X Outcome 3 Outcome 2 SYS.2 System Requirements Analysis Outcome 1"
+      },
+      {
+        "id": "BP6",
+        "text": "SYS.2.BP6: Communicate agreed system requirements and impact on the system context. Communicate the agreed system requirements, and results of the impact analysis on the system context, to all affected parties. Output Information Items 17-00 Requirement 17-54 Requirement Attribute X 15-51 Analysis Results X X X 13-51 Consistency Evidence X 13-52 Communication Evidence X Base Practices BP1: Specify system requirements X BP2: Structure system requirements X BP3: Analyze system requirements X BP4: Analyze the impact on the system context BP5: Ensure consistency and establish bidirectional traceability X X BP6: Communicate agreed system requirements and impact on the system context X",
+        "title": "Communicate agreed system requirements and impact on the system context. Communicate the agreed system requirements, and results of the impact analysis on the system context, to all affected parties. Output Information Items 17-00 Requirement 17-54 Requirement Attribute X 15-51 Analysis Results X X X 13-51 Consistency Evidence X 13-52 Communication Evidence X Base Practices BP1: Specify system requirements X BP2: Structure system requirements X BP3: Analyze system requirements X BP4: Analyze the impact on the system context BP5: Ensure consistency and establish bidirectional traceability X X BP6: Communicate agreed system requirements and impact on the system context X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-SYS2-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": null,
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2498,
+        "source_line_end": 2499
+      },
+      "verbatim_text": "The purpose is to establish a structured and analyzed set of system requirements consistent with the stakeholder requirements.",
+      "verbatim_text_sha256": "88561b8cf307be2cc6dd17974eabd17be3ae7144f52af01531c1743181125969",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of SYS.2.",
+      "interpretation": "This is the PAM purpose statement for SYS.2; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "OUTCOME.1",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2501,
+        "source_line_end": 2501
+      },
+      "verbatim_text": "1)",
+      "verbatim_text_sha256": "d1f47e5a47cb4cb2f0639dabef187d1ed63dab221280869d910c9f60be38df47",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SYS.2 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "OUTCOME.2",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2502,
+        "source_line_end": 2502
+      },
+      "verbatim_text": "2)",
+      "verbatim_text_sha256": "4ddcdc3195dacd1e53e11029a707abeb4d797912220af1b51f5c2af6e6eb925b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SYS.2 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "OUTCOME.3",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2503,
+        "source_line_end": 2503
+      },
+      "verbatim_text": "3)",
+      "verbatim_text_sha256": "6180669a9fb9d0e8d30055aa57b3ba6c43646a98d88caf1b2f906b8119f7a55b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SYS.2 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "OUTCOME.4",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2504,
+        "source_line_end": 2504
+      },
+      "verbatim_text": "4)",
+      "verbatim_text_sha256": "2ad75c4c49eb98f340f9287d58069cfec60a90aecd3b9f13ffe411febfe8b187",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SYS.2 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "OUTCOME.5",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2505,
+        "source_line_end": 2512
+      },
+      "verbatim_text": "5) System requirements are specified. System requirements are structured and prioritized. System requirements are analyzed for correctness and technical feasibility. The impact of system requirements on the operating environment is analyzed. Consistency and bidirectional traceability are established between system requirements and stakeholder requirements.",
+      "verbatim_text_sha256": "605120a429191de5fee464f888a3b87b3be6411cbb3da77a6ad3446918c1b383",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SYS.2 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "OUTCOME.6",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2513,
+        "source_line_end": 2513
+      },
+      "verbatim_text": "6) The system requirements are agreed and communicated to all affected parties.",
+      "verbatim_text_sha256": "0b936735eb2688e26e65a32b58caf4e18862a148515fe03f83fde0be26e9a29b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SYS.2 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "BP1",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2515,
+        "source_line_end": 2524
+      },
+      "verbatim_text": "SYS.2.BP1: Specify system requirements. Use the stakeholder requirements to identify and document the functional and non-functional requirements for the system according to defined characteristics for requirements. Note 1: Characteristics of requirements are defined in standards such as ISO IEEE 29148, ISO 26262-8:2018, or the INCOSE Guide For Writing Requirements. Note 2: Examples for defined characteristics of requirements shared by technical standards are verifiability (i.e., verification criteria being inherent in the requirements text), unambiguity/comprehensibility, freedom from design and implementation, and not contradicting any other requirement).",
+      "verbatim_text_sha256": "aed850043d4aea496ebefb5ff02a131221e326e864313b8999767fbcbfaab044",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "BP2",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2525,
+        "source_line_end": 2530
+      },
+      "verbatim_text": "SYS.2.BP2: Structure system requirements. Structure and prioritize the system requirements. Note 3: Examples for structuring criteria can be grouping (e.g., by functionality) or product variants identification. Note 4: Prioritization can be done according to project or stakeholder needs via e.g., definition of release scopes. Please refer to SPL.2.BP1.",
+      "verbatim_text_sha256": "f718c3cac387c090e2c2e1920d17f669690f035d774717eb173cfbf462ec6c78",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "BP3",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2531,
+        "source_line_end": 2538
+      },
+      "verbatim_text": "SYS.2.BP3: Analyze system requirements. Analyze the specified system requirements including their interdependencies to ensure correctness, technical feasibility, and to support project management regarding project estimates. Note 5: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates. Note 6: Technical feasibility can be evaluated based on e.g., platform or product line, or by means of prototype development or product demonstrators.",
+      "verbatim_text_sha256": "d1f1e374ca18a9e640823abe95d96b3a734135ac54b577116d97e71bd1c306ba",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "BP4",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2539,
+        "source_line_end": 2540
+      },
+      "verbatim_text": "SYS.2.BP4: Analyze the impact on the system context. Analyze the impact that the system requirements will have on elements in the relevant system context.",
+      "verbatim_text_sha256": "90c903d5c43e88be99e1317d7159ec07a7247415271d522771383771525fdfab",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "BP5",
+        "page": 37,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2541,
+        "source_line_end": 2569
+      },
+      "verbatim_text": "SYS.2.BP5: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between system requirements and stakeholder requirements. Note 7: Bidirectional traceability supports consistency, facilitates impact analyses of change requests, and supports the demonstration of coverage of stakeholder requirements. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 8: There may be non-functional stakeholder requirements that the system requirements do not trace to. Examples are process requirements. Such stakeholder requirements are still subject to verification. Outcome 6 Outcome 5 X Outcome 4 X Outcome 3 Outcome 2 SYS.2 System Requirements Analysis Outcome 1",
+      "verbatim_text_sha256": "7eec35f8f479292d6fdaf4a9535896444aa77965cafd57b720e608aa02f09a37",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS2-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.3.2",
+        "process_id": "SYS.2",
+        "indicator_id": "BP6",
+        "page": 38,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2570,
+        "source_line_end": 2620
+      },
+      "verbatim_text": "SYS.2.BP6: Communicate agreed system requirements and impact on the system context. Communicate the agreed system requirements, and results of the impact analysis on the system context, to all affected parties. Output Information Items 17-00 Requirement 17-54 Requirement Attribute X 15-51 Analysis Results X X X 13-51 Consistency Evidence X 13-52 Communication Evidence X Base Practices BP1: Specify system requirements X BP2: Structure system requirements X BP3: Analyze system requirements X BP4: Analyze the impact on the system context BP5: Ensure consistency and establish bidirectional traceability X X BP6: Communicate agreed system requirements and impact on the system context X",
+      "verbatim_text_sha256": "d57ee2d66a329b09533878c9f997539b008821f50101741977a35fc9a5e1ddd0",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.2.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 1510,
+    "output_information_items": [
+      {
+        "id": "17-00",
+        "name": "Requirement",
+        "outcomes": [
+          "O1",
+          "O2"
+        ]
+      },
+      {
+        "id": "17-54",
+        "name": "Requirement Attribute",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "15-51",
+        "name": "Analysis Results",
+        "outcomes": [
+          "O3",
+          "O4"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency Evidence",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication Evidence",
+        "outcomes": [
+          "O6"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Specify system requirements",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Structure system requirements",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Analyze system requirements",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Analyze the impact on the system context",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Ensure consistency and establish bidirectional traceability",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Communicate agreed system requirements and impact on the system context",
+        "outcomes": [
+          "O6"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

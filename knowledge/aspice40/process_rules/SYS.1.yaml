@@ -1,0 +1,435 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "SYS.1",
+  "process_name": "Requirements Elicitation",
+  "process_group": "SYS",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.3.1",
+    "source_page_hint": 35,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to gather, analyze, and track evolving stakeholder needs and requirements throughout the lifecycle of the product and/or service to establish a set of agreed requirements.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) Continuing communication with the stakeholder is established."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) Stakeholder expectations are understood, and requirements are defined and agreed."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) Stakeholder requirements changes arising from stakeholder needs are analyzed to enable associated risk assessment and impact management."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) Determination of stakeholder requirements status is ensured for all affected parties."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "SYS.1.BP1: Obtain stakeholder expectations and requests. Obtain and define stakeholder expectations and requests through direct solicitation of stakeholder input, and through review of stakeholder business proposals (where relevant) and other documents containing inputs to stakeholder requirements, and consideration of the target operating and hardware environment. Note 1: Documenting the stakeholder, or the source of a stakeholder requirement, supports stakeholder requirements agreement and change analysis (see BP2 and BP3).",
+        "title": "Obtain stakeholder expectations and requests. Obtain and define stakeholder expectations and requests through direct solicitation of stakeholder input, and through review of stakeholder business proposals (where relevant) and other documents containing inputs to stakeholder requirements, and consideration of the target operating and hardware environment. Note 1: Documenting the stakeholder, or the source of a stakeholder requirement, supports stakeholder requirements agreement and change analysis (see BP2 and BP3)."
+      },
+      {
+        "id": "BP2",
+        "text": "SYS.1.BP2: Agree on requirements. Formalize the stakeholder’s expectations and requests into requirements. Reach a common understanding of the set of stakeholder requirements among affected parties by obtaining an explicit agreement from all affected parties. Note 2: Examples of affected parties are customers, suppliers, design partners, joint venture partners, or outsourcing parties. Note 3: The agreed stakeholder requirements may be based on feasibility studies and/or cost and schedule impact analysis.",
+        "title": "Agree on requirements. Formalize the stakeholder’s expectations and requests into requirements. Reach a common understanding of the set of stakeholder requirements among affected parties by obtaining an explicit agreement from all affected parties. Note 2: Examples of affected parties are customers, suppliers, design partners, joint venture partners, or outsourcing parties. Note 3: The agreed stakeholder requirements may be based on feasibility studies and/or cost and schedule impact analysis."
+      },
+      {
+        "id": "BP3",
+        "text": "SYS.1.BP3: Analyze stakeholder requirements changes. Analyze all changes made to the stakeholder requirements against the agreed stakeholder requirements. Assess the impact and risks, and initiate appropriate change control and mitigation actions. Note 4: Requirements changes may arise from different sources as for instance changing technology, stakeholder needs, or legal constraints. Note 5: Refer to SUP.10 Change Request Management, if required. Outcome 4 Outcome 3 SYS.1 Requirements Elicitation Outcome 2 Outcome 1",
+        "title": "Analyze stakeholder requirements changes. Analyze all changes made to the stakeholder requirements against the agreed stakeholder requirements. Assess the impact and risks, and initiate appropriate change control and mitigation actions. Note 4: Requirements changes may arise from different sources as for instance changing technology, stakeholder needs, or legal constraints. Note 5: Refer to SUP.10 Change Request Management, if required. Outcome 4 Outcome 3 SYS.1 Requirements Elicitation Outcome 2 Outcome 1"
+      },
+      {
+        "id": "BP4",
+        "text": "SYS.1.BP4: Communicate requirements status. Ensure all affected parties can be aware of the status and disposition of their requirements including changes and can communicate necessary information and data. Output Information Items 15-51 Analysis Results X 13-52 Communication Evidence X X 17-00 Requirement X 17-54 Requirement Attribute X X X Base Practices BP1: Obtain stakeholder expectations and requests X BP2: Agree on requirements X BP3: Analyze stakeholder requirements changes BP4: Communicate requirements status X X X",
+        "title": "Communicate requirements status. Ensure all affected parties can be aware of the status and disposition of their requirements including changes and can communicate necessary information and data. Output Information Items 15-51 Analysis Results X 13-52 Communication Evidence X X 17-00 Requirement X 17-54 Requirement Attribute X X X Base Practices BP1: Obtain stakeholder expectations and requests X BP2: Agree on requirements X BP3: Analyze stakeholder requirements changes BP4: Communicate requirements status X X X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-SYS1-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.3.1",
+        "process_id": "SYS.1",
+        "indicator_id": null,
+        "page": 35,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2404,
+        "source_line_end": 2405
+      },
+      "verbatim_text": "The purpose is to gather, analyze, and track evolving stakeholder needs and requirements throughout the lifecycle of the product and/or service to establish a set of agreed requirements.",
+      "verbatim_text_sha256": "694c9e4569e913950de9491e84dda522f180d623c026b501bc84a682cfadca00",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of SYS.1.",
+      "interpretation": "This is the PAM purpose statement for SYS.1; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS1-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.3.1",
+        "process_id": "SYS.1",
+        "indicator_id": "OUTCOME.1",
+        "page": 35,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2407,
+        "source_line_end": 2407
+      },
+      "verbatim_text": "1) Continuing communication with the stakeholder is established.",
+      "verbatim_text_sha256": "749c7e3f50317d4ad327928c0c42c9455b4a6b4d24dd54d6f029b68ca258d33f",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.1 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SYS.1 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS1-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.3.1",
+        "process_id": "SYS.1",
+        "indicator_id": "OUTCOME.2",
+        "page": 35,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2408,
+        "source_line_end": 2408
+      },
+      "verbatim_text": "2) Stakeholder expectations are understood, and requirements are defined and agreed.",
+      "verbatim_text_sha256": "7f634b18ebbd4293ee3716371fd278fe878bfeaaaf144308f8ec56fbab2ebca7",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.1 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SYS.1 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS1-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.3.1",
+        "process_id": "SYS.1",
+        "indicator_id": "OUTCOME.3",
+        "page": 35,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2409,
+        "source_line_end": 2410
+      },
+      "verbatim_text": "3) Stakeholder requirements changes arising from stakeholder needs are analyzed to enable associated risk assessment and impact management.",
+      "verbatim_text_sha256": "72e2f77cd595cc8f8b94775895b75165e7fab1b6224dce4fe2444157e70f4f45",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.1 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SYS.1 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS1-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.3.1",
+        "process_id": "SYS.1",
+        "indicator_id": "OUTCOME.4",
+        "page": 35,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2411,
+        "source_line_end": 2411
+      },
+      "verbatim_text": "4) Determination of stakeholder requirements status is ensured for all affected parties.",
+      "verbatim_text_sha256": "f519e64bc54cd827a033e356ca7aac63430aac1999e8d428018d39461b223a01",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.1 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SYS.1 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS1-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.3.1",
+        "process_id": "SYS.1",
+        "indicator_id": "BP1",
+        "page": 35,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2413,
+        "source_line_end": 2419
+      },
+      "verbatim_text": "SYS.1.BP1: Obtain stakeholder expectations and requests. Obtain and define stakeholder expectations and requests through direct solicitation of stakeholder input, and through review of stakeholder business proposals (where relevant) and other documents containing inputs to stakeholder requirements, and consideration of the target operating and hardware environment. Note 1: Documenting the stakeholder, or the source of a stakeholder requirement, supports stakeholder requirements agreement and change analysis (see BP2 and BP3).",
+      "verbatim_text_sha256": "b4d752ae5cbace947089d3289e7d97d5dbb83f09b6b62a5da7fb18c0e0d1ba5a",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.1.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS1-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.3.1",
+        "process_id": "SYS.1",
+        "indicator_id": "BP2",
+        "page": 35,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2420,
+        "source_line_end": 2427
+      },
+      "verbatim_text": "SYS.1.BP2: Agree on requirements. Formalize the stakeholder’s expectations and requests into requirements. Reach a common understanding of the set of stakeholder requirements among affected parties by obtaining an explicit agreement from all affected parties. Note 2: Examples of affected parties are customers, suppliers, design partners, joint venture partners, or outsourcing parties. Note 3: The agreed stakeholder requirements may be based on feasibility studies and/or cost and schedule impact analysis.",
+      "verbatim_text_sha256": "360910599ee7862743b94bf09d2bb645812d6dac513310444345c149a35c4b4b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.1.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS1-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.3.1",
+        "process_id": "SYS.1",
+        "indicator_id": "BP3",
+        "page": 35,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2428,
+        "source_line_end": 2445
+      },
+      "verbatim_text": "SYS.1.BP3: Analyze stakeholder requirements changes. Analyze all changes made to the stakeholder requirements against the agreed stakeholder requirements. Assess the impact and risks, and initiate appropriate change control and mitigation actions. Note 4: Requirements changes may arise from different sources as for instance changing technology, stakeholder needs, or legal constraints. Note 5: Refer to SUP.10 Change Request Management, if required. Outcome 4 Outcome 3 SYS.1 Requirements Elicitation Outcome 2 Outcome 1",
+      "verbatim_text_sha256": "3de53868145ba850e9f4e2e195d75bc72d1d7286b06a80ae4e5dfd7152104393",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.1.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SYS1-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.3.1",
+        "process_id": "SYS.1",
+        "indicator_id": "BP4",
+        "page": 36,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2446,
+        "source_line_end": 2491
+      },
+      "verbatim_text": "SYS.1.BP4: Communicate requirements status. Ensure all affected parties can be aware of the status and disposition of their requirements including changes and can communicate necessary information and data. Output Information Items 15-51 Analysis Results X 13-52 Communication Evidence X X 17-00 Requirement X 17-54 Requirement Attribute X X X Base Practices BP1: Obtain stakeholder expectations and requests X BP2: Agree on requirements X BP3: Analyze stakeholder requirements changes BP4: Communicate requirements status X X X",
+      "verbatim_text_sha256": "9d07d4bab8f1cd2bdd230789378613ccdf04412225fac4c8bb2f174b9e2fbab2",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SYS.1.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SYS.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 1417,
+    "output_information_items": [
+      {
+        "id": "15-51",
+        "name": "Analysis Results",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication Evidence",
+        "outcomes": [
+          "O1",
+          "O2"
+        ]
+      },
+      {
+        "id": "17-00",
+        "name": "Requirement",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "17-54",
+        "name": "Requirement Attribute",
+        "outcomes": [
+          "O2",
+          "O3",
+          "O4"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Obtain stakeholder expectations and requests",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Agree on requirements",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Analyze stakeholder requirements changes",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Communicate requirements status",
+        "outcomes": [
+          "O1",
+          "O4"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

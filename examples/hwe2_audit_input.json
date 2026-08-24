@@ -1,0 +1,91 @@
+{
+  "run_id": "RUN-2026-0001",
+  "project_id": "SSDCTRL-A",
+  "release_or_baseline": "HW-BL-042",
+  "process_id": "HWE.2",
+  "profile": "knowledge/aspice40/HWE.2.yaml",
+  "assessment_scope": {
+    "status": "in_scope",
+    "approved_by": "REPLACE-ME",
+    "rationale": "Hardware design includes digital, analog/mixed-signal, simulation and tape-out/silicon evidence."
+  },
+  "evidence_objects": [
+    {
+      "artifact_id": "HW-ARCH-001",
+      "artifact_type": "architecture",
+      "name": "SSD Controller Hardware Architecture",
+      "uri_or_path": "plm://ssdctrl/hw-architecture/HW-ARCH-001",
+      "revision": "R12",
+      "baseline": "HW-BL-042",
+      "owner": "M03",
+      "review_status": "approved",
+      "source_system": "PLM",
+      "content_hash": "REPLACE-WITH-SHA256",
+      "source_anchor": {"document_id": "COMPANY-HW-ARCH", "version": "R12", "section": "Architecture", "page": null}
+    },
+    {
+      "artifact_id": "RTL-BASE-017",
+      "artifact_type": "rtl",
+      "name": "Digital RTL baseline",
+      "uri_or_path": "git://hardware/rtl@commit:REPLACE",
+      "revision": "commit:REPLACE",
+      "baseline": "HW-BL-042",
+      "owner": "M04",
+      "review_status": "reviewed",
+      "source_system": "Git",
+      "content_hash": "REPLACE-WITH-SHA256",
+      "source_anchor": {"document_id": "GIT-RTL", "version": "commit:REPLACE", "section": null, "page": null}
+    },
+    {
+      "artifact_id": "ANA-PVT-009",
+      "artifact_type": "analysis",
+      "name": "Analog PVT and corner analysis",
+      "uri_or_path": "plm://ssdctrl/analog/ANA-PVT-009",
+      "revision": "R03",
+      "baseline": "HW-BL-042",
+      "owner": "M05",
+      "review_status": "approved",
+      "source_system": "PLM",
+      "content_hash": "REPLACE-WITH-SHA256",
+      "source_anchor": {"document_id": "ANA-PVT-009", "version": "R03", "section": "PVT", "page": null}
+    },
+    {
+      "artifact_id": "SIM-REG-031",
+      "artifact_type": "simulation_log",
+      "name": "RTL simulation regression",
+      "uri_or_path": "ci://hardware/sim/RUN-031",
+      "revision": "RUN-031",
+      "baseline": "HW-BL-042",
+      "owner": "M06",
+      "review_status": "reviewed",
+      "source_system": "CI",
+      "content_hash": "REPLACE-WITH-SHA256",
+      "source_anchor": {"document_id": "SIM-REG-031", "version": "RUN-031", "section": "Regression", "page": null}
+    },
+    {
+      "artifact_id": "TAPEOUT-READ-004",
+      "artifact_type": "production_data",
+      "name": "Tape-out readiness and production data",
+      "uri_or_path": "tapeout://ssdctrl/TO-004",
+      "revision": "TO-004",
+      "baseline": "HW-BL-042",
+      "owner": "M07",
+      "review_status": "draft",
+      "source_system": "Tape-out System",
+      "content_hash": "REPLACE-WITH-SHA256",
+      "source_anchor": {"document_id": "TAPEOUT-READ-004", "version": "TO-004", "section": "Readiness", "page": null}
+    }
+  ],
+  "traceability_edges": [
+    {"from": "HW-ARCH-001", "to": "RTL-BASE-017", "relation": "decomposes_to", "baseline": "HW-BL-042"},
+    {"from": "RTL-BASE-017", "to": "SIM-REG-031", "relation": "verified_by", "baseline": "HW-BL-042"},
+    {"from": "HW-ARCH-001", "to": "ANA-PVT-009", "relation": "supported_by", "baseline": "HW-BL-042"},
+    {"from": "HW-ARCH-001", "to": "TAPEOUT-READ-004", "relation": "released_as", "baseline": "HW-BL-042"}
+  ],
+  "known_questions": [
+    "Is the tape-out package approved or still draft?",
+    "Are all hardware element interfaces bidirectionally traceable to requirements and architecture?",
+    "Which verification measures require real silicon rather than simulation or emulation?",
+    "Who is the independent reviewer for design correctness and production-data readiness?"
+  ]
+}

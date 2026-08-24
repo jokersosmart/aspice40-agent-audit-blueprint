@@ -1,0 +1,877 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "MAN.3",
+  "process_name": "Project Management",
+  "process_group": "MAN",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.9.1",
+    "source_page_hint": 90,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to identify and control the activities, and establish resources necessary for a project to develop a product, in the context of the project’s requirements and constraints.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) The scope of the work for the project is defined."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) The feasibility of achieving the goals of the project with available resources and constraints is evaluated."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) The activities and resources necessary to complete the work are sized and estimated."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) Interfaces within the project, and with other projects and organizational units, are identified and monitored."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Plans for the execution of the project are developed, implemented and maintained."
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) Progress of the project is monitored and reported."
+      },
+      {
+        "id": "OUTCOME.7",
+        "text": "7) Adjustment is performed when project goals are not achieved."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "MAN.3.BP1: Define the scope of work. Identify the project's goals, motivation and boundaries.",
+        "title": "Define the scope of work. Identify the project's goals, motivation and boundaries."
+      },
+      {
+        "id": "BP2",
+        "text": "MAN.3.BP2: Define project life cycle. Define the life cycle for the project, which is appropriate to the scope, context, and complexity of the project. Define a release scope for relevant milestones. Note 1: This may include the alignment of the project life cycle with the customer's development process.",
+        "title": "Define project life cycle. Define the life cycle for the project, which is appropriate to the scope, context, and complexity of the project. Define a release scope for relevant milestones. Note 1: This may include the alignment of the project life cycle with the customer's development process."
+      },
+      {
+        "id": "BP3",
+        "text": "MAN.3.BP3: Evaluate feasibility of the project. Evaluate the feasibility of achieving the goals of the project with respect to time, project estimates, and available resources. Note 2: The evaluation of feasibility may consider technical constraints of the project.",
+        "title": "Evaluate feasibility of the project. Evaluate the feasibility of achieving the goals of the project with respect to time, project estimates, and available resources. Note 2: The evaluation of feasibility may consider technical constraints of the project."
+      },
+      {
+        "id": "BP4",
+        "text": "MAN.3.BP4: Define and monitor work packages. Define and monitor work packages and their dependencies according to defined project life cycle and estimations. Note 3: The structure and the size of the work packages support an adequate progress monitoring. Note 4: Work packages may be organized in a work breakdown structure.",
+        "title": "Define and monitor work packages. Define and monitor work packages and their dependencies according to defined project life cycle and estimations. Note 3: The structure and the size of the work packages support an adequate progress monitoring. Note 4: Work packages may be organized in a work breakdown structure."
+      },
+      {
+        "id": "BP5",
+        "text": "MAN.3.BP5: Define and monitor project estimates and resources. Define and monitor project estimates of effort and resources based on project's goals, project risks, motivation and boundaries. Note 5: Examples of necessary resources are budget, people, product samples, or infrastructure Note 6: Project risks (using MAN.5) may be considered. Note 7: Estimations and resources may include engineering, management and supporting processes.",
+        "title": "Define and monitor project estimates and resources. Define and monitor project estimates of effort and resources based on project's goals, project risks, motivation and boundaries. Note 5: Examples of necessary resources are budget, people, product samples, or infrastructure Note 6: Project risks (using MAN.5) may be considered. Note 7: Estimations and resources may include engineering, management and supporting processes."
+      },
+      {
+        "id": "BP6",
+        "text": "MAN.3.BP6: Define and monitor required skills, knowledge, and experience. Identify and monitor the required skills, knowledge, and experience for the project in line with the estimates and work packages. Note 8: Training, mentoring or coaching of individuals may be applied to resolve deviations from required skills and knowledge.",
+        "title": "Define and monitor required skills, knowledge, and experience. Identify and monitor the required skills, knowledge, and experience for the project in line with the estimates and work packages. Note 8: Training, mentoring or coaching of individuals may be applied to resolve deviations from required skills and knowledge."
+      },
+      {
+        "id": "BP7",
+        "text": "MAN.3.BP7: Define and monitor project interfaces and agreed commitments. Identify and agree interfaces of the project with affected stakeholders and monitor agreed commitments. Define an escalation mechanism for commitments that are not fulfilled. Note 9: Affected stakeholders may include other projects, organizational units, sub-contractors, and service providers.",
+        "title": "Define and monitor project interfaces and agreed commitments. Identify and agree interfaces of the project with affected stakeholders and monitor agreed commitments. Define an escalation mechanism for commitments that are not fulfilled. Note 9: Affected stakeholders may include other projects, organizational units, sub-contractors, and service providers."
+      },
+      {
+        "id": "BP8",
+        "text": "MAN.3.BP8: Define and monitor project schedule. Allocate resources to work packages and schedule each activity of the project. Monitor the performance of activities against schedule.",
+        "title": "Define and monitor project schedule. Allocate resources to work packages and schedule each activity of the project. Monitor the performance of activities against schedule."
+      },
+      {
+        "id": "BP9",
+        "text": "MAN.3.BP9: Ensure consistency. Regularly adjust estimates, resources, skills, work packages and their dependencies, schedules, plans, interfaces, and commitments for the project to ensure consistency with the scope of work. Note 10: This may include the consideration of critical dependencies, that are an input for risk management.",
+        "title": "Ensure consistency. Regularly adjust estimates, resources, skills, work packages and their dependencies, schedules, plans, interfaces, and commitments for the project to ensure consistency with the scope of work. Note 10: This may include the consideration of critical dependencies, that are an input for risk management."
+      },
+      {
+        "id": "BP10",
+        "text": "MAN.3.BP10: Review and report progress of the project. Regularly review and report the status of the project and the fulfillment of work packages against estimated effort and duration to all affected parties. Prevent recurrence of identified problems. Outcome 7 Outcome 6 Outcome 5 Outcome 4 Outcome 3 MAN.3 Project Management Outcome 2 Outcome 1 Note 11: Project reviews may be executed at regular intervals by the management. Project reviews may contribute to identify best practices and lessons learned. Note 12: Refer to SUP.9 for resolution of problems Output Information Items 08-53 Scope of work X 08-54 Feasibility analysis X 14-10 Work package X X X X 13-52 Communication evidence X X 13-16 Change request X 13-51 Consistency evidence X X 14-02 Corrective action 18-52 Escalation path X 08-56 Schedule X X X X X X 14-50 Stakeholder groups list X 15-06 Project status X X X Base Practices BP1: Define the scope of work X BP2: Define project life cycle X BP3: Evaluate feasibility of the project X X BP4: Define and monitor work packages X BP5: Define and monitor project estimates and resources X X X X X X BP6: Define and monitor required skills, knowledge, and experience X X BP7: Define and monitor project interfaces and agreed commitments X X BP8: Define and monitor project schedule X X BP9: Ensure consistency X X X BP10: Review and report progress of the project X X X X",
+        "title": "Review and report progress of the project. Regularly review and report the status of the project and the fulfillment of work packages against estimated effort and duration to all affected parties. Prevent recurrence of identified problems. Outcome 7 Outcome 6 Outcome 5 Outcome 4 Outcome 3 MAN.3 Project Management Outcome 2 Outcome 1 Note 11: Project reviews may be executed at regular intervals by the management. Project reviews may contribute to identify best practices and lessons learned. Note 12: Refer to SUP.9 for resolution of problems Output Information Items 08-53 Scope of work X 08-54 Feasibility analysis X 14-10 Work package X X X X 13-52 Communication evidence X X 13-16 Change request X 13-51 Consistency evidence X X 14-02 Corrective action 18-52 Escalation path X 08-56 Schedule X X X X X X 14-50 Stakeholder groups list X 15-06 Project status X X X Base Practices BP1: Define the scope of work X BP2: Define project life cycle X BP3: Evaluate feasibility of the project X X BP4: Define and monitor work packages X BP5: Define and monitor project estimates and resources X X X X X X BP6: Define and monitor required skills, knowledge, and experience X X BP7: Define and monitor project interfaces and agreed commitments X X BP8: Define and monitor project schedule X X BP9: Ensure consistency X X X BP10: Review and report progress of the project X X X X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-MAN3-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": null,
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5855,
+        "source_line_end": 5856
+      },
+      "verbatim_text": "The purpose is to identify and control the activities, and establish resources necessary for a project to develop a product, in the context of the project’s requirements and constraints.",
+      "verbatim_text_sha256": "096718475722366b0769e5fecd413f2db5237497b12e5e8bcf59a6e2a9fed609",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of MAN.3.",
+      "interpretation": "This is the PAM purpose statement for MAN.3; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "OUTCOME.1",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5858,
+        "source_line_end": 5858
+      },
+      "verbatim_text": "1) The scope of the work for the project is defined.",
+      "verbatim_text_sha256": "d30d6fc12cc510e9ea7f43bb67ab7e70ac0b0ef3b6f71e7cff12cac97186f070",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.3 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "OUTCOME.2",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5859,
+        "source_line_end": 5860
+      },
+      "verbatim_text": "2) The feasibility of achieving the goals of the project with available resources and constraints is evaluated.",
+      "verbatim_text_sha256": "44faf1a68ce57d425dc537f9755f6cbbe5d4e1143272c036225950c026741367",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.3 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "OUTCOME.3",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5861,
+        "source_line_end": 5861
+      },
+      "verbatim_text": "3) The activities and resources necessary to complete the work are sized and estimated.",
+      "verbatim_text_sha256": "475a8e60ebdadcae9965b1241f6d1213d35556ba35968e2b64ca30410b73893c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.3 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "OUTCOME.4",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5862,
+        "source_line_end": 5863
+      },
+      "verbatim_text": "4) Interfaces within the project, and with other projects and organizational units, are identified and monitored.",
+      "verbatim_text_sha256": "a7aebd4e3618d616eebdd97fd1203e91592bb59aac3e864cfd01c2adee7bd196",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.3 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "OUTCOME.5",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5864,
+        "source_line_end": 5864
+      },
+      "verbatim_text": "5) Plans for the execution of the project are developed, implemented and maintained.",
+      "verbatim_text_sha256": "ef91aa67b78c22290c77322d9f99e6cdacc61501ca9d404539c7cad5b1925c92",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.3 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "OUTCOME.6",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5865,
+        "source_line_end": 5865
+      },
+      "verbatim_text": "6) Progress of the project is monitored and reported.",
+      "verbatim_text_sha256": "f79e0a4d71bd418a87ef0c191a3e9483fb8392843b202661b8bd8496c47867a3",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.3 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-OUTCOME-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "OUTCOME.7",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5866,
+        "source_line_end": 5866
+      },
+      "verbatim_text": "7) Adjustment is performed when project goals are not achieved.",
+      "verbatim_text_sha256": "bb2b71d4e54eb17460d1d3aeef5703630a2d720f6ce8beaa9d03166b6fe29b7d",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3 outcome 7 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.3 outcome 7; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "BP1",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5868,
+        "source_line_end": 5868
+      },
+      "verbatim_text": "MAN.3.BP1: Define the scope of work. Identify the project's goals, motivation and boundaries.",
+      "verbatim_text_sha256": "d73f50d4a45f11602141353a29c00afa7449fed03da946a9aed374454a6422bf",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "BP2",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5869,
+        "source_line_end": 5874
+      },
+      "verbatim_text": "MAN.3.BP2: Define project life cycle. Define the life cycle for the project, which is appropriate to the scope, context, and complexity of the project. Define a release scope for relevant milestones. Note 1: This may include the alignment of the project life cycle with the customer's development process.",
+      "verbatim_text_sha256": "e0bb8ccc09fa6094e4a3ecb8e4d0c96f8029c689a0b56942a0d874c83148ff1c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "BP3",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5875,
+        "source_line_end": 5878
+      },
+      "verbatim_text": "MAN.3.BP3: Evaluate feasibility of the project. Evaluate the feasibility of achieving the goals of the project with respect to time, project estimates, and available resources. Note 2: The evaluation of feasibility may consider technical constraints of the project.",
+      "verbatim_text_sha256": "f23f63dfb162c403e324859d7f67958284bcc2f30e74e2edf866eceda8da7941",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "BP4",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5879,
+        "source_line_end": 5884
+      },
+      "verbatim_text": "MAN.3.BP4: Define and monitor work packages. Define and monitor work packages and their dependencies according to defined project life cycle and estimations. Note 3: The structure and the size of the work packages support an adequate progress monitoring. Note 4: Work packages may be organized in a work breakdown structure.",
+      "verbatim_text_sha256": "4364ca39ee4ce53a41fa6c81a4e219c738aaac254713dab5b8c0efa1f1398388",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "BP5",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5885,
+        "source_line_end": 5892
+      },
+      "verbatim_text": "MAN.3.BP5: Define and monitor project estimates and resources. Define and monitor project estimates of effort and resources based on project's goals, project risks, motivation and boundaries. Note 5: Examples of necessary resources are budget, people, product samples, or infrastructure Note 6: Project risks (using MAN.5) may be considered. Note 7: Estimations and resources may include engineering, management and supporting processes.",
+      "verbatim_text_sha256": "59f2c97423dc59fbda1758c2024eee72f6b58f788fd80cadf710189602747217",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "BP6",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5893,
+        "source_line_end": 5898
+      },
+      "verbatim_text": "MAN.3.BP6: Define and monitor required skills, knowledge, and experience. Identify and monitor the required skills, knowledge, and experience for the project in line with the estimates and work packages. Note 8: Training, mentoring or coaching of individuals may be applied to resolve deviations from required skills and knowledge.",
+      "verbatim_text_sha256": "a439b942b1d5fd6c23f68435befe9d1f70fa87bb9745f013eeec58e3b5b0d551",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-BP-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "BP7",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5899,
+        "source_line_end": 5904
+      },
+      "verbatim_text": "MAN.3.BP7: Define and monitor project interfaces and agreed commitments. Identify and agree interfaces of the project with affected stakeholders and monitor agreed commitments. Define an escalation mechanism for commitments that are not fulfilled. Note 9: Affected stakeholders may include other projects, organizational units, sub-contractors, and service providers.",
+      "verbatim_text_sha256": "6a1310238c88f6241a5c1deda760d608b3ea7bf681535a569b7071713858f6ed",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3.BP7 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-BP-08",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "BP8",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5905,
+        "source_line_end": 5906
+      },
+      "verbatim_text": "MAN.3.BP8: Define and monitor project schedule. Allocate resources to work packages and schedule each activity of the project. Monitor the performance of activities against schedule.",
+      "verbatim_text_sha256": "34c3634543fe216b38a8f9bb8d8e9ed65939babf7f128873c1dc48c2cd9296b0",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3.BP8 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-BP-09",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "BP9",
+        "page": 90,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5907,
+        "source_line_end": 5912
+      },
+      "verbatim_text": "MAN.3.BP9: Ensure consistency. Regularly adjust estimates, resources, skills, work packages and their dependencies, schedules, plans, interfaces, and commitments for the project to ensure consistency with the scope of work. Note 10: This may include the consideration of critical dependencies, that are an input for risk management.",
+      "verbatim_text_sha256": "eafbdc42c01953707e54c4f5191a38d6c10e381a8aa25898fd5ca4c6150d250c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3.BP9 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN3-BP-10",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.1",
+        "process_id": "MAN.3",
+        "indicator_id": "BP10",
+        "page": 91,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5913,
+        "source_line_end": 6069
+      },
+      "verbatim_text": "MAN.3.BP10: Review and report progress of the project. Regularly review and report the status of the project and the fulfillment of work packages against estimated effort and duration to all affected parties. Prevent recurrence of identified problems. Outcome 7 Outcome 6 Outcome 5 Outcome 4 Outcome 3 MAN.3 Project Management Outcome 2 Outcome 1 Note 11: Project reviews may be executed at regular intervals by the management. Project reviews may contribute to identify best practices and lessons learned. Note 12: Refer to SUP.9 for resolution of problems Output Information Items 08-53 Scope of work X 08-54 Feasibility analysis X 14-10 Work package X X X X 13-52 Communication evidence X X 13-16 Change request X 13-51 Consistency evidence X X 14-02 Corrective action 18-52 Escalation path X 08-56 Schedule X X X X X X 14-50 Stakeholder groups list X 15-06 Project status X X X Base Practices BP1: Define the scope of work X BP2: Define project life cycle X BP3: Evaluate feasibility of the project X X BP4: Define and monitor work packages X BP5: Define and monitor project estimates and resources X X X X X X BP6: Define and monitor required skills, knowledge, and experience X X BP7: Define and monitor project interfaces and agreed commitments X X BP8: Define and monitor project schedule X X BP9: Ensure consistency X X X BP10: Review and report progress of the project X X X X",
+      "verbatim_text_sha256": "19a6bc02b13f08577e362cf38c99f8dec10cd1e0b95cc4ca7a7deb16aa35ac42",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.3.BP10 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.3"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 3970,
+    "output_information_items": [
+      {
+        "id": "08-53",
+        "name": "Scope of work",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "08-54",
+        "name": "Feasibility analysis",
+        "outcomes": [
+          "O2",
+          "O4"
+        ]
+      },
+      {
+        "id": "14-10",
+        "name": "Work package",
+        "outcomes": [
+          "O3",
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication evidence",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "13-16",
+        "name": "Change request",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency evidence",
+        "outcomes": [
+          "O1",
+          "O3"
+        ]
+      },
+      {
+        "id": "14-02",
+        "name": "Corrective action",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "18-52",
+        "name": "Escalation path",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "08-56",
+        "name": "Schedule",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "14-50",
+        "name": "Stakeholder groups list",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "15-06",
+        "name": "Project status",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Define the scope of work",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Define project life cycle",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Evaluate feasibility of the project",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Define and monitor work packages",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Define and monitor project estimates and resources",
+        "outcomes": [
+          "O1",
+          "O3"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Define and monitor required skills, knowledge, and experience",
+        "outcomes": [
+          "O1",
+          "O3"
+        ]
+      },
+      {
+        "id": "BP7",
+        "name": "Define and monitor project interfaces and agreed commitments",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "BP8",
+        "name": "Define and monitor project schedule",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP9",
+        "name": "Ensure consistency",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "BP10",
+        "name": "Review and report progress of the project",
+        "outcomes": [
+          "O3"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

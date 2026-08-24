@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/aspice/process-audit-result.schema.json",
+  "title": "ASPICE Process Audit Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["agent_id", "agent_version", "run_id", "project_id", "process_id", "scope_status", "checks", "summary"],
+  "properties": {
+    "agent_id": {"type": "string"},
+    "agent_version": {"type": "string"},
+    "run_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "release_or_baseline": {"type": ["string", "null"]},
+    "process_id": {"type": "string"},
+    "scope_status": {"type": "string", "enum": ["in_scope", "conditional", "not_in_scope", "out_of_scope", "unknown"]},
+    "checks": {"type": "array", "items": {"$ref": "audit-finding.schema.json"}},
+    "cross_domain_issues": {"type": "array", "items": {"type": "string"}},
+    "questions_for_owner": {"type": "array", "items": {"type": "string"}},
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["satisfied", "partial", "gap", "unknown", "conflict", "not_in_scope"],
+      "properties": {
+        "satisfied": {"type": "integer", "minimum": 0},
+        "partial": {"type": "integer", "minimum": 0},
+        "gap": {"type": "integer", "minimum": 0},
+        "unknown": {"type": "integer", "minimum": 0},
+        "conflict": {"type": "integer", "minimum": 0},
+        "not_in_scope": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}

@@ -1,0 +1,605 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "REU.2",
+  "process_name": "Management of Products for Reuse",
+  "process_group": "REU",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.11.1",
+    "source_page_hint": 98,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to ensure that reused work products are analyzed, verified, and approved for their target context.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1)"
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2)"
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3)"
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4)"
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5)"
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) Products for reuse are selected using defined criteria. Products for reuse are analyzed for portability and interoperability. Limitations for reuse are defined and communicated. Products for reuse are verified. Products for reuse are provided to affected parties. Communication mechanism is established with the reuse product provider."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "REU.2.BP1: Select products for reuse. Select the products to be reused using defined criteria. Note 1: Products for reuse may be systems, hardware or software components, third party components or legacy components.",
+        "title": "Select products for reuse. Select the products to be reused using defined criteria. Note 1: Products for reuse may be systems, hardware or software components, third party components or legacy components."
+      },
+      {
+        "id": "BP2",
+        "text": "REU.2.BP2: Analyze the reuse capability of the product. Analyze the designated target architecture and the product to be reused to determine its applicability in the target architecture according to relevant criteria. Note 2: Examples for criteria can be requirements compliance, verifiability of the product to be reused in the target architecture, or portability/interoperability.",
+        "title": "Analyze the reuse capability of the product. Analyze the designated target architecture and the product to be reused to determine its applicability in the target architecture according to relevant criteria. Note 2: Examples for criteria can be requirements compliance, verifiability of the product to be reused in the target architecture, or portability/interoperability."
+      },
+      {
+        "id": "BP3",
+        "text": "REU.2.BP3: Define limitations for reuse. Define and communicate limitations for the products to be reused. Note 3: Limitations may address parameters of operational environment.",
+        "title": "Define limitations for reuse. Define and communicate limitations for the products to be reused. Note 3: Limitations may address parameters of operational environment."
+      },
+      {
+        "id": "BP4",
+        "text": "REU.2.BP4: Ensure qualification of products for reuse. Provide evidence that the product for reuse is qualified for the intended use of the deliverable. Note 4: Qualification may be demonstrated by verification evidence. Note 5: Verification may include the appropriateness of documentation.",
+        "title": "Ensure qualification of products for reuse. Provide evidence that the product for reuse is qualified for the intended use of the deliverable. Note 4: Qualification may be demonstrated by verification evidence. Note 5: Verification may include the appropriateness of documentation."
+      },
+      {
+        "id": "BP5",
+        "text": "REU.2.BP5: Provide products for reuse. Make available the product to be reused to affected parties. Note 6: Refer to HWE.3, SWE.5 or SYS.4 for more information on integration of hardware, software, or system components.",
+        "title": "Provide products for reuse. Make available the product to be reused to affected parties. Note 6: Refer to HWE.3, SWE.5 or SYS.4 for more information on integration of hardware, software, or system components."
+      },
+      {
+        "id": "BP6",
+        "text": "REU.2.BP6: Communicate information about effectiveness of reuse activities. Establish communication and notification mechanism about experiences and technical outcomes to the provider of reused products. Outcome 6 X Outcome 5 X Outcome 4 Outcome 3 REU.2 Management of Products for Reuse Outcome 2 Outcome 1 Note 7: The communication with the provider of a reused product may depend on whether the product is under development or not. Output Information Items 04-02 Domain architecture 12-03 Reuse candidate X X 13-52 Communication evidence X 15-07 Reuse analysis evidence X X 13-53 Qualification evidence X Base Practices BP1: Select products for reuse X BP2: Analyze the reuse capability of the product BP3: Define limitations for reuse X BP4: Ensure qualification of products for reuse BP5: Provide products for reuse X X X BP6: Communicate information about effectiveness of reuse activities X",
+        "title": "Communicate information about effectiveness of reuse activities. Establish communication and notification mechanism about experiences and technical outcomes to the provider of reused products. Outcome 6 X Outcome 5 X Outcome 4 Outcome 3 REU.2 Management of Products for Reuse Outcome 2 Outcome 1 Note 7: The communication with the provider of a reused product may depend on whether the product is under development or not. Output Information Items 04-02 Domain architecture 12-03 Reuse candidate X X 13-52 Communication evidence X 15-07 Reuse analysis evidence X X 13-53 Qualification evidence X Base Practices BP1: Select products for reuse X BP2: Analyze the reuse capability of the product BP3: Define limitations for reuse X BP4: Ensure qualification of products for reuse BP5: Provide products for reuse X X X BP6: Communicate information about effectiveness of reuse activities X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-REU2-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": null,
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6495,
+        "source_line_end": 6496
+      },
+      "verbatim_text": "The purpose is to ensure that reused work products are analyzed, verified, and approved for their target context.",
+      "verbatim_text_sha256": "37be6bf2e687040f3f447488b22c199c795663caac35528b356dd23be1528cdc",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of REU.2.",
+      "interpretation": "This is the PAM purpose statement for REU.2; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "OUTCOME.1",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6498,
+        "source_line_end": 6498
+      },
+      "verbatim_text": "1)",
+      "verbatim_text_sha256": "d1f47e5a47cb4cb2f0639dabef187d1ed63dab221280869d910c9f60be38df47",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for REU.2 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "OUTCOME.2",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6499,
+        "source_line_end": 6499
+      },
+      "verbatim_text": "2)",
+      "verbatim_text_sha256": "4ddcdc3195dacd1e53e11029a707abeb4d797912220af1b51f5c2af6e6eb925b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for REU.2 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "OUTCOME.3",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6500,
+        "source_line_end": 6500
+      },
+      "verbatim_text": "3)",
+      "verbatim_text_sha256": "6180669a9fb9d0e8d30055aa57b3ba6c43646a98d88caf1b2f906b8119f7a55b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for REU.2 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "OUTCOME.4",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6501,
+        "source_line_end": 6501
+      },
+      "verbatim_text": "4)",
+      "verbatim_text_sha256": "2ad75c4c49eb98f340f9287d58069cfec60a90aecd3b9f13ffe411febfe8b187",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for REU.2 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "OUTCOME.5",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6502,
+        "source_line_end": 6502
+      },
+      "verbatim_text": "5)",
+      "verbatim_text_sha256": "6d2e493279dd15fce4c54c4f97b329691d6ce83d724997ecaceba4902c9c67cc",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for REU.2 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "OUTCOME.6",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6503,
+        "source_line_end": 6511
+      },
+      "verbatim_text": "6) Products for reuse are selected using defined criteria. Products for reuse are analyzed for portability and interoperability. Limitations for reuse are defined and communicated. Products for reuse are verified. Products for reuse are provided to affected parties. Communication mechanism is established with the reuse product provider.",
+      "verbatim_text_sha256": "9fa0906226eb2509f18d7667dfb43d67a55021d495828b2109a09b9694018390",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for REU.2 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "BP1",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6513,
+        "source_line_end": 6516
+      },
+      "verbatim_text": "REU.2.BP1: Select products for reuse. Select the products to be reused using defined criteria. Note 1: Products for reuse may be systems, hardware or software components, third party components or legacy components.",
+      "verbatim_text_sha256": "42504b76e09820fbaa8d9ceef745ad72f2002f9b906c762dfb18db12193d3643",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "BP2",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6517,
+        "source_line_end": 6522
+      },
+      "verbatim_text": "REU.2.BP2: Analyze the reuse capability of the product. Analyze the designated target architecture and the product to be reused to determine its applicability in the target architecture according to relevant criteria. Note 2: Examples for criteria can be requirements compliance, verifiability of the product to be reused in the target architecture, or portability/interoperability.",
+      "verbatim_text_sha256": "e7df4134a27323fa64a3b2ebfa6a49b219cf0bba6c0b62ea8a5d1e1dae615aaa",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "BP3",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6523,
+        "source_line_end": 6527
+      },
+      "verbatim_text": "REU.2.BP3: Define limitations for reuse. Define and communicate limitations for the products to be reused. Note 3: Limitations may address parameters of operational environment.",
+      "verbatim_text_sha256": "b75db57eb7a9b47eab5fd0907153726dc0e719b548689fdd1b89adee4519cfba",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "BP4",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6528,
+        "source_line_end": 6532
+      },
+      "verbatim_text": "REU.2.BP4: Ensure qualification of products for reuse. Provide evidence that the product for reuse is qualified for the intended use of the deliverable. Note 4: Qualification may be demonstrated by verification evidence. Note 5: Verification may include the appropriateness of documentation.",
+      "verbatim_text_sha256": "0f5b4f9f91bc71eb64b817ae9e6bafdece208ad60418b6568ef0df1392a5af98",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "BP5",
+        "page": 98,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6533,
+        "source_line_end": 6537
+      },
+      "verbatim_text": "REU.2.BP5: Provide products for reuse. Make available the product to be reused to affected parties. Note 6: Refer to HWE.3, SWE.5 or SYS.4 for more information on integration of hardware, software, or system components.",
+      "verbatim_text_sha256": "2f11ae2d569dedb2d6a5b73c27c4a747510800cdee803f93eac21d400f681aa7",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-REU2-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.11.1",
+        "process_id": "REU.2",
+        "indicator_id": "BP6",
+        "page": 99,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6538,
+        "source_line_end": 6608
+      },
+      "verbatim_text": "REU.2.BP6: Communicate information about effectiveness of reuse activities. Establish communication and notification mechanism about experiences and technical outcomes to the provider of reused products. Outcome 6 X Outcome 5 X Outcome 4 Outcome 3 REU.2 Management of Products for Reuse Outcome 2 Outcome 1 Note 7: The communication with the provider of a reused product may depend on whether the product is under development or not. Output Information Items 04-02 Domain architecture 12-03 Reuse candidate X X 13-52 Communication evidence X 15-07 Reuse analysis evidence X X 13-53 Qualification evidence X Base Practices BP1: Select products for reuse X BP2: Analyze the reuse capability of the product BP3: Define limitations for reuse X BP4: Ensure qualification of products for reuse BP5: Provide products for reuse X X X BP6: Communicate information about effectiveness of reuse activities X",
+      "verbatim_text_sha256": "158aa1059cfd80c86e0b7cffa3917dab6e3fe1514da3cfcc63398285dca43d45",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete REU.2.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "REU.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 4343,
+    "output_information_items": [
+      {
+        "id": "04-02",
+        "name": "Domain architecture",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "12-03",
+        "name": "Reuse candidate",
+        "outcomes": [
+          "O1",
+          "O5"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication evidence",
+        "outcomes": [
+          "O6"
+        ]
+      },
+      {
+        "id": "15-07",
+        "name": "Reuse analysis evidence",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "13-53",
+        "name": "Qualification evidence",
+        "outcomes": [
+          "O4"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Select products for reuse",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Analyze the reuse capability of the product",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Define limitations for reuse",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Ensure qualification of products for reuse",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Provide products for reuse",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Communicate information about effectiveness of reuse activities 5. Process capability levels and process attributes The definition of process capability indicators for each process attribute is an integral part of a measurement framework. Process capability indicators such as generic practices and information items are the means to support the judgment of the degree of achievement of the associated process attribute. This chapter defines the generic practices and information items and their mapping to the process attributes for each capability level defined in the measurement framework [3.2]. Note: Due to lack of a defined process attribute for process capability level 0, no generic practices and information items are defined. Process attribute ID Process capability Process attribute name Each process attribute is identified with a unique identifier and level name. A process attribute scope statement is provided, and Process attribute process achievements are defined. scope Process achievements A set of generic practices for the process attribute providing a definition of the activities to be performed to accomplish the Process attribute acievement process attribute scope and fulfill the process achievements. Generic practices The generic practice headers are summarized at the end of a process to demonstrate their relationship to the process attribute achievements. indicators The output information items that are relevant to accomplish the process attribute scope and fulfill the process achievements are summarized at the end of a process attribute Output information section to demonstrate their relationship to the process items achievements. Note: Refer to Annex B for the characteristics of each information item. Table 22 — Template for the process description",
+        "outcomes": [
+          "O6"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

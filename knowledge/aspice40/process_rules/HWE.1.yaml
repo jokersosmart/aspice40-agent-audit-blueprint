@@ -1,0 +1,642 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "HWE.1",
+  "process_name": "Hardware Requirements Analysis",
+  "process_group": "HWE",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.7.1",
+    "source_page_hint": 71,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to establish a structured and analyzed set of hardware requirements consistent with the system requirements, and the system architectural design.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1)"
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2)"
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3)"
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4)"
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Hardware requirements are specified. Hardware requirements are structured and prioritized. Hardware requirements are analyzed for correctness and technical feasibility. The impact of hardware requirements on the operating environment is analyzed. Consistency and bidirectional traceability are established between hardware requirements and system requirements."
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) Consistency and bidirectional traceability are established between hardware requirements and system architectural design."
+      },
+      {
+        "id": "OUTCOME.7",
+        "text": "7) The hardware requirements are agreed and communicated to all affected parties."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "HWE.1.BP1: Specify hardware requirements. Use the system requirements, and the system architecture including interface definitions, to identify and document the functional and nonfunctional requirements of the hardware according to defined characteristics for requirements. Note 1: Characteristics of requirements are defined in standards such as ISO IEEE 29148, ISO/IEC IEEE 24765, ISO 26262-8:2018, or the INCOSE Guide For Writing Requirements. Note 2: Examples for defined characteristics of requirements shared by the above-mentioned standards are verifiability (i.e., verification criteria being inherent in the requirements text), unambiguity/comprehensibility, freedom from design and implementation, and not contradicting any other requirement). Note 3: In case of hardware-only development, the system requirements and the system architecture refer to a given operating environment. In that case, stakeholder requirements can be used as the basis for identifying the required functions and capabilities of the hardware. Note 4: The hardware-software-interface (HSI) definition puts in context software and therefore is an interface decision at the system design level. If such a HSI exists, then it may provide input to hardware requirements.",
+        "title": "Specify hardware requirements. Use the system requirements, and the system architecture including interface definitions, to identify and document the functional and nonfunctional requirements of the hardware according to defined characteristics for requirements. Note 1: Characteristics of requirements are defined in standards such as ISO IEEE 29148, ISO/IEC IEEE 24765, ISO 26262-8:2018, or the INCOSE Guide For Writing Requirements. Note 2: Examples for defined characteristics of requirements shared by the above-mentioned standards are verifiability (i.e., verification criteria being inherent in the requirements text), unambiguity/comprehensibility, freedom from design and implementation, and not contradicting any other requirement). Note 3: In case of hardware-only development, the system requirements and the system architecture refer to a given operating environment. In that case, stakeholder requirements can be used as the basis for identifying the required functions and capabilities of the hardware. Note 4: The hardware-software-interface (HSI) definition puts in context software and therefore is an interface decision at the system design level. If such a HSI exists, then it may provide input to hardware requirements."
+      },
+      {
+        "id": "BP2",
+        "text": "HWE.1.BP2: Structure hardware requirements. Structure and prioritize the hardware requirements. Note 5: Examples for structuring criteria can be grouping (e.g., by functionality) or variants identification. Note 6: Prioritization can be done according to project or stakeholder needs via e.g., definition of release scopes. Refer to SPL.2.BP1.",
+        "title": "Structure hardware requirements. Structure and prioritize the hardware requirements. Note 5: Examples for structuring criteria can be grouping (e.g., by functionality) or variants identification. Note 6: Prioritization can be done according to project or stakeholder needs via e.g., definition of release scopes. Refer to SPL.2.BP1."
+      },
+      {
+        "id": "BP3",
+        "text": "HWE.1.BP3: Analyze hardware requirements. Analyze the specified hardware requirements including their interdependencies to ensure correctness, technical feasibility, and to support project management regarding project estimates. Note 7: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates. Note 8: The analyses of technical feasibility can be done based on a given hardware design (e.g., platform) or by prototype development.",
+        "title": "Analyze hardware requirements. Analyze the specified hardware requirements including their interdependencies to ensure correctness, technical feasibility, and to support project management regarding project estimates. Note 7: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates. Note 8: The analyses of technical feasibility can be done based on a given hardware design (e.g., platform) or by prototype development."
+      },
+      {
+        "id": "BP4",
+        "text": "HWE.1.BP4: Analyze the impact on the operating environment. Identify the interfaces between the specified hardware and other elements of the operating environment. Analyze the impact that the hardware requirements will have on these interfaces and the operating environment.",
+        "title": "Analyze the impact on the operating environment. Identify the interfaces between the specified hardware and other elements of the operating environment. Analyze the impact that the hardware requirements will have on these interfaces and the operating environment."
+      },
+      {
+        "id": "BP5",
+        "text": "HWE.1.BP5: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish traceability between hardware requirements and the system architecture. Ensure consistency and establish traceability between hardware requirements and system requirements. Note 9: Redundant traceability is not intended. Note 10: There may be non-functional hardware requirements that the hardware design does not trace to. Examples are development process requirements. Such requirements are still subject to verification. Note 11: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 12: In case of hardware development only, the system requirements and system architecture refer to a given operating environment. In that case, consistency and bidirectional traceability can be ensured between stakeholder requirements and hardware requirements. Outcome 7 Outcome 6 Outcome 5 Outcome 4 Outcome 3 HWE.1 Hardware Requirements Analysis Outcome 2 Outcome 1",
+        "title": "Ensure consistency and establish bidirectional traceability. Ensure consistency and establish traceability between hardware requirements and the system architecture. Ensure consistency and establish traceability between hardware requirements and system requirements. Note 9: Redundant traceability is not intended. Note 10: There may be non-functional hardware requirements that the hardware design does not trace to. Examples are development process requirements. Such requirements are still subject to verification. Note 11: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 12: In case of hardware development only, the system requirements and system architecture refer to a given operating environment. In that case, consistency and bidirectional traceability can be ensured between stakeholder requirements and hardware requirements. Outcome 7 Outcome 6 Outcome 5 Outcome 4 Outcome 3 HWE.1 Hardware Requirements Analysis Outcome 2 Outcome 1"
+      },
+      {
+        "id": "BP6",
+        "text": "HWE.1.BP6: Communicate agreed hardware requirements and impact on the operating environment. Communicate the agreed hardware requirements and results of the analysis of impact on the operating environment to all affected parties. Output Information Items 13-52 Communication Evidence X 13-51 Consistency Evidence X 17-00 Requirement X X X X 17-54 Requirement Attribute X 15-51 Analysis Results X X Base Practices BP1: Specify hardware requirements X BP2: Structure hardware requirements X BP3: Analyze hardware requirements X BP4: Analyze the impact on the operating environment BP5: Ensure consistency and establish bidirectional traceability BP6: Communicate agreed hardware requirements X X X X",
+        "title": "Communicate agreed hardware requirements and impact on the operating environment. Communicate the agreed hardware requirements and results of the analysis of impact on the operating environment to all affected parties. Output Information Items 13-52 Communication Evidence X 13-51 Consistency Evidence X 17-00 Requirement X X X X 17-54 Requirement Attribute X 15-51 Analysis Results X X Base Practices BP1: Specify hardware requirements X BP2: Structure hardware requirements X BP3: Analyze hardware requirements X BP4: Analyze the impact on the operating environment BP5: Ensure consistency and establish bidirectional traceability BP6: Communicate agreed hardware requirements X X X X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-HWE1-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": null,
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4537,
+        "source_line_end": 4538
+      },
+      "verbatim_text": "The purpose is to establish a structured and analyzed set of hardware requirements consistent with the system requirements, and the system architectural design.",
+      "verbatim_text_sha256": "dc31f6c12dcb2ceee382d460300bf9c8a6f6b9a2cbecda9199a4a1d64fc699db",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of HWE.1.",
+      "interpretation": "This is the PAM purpose statement for HWE.1; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "OUTCOME.1",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4540,
+        "source_line_end": 4540
+      },
+      "verbatim_text": "1)",
+      "verbatim_text_sha256": "d1f47e5a47cb4cb2f0639dabef187d1ed63dab221280869d910c9f60be38df47",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for HWE.1 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "OUTCOME.2",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4541,
+        "source_line_end": 4541
+      },
+      "verbatim_text": "2)",
+      "verbatim_text_sha256": "4ddcdc3195dacd1e53e11029a707abeb4d797912220af1b51f5c2af6e6eb925b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for HWE.1 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "OUTCOME.3",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4542,
+        "source_line_end": 4542
+      },
+      "verbatim_text": "3)",
+      "verbatim_text_sha256": "6180669a9fb9d0e8d30055aa57b3ba6c43646a98d88caf1b2f906b8119f7a55b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for HWE.1 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "OUTCOME.4",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4543,
+        "source_line_end": 4543
+      },
+      "verbatim_text": "4)",
+      "verbatim_text_sha256": "2ad75c4c49eb98f340f9287d58069cfec60a90aecd3b9f13ffe411febfe8b187",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for HWE.1 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "OUTCOME.5",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4544,
+        "source_line_end": 4551
+      },
+      "verbatim_text": "5) Hardware requirements are specified. Hardware requirements are structured and prioritized. Hardware requirements are analyzed for correctness and technical feasibility. The impact of hardware requirements on the operating environment is analyzed. Consistency and bidirectional traceability are established between hardware requirements and system requirements.",
+      "verbatim_text_sha256": "5c593db5cb7cea4468e14944490adc78b51a107e318dffdedcde1598b0d6b28b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for HWE.1 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "OUTCOME.6",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4552,
+        "source_line_end": 4553
+      },
+      "verbatim_text": "6) Consistency and bidirectional traceability are established between hardware requirements and system architectural design.",
+      "verbatim_text_sha256": "307300f409049fa6dbed28e196e47ada89bcf90bbc7932be8b72c2195485a829",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for HWE.1 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-OUTCOME-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "OUTCOME.7",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4554,
+        "source_line_end": 4554
+      },
+      "verbatim_text": "7) The hardware requirements are agreed and communicated to all affected parties.",
+      "verbatim_text_sha256": "adda41598c973d1c831aec17cb233a0d82560938960c778b8991b30d5ad244f2",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1 outcome 7 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for HWE.1 outcome 7; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "BP1",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4556,
+        "source_line_end": 4571
+      },
+      "verbatim_text": "HWE.1.BP1: Specify hardware requirements. Use the system requirements, and the system architecture including interface definitions, to identify and document the functional and nonfunctional requirements of the hardware according to defined characteristics for requirements. Note 1: Characteristics of requirements are defined in standards such as ISO IEEE 29148, ISO/IEC IEEE 24765, ISO 26262-8:2018, or the INCOSE Guide For Writing Requirements. Note 2: Examples for defined characteristics of requirements shared by the above-mentioned standards are verifiability (i.e., verification criteria being inherent in the requirements text), unambiguity/comprehensibility, freedom from design and implementation, and not contradicting any other requirement). Note 3: In case of hardware-only development, the system requirements and the system architecture refer to a given operating environment. In that case, stakeholder requirements can be used as the basis for identifying the required functions and capabilities of the hardware. Note 4: The hardware-software-interface (HSI) definition puts in context software and therefore is an interface decision at the system design level. If such a HSI exists, then it may provide input to hardware requirements.",
+      "verbatim_text_sha256": "3210dd4d190f498ee49d40f619a71ca884566f6ce741dfa27c26d3e8f17baa41",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "BP2",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4572,
+        "source_line_end": 4578
+      },
+      "verbatim_text": "HWE.1.BP2: Structure hardware requirements. Structure and prioritize the hardware requirements. Note 5: Examples for structuring criteria can be grouping (e.g., by functionality) or variants identification. Note 6: Prioritization can be done according to project or stakeholder needs via e.g., definition of release scopes. Refer to SPL.2.BP1.",
+      "verbatim_text_sha256": "8e5e91cae3463f42733748a37ff8a54243c466326e7a0da5257f99900c163070",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "BP3",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4579,
+        "source_line_end": 4585
+      },
+      "verbatim_text": "HWE.1.BP3: Analyze hardware requirements. Analyze the specified hardware requirements including their interdependencies to ensure correctness, technical feasibility, and to support project management regarding project estimates. Note 7: See MAN.3.BP3 for project feasibility and MAN.3.BP5 for project estimates. Note 8: The analyses of technical feasibility can be done based on a given hardware design (e.g., platform) or by prototype development.",
+      "verbatim_text_sha256": "0a8240010a151675350634c281a7bd1a4569a49c59282bbeefaa220f5250e79b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "BP4",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4586,
+        "source_line_end": 4589
+      },
+      "verbatim_text": "HWE.1.BP4: Analyze the impact on the operating environment. Identify the interfaces between the specified hardware and other elements of the operating environment. Analyze the impact that the hardware requirements will have on these interfaces and the operating environment.",
+      "verbatim_text_sha256": "a69a642c2db5b8a7e63c652a797d86238cf7fae80d68b5a4767941c62424df73",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "BP5",
+        "page": 71,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4590,
+        "source_line_end": 4620
+      },
+      "verbatim_text": "HWE.1.BP5: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish traceability between hardware requirements and the system architecture. Ensure consistency and establish traceability between hardware requirements and system requirements. Note 9: Redundant traceability is not intended. Note 10: There may be non-functional hardware requirements that the hardware design does not trace to. Examples are development process requirements. Such requirements are still subject to verification. Note 11: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other. Note 12: In case of hardware development only, the system requirements and system architecture refer to a given operating environment. In that case, consistency and bidirectional traceability can be ensured between stakeholder requirements and hardware requirements. Outcome 7 Outcome 6 Outcome 5 Outcome 4 Outcome 3 HWE.1 Hardware Requirements Analysis Outcome 2 Outcome 1",
+      "verbatim_text_sha256": "1bb80fd0ed026c8c547262236772a213181577cca43df41757ee95aca7ee2f3a",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-HWE1-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.7.1",
+        "process_id": "HWE.1",
+        "indicator_id": "BP6",
+        "page": 72,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 4621,
+        "source_line_end": 4678
+      },
+      "verbatim_text": "HWE.1.BP6: Communicate agreed hardware requirements and impact on the operating environment. Communicate the agreed hardware requirements and results of the analysis of impact on the operating environment to all affected parties. Output Information Items 13-52 Communication Evidence X 13-51 Consistency Evidence X 17-00 Requirement X X X X 17-54 Requirement Attribute X 15-51 Analysis Results X X Base Practices BP1: Specify hardware requirements X BP2: Structure hardware requirements X BP3: Analyze hardware requirements X BP4: Analyze the impact on the operating environment BP5: Ensure consistency and establish bidirectional traceability BP6: Communicate agreed hardware requirements X X X X",
+      "verbatim_text_sha256": "8565015afab7a6627608ba564f04c7da2332ecc9d8163dcddb3e5f383bf82a0b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete HWE.1.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "HWE.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 3050,
+    "output_information_items": [
+      {
+        "id": "13-52",
+        "name": "Communication Evidence",
+        "outcomes": [
+          "O7"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency Evidence",
+        "outcomes": [
+          "O5",
+          "O6"
+        ]
+      },
+      {
+        "id": "17-00",
+        "name": "Requirement",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "17-54",
+        "name": "Requirement Attribute",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "15-51",
+        "name": "Analysis Results",
+        "outcomes": [
+          "O1"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Specify hardware requirements",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Structure hardware requirements",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Analyze hardware requirements",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Analyze the impact on the operating environment",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Ensure consistency and establish bidirectional traceability",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Communicate agreed hardware requirements",
+        "outcomes": [
+          "O3"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

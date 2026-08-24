@@ -1,0 +1,1166 @@
+{
+  "schema_version": "1.0",
+  "layer_name": "Cognitive Operating Layer",
+  "normative_status": "non_normative_support_layer",
+  "visibility": "standard_agent_behavior",
+  "source_attribution_in_outputs": false,
+  "precedence": "below_approved_spec_company_customer_rules_and_human_approvals",
+  "assignment_count": 54,
+  "assignments": [
+    {
+      "agent_id": "C01",
+      "agent_class": "control",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "evidence_first",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "source_integrity",
+        "human_review_for_authority"
+      ]
+    },
+    {
+      "agent_id": "C02",
+      "agent_class": "control",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-05",
+        "COM-08"
+      ],
+      "operating_mode": "evidence_first",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "source_integrity",
+        "human_review_for_authority"
+      ]
+    },
+    {
+      "agent_id": "C03",
+      "agent_class": "control",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-08",
+        "COM-09"
+      ],
+      "operating_mode": "evidence_first",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "source_integrity",
+        "human_review_for_authority"
+      ]
+    },
+    {
+      "agent_id": "C04",
+      "agent_class": "control",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-05",
+        "COM-08"
+      ],
+      "operating_mode": "evidence_first",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "source_integrity",
+        "human_review_for_authority"
+      ]
+    },
+    {
+      "agent_id": "C05",
+      "agent_class": "control",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "evidence_first",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "source_integrity",
+        "human_review_for_authority"
+      ]
+    },
+    {
+      "agent_id": "C06",
+      "agent_class": "control",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "evidence_first",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "source_integrity",
+        "human_review_for_authority"
+      ]
+    },
+    {
+      "agent_id": "C07",
+      "agent_class": "control",
+      "modules": [
+        "COM-02",
+        "COM-03",
+        "COM-04",
+        "COM-05",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "evidence_first",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "source_integrity",
+        "human_review_for_authority"
+      ]
+    },
+    {
+      "agent_id": "C08",
+      "agent_class": "control",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "evidence_first",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "source_integrity",
+        "human_review_for_authority"
+      ]
+    },
+    {
+      "agent_id": "ACQ.4",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SPL.2",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SYS.1",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "bounded problem definition, evidence provenance, design assumptions, interface communication and cross-level consistency",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SYS.2",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "bounded problem definition, evidence provenance, design assumptions, interface communication and cross-level consistency",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SYS.3",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "bounded problem definition, evidence provenance, design assumptions, interface communication and cross-level consistency",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SYS.4",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "testable hypotheses, controlled measures, result interpretation, regression impact and independent review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SYS.5",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "testable hypotheses, controlled measures, result interpretation, regression impact and independent review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SWE.1",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "bounded problem definition, evidence provenance, design assumptions, interface communication and cross-level consistency",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SWE.2",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "bounded problem definition, evidence provenance, design assumptions, interface communication and cross-level consistency",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SWE.3",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "bounded problem definition, evidence provenance, design assumptions, interface communication and cross-level consistency",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SWE.4",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "testable hypotheses, controlled measures, result interpretation, regression impact and independent review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SWE.5",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "testable hypotheses, controlled measures, result interpretation, regression impact and independent review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SWE.6",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "testable hypotheses, controlled measures, result interpretation, regression impact and independent review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "VAL.1",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "testable hypotheses, controlled measures, result interpretation, regression impact and independent review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "MLE.1",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "data/model scope, reproducibility, alternative explanations, model risk and human approval",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "MLE.2",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "data/model scope, reproducibility, alternative explanations, model risk and human approval",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "MLE.3",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "data/model scope, reproducibility, alternative explanations, model risk and human approval",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "MLE.4",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "data/model scope, reproducibility, alternative explanations, model risk and human approval",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "HWE.1",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "bounded problem definition, evidence provenance, design assumptions, interface communication and cross-level consistency",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "HWE.2",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "bounded problem definition, evidence provenance, design assumptions, interface communication and cross-level consistency",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "HWE.3",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "testable hypotheses, controlled measures, result interpretation, regression impact and independent review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "HWE.4",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "testable hypotheses, controlled measures, result interpretation, regression impact and independent review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SUP.1",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SUP.8",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SUP.9",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SUP.10",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "SUP.11",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "MAN.3",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "MAN.5",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "MAN.6",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "PIM.3",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "REU.2",
+      "agent_class": "process_auditor",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "normative_check_plus_contextual_analysis",
+      "emphasis": "scope, evidence quality, prioritization, cross-party responsibility, baseline continuity and corrective action",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "scope_status",
+        "unknown_and_conflict_preservation",
+        "technical_human_review"
+      ]
+    },
+    {
+      "agent_id": "M01",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "system boundary, affected parties, interface decisions and cross-domain impact",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M02",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "firmware evidence chain, implementation assumptions, regression and release readiness",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M03",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "hardware architecture, design feasibility, manufacturing and evidence ownership",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M04",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "RTL behavior, CDC/reset/power-domain assumptions, formal/simulation evidence",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M05",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "electrical behavior, PVT/corner assumptions, measurement and characterization",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M06",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "controlled simulation/emulation, reproducibility, coverage and result interpretation",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M07",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-04",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "design freeze, irreversible release decisions, sign-off evidence and rollback limits",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M08",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "system-level measures, intended environment, validation and affected-party communication",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M09",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "software verification measures, regression, defect interpretation and independent review",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M10",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "hardware verification method selection, measurement, silicon evidence and closure",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M11",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "independence, consistency, evidence quality, corrective action and escalation",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M12",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "baseline integrity, change impact, problem cause, recovery and re-verification",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M13",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "scope, constraints, risks, resources, metrics, trade-offs and decision gates",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M14",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "supplier/reuse evidence, external commitments, release communication and qualification",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    }
+  ]
+}

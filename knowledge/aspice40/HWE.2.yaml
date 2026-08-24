@@ -1,0 +1,120 @@
+schema_version: "1.0"
+aspice_version: "4.0"
+process_id: HWE.2
+process_name: Hardware Design
+process_group: HWE
+source:
+  document_id: Automotive-SPICE-PAM-v40
+  version: "4.0"
+  sections: ["4.7.2", "HWE.2"]
+  pages: ["72-74"]
+  note: "Use the approved source hash from C01; page numbers are source anchors, not evidence status."
+pam:
+  purpose: "The purpose is to establish a detailed hardware design based on the hardware architecture."
+  outcomes:
+    - id: OUTCOME.1
+      text: "A detailed hardware design is developed based on the hardware architecture."
+    - id: OUTCOME.2
+      text: "The dynamic aspects of the hardware design are evaluated."
+    - id: OUTCOME.3
+      text: "The hardware design is analyzed for correctness and technical feasibility."
+    - id: OUTCOME.4
+      text: "Consistency and bidirectional traceability are established between hardware elements and hardware requirements."
+    - id: OUTCOME.5
+      text: "Consistency and bidirectional traceability are established between the hardware detailed design and the hardware architecture."
+    - id: OUTCOME.6
+      text: "The agreed hardware architecture and hardware detailed design are communicated to all affected parties."
+  base_practices:
+    - id: BP1
+      title: Specify the hardware architecture
+      evidence_expectations: [hardware_architecture, interface_definition, design_constraints, traceability]
+    - id: BP2
+      title: Specify the hardware detailed design
+      evidence_expectations: [schematic, rtl, micro_architecture, netlist, layout, bom, interface]
+    - id: BP3
+      title: Specify dynamic aspects
+      evidence_expectations: [timing, power, reset, clock, protocol, state_behavior, dynamic_analysis]
+    - id: BP4
+      title: Analyze the hardware architecture and hardware detailed design
+      evidence_expectations: [simulation, formal, calculation, analysis, review, feasibility]
+    - id: BP5
+      title: Ensure consistency and establish bidirectional traceability
+      evidence_expectations: [traceability_graph, consistency_evidence, change_impact]
+    - id: BP6
+      title: Communicate agreed hardware architecture and hardware detailed design
+      evidence_expectations: [communication_evidence, affected_party_acknowledgement, special_characteristics, production_data]
+  expected_information_items:
+    - id: 04-52
+      name: Hardware Architecture
+      characteristics: [unique_identification, version, owner, review_status, traceability]
+    - id: 04-53
+      name: Hardware Detailed Design
+      characteristics: [unique_identification, version, baseline, interfaces, review_status]
+    - id: 04-54
+      name: Hardware Schematics
+      characteristics: [revision, design_status, review_status, traceability]
+    - id: 14-54
+      name: Hardware Bill of Materials
+      characteristics: [revision, approved_components, source, traceability]
+    - id: 04-55
+      name: Hardware Layout
+      characteristics: [revision, constraints, review_status, traceability]
+    - id: 03-54
+      name: Hardware Production Data
+      characteristics: [design_freeze, release_status, baseline, approval]
+    - id: 04-56
+      name: Hardware Element Interface
+      characteristics: [interface_id, owner, version, requirements_traceability]
+    - id: 15-51
+      name: Analysis Results
+      characteristics: [measure_or_method, criteria, result, reviewer, date]
+    - id: 13-51
+      name: Consistency Evidence
+      characteristics: [compared_artifacts, baseline, result, reviewer]
+    - id: 17-57
+      name: Special Characteristics
+      characteristics: [identifier, owner, affected_parties, production_relevance]
+    - id: 13-52
+      name: Communication Evidence
+      characteristics: [recipient, content, date, acknowledgement_or_followup]
+product_context:
+  evidence_domains:
+    digital_hardware: [rtl, micro_architecture, cdc, reset, power_domain, lint, formal, synthesis, netlist]
+    analog_mixed_signal: [schematic, layout, spice, pvt_corner, electrical_analysis, measurement, characterization]
+    simulation_emulation: [simulation_plan, environment_version, protocol, log, coverage, regression, result]
+    tapeout_silicon: [design_freeze, signoff, gds_or_mask, production_data, sample_id, bringup, characterization, deviation]
+  product_questions:
+    - "Which SSD Controller blocks are in scope: host interface, NAND interface, FTL support logic, ECC/LDPC, DMA, SRAM/DRAM controller, power/clock, security, or other?"
+    - "Which hardware artifacts are authoritative for each block: RTL, schematic, netlist, layout, model, production data, or silicon characterization?"
+    - "Which verification evidence is simulation/formal/emulation, and which requires tape-out or real silicon?"
+    - "How are design freeze, production data, silicon sample identity and change requests linked?"
+  explicit_non_requirements:
+    - "Digital, analog, simulation and tape-out are domain partitions, not additional ASPICE processes."
+interfaces:
+  upstream_processes: [SYS.3, HWE.1]
+  downstream_processes: [HWE.3, HWE.4, SYS.4, SPL.2]
+  affected_managers: [M01, M03, M04, M05, M06, M07, M10, M12]
+  independent_verification_managers: [M06, M10]
+interpretation:
+  pam_explicit:
+    - "Hardware architecture, detailed design, dynamic aspects, analysis, consistency/traceability and communication are inspected through the process outcomes and base practices."
+    - "Verification evidence may use simulation, calculation, analysis, measurement or other suitable methods; do not reduce it to test reports only."
+  company_rule:
+    - "Map the company design review, RTL sign-off, analog sign-off, tape-out readiness and production-data approval to HWE.2 evidence objects."
+  customer_specific: []
+  product_context:
+    - "Digital/analog/simulation/tape-out routing reflects the SSD Controller organization and product lifecycle."
+  inference:
+    - "CDC/reset/power-domain checks are recommended product-context checks; they are not independent PAM requirements unless adopted by company or customer scope."
+known_conflicts:
+  - id: HWE.2-BP-NUMBER-CONFLICT
+    description: "The page-74 matrix shows BP7 for the communication row while the prose labels the communication practice BP6. Preserve both labels and require manual resolution."
+    status: conflict
+    human_owner: Lead_Assessor_or_QA
+human_gates:
+  - scope_and_na
+  - technical_correctness_of_rtl_schematic_layout_and_production_data
+  - verification_adequacy
+  - design_freeze_and_tapeout_approval
+  - formal_rating
+  - major_finding_closure

@@ -1,0 +1,592 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "SUP.10",
+  "process_name": "Change Request Management",
+  "process_group": "SUP",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.8.4",
+    "source_page_hint": 86,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose of the Change Request Management Process is to ensure that change requests are recorded, analyzed, tracked, approved, and implemented.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) Requests for changes are recorded and identified."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) Change requests are analyzed, dependencies and relationships to other change requests are identified, and the impact is estimated."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) Change requests are approved before implementation and prioritized accordingly."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) Bidirectional traceability is established between change requests and affected work products."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Implementation of change requests is confirmed."
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) Change requests are tracked to closure and status of change requests is communicated to affected parties."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "SUP.10.BP1: Identify and record the change requests. The scope for application of change requests is identified. Each change request is uniquely identified, described, and recorded, including the initiator and reason of the change request. A status is assigned to each change request to facilitate tracking. NOTE 1: Change requests may be used for changes related to e.g., product, process, methods. NOTE 2: Example values for the change request status are “open”, “under investigation”, “implemented”, etc. NOTE 3: The change request handling may differ across the product life cycle e.g., during prototype construction and series development",
+        "title": "Identify and record the change requests. The scope for application of change requests is identified. Each change request is uniquely identified, described, and recorded, including the initiator and reason of the change request. A status is assigned to each change request to facilitate tracking. NOTE 1: Change requests may be used for changes related to e.g., product, process, methods. NOTE 2: Example values for the change request status are “open”, “under investigation”, “implemented”, etc. NOTE 3: The change request handling may differ across the product life cycle e.g., during prototype construction and series development"
+      },
+      {
+        "id": "BP2",
+        "text": "SUP.10.BP2: Analyze and assess change requests. Change requests are analyzed by relevant parties according to analysis criteria. Work products affected by the change request and dependencies to other change requests are determined. The impact of the change requests is assessed. NOTE 4: Examples for analysis criteria are: resource requirements, scheduling issues, risks, benefits, etc.",
+        "title": "Analyze and assess change requests. Change requests are analyzed by relevant parties according to analysis criteria. Work products affected by the change request and dependencies to other change requests are determined. The impact of the change requests is assessed. NOTE 4: Examples for analysis criteria are: resource requirements, scheduling issues, risks, benefits, etc."
+      },
+      {
+        "id": "BP3",
+        "text": "SUP.10.BP3: Approve change requests before implementation. Change requests are prioritized and approved for implementation based on analysis results and availability of resources. NOTE 5: A Change Control Board (CCB) is an example mechanism used to approve change requests. NOTE 6: Prioritization of change requests may be done by allocation to releases.",
+        "title": "Approve change requests before implementation. Change requests are prioritized and approved for implementation based on analysis results and availability of resources. NOTE 5: A Change Control Board (CCB) is an example mechanism used to approve change requests. NOTE 6: Prioritization of change requests may be done by allocation to releases."
+      },
+      {
+        "id": "BP4",
+        "text": "SUP.10.BP4: Establish bidirectional traceability. Establish bidirectional traceability between change requests and work products affected by the change requests. In case that the change request is initiated by a problem, establish bidirectional traceability between change requests and the corresponding problem reports.",
+        "title": "Establish bidirectional traceability. Establish bidirectional traceability between change requests and work products affected by the change requests. In case that the change request is initiated by a problem, establish bidirectional traceability between change requests and the corresponding problem reports."
+      },
+      {
+        "id": "BP5",
+        "text": "SUP.10.BP5: Confirm the implementation of change requests. The implementation of change requests is confirmed before closure by relevant stakeholders.",
+        "title": "Confirm the implementation of change requests. The implementation of change requests is confirmed before closure by relevant stakeholders."
+      },
+      {
+        "id": "BP6",
+        "text": "SUP.10.BP6: Track change requests to closure. Change requests are tracked to closure. The status of change requests is communicated to all affected parties. Outcome 5 Outcome 6 Outcome 4 Outcome 3 SUP.10 Change Request Management Outcome 2 Outcome 1 NOTE 7: Examples for informing affected parties can be daily standup meetings or tool-supported workflows. X X Output Information Items 18-57 Change analysis criteria X 13-16 Change request X X X 13-51 Consistency evidence X Base Practices BP1: Identify and record the change requests X BP2: Analyze and assess change requests X BP3: Approve change requests before implementation BP4: Establish bidirectional traceability X BP5: Confirm the implementation of change requests X X BP6: Track change requests to closure X",
+        "title": "Track change requests to closure. Change requests are tracked to closure. The status of change requests is communicated to all affected parties. Outcome 5 Outcome 6 Outcome 4 Outcome 3 SUP.10 Change Request Management Outcome 2 Outcome 1 NOTE 7: Examples for informing affected parties can be daily standup meetings or tool-supported workflows. X X Output Information Items 18-57 Change analysis criteria X 13-16 Change request X X X 13-51 Consistency evidence X Base Practices BP1: Identify and record the change requests X BP2: Analyze and assess change requests X BP3: Approve change requests before implementation BP4: Establish bidirectional traceability X BP5: Confirm the implementation of change requests X X BP6: Track change requests to closure X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-SUP10-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": null,
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5613,
+        "source_line_end": 5614
+      },
+      "verbatim_text": "The purpose of the Change Request Management Process is to ensure that change requests are recorded, analyzed, tracked, approved, and implemented.",
+      "verbatim_text_sha256": "e131f46996c840b30e29e4ee2690517fd3729fd12a1a36ac86373c4cd394faf5",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of SUP.10.",
+      "interpretation": "This is the PAM purpose statement for SUP.10; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "OUTCOME.1",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5616,
+        "source_line_end": 5616
+      },
+      "verbatim_text": "1) Requests for changes are recorded and identified.",
+      "verbatim_text_sha256": "99c313b35cdeff241d0e9e6e3c70b1d247907b24f030d243dcc452f431cb2355",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.10 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "OUTCOME.2",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5617,
+        "source_line_end": 5618
+      },
+      "verbatim_text": "2) Change requests are analyzed, dependencies and relationships to other change requests are identified, and the impact is estimated.",
+      "verbatim_text_sha256": "60210c68c77247da7758d29c13a675f996f5ad722cf02b257209ecb8d8bcf787",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.10 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "OUTCOME.3",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5619,
+        "source_line_end": 5619
+      },
+      "verbatim_text": "3) Change requests are approved before implementation and prioritized accordingly.",
+      "verbatim_text_sha256": "76ac2a239df5dc95267f80cf01522fc199acbb2d083b304c53a57bbe714bd369",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.10 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "OUTCOME.4",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5620,
+        "source_line_end": 5621
+      },
+      "verbatim_text": "4) Bidirectional traceability is established between change requests and affected work products.",
+      "verbatim_text_sha256": "6bac0c84490314354e712dac3fa33c8dc7e7efa0526faa196384c712b788a68b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.10 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "OUTCOME.5",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5622,
+        "source_line_end": 5622
+      },
+      "verbatim_text": "5) Implementation of change requests is confirmed.",
+      "verbatim_text_sha256": "cfded16128f63f0e1e8e788806ffd8984943a4bd5d9e10cc928b3ef01ec9d880",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.10 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "OUTCOME.6",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5623,
+        "source_line_end": 5624
+      },
+      "verbatim_text": "6) Change requests are tracked to closure and status of change requests is communicated to affected parties.",
+      "verbatim_text_sha256": "b8ccc52bb9385cc9ae53682dcfa9488c9fccf65ed1721b2c9dca0d5714f02008",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.10 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "BP1",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5626,
+        "source_line_end": 5637
+      },
+      "verbatim_text": "SUP.10.BP1: Identify and record the change requests. The scope for application of change requests is identified. Each change request is uniquely identified, described, and recorded, including the initiator and reason of the change request. A status is assigned to each change request to facilitate tracking. NOTE 1: Change requests may be used for changes related to e.g., product, process, methods. NOTE 2: Example values for the change request status are “open”, “under investigation”, “implemented”, etc. NOTE 3: The change request handling may differ across the product life cycle e.g., during prototype construction and series development",
+      "verbatim_text_sha256": "28e0c342969bc48f88bb39411f7d0861943195dabdb1c829229aae6e7d8c5c4e",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "BP2",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5638,
+        "source_line_end": 5644
+      },
+      "verbatim_text": "SUP.10.BP2: Analyze and assess change requests. Change requests are analyzed by relevant parties according to analysis criteria. Work products affected by the change request and dependencies to other change requests are determined. The impact of the change requests is assessed. NOTE 4: Examples for analysis criteria are: resource requirements, scheduling issues, risks, benefits, etc.",
+      "verbatim_text_sha256": "5eeb1b2c20ac93c6161a71c5f642e6de7b3ed3a509bd5686915f5a56e5191530",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "BP3",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5645,
+        "source_line_end": 5651
+      },
+      "verbatim_text": "SUP.10.BP3: Approve change requests before implementation. Change requests are prioritized and approved for implementation based on analysis results and availability of resources. NOTE 5: A Change Control Board (CCB) is an example mechanism used to approve change requests. NOTE 6: Prioritization of change requests may be done by allocation to releases.",
+      "verbatim_text_sha256": "7f29e85b26f1e9aa91b295634e2bcf640505ab5ce2d1605360851d62bc6ca192",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "BP4",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5652,
+        "source_line_end": 5655
+      },
+      "verbatim_text": "SUP.10.BP4: Establish bidirectional traceability. Establish bidirectional traceability between change requests and work products affected by the change requests. In case that the change request is initiated by a problem, establish bidirectional traceability between change requests and the corresponding problem reports.",
+      "verbatim_text_sha256": "e76e7283491bcc1f4359885b4e506436149c1dcf0090bd365644a750ec64d3fc",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "BP5",
+        "page": 86,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5656,
+        "source_line_end": 5657
+      },
+      "verbatim_text": "SUP.10.BP5: Confirm the implementation of change requests. The implementation of change requests is confirmed before closure by relevant stakeholders.",
+      "verbatim_text_sha256": "dbbf095b872989043d48921c58a2610cb4d2695265f8564d566a46894836ba5b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP10-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.4",
+        "process_id": "SUP.10",
+        "indicator_id": "BP6",
+        "page": 87,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5658,
+        "source_line_end": 5722
+      },
+      "verbatim_text": "SUP.10.BP6: Track change requests to closure. Change requests are tracked to closure. The status of change requests is communicated to all affected parties. Outcome 5 Outcome 6 Outcome 4 Outcome 3 SUP.10 Change Request Management Outcome 2 Outcome 1 NOTE 7: Examples for informing affected parties can be daily standup meetings or tool-supported workflows. X X Output Information Items 18-57 Change analysis criteria X 13-16 Change request X X X 13-51 Consistency evidence X Base Practices BP1: Identify and record the change requests X BP2: Analyze and assess change requests X BP3: Approve change requests before implementation BP4: Establish bidirectional traceability X BP5: Confirm the implementation of change requests X X BP6: Track change requests to closure X",
+      "verbatim_text_sha256": "1560183cfa4f27093d5a4049eeadb09533ecc24ac67a54e211eab645d7982d1d",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.10.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.10"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 3774,
+    "output_information_items": [
+      {
+        "id": "18-57",
+        "name": "Change analysis criteria",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "13-16",
+        "name": "Change request",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O3",
+          "O5",
+          "O6"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency evidence",
+        "outcomes": [
+          "O4"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Identify and record the change requests",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Analyze and assess change requests",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Approve change requests before implementation",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Establish bidirectional traceability",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Confirm the implementation of change requests",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Track change requests to closure",
+        "outcomes": [
+          "O4"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

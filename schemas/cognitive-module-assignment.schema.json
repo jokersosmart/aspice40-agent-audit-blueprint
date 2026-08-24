@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/cognitive-module-assignment.schema.json",
+  "title": "Cognitive Module Assignment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "layer_name", "normative_status", "visibility", "source_attribution_in_outputs", "assignment_count", "assignments"],
+  "properties": {
+    "schema_version": {"type": "string"},
+    "layer_name": {"const": "Cognitive Operating Layer"},
+    "normative_status": {"const": "non_normative_support_layer"},
+    "visibility": {"const": "standard_agent_behavior"},
+    "source_attribution_in_outputs": {"const": false},
+    "precedence": {"type": "string"},
+    "assignment_count": {"type": "integer", "const": 54},
+    "assignments": {
+      "type": "array",
+      "minItems": 54,
+      "maxItems": 54,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["agent_id", "agent_class", "modules", "operating_mode", "mandatory_gates"],
+        "properties": {
+          "agent_id": {"type": "string"},
+          "agent_class": {"enum": ["control", "process_auditor", "manager"]},
+          "modules": {"type": "array", "minItems": 1, "items": {"pattern": "^COM-[0-9]{2}$", "type": "string"}},
+          "operating_mode": {"type": "string"},
+          "emphasis": {"type": "string"},
+          "mandatory_gates": {"type": "array", "minItems": 1, "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

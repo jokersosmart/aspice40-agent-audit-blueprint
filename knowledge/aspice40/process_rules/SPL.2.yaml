@@ -1,0 +1,625 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "SPL.2",
+  "process_name": "Product Release",
+  "process_group": "SPL",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.2.1",
+    "source_page_hint": 32,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to control the release of a product to the intended customer.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1)"
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2)"
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3)"
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4)"
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) The contents of the product releases are determined. The release package is assembled from configured items. The release documentation is defined and produced. Release approval is performed against defined criteria. The release package is made available to the intended customer."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "SPL.2.BP1: Define the functional content of releases. Define the functionality to be included and the release criteria for each release. Note 1: This may include the hardware elements, software elements, and extra application parameter files (influencing the identified system functionality) that are needed for the release.",
+        "title": "Define the functional content of releases. Define the functionality to be included and the release criteria for each release. Note 1: This may include the hardware elements, software elements, and extra application parameter files (influencing the identified system functionality) that are needed for the release."
+      },
+      {
+        "id": "BP2",
+        "text": "SPL.2.BP2: Define release package. Define the release as well as supporting tools and information. Note 2: The release package may include also programming tools.",
+        "title": "Define release package. Define the release as well as supporting tools and information. Note 2: The release package may include also programming tools."
+      },
+      {
+        "id": "BP3",
+        "text": "SPL.2.BP3: Ensure unique identification of releases. Ensure a unique identification of the release based upon the intended purpose and expectations of the release. Note 3: Unique identification may be realized by a classification and numbering scheme for product releases.",
+        "title": "Ensure unique identification of releases. Ensure a unique identification of the release based upon the intended purpose and expectations of the release. Note 3: Unique identification may be realized by a classification and numbering scheme for product releases."
+      },
+      {
+        "id": "BP4",
+        "text": "SPL.2.BP4: Build the release from items under configuration control. Build the release from items under configuration control to ensure integrity. Note 4: This practice may be supported by the SUP.8 Configuration Management Process.",
+        "title": "Build the release from items under configuration control. Build the release from items under configuration control to ensure integrity. Note 4: This practice may be supported by the SUP.8 Configuration Management Process."
+      },
+      {
+        "id": "BP5",
+        "text": "SPL.2.BP5: Ensure release approval before delivery. Criteria for the release are satisfied before delivery takes place.",
+        "title": "Ensure release approval before delivery. Criteria for the release are satisfied before delivery takes place."
+      },
+      {
+        "id": "BP6",
+        "text": "SPL.2.BP6: Provide a release note. A release is accompanied by information detailing key characteristics of the release. Note 5: The release note may include information about legal aspects like relevant target markets, legislation that is considered etc. See also VAL.1 Validation. SPL2.BP7: Communicate the type, service level and duration of support for a release. Identify and communicate the type, service level and duration of support for a release.",
+        "title": "Provide a release note. A release is accompanied by information detailing key characteristics of the release. Note 5: The release note may include information about legal aspects like relevant target markets, legislation that is considered etc. See also VAL.1 Validation. SPL2.BP7: Communicate the type, service level and duration of support for a release. Identify and communicate the type, service level and duration of support for a release."
+      },
+      {
+        "id": "BP8",
+        "text": "SPL.2.BP8: Deliver the release package to the intended customer. Deliver the release package to the intended customer. Outcome 3 Outcome 4 Outcome 5 SPL.2 Product Release Outcome 2 Outcome 1 Note 6: The intended customer may be an internal organizational unit or an external organization. X X X Output Information Items 11-03 Release note X 11-04 Product release package X 13-06 Delivery evidence X 13-13 Product release approval X X 18-06 Product release criteria X X X X X Base Practices BP1: Define the functional content of releases X BP2: Define release package X BP3: Establish a product release classification and numbering scheme BP4: Build the release from configured items X X BP5: Ensure product release approval before delivery X BP6: Provide a release note X X BP7: Communicate the type, service level and duration of support for a release X X BP8: Deliver the release package to the intended customer X 4.3. System engineering process group (SYS)",
+        "title": "Deliver the release package to the intended customer. Deliver the release package to the intended customer. Outcome 3 Outcome 4 Outcome 5 SPL.2 Product Release Outcome 2 Outcome 1 Note 6: The intended customer may be an internal organizational unit or an external organization. X X X Output Information Items 11-03 Release note X 11-04 Product release package X 13-06 Delivery evidence X 13-13 Product release approval X X 18-06 Product release criteria X X X X X Base Practices BP1: Define the functional content of releases X BP2: Define release package X BP3: Establish a product release classification and numbering scheme BP4: Build the release from configured items X X BP5: Ensure product release approval before delivery X BP6: Provide a release note X X BP7: Communicate the type, service level and duration of support for a release X X BP8: Deliver the release package to the intended customer X 4.3. System engineering process group (SYS)"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-SPL2-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": null,
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2261,
+        "source_line_end": 2261
+      },
+      "verbatim_text": "The purpose is to control the release of a product to the intended customer.",
+      "verbatim_text_sha256": "e424d0f3da8d84c1e266fe2447d5a1af9cca95108b12e41dea8caba2469ecc1e",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of SPL.2.",
+      "interpretation": "This is the PAM purpose statement for SPL.2; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "OUTCOME.1",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2263,
+        "source_line_end": 2263
+      },
+      "verbatim_text": "1)",
+      "verbatim_text_sha256": "d1f47e5a47cb4cb2f0639dabef187d1ed63dab221280869d910c9f60be38df47",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SPL.2 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "OUTCOME.2",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2264,
+        "source_line_end": 2264
+      },
+      "verbatim_text": "2)",
+      "verbatim_text_sha256": "4ddcdc3195dacd1e53e11029a707abeb4d797912220af1b51f5c2af6e6eb925b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SPL.2 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "OUTCOME.3",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2265,
+        "source_line_end": 2265
+      },
+      "verbatim_text": "3)",
+      "verbatim_text_sha256": "6180669a9fb9d0e8d30055aa57b3ba6c43646a98d88caf1b2f906b8119f7a55b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SPL.2 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "OUTCOME.4",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2266,
+        "source_line_end": 2266
+      },
+      "verbatim_text": "4)",
+      "verbatim_text_sha256": "2ad75c4c49eb98f340f9287d58069cfec60a90aecd3b9f13ffe411febfe8b187",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SPL.2 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "OUTCOME.5",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2267,
+        "source_line_end": 2275
+      },
+      "verbatim_text": "5) The contents of the product releases are determined. The release package is assembled from configured items. The release documentation is defined and produced. Release approval is performed against defined criteria. The release package is made available to the intended customer.",
+      "verbatim_text_sha256": "7d064bc5d17cff7be0384cddfc64f5a85139208094bfe50358ac7381946f2c06",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SPL.2 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "BP1",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2277,
+        "source_line_end": 2281
+      },
+      "verbatim_text": "SPL.2.BP1: Define the functional content of releases. Define the functionality to be included and the release criteria for each release. Note 1: This may include the hardware elements, software elements, and extra application parameter files (influencing the identified system functionality) that are needed for the release.",
+      "verbatim_text_sha256": "a467f0066f476a3dc479b0bcd51222c996d0464529c290994d8f9d905af36c7a",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "BP2",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2282,
+        "source_line_end": 2285
+      },
+      "verbatim_text": "SPL.2.BP2: Define release package. Define the release as well as supporting tools and information. Note 2: The release package may include also programming tools.",
+      "verbatim_text_sha256": "33d64fb44319f71c9e136a084518c2b8362635558d85a3c5f2497d03f1260508",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "BP3",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2286,
+        "source_line_end": 2290
+      },
+      "verbatim_text": "SPL.2.BP3: Ensure unique identification of releases. Ensure a unique identification of the release based upon the intended purpose and expectations of the release. Note 3: Unique identification may be realized by a classification and numbering scheme for product releases.",
+      "verbatim_text_sha256": "d40c42032753dac14ecf07821c7df2d0a1a13fc3d4e03b15946e3ffab770eb1b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "BP4",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2291,
+        "source_line_end": 2294
+      },
+      "verbatim_text": "SPL.2.BP4: Build the release from items under configuration control. Build the release from items under configuration control to ensure integrity. Note 4: This practice may be supported by the SUP.8 Configuration Management Process.",
+      "verbatim_text_sha256": "0ef686ed85fd07cf840fc24bb0c8af935c14d61f94c1d2e84200bb0d176b9db4",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "BP5",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2295,
+        "source_line_end": 2296
+      },
+      "verbatim_text": "SPL.2.BP5: Ensure release approval before delivery. Criteria for the release are satisfied before delivery takes place.",
+      "verbatim_text_sha256": "8095f73d49f5ec621a9fe7694798d93b5bfebbd84e542139dbfbe9f0dd37ca61",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "BP6",
+        "page": 32,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2297,
+        "source_line_end": 2303
+      },
+      "verbatim_text": "SPL.2.BP6: Provide a release note. A release is accompanied by information detailing key characteristics of the release. Note 5: The release note may include information about legal aspects like relevant target markets, legislation that is considered etc. See also VAL.1 Validation. SPL2.BP7: Communicate the type, service level and duration of support for a release. Identify and communicate the type, service level and duration of support for a release.",
+      "verbatim_text_sha256": "b3e42e0fa3b7ec74bdcc5848b96dcedc99ca510a99729413d956c56e99d402ad",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SPL2-BP-08",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.2.1",
+        "process_id": "SPL.2",
+        "indicator_id": "BP8",
+        "page": 33,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 2304,
+        "source_line_end": 2397
+      },
+      "verbatim_text": "SPL.2.BP8: Deliver the release package to the intended customer. Deliver the release package to the intended customer. Outcome 3 Outcome 4 Outcome 5 SPL.2 Product Release Outcome 2 Outcome 1 Note 6: The intended customer may be an internal organizational unit or an external organization. X X X Output Information Items 11-03 Release note X 11-04 Product release package X 13-06 Delivery evidence X 13-13 Product release approval X X 18-06 Product release criteria X X X X X Base Practices BP1: Define the functional content of releases X BP2: Define release package X BP3: Establish a product release classification and numbering scheme BP4: Build the release from configured items X X BP5: Ensure product release approval before delivery X BP6: Provide a release note X X BP7: Communicate the type, service level and duration of support for a release X X BP8: Deliver the release package to the intended customer X 4.3. System engineering process group (SYS)",
+      "verbatim_text_sha256": "e29a39f8d168b9d121dd798037483c37f08f09caa82a66672f735e797b0bd230",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SPL.2.BP8 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SPL.2"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 1334,
+    "output_information_items": [
+      {
+        "id": "11-03",
+        "name": "Release note",
+        "outcomes": [
+          "O1",
+          "O3",
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "11-04",
+        "name": "Product release package",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "13-06",
+        "name": "Delivery evidence",
+        "outcomes": [
+          "O3",
+          "O5"
+        ]
+      },
+      {
+        "id": "13-13",
+        "name": "Product release approval",
+        "outcomes": [
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "18-06",
+        "name": "Product release criteria",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O4"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Define the functional content of releases",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Define release package",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Establish a product release classification and numbering scheme",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Build the release from configured items",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Ensure product release approval before delivery",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Provide a release note",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP7",
+        "name": "Communicate the type, service level and duration of support for a release",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP8",
+        "name": "Deliver the release package to the intended customer",
+        "outcomes": [
+          "O1"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

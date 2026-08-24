@@ -1,0 +1,674 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "SUP.1",
+  "process_name": "Quality Assurance",
+  "process_group": "SUP",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.8.1",
+    "source_page_hint": 80,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose of the Quality Assurance Process is to provide independent and objective assurance that work products and processes comply with defined criteria and that nonconformances are resolved and further prevented.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) Quality assurance is performed independently and objectively without conflicts of interest."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) Criteria for the quality of work products and process performance are defined."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) Conformance of work products and process performance with the defined criteria and targets is verified, documented and communicated to the relevant parties."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) Non-conformances are tracked, resolved, and further prevented."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Non-conformances are escalated to appropriate levels of management."
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) Management ensures that escalated non-conformances are resolved."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "SUP.1.BP1: Ensure independence of quality assurance. Ensure that quality assurance is performed independently and objectively without conflicts of interest. Note 1: Possible inputs for evaluating the independence may be assignment to financial and/or organizational structure as well as responsibility for processes that are subject to quality assurance (no self-monitoring).",
+        "title": "Ensure independence of quality assurance. Ensure that quality assurance is performed independently and objectively without conflicts of interest. Note 1: Possible inputs for evaluating the independence may be assignment to financial and/or organizational structure as well as responsibility for processes that are subject to quality assurance (no self-monitoring)."
+      },
+      {
+        "id": "BP2",
+        "text": "SUP.1.BP2: Define criteria for quality assurance. Define quality criteria for work products as well as for process tasks and their performance. Note 2: Quality criteria may consider internal and external inputs such as customer requirements, standards, milestones, etc.",
+        "title": "Define criteria for quality assurance. Define quality criteria for work products as well as for process tasks and their performance. Note 2: Quality criteria may consider internal and external inputs such as customer requirements, standards, milestones, etc."
+      },
+      {
+        "id": "BP3",
+        "text": "SUP.1.BP3: Assure quality of work products. Identify work products subject to quality assurance according to the quality criteria. Perform appropriate activities to evaluate the work products against the defined quality criteria and document the results. Note 3: Quality assurance activities may include reviews, problem analysis and lessons learned that improve the work products for further use.",
+        "title": "Assure quality of work products. Identify work products subject to quality assurance according to the quality criteria. Perform appropriate activities to evaluate the work products against the defined quality criteria and document the results. Note 3: Quality assurance activities may include reviews, problem analysis and lessons learned that improve the work products for further use."
+      },
+      {
+        "id": "BP4",
+        "text": "SUP.1.BP4: Assure quality of process activities. Identify processes subject to quality assurance according to the quality criteria. Perform appropriate activities to evaluate the processes against their defined quality criteria and associated target values and document the results. NOTE 4: Quality assurance activities may include process assessments, problem analysis, regular check of methods, tools, and the adherence to defined processes, and consideration of lessons learned.",
+        "title": "Assure quality of process activities. Identify processes subject to quality assurance according to the quality criteria. Perform appropriate activities to evaluate the processes against their defined quality criteria and associated target values and document the results. NOTE 4: Quality assurance activities may include process assessments, problem analysis, regular check of methods, tools, and the adherence to defined processes, and consideration of lessons learned."
+      },
+      {
+        "id": "BP5",
+        "text": "SUP.1.BP5: Summarize and communicate quality assurance activities and results. Regularly report performance, non-conformances, and trends of quality assurance activities to all affected parties.",
+        "title": "Summarize and communicate quality assurance activities and results. Regularly report performance, non-conformances, and trends of quality assurance activities to all affected parties."
+      },
+      {
+        "id": "BP6",
+        "text": "SUP.1.BP6: Ensure resolution of non-conformances. Analyze, track, correct, resolve, and further prevent non-conformances found in quality assurance activities. NOTE 5: Non-conformances detected in work products may be entered into the problem resolution management process (SUP.9). NOTE 6: Non-conformances detected in the process definition or implementation may be entered into a process improvement process (PIM.3).",
+        "title": "Ensure resolution of non-conformances. Analyze, track, correct, resolve, and further prevent non-conformances found in quality assurance activities. NOTE 5: Non-conformances detected in work products may be entered into the problem resolution management process (SUP.9). NOTE 6: Non-conformances detected in the process definition or implementation may be entered into a process improvement process (PIM.3)."
+      },
+      {
+        "id": "BP7",
+        "text": "SUP.1.BP7: Escalate non-conformances. Escalate relevant non-conformances to appropriate levels of management and other relevant stakeholders to facilitate their resolution. Outcome 6 Outcome 5 Outcome 4 Outcome 3 SUP.1 Quality Assurance Outcome 2 Outcome 1 NOTE 7: The decision whether to escalate non-conformances may be based on criteria such as delay of resolution, urgency, and risk. Output Information Items 16-50 Organizational structure X X 18-52 Escalation path X 18-07 Quality criteria X X X 13-52 Communication evidence X X 13-18 Quality conformance evidence X X 13-19 Review evidence X X 14-02 Corrective action X X X X Base Practices BP1: Ensure independence of quality assurance. BP2: Define criteria for quality assurance. X X BP3: Assure quality of work products. X X BP4: Assure quality of process activities. X X BP5: Summarize and communicate quality assurance activities and results. BP6: Ensure resolution of non-conformances. X X X X BP7: Escalate non-conformances. X X X",
+        "title": "Escalate non-conformances. Escalate relevant non-conformances to appropriate levels of management and other relevant stakeholders to facilitate their resolution. Outcome 6 Outcome 5 Outcome 4 Outcome 3 SUP.1 Quality Assurance Outcome 2 Outcome 1 NOTE 7: The decision whether to escalate non-conformances may be based on criteria such as delay of resolution, urgency, and risk. Output Information Items 16-50 Organizational structure X X 18-52 Escalation path X 18-07 Quality criteria X X X 13-52 Communication evidence X X 13-18 Quality conformance evidence X X 13-19 Review evidence X X 14-02 Corrective action X X X X Base Practices BP1: Ensure independence of quality assurance. BP2: Define criteria for quality assurance. X X BP3: Assure quality of work products. X X BP4: Assure quality of process activities. X X BP5: Summarize and communicate quality assurance activities and results. BP6: Ensure resolution of non-conformances. X X X X BP7: Escalate non-conformances. X X X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-SUP1-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": null,
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5152,
+        "source_line_end": 5153
+      },
+      "verbatim_text": "The purpose of the Quality Assurance Process is to provide independent and objective assurance that work products and processes comply with defined criteria and that nonconformances are resolved and further prevented.",
+      "verbatim_text_sha256": "a6f574a9ed5096090a6565dce16c6d21dabb46677fe2cd84a09ff53b3bc38265",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of SUP.1.",
+      "interpretation": "This is the PAM purpose statement for SUP.1; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "OUTCOME.1",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5155,
+        "source_line_end": 5155
+      },
+      "verbatim_text": "1) Quality assurance is performed independently and objectively without conflicts of interest.",
+      "verbatim_text_sha256": "2710c623a5e46b907996af2beb6a249de41254308ae33607f1c208aff2abb069",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.1 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "OUTCOME.2",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5156,
+        "source_line_end": 5156
+      },
+      "verbatim_text": "2) Criteria for the quality of work products and process performance are defined.",
+      "verbatim_text_sha256": "698ab46cd942ac139ffd5832ed2316108dd2b01cb389b21bd4d9ac3c35d20a4c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.1 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "OUTCOME.3",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5157,
+        "source_line_end": 5158
+      },
+      "verbatim_text": "3) Conformance of work products and process performance with the defined criteria and targets is verified, documented and communicated to the relevant parties.",
+      "verbatim_text_sha256": "d28b00d6f824ab47485c7185c0080f1012496c2efe1f514878049f8ad74c3a6a",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.1 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "OUTCOME.4",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5159,
+        "source_line_end": 5159
+      },
+      "verbatim_text": "4) Non-conformances are tracked, resolved, and further prevented.",
+      "verbatim_text_sha256": "976aa22915c49f1c8c410b3304ef94fa4f0f45e3544175bf1590640104fd5b77",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.1 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "OUTCOME.5",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5160,
+        "source_line_end": 5160
+      },
+      "verbatim_text": "5) Non-conformances are escalated to appropriate levels of management.",
+      "verbatim_text_sha256": "cf02f6c300ca8d540ebde222ec17303b47dec18ba0bb98ecac6c76f5850c709f",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.1 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "OUTCOME.6",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5161,
+        "source_line_end": 5161
+      },
+      "verbatim_text": "6) Management ensures that escalated non-conformances are resolved.",
+      "verbatim_text_sha256": "ffb7b159f75de535831ed93cb32c3fd3fd037dabe5dfcf391acd8cb995be3f61",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SUP.1 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "BP1",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5163,
+        "source_line_end": 5168
+      },
+      "verbatim_text": "SUP.1.BP1: Ensure independence of quality assurance. Ensure that quality assurance is performed independently and objectively without conflicts of interest. Note 1: Possible inputs for evaluating the independence may be assignment to financial and/or organizational structure as well as responsibility for processes that are subject to quality assurance (no self-monitoring).",
+      "verbatim_text_sha256": "70c80966c75b676f621952d83f0a1b7c7a0fe30249868aeed7362cddc881da90",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "BP2",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5169,
+        "source_line_end": 5173
+      },
+      "verbatim_text": "SUP.1.BP2: Define criteria for quality assurance. Define quality criteria for work products as well as for process tasks and their performance. Note 2: Quality criteria may consider internal and external inputs such as customer requirements, standards, milestones, etc.",
+      "verbatim_text_sha256": "ea9407cf2d161153d8cebccc4d635cfc679ac1fa6f7d5ef628e2f735224aee50",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "BP3",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5174,
+        "source_line_end": 5180
+      },
+      "verbatim_text": "SUP.1.BP3: Assure quality of work products. Identify work products subject to quality assurance according to the quality criteria. Perform appropriate activities to evaluate the work products against the defined quality criteria and document the results. Note 3: Quality assurance activities may include reviews, problem analysis and lessons learned that improve the work products for further use.",
+      "verbatim_text_sha256": "ae66a5fac7687529ed0b3418cd5f204481201bc92324cbec46aa59f2830d6dc6",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "BP4",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5181,
+        "source_line_end": 5188
+      },
+      "verbatim_text": "SUP.1.BP4: Assure quality of process activities. Identify processes subject to quality assurance according to the quality criteria. Perform appropriate activities to evaluate the processes against their defined quality criteria and associated target values and document the results. NOTE 4: Quality assurance activities may include process assessments, problem analysis, regular check of methods, tools, and the adherence to defined processes, and consideration of lessons learned.",
+      "verbatim_text_sha256": "2e053eab86d8b5c8ccc7d2b24527534e73a3bcf223709cad5fe1db0e5baed562",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "BP5",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5189,
+        "source_line_end": 5191
+      },
+      "verbatim_text": "SUP.1.BP5: Summarize and communicate quality assurance activities and results. Regularly report performance, non-conformances, and trends of quality assurance activities to all affected parties.",
+      "verbatim_text_sha256": "2737902c9929be00399655b42fa1847dd5b7d50a8275c268688b59b193222847",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "BP6",
+        "page": 80,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5192,
+        "source_line_end": 5198
+      },
+      "verbatim_text": "SUP.1.BP6: Ensure resolution of non-conformances. Analyze, track, correct, resolve, and further prevent non-conformances found in quality assurance activities. NOTE 5: Non-conformances detected in work products may be entered into the problem resolution management process (SUP.9). NOTE 6: Non-conformances detected in the process definition or implementation may be entered into a process improvement process (PIM.3).",
+      "verbatim_text_sha256": "8346b07d2cf413f2c58cd21c0e69cbadcec3d7c0a853aa7308bf90e1af8818dc",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SUP1-BP-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.8.1",
+        "process_id": "SUP.1",
+        "indicator_id": "BP7",
+        "page": 81,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 5199,
+        "source_line_end": 5306
+      },
+      "verbatim_text": "SUP.1.BP7: Escalate non-conformances. Escalate relevant non-conformances to appropriate levels of management and other relevant stakeholders to facilitate their resolution. Outcome 6 Outcome 5 Outcome 4 Outcome 3 SUP.1 Quality Assurance Outcome 2 Outcome 1 NOTE 7: The decision whether to escalate non-conformances may be based on criteria such as delay of resolution, urgency, and risk. Output Information Items 16-50 Organizational structure X X 18-52 Escalation path X 18-07 Quality criteria X X X 13-52 Communication evidence X X 13-18 Quality conformance evidence X X 13-19 Review evidence X X 14-02 Corrective action X X X X Base Practices BP1: Ensure independence of quality assurance. BP2: Define criteria for quality assurance. X X BP3: Assure quality of work products. X X BP4: Assure quality of process activities. X X BP5: Summarize and communicate quality assurance activities and results. BP6: Ensure resolution of non-conformances. X X X X BP7: Escalate non-conformances. X X X",
+      "verbatim_text_sha256": "f66ea30b34b8908abf75670c6c3039579db9183691d0b87424cca123e4014f2b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SUP.1.BP7 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SUP.1"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 3471,
+    "output_information_items": [
+      {
+        "id": "16-50",
+        "name": "Organizational structure",
+        "outcomes": [
+          "O1",
+          "O5"
+        ]
+      },
+      {
+        "id": "18-52",
+        "name": "Escalation path",
+        "outcomes": [
+          "O5",
+          "O6"
+        ]
+      },
+      {
+        "id": "18-07",
+        "name": "Quality criteria",
+        "outcomes": [
+          "O2",
+          "O3",
+          "O4"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication evidence",
+        "outcomes": [
+          "O3",
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "13-18",
+        "name": "Quality conformance evidence",
+        "outcomes": [
+          "O3",
+          "O4"
+        ]
+      },
+      {
+        "id": "13-19",
+        "name": "Review evidence",
+        "outcomes": [
+          "O3",
+          "O4"
+        ]
+      },
+      {
+        "id": "14-02",
+        "name": "Corrective action",
+        "outcomes": [
+          "O4",
+          "O6"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Ensure independence of quality assurance.",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Define criteria for quality assurance.",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Assure quality of work products.",
+        "outcomes": [
+          "O3",
+          "O4"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Assure quality of process activities.",
+        "outcomes": [
+          "O3",
+          "O4"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Summarize and communicate quality assurance activities and results.",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Ensure resolution of non-conformances.",
+        "outcomes": [
+          "O2",
+          "O3"
+        ]
+      },
+      {
+        "id": "BP7",
+        "name": "Escalate non-conformances.",
+        "outcomes": [
+          "O3"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

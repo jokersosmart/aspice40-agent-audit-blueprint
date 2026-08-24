@@ -1,0 +1,752 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "SWE.5",
+  "process_name": "Software Component Verification and Integration Verification",
+  "process_group": "SWE",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.4.5",
+    "source_page_hint": 53,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to verify that software components are consistent with the software architectural design, and to integrate software elements and verify that the integrated software elements are consistent with the software architecture and software detailed design.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) Verification measures are specified for software integration verification of the integrated software elements based on the software architecture and detailed design, including the interfaces of, and interactions between, the software components."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) Verification measures for software components are specified to provide evidence for compliance of the software components with the software components’ behavior and interfaces."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) Software elements are integrated up to a complete integrated software."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) Verification measures are selected according to the release scope considering criteria, including criteria for regression verification."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Software components are verified using the selected verification measures, and the results of the integration verification are recorded."
+      },
+      {
+        "id": "OUTCOME.6",
+        "text": "6) Integrated software elements are verified using the selected verification measures, and the results of the integration verification are recorded."
+      },
+      {
+        "id": "OUTCOME.7",
+        "text": "7) Consistency and bidirectional traceability are established between verification measures and the software architecture and detailed design; and bidirectional traceability is established between verification results and verification measures."
+      },
+      {
+        "id": "OUTCOME.8",
+        "text": "8) The results of software component verification and software elements integration verification are summarized and communicated to all affected parties"
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "SWE.5.BP1: Specify software integration verification measures. Specify verification measures, based on a defined sequence and preconditions for the integration of software elements, against the defined static and dynamic aspects of the software architecture, including • techniques for the verification measures, • pass/fail criteria for verification measures, • entry and exit criteria for verification measures, and • the required verification infrastructure and environment setup. Note 1: Examples on which the software integration verification measures may focus on are the correct dataflow and dynamic interaction between software components together with their timing dependencies, the correct interpretation of data by all software components using an interface, and the compliance to resource consumption objectives. Note 2: The software integration verification measure may be supported by using hardware debug interfaces or simulation environments (e.g, Software-in-the-Loop-Simulation).",
+        "title": "Specify software integration verification measures. Specify verification measures, based on a defined sequence and preconditions for the integration of software elements, against the defined static and dynamic aspects of the software architecture, including • techniques for the verification measures, • pass/fail criteria for verification measures, • entry and exit criteria for verification measures, and • the required verification infrastructure and environment setup. Note 1: Examples on which the software integration verification measures may focus on are the correct dataflow and dynamic interaction between software components together with their timing dependencies, the correct interpretation of data by all software components using an interface, and the compliance to resource consumption objectives. Note 2: The software integration verification measure may be supported by using hardware debug interfaces or simulation environments (e.g, Software-in-the-Loop-Simulation)."
+      },
+      {
+        "id": "BP2",
+        "text": "SWE.5.BP2: Specify verification measures for verifying software component behavior. Specify verification measures for software component verification against the defined software components’ behavior and their interfaces in the software architecture, including • techniques for the verification measures, • entry and exit criteria for verification measures, • pass/fail criteria for verification measures, and • the required verification infrastructure and environment setup. Note 3: Verification measures are related to software components but not to the software units since software unit verification is addressed in the process SWE.4 Software Unit Verification.",
+        "title": "Specify verification measures for verifying software component behavior. Specify verification measures for software component verification against the defined software components’ behavior and their interfaces in the software architecture, including • techniques for the verification measures, • entry and exit criteria for verification measures, • pass/fail criteria for verification measures, and • the required verification infrastructure and environment setup. Note 3: Verification measures are related to software components but not to the software units since software unit verification is addressed in the process SWE.4 Software Unit Verification."
+      },
+      {
+        "id": "BP3",
+        "text": "SWE.5.BP3: Select verification measures. Document the selection of integration verification measures for each integration step considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope. Note 4: Examples for selection criteria can be the need for continuous integration /continuous development regression verification (due to e.g, changes to the software architectural or detailed design), or the intended use of the delivered product release (e.g, test bench, test track, public road etc.).",
+        "title": "Select verification measures. Document the selection of integration verification measures for each integration step considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope. Note 4: Examples for selection criteria can be the need for continuous integration /continuous development regression verification (due to e.g, changes to the software architectural or detailed design), or the intended use of the delivered product release (e.g, test bench, test track, public road etc.)."
+      },
+      {
+        "id": "BP4",
+        "text": "SWE.5.BP4: Integrate software elements and perform integration verification. Integrate the software elements until the software is fully integrated according to the specified interfaces and interactions between the Software elements, and according to the defined sequence and defined preconditions. Perform the selected integration verification measures. Record the verification measure data including pass/fail status and corresponding verification measure data. Note 5: Examples for preconditions for starting software integration are qualification of pre-existing software components, off-the-shelf software components, open-source-software, or auto-code generated software. Note 6: Defined preconditions may allow e.g, big-bang-integration of all software components, continuous integration, as well as stepwise integration (e.g, across software units and/or software components up to the fully integrated software) with accompanying verification measures. Note 7: See SUP.9 for handling deviations of verification results deviate expected results.",
+        "title": "Integrate software elements and perform integration verification. Integrate the software elements until the software is fully integrated according to the specified interfaces and interactions between the Software elements, and according to the defined sequence and defined preconditions. Perform the selected integration verification measures. Record the verification measure data including pass/fail status and corresponding verification measure data. Note 5: Examples for preconditions for starting software integration are qualification of pre-existing software components, off-the-shelf software components, open-source-software, or auto-code generated software. Note 6: Defined preconditions may allow e.g, big-bang-integration of all software components, continuous integration, as well as stepwise integration (e.g, across software units and/or software components up to the fully integrated software) with accompanying verification measures. Note 7: See SUP.9 for handling deviations of verification results deviate expected results."
+      },
+      {
+        "id": "BP5",
+        "text": "SWE.5.BP5: Perform software component verification. Perform the selected verification measures for verifying software component behavior. Record the verification results including pass/fail status and corresponding verification measure data. Note 8: See SUP.9 for handling verification results that deviate from expected results.",
+        "title": "Perform software component verification. Perform the selected verification measures for verifying software component behavior. Record the verification results including pass/fail status and corresponding verification measure data. Note 8: See SUP.9 for handling verification results that deviate from expected results."
+      },
+      {
+        "id": "BP6",
+        "text": "SWE.5.BP6: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between verification measures and the static and dynamic aspects of the software architecture and detailed design. Establish bidirectional traceability between verification results and verification measures. Note 9: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+        "title": "Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between verification measures and the static and dynamic aspects of the software architecture and detailed design. Establish bidirectional traceability between verification results and verification measures. Note 9: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other."
+      },
+      {
+        "id": "BP7",
+        "text": "SWE.5.BP7: Summarize and communicate results. Summarize the software component verification and the software integration verification results and communicate them to all affected parties. Output Information Items 08-60 Verification Measure 06-50 Integration Sequence Instruction 03-50 Verification Measure Data 08-58 Verification Measure Selection Set 15-52 Verification Results 13-51 Consistency Evidence 13-52 Communication Evidence 01-03 Software Component 01-50 Integrated Software Base Practices BP1: Specify software integration verification measures BP2: Specify verification measures for verifying software component behavior BP3: Select verification measures BP4: Integrate software elements and perform integration verification BP5: Perform software component verification BP6: Ensure consistency and establish bidirectional traceability BP7: Summarize and communicate results Outcome 8 Outcome 7 Outcome 6 Outcome 5 X Outcome 4 X Outcome 3 Outcome 2 SWE.5 Software Component Verification and Integration Verification Outcome 1 Note 10: Providing all necessary information from the test case execution in a summary enables other parties to judge the consequences. X X X X X X X X X X X X X X X X X",
+        "title": "Summarize and communicate results. Summarize the software component verification and the software integration verification results and communicate them to all affected parties. Output Information Items 08-60 Verification Measure 06-50 Integration Sequence Instruction 03-50 Verification Measure Data 08-58 Verification Measure Selection Set 15-52 Verification Results 13-51 Consistency Evidence 13-52 Communication Evidence 01-03 Software Component 01-50 Integrated Software Base Practices BP1: Specify software integration verification measures BP2: Specify verification measures for verifying software component behavior BP3: Select verification measures BP4: Integrate software elements and perform integration verification BP5: Perform software component verification BP6: Ensure consistency and establish bidirectional traceability BP7: Summarize and communicate results Outcome 8 Outcome 7 Outcome 6 Outcome 5 X Outcome 4 X Outcome 3 Outcome 2 SWE.5 Software Component Verification and Integration Verification Outcome 1 Note 10: Providing all necessary information from the test case execution in a summary enables other parties to judge the consequences. X X X X X X X X X X X X X X X X X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-SWE5-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": null,
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3522,
+        "source_line_end": 3526
+      },
+      "verbatim_text": "The purpose is to verify that software components are consistent with the software architectural design, and to integrate software elements and verify that the integrated software elements are consistent with the software architecture and software detailed design.",
+      "verbatim_text_sha256": "ffc1b39c80cdfd02131117748841934a13fb2d2614b9411f0876335cf9cb0fcd",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of SWE.5.",
+      "interpretation": "This is the PAM purpose statement for SWE.5; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "OUTCOME.1",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3528,
+        "source_line_end": 3530
+      },
+      "verbatim_text": "1) Verification measures are specified for software integration verification of the integrated software elements based on the software architecture and detailed design, including the interfaces of, and interactions between, the software components.",
+      "verbatim_text_sha256": "fee15813b14e4b7ac3165de7fca3b8b562def354bb8f43009e57a51af6b29760",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.5 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "OUTCOME.2",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3531,
+        "source_line_end": 3533
+      },
+      "verbatim_text": "2) Verification measures for software components are specified to provide evidence for compliance of the software components with the software components’ behavior and interfaces.",
+      "verbatim_text_sha256": "b01d5cccc34d087e00b8123f18b7a975e634124178589a18a20f39d4def94769",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.5 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "OUTCOME.3",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3534,
+        "source_line_end": 3534
+      },
+      "verbatim_text": "3) Software elements are integrated up to a complete integrated software.",
+      "verbatim_text_sha256": "fa6b6d000ae9b33a66e76288cd2a5961acd91cb91f0d26dc556acbbab9a69c8d",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.5 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "OUTCOME.4",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3535,
+        "source_line_end": 3536
+      },
+      "verbatim_text": "4) Verification measures are selected according to the release scope considering criteria, including criteria for regression verification.",
+      "verbatim_text_sha256": "35f62f7e3b2240947e43ce699a23ca56fead91b4993a1c5fdf82d1aa2a9de498",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.5 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "OUTCOME.5",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3537,
+        "source_line_end": 3538
+      },
+      "verbatim_text": "5) Software components are verified using the selected verification measures, and the results of the integration verification are recorded.",
+      "verbatim_text_sha256": "d7d6244ac662ccd238e567371b104a7c92d8a1a20c934366c453f7f279f5987a",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.5 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-OUTCOME-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "OUTCOME.6",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3539,
+        "source_line_end": 3540
+      },
+      "verbatim_text": "6) Integrated software elements are verified using the selected verification measures, and the results of the integration verification are recorded.",
+      "verbatim_text_sha256": "562805f9e166eca69d1d1ac0431b8925bc7265786f1e2840bbe90371ac1ffddb",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5 outcome 6 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.5 outcome 6; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-OUTCOME-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "OUTCOME.7",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3541,
+        "source_line_end": 3543
+      },
+      "verbatim_text": "7) Consistency and bidirectional traceability are established between verification measures and the software architecture and detailed design; and bidirectional traceability is established between verification results and verification measures.",
+      "verbatim_text_sha256": "cc6406208192fc796ce2e33db1a31d71b758b7822f3d69036033b2195053bf9d",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5 outcome 7 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.5 outcome 7; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-OUTCOME-08",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "OUTCOME.8",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3544,
+        "source_line_end": 3545
+      },
+      "verbatim_text": "8) The results of software component verification and software elements integration verification are summarized and communicated to all affected parties",
+      "verbatim_text_sha256": "225743ce882ff398315dd6e7dbb2104a4613a5fd008785a847dcb59d18098df3",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5 outcome 8 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for SWE.5 outcome 8; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "BP1",
+        "page": 54,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3548,
+        "source_line_end": 3574
+      },
+      "verbatim_text": "SWE.5.BP1: Specify software integration verification measures. Specify verification measures, based on a defined sequence and preconditions for the integration of software elements, against the defined static and dynamic aspects of the software architecture, including • techniques for the verification measures, • pass/fail criteria for verification measures, • entry and exit criteria for verification measures, and • the required verification infrastructure and environment setup. Note 1: Examples on which the software integration verification measures may focus on are the correct dataflow and dynamic interaction between software components together with their timing dependencies, the correct interpretation of data by all software components using an interface, and the compliance to resource consumption objectives. Note 2: The software integration verification measure may be supported by using hardware debug interfaces or simulation environments (e.g, Software-in-the-Loop-Simulation).",
+      "verbatim_text_sha256": "7888f511039ab2e91f430dceb4a376434dff47a9c1deb466042e923c3aaead80",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "BP2",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3575,
+        "source_line_end": 3596
+      },
+      "verbatim_text": "SWE.5.BP2: Specify verification measures for verifying software component behavior. Specify verification measures for software component verification against the defined software components’ behavior and their interfaces in the software architecture, including • techniques for the verification measures, • entry and exit criteria for verification measures, • pass/fail criteria for verification measures, and • the required verification infrastructure and environment setup. Note 3: Verification measures are related to software components but not to the software units since software unit verification is addressed in the process SWE.4 Software Unit Verification.",
+      "verbatim_text_sha256": "24794cdeb6613a95f7e5bd2a3bd06322b638d7a546be1a5ec0754438f52aec9f",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "BP3",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3597,
+        "source_line_end": 3605
+      },
+      "verbatim_text": "SWE.5.BP3: Select verification measures. Document the selection of integration verification measures for each integration step considering selection criteria including criteria for regression verification. The documented selection of verification measures shall have sufficient coverage according to the release scope. Note 4: Examples for selection criteria can be the need for continuous integration /continuous development regression verification (due to e.g, changes to the software architectural or detailed design), or the intended use of the delivered product release (e.g, test bench, test track, public road etc.).",
+      "verbatim_text_sha256": "c757cec9e93b4f94b0f1facab2d0d99e51563e8b2b750e899661730c369f73ef",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "BP4",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3606,
+        "source_line_end": 3618
+      },
+      "verbatim_text": "SWE.5.BP4: Integrate software elements and perform integration verification. Integrate the software elements until the software is fully integrated according to the specified interfaces and interactions between the Software elements, and according to the defined sequence and defined preconditions. Perform the selected integration verification measures. Record the verification measure data including pass/fail status and corresponding verification measure data. Note 5: Examples for preconditions for starting software integration are qualification of pre-existing software components, off-the-shelf software components, open-source-software, or auto-code generated software. Note 6: Defined preconditions may allow e.g, big-bang-integration of all software components, continuous integration, as well as stepwise integration (e.g, across software units and/or software components up to the fully integrated software) with accompanying verification measures. Note 7: See SUP.9 for handling deviations of verification results deviate expected results.",
+      "verbatim_text_sha256": "3ecb64b25ad837239ac620cc197e5eb731001bea107bb8ecb9899b2cade4d4d8",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "BP5",
+        "page": 53,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3619,
+        "source_line_end": 3623
+      },
+      "verbatim_text": "SWE.5.BP5: Perform software component verification. Perform the selected verification measures for verifying software component behavior. Record the verification results including pass/fail status and corresponding verification measure data. Note 8: See SUP.9 for handling verification results that deviate from expected results.",
+      "verbatim_text_sha256": "0f1edabd69da1201fd7638ac92077220852e2310621cb072311b2808401b1c74",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "BP6",
+        "page": 55,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3624,
+        "source_line_end": 3632
+      },
+      "verbatim_text": "SWE.5.BP6: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish bidirectional traceability between verification measures and the static and dynamic aspects of the software architecture and detailed design. Establish bidirectional traceability between verification results and verification measures. Note 9: Bidirectional traceability supports consistency, and facilitates impact analysis of change requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links, does not necessarily mean that the information is consistent with each other.",
+      "verbatim_text_sha256": "26cb400442f75d554092a9f51117f90f4af1261d5bb53b667b1cef622d531105",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-SWE5-BP-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.4.5",
+        "process_id": "SWE.5",
+        "indicator_id": "BP7",
+        "page": 56,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 3633,
+        "source_line_end": 3707
+      },
+      "verbatim_text": "SWE.5.BP7: Summarize and communicate results. Summarize the software component verification and the software integration verification results and communicate them to all affected parties. Output Information Items 08-60 Verification Measure 06-50 Integration Sequence Instruction 03-50 Verification Measure Data 08-58 Verification Measure Selection Set 15-52 Verification Results 13-51 Consistency Evidence 13-52 Communication Evidence 01-03 Software Component 01-50 Integrated Software Base Practices BP1: Specify software integration verification measures BP2: Specify verification measures for verifying software component behavior BP3: Select verification measures BP4: Integrate software elements and perform integration verification BP5: Perform software component verification BP6: Ensure consistency and establish bidirectional traceability BP7: Summarize and communicate results Outcome 8 Outcome 7 Outcome 6 Outcome 5 X Outcome 4 X Outcome 3 Outcome 2 SWE.5 Software Component Verification and Integration Verification Outcome 1 Note 10: Providing all necessary information from the test case execution in a summary enables other parties to judge the consequences. X X X X X X X X X X X X X X X X X",
+      "verbatim_text_sha256": "8691ad3f44d12035ef2288a3bda678bd52b9ca182df70f4ea4142a789dfe2ca7",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete SWE.5.BP7 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "SWE.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 2328,
+    "output_information_items": [
+      {
+        "id": "08-60",
+        "name": "Verification Measure",
+        "outcomes": [
+          "O1",
+          "O2"
+        ]
+      },
+      {
+        "id": "06-50",
+        "name": "Integration Sequence Instruction",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "03-50",
+        "name": "Verification Measure Data",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "08-58",
+        "name": "Verification Measure Selection Set",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "15-52",
+        "name": "Verification Results",
+        "outcomes": [
+          "O5",
+          "O6"
+        ]
+      },
+      {
+        "id": "13-51",
+        "name": "Consistency Evidence",
+        "outcomes": [
+          "O7"
+        ]
+      },
+      {
+        "id": "13-52",
+        "name": "Communication Evidence",
+        "outcomes": [
+          "O8"
+        ]
+      },
+      {
+        "id": "01-03",
+        "name": "Software Component",
+        "outcomes": [
+          "O3"
+        ]
+      },
+      {
+        "id": "01-50",
+        "name": "Integrated Software",
+        "outcomes": [
+          "O3"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Specify software integration verification measures",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Specify verification measures for verifying software component behavior",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Select verification measures",
+        "outcomes": [
+          "O4"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Integrate software elements and perform integration verification",
+        "outcomes": [
+          "O3",
+          "O6"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Perform software component verification",
+        "outcomes": [
+          "O5"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Ensure consistency and establish bidirectional traceability",
+        "outcomes": [
+          "O7"
+        ]
+      },
+      {
+        "id": "BP7",
+        "name": "Summarize and communicate results",
+        "outcomes": [
+          "O8"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

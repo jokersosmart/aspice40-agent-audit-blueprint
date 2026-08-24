@@ -1,0 +1,610 @@
+{
+  "schema_version": "1.0",
+  "aspice_version": "4.0",
+  "profile_version": "2026.08.24",
+  "process_id": "MAN.5",
+  "process_name": "Risk Management",
+  "process_group": "MAN",
+  "source": {
+    "document_id": "Automotive-SPICE-PAM-v40",
+    "version": "4.0",
+    "source_file": "aspice40_clean_plain.txt",
+    "source_section": "4.9.2",
+    "source_page_hint": 92,
+    "citation_policy": "Every normative finding must carry one or more direct spec citation objects with verbatim_text."
+  },
+  "pam": {
+    "purpose": "The purpose is to Regularly identify, analyze, treat and monitor process related risks and product related risks.",
+    "outcomes": [
+      {
+        "id": "OUTCOME.1",
+        "text": "1) The sources of risks are identified and regularly updated."
+      },
+      {
+        "id": "OUTCOME.2",
+        "text": "2) Potential undesirable events are identified as they develop during the conduct of the project."
+      },
+      {
+        "id": "OUTCOME.3",
+        "text": "3) Risks are analyzed and the priority in which to apply resources to treatment of these risks is determined."
+      },
+      {
+        "id": "OUTCOME.4",
+        "text": "4) Risk measures are defined, applied, and assessed to determine changes in the status of risk and the progress of the risk treatment activities."
+      },
+      {
+        "id": "OUTCOME.5",
+        "text": "5) Appropriate treatment is taken to correct or avoid the impact of risk based on its priority, probability, and consequence or other defined risk threshold."
+      }
+    ],
+    "base_practices": [
+      {
+        "id": "BP1",
+        "text": "MAN.5.BP1: Identify sources of risks. Identify and regularly update the sources of risks with affected parties. Note 1: Risks may include technical, economical, and schedule risks. Note 2: Risks may include the suppliers’ deliverables and services. Note 3: The risk sources may vary across the entire project life cycle.",
+        "title": "Identify sources of risks. Identify and regularly update the sources of risks with affected parties. Note 1: Risks may include technical, economical, and schedule risks. Note 2: Risks may include the suppliers’ deliverables and services. Note 3: The risk sources may vary across the entire project life cycle."
+      },
+      {
+        "id": "BP2",
+        "text": "MAN.5.BP2: Identify potential undesirable events. Identify potential undesirable events within the scope of the risk management for the project.",
+        "title": "Identify potential undesirable events. Identify potential undesirable events within the scope of the risk management for the project."
+      },
+      {
+        "id": "BP3",
+        "text": "MAN.5.BP3: Determine risks. Determine the probability and severity of the undesirable events to support priorities for the mitigation of the risks. Note 4: Different methods may be used to analyze technical risks of a system, for example, functional analysis, simulation, FMEA, FTA etc.",
+        "title": "Determine risks. Determine the probability and severity of the undesirable events to support priorities for the mitigation of the risks. Note 4: Different methods may be used to analyze technical risks of a system, for example, functional analysis, simulation, FMEA, FTA etc."
+      },
+      {
+        "id": "BP4",
+        "text": "MAN.5.BP4: Define risk treatment options. For each risk select a treatment option to accept, mitigate, avoid, or share (transfer) the risk.",
+        "title": "Define risk treatment options. For each risk select a treatment option to accept, mitigate, avoid, or share (transfer) the risk."
+      },
+      {
+        "id": "BP5",
+        "text": "MAN.5.BP5: Define and perform risk treatment activities. Define and perform risk activities for risk treatment options.",
+        "title": "Define and perform risk treatment activities. Define and perform risk activities for risk treatment options."
+      },
+      {
+        "id": "BP6",
+        "text": "MAN.5.BP6: Monitor risks. Regularly re-evaluate the risk related to the identified potential undesirable events to determine changes in the status of a risk and to evaluate the progress of the risk treatment activities. Note 5: Risks of high priority may need to be communicated to and monitored by higher levels of management.",
+        "title": "Monitor risks. Regularly re-evaluate the risk related to the identified potential undesirable events to determine changes in the status of a risk and to evaluate the progress of the risk treatment activities. Note 5: Risks of high priority may need to be communicated to and monitored by higher levels of management."
+      },
+      {
+        "id": "BP7",
+        "text": "MAN.5.BP7: Take corrective action. When risk treatment activities are not effective, take appropriate corrective action. Outcome 3 X X X 15-09 Risk status X Outcome 5 Outcome 2 15-51 Analysis results MAN.5 Risk Management Outcome 4 Outcome 1 Note 6: Corrective actions may involve reevaluation of risks, developing and implementing new mitigation concepts or adjusting the existing concepts. Output Information Items 08-55 Risk measure X X X X X X 14-02 Corrective action X X BP4: Define risk treatment options X X BP5: Define and perform risk treatment activities. X X BP6: Monitor risks X Base Practices BP1: Identify sources of risks X BP2: Identify potential undesirable events X BP3: Determine risks X BP7: Take corrective action X",
+        "title": "Take corrective action. When risk treatment activities are not effective, take appropriate corrective action. Outcome 3 X X X 15-09 Risk status X Outcome 5 Outcome 2 15-51 Analysis results MAN.5 Risk Management Outcome 4 Outcome 1 Note 6: Corrective actions may involve reevaluation of risks, developing and implementing new mitigation concepts or adjusting the existing concepts. Output Information Items 08-55 Risk measure X X X X X X 14-02 Corrective action X X BP4: Define risk treatment options X X BP5: Define and perform risk treatment activities. X X BP6: Monitor risks X Base Practices BP1: Identify sources of risks X BP2: Identify potential undesirable events X BP3: Determine risks X BP7: Take corrective action X"
+      }
+    ]
+  },
+  "spec_citations": [
+    {
+      "citation_id": "SPEC-MAN5-PURPOSE-001",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "purpose",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": null,
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6076,
+        "source_line_end": 6077
+      },
+      "verbatim_text": "The purpose is to Regularly identify, analyze, treat and monitor process related risks and product related risks.",
+      "verbatim_text_sha256": "8cdf1b3f7e70b0c744fe1e68b9e55a7ad9f4e0a1dc8010b7cbc2a40c478d5a14",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use this exact purpose when deciding the boundary of MAN.5.",
+      "interpretation": "This is the PAM purpose statement for MAN.5; it defines the intended result of the Process but does not define the company lifecycle or fixed document names.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-OUTCOME-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "OUTCOME.1",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6079,
+        "source_line_end": 6079
+      },
+      "verbatim_text": "1) The sources of risks are identified and regularly updated.",
+      "verbatim_text_sha256": "dac153f4071df31b1b83c355d6a32384fdee8a1a7795636e0408ebd6927e6f09",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5 outcome 1 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.5 outcome 1; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-OUTCOME-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "OUTCOME.2",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6080,
+        "source_line_end": 6080
+      },
+      "verbatim_text": "2) Potential undesirable events are identified as they develop during the conduct of the project.",
+      "verbatim_text_sha256": "d7fac4add9f141a066308ddc6d83dda799c80c0f85c4289fee80667cc021d05c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5 outcome 2 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.5 outcome 2; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-OUTCOME-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "OUTCOME.3",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6081,
+        "source_line_end": 6082
+      },
+      "verbatim_text": "3) Risks are analyzed and the priority in which to apply resources to treatment of these risks is determined.",
+      "verbatim_text_sha256": "e9619a04de5915f38a7ebb1ef81393402413bc30a0ec1eceede8352d2987bc42",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5 outcome 3 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.5 outcome 3; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-OUTCOME-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "OUTCOME.4",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6083,
+        "source_line_end": 6086
+      },
+      "verbatim_text": "4) Risk measures are defined, applied, and assessed to determine changes in the status of risk and the progress of the risk treatment activities.",
+      "verbatim_text_sha256": "0b9b9fc8066e246aa154e93f9814ec80770b2f7edd3412e1d04d716a15d1bc5c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5 outcome 4 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.5 outcome 4; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-OUTCOME-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "outcome",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "OUTCOME.5",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6087,
+        "source_line_end": 6088
+      },
+      "verbatim_text": "5) Appropriate treatment is taken to correct or avoid the impact of risk based on its priority, probability, and consequence or other defined risk threshold.",
+      "verbatim_text_sha256": "6f62ba5bc4131cb93d31e44ebee430a655359947366caec0633f25aea04bac99",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5 outcome 5 as the normative result to inspect.",
+      "interpretation": "This text states the expected positive result for MAN.5 outcome 5; evidence must be evaluated against its full meaning, not against a filename or checkbox.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-BP-01",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "BP1",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6090,
+        "source_line_end": 6095
+      },
+      "verbatim_text": "MAN.5.BP1: Identify sources of risks. Identify and regularly update the sources of risks with affected parties. Note 1: Risks may include technical, economical, and schedule risks. Note 2: Risks may include the suppliers’ deliverables and services. Note 3: The risk sources may vary across the entire project life cycle.",
+      "verbatim_text_sha256": "73767161d846aa92374f29ce1a9a7d5610323c854a58e239b462f9cad38b232b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5.BP1 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-BP-02",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "BP2",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6096,
+        "source_line_end": 6097
+      },
+      "verbatim_text": "MAN.5.BP2: Identify potential undesirable events. Identify potential undesirable events within the scope of the risk management for the project.",
+      "verbatim_text_sha256": "e0582d239f2f43f6544b7a72c1c17111d2e2f4f6946f8a5f0c00aa4a2e38473b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5.BP2 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-BP-03",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "BP3",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6098,
+        "source_line_end": 6102
+      },
+      "verbatim_text": "MAN.5.BP3: Determine risks. Determine the probability and severity of the undesirable events to support priorities for the mitigation of the risks. Note 4: Different methods may be used to analyze technical risks of a system, for example, functional analysis, simulation, FMEA, FTA etc.",
+      "verbatim_text_sha256": "493341c750b5514324f1bbc7c9d950d6c6c8b70442c0d7fc5605584375a2422c",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5.BP3 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-BP-04",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "BP4",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6103,
+        "source_line_end": 6104
+      },
+      "verbatim_text": "MAN.5.BP4: Define risk treatment options. For each risk select a treatment option to accept, mitigate, avoid, or share (transfer) the risk.",
+      "verbatim_text_sha256": "6054dabfc860e91ea3e9de70a226423e6f08e55754e28c9d5193e9f33cd84928",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5.BP4 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-BP-05",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "BP5",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6105,
+        "source_line_end": 6106
+      },
+      "verbatim_text": "MAN.5.BP5: Define and perform risk treatment activities. Define and perform risk activities for risk treatment options.",
+      "verbatim_text_sha256": "87168c76c4531f330d128e5a221dcdcf36eae5fcae12a45c159c8049c34a843b",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5.BP5 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-BP-06",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "BP6",
+        "page": 92,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6107,
+        "source_line_end": 6112
+      },
+      "verbatim_text": "MAN.5.BP6: Monitor risks. Regularly re-evaluate the risk related to the identified potential undesirable events to determine changes in the status of a risk and to evaluate the progress of the risk treatment activities. Note 5: Risks of high priority may need to be communicated to and monitored by higher levels of management.",
+      "verbatim_text_sha256": "cfe04106f3d14bccd682efdccc6ba4d5ebd1acbae8e50923a320dc0492e5bbb1",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5.BP6 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    },
+    {
+      "citation_id": "SPEC-MAN5-BP-07",
+      "document_id": "Automotive-SPICE-PAM-v40",
+      "document_version": "4.0",
+      "citation_kind": "base_practice",
+      "source_anchor": {
+        "section": "4.9.2",
+        "process_id": "MAN.5",
+        "indicator_id": "BP7",
+        "page": 93,
+        "source_file": "aspice40_clean_plain.txt",
+        "source_line_start": 6113,
+        "source_line_end": 6197
+      },
+      "verbatim_text": "MAN.5.BP7: Take corrective action. When risk treatment activities are not effective, take appropriate corrective action. Outcome 3 X X X 15-09 Risk status X Outcome 5 Outcome 2 15-51 Analysis results MAN.5 Risk Management Outcome 4 Outcome 1 Note 6: Corrective actions may involve reevaluation of risks, developing and implementing new mitigation concepts or adjusting the existing concepts. Output Information Items 08-55 Risk measure X X X X X X 14-02 Corrective action X X BP4: Define risk treatment options X X BP5: Define and perform risk treatment activities. X X BP6: Monitor risks X Base Practices BP1: Identify sources of risks X BP2: Identify potential undesirable events X BP3: Determine risks X BP7: Take corrective action X",
+      "verbatim_text_sha256": "16abe362aceaf890411673b3b4607d69d2670bd5ac443d605ea5402f6890dbd9",
+      "text_normalization": "whitespace_only",
+      "original_text_if_corrected": null,
+      "why_this_text_applies": "Use the complete MAN.5.BP7 paragraph when checking the corresponding practice.",
+      "interpretation": "This is the complete Base Practice paragraph extracted from the approved PAM text. The Agent must compare evidence to the entire paragraph and its notes, not only the BP title.",
+      "interpretation_type": "literal_requirement_meaning",
+      "requirement_type": "pam_explicit",
+      "applies_to": [
+        "MAN.5"
+      ],
+      "not_implied": [
+        "This citation does not prescribe a fixed company filename, tool or organizational structure unless a separate company_rule or customer_specific citation says so."
+      ],
+      "verified_status": "verified_against_approved_text",
+      "verified_by": "C01-source-text-review",
+      "verified_at": null,
+      "human_confirmation_required": true
+    }
+  ],
+  "product_context": {
+    "evidence_domains": [],
+    "manager_routing": [],
+    "matrix_reconstruction_status": "available_from_layout_extraction",
+    "matrix_source_layout_line": 4070,
+    "output_information_items": [
+      {
+        "id": "15-51",
+        "name": "Analysis results",
+        "outcomes": [
+          "O1",
+          "O2",
+          "O3",
+          "O5"
+        ]
+      },
+      {
+        "id": "15-09",
+        "name": "Risk status",
+        "outcomes": [
+          "O1",
+          "O3",
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "08-55",
+        "name": "Risk measure",
+        "outcomes": [
+          "O4",
+          "O5"
+        ]
+      },
+      {
+        "id": "14-02",
+        "name": "Corrective action",
+        "outcomes": [
+          "O2"
+        ]
+      }
+    ],
+    "base_practice_outcome_mapping": [
+      {
+        "id": "BP1",
+        "name": "Identify sources of risks",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP2",
+        "name": "Identify potential undesirable events",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP3",
+        "name": "Determine risks",
+        "outcomes": [
+          "O1"
+        ]
+      },
+      {
+        "id": "BP4",
+        "name": "Define risk treatment options",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP5",
+        "name": "Define and perform risk treatment activities.",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP6",
+        "name": "Monitor risks",
+        "outcomes": [
+          "O2"
+        ]
+      },
+      {
+        "id": "BP7",
+        "name": "Take corrective action",
+        "outcomes": [
+          "O2"
+        ]
+      }
+    ]
+  },
+  "human_gates": [
+    "scope_and_na",
+    "technical_correctness",
+    "verification_adequacy",
+    "formal_rating",
+    "major_finding_closure"
+  ]
+}

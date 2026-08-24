@@ -1,0 +1,123 @@
+schema_version: "1.0"
+profile_version: "2026.08.24"
+engine: "manager_coordination_v1"
+defaults:
+  human_confirmation_required: true
+  closure_requires: [evidence_update, independent_reverification, qa_or_authorized_review]
+managers:
+  - id: M01
+    name: System Engineering Manager
+    domain_scope: system requirements, system architecture, interfaces, system behavior, change impact
+    primary_processes: [SYS.1, SYS.2, SYS.3]
+    secondary_processes: [SYS.4, SYS.5, VAL.1, SUP.10, MAN.5]
+    evidence_sources: [requirements_alm, architecture_repository, interface_control, stakeholder_records, change_system]
+    affected_parties: [M02, M03, M08, M09, M10, M14]
+    approvals: [system_requirements, system_architecture, system_interface, system_change_impact]
+  - id: M02
+    name: Firmware / Software Engineering Manager
+    domain_scope: firmware requirements, software architecture, detailed design, implementation, software release readiness
+    primary_processes: [SWE.1, SWE.2, SWE.3]
+    secondary_processes: [SWE.4, SWE.5, SWE.6, SYS.2, SYS.3, SUP.8, SUP.9]
+    evidence_sources: [requirements_alm, git_or_perforce, code_review, build_ci, software_design_repository]
+    affected_parties: [M01, M04, M06, M08, M09, M12, M14]
+    approvals: [software_requirements, software_architecture, software_release_readiness]
+  - id: M03
+    name: Hardware Engineering Manager
+    domain_scope: hardware requirements, architecture, detailed design, production data, hardware design decisions
+    primary_processes: [HWE.1, HWE.2]
+    secondary_processes: [HWE.3, HWE.4, SYS.2, SYS.3, SUP.8]
+    evidence_sources: [hardware_alm, schematic_repository, rtl_repository, netlist, bom, layout, production_data]
+    affected_parties: [M01, M04, M05, M06, M07, M08, M10, M12]
+    approvals: [hardware_requirements, hardware_architecture, design_freeze, production_data]
+  - id: M04
+    name: Digital Hardware Manager
+    domain_scope: RTL, digital architecture, micro-architecture, logic implementation, CDC, reset, power-domain evidence
+    primary_processes: [HWE.1, HWE.2]
+    secondary_processes: [HWE.3, HWE.4, SYS.3, SYS.4]
+    evidence_sources: [rtl_repository, digital_design_database, lint, cdc, formal, synthesis, netlist]
+    affected_parties: [M03, M06, M10, M07]
+    approvals: [digital_architecture, rtl_baseline, digital_signoff_inputs]
+    note: "CDC/reset/power-domain controls are product-context checks, not new PAM processes."
+  - id: M05
+    name: Analog / Mixed-Signal Manager
+    domain_scope: analog and mixed-signal requirements, models, electrical behavior, layout, PVT/corner and characterization
+    primary_processes: [HWE.1, HWE.2]
+    secondary_processes: [HWE.3, HWE.4, VAL.1]
+    evidence_sources: [analog_alm, schematic, layout, spice_or_simulation, corner_analysis, lab_measurement, silicon_characterization]
+    affected_parties: [M03, M06, M07, M10]
+    approvals: [electrical_requirements, analog_design, characterization_plan]
+    note: "PVT, corner and electrical checks must be mapped to company criteria and verification measures."
+  - id: M06
+    name: Simulation / Emulation Manager
+    domain_scope: RTL simulation, formal, FPGA/emulation, models, simulation protocols, logs, coverage and regression
+    primary_processes: [HWE.3, HWE.4, SYS.4, SYS.5]
+    secondary_processes: [SWE.4, SWE.5, SWE.6, VAL.1]
+    evidence_sources: [simulation_repository, formal_results, emulation_logs, ci, coverage_database, environment_configuration]
+    affected_parties: [M01, M02, M03, M04, M09, M10]
+    approvals: [verification_environment, regression_baseline, simulation_result_package]
+  - id: M07
+    name: Tape-out / Silicon Manager
+    domain_scope: design freeze, signoff, netlist/mask/production data, silicon bring-up, characterization, deviation and release
+    primary_processes: [HWE.2, HWE.3, HWE.4]
+    secondary_processes: [SUP.8, SUP.9, SUP.10, SPL.2, VAL.1]
+    evidence_sources: [tapeout_system, foundry_package, signoff_database, mask_or_gds, sample_registry, bringup_lab, characterization]
+    affected_parties: [M03, M05, M06, M08, M10, M12, M14]
+    approvals: [design_freeze, tapeout_readiness, production_data, silicon_release]
+    note: "Tape-out and silicon are domain evidence and release gates, not standalone ASPICE processes."
+  - id: M08
+    name: System Verification and Validation Manager
+    domain_scope: system integration verification, system verification, target environment validation, regression and result communication
+    primary_processes: [SYS.4, SYS.5, VAL.1]
+    secondary_processes: [SPL.2, SUP.1, SUP.10]
+    evidence_sources: [test_management, lab, system_ci, target_environment, validation_database, result_reports]
+    affected_parties: [M01, M02, M03, M06, M07, M09, M10, M11]
+    approvals: [system_verification_strategy, validation_strategy, system_result_summary]
+  - id: M09
+    name: Firmware Verification Manager
+    domain_scope: software unit, component/integration, final software verification, static analysis, testing and regression
+    primary_processes: [SWE.4, SWE.5, SWE.6]
+    secondary_processes: [SYS.4, SYS.5, VAL.1, SUP.1]
+    evidence_sources: [test_management, ci, static_analysis, code_review, coverage_database, defect_tracker]
+    affected_parties: [M02, M06, M08, M11, M12]
+    approvals: [verification_measures, test_results, regression_summary, software_verification_result]
+  - id: M10
+    name: Hardware Verification Manager
+    domain_scope: design verification, requirements verification, simulation, measurement, analysis, samples and silicon evidence
+    primary_processes: [HWE.3, HWE.4]
+    secondary_processes: [SYS.4, SYS.5, VAL.1, SUP.1]
+    evidence_sources: [simulation, formal, emulation, lab_measurement, silicon_characterization, analysis_repository, sample_registry]
+    affected_parties: [M03, M04, M05, M06, M07, M08, M11]
+    approvals: [hardware_verification_measures, hardware_results, silicon_evidence_package]
+  - id: M11
+    name: QA and Process Improvement Manager
+    domain_scope: independent quality assurance, process compliance, nonconformance, improvement, training and internal assessment
+    primary_processes: [SUP.1, PIM.3]
+    secondary_processes: [ALL]
+    evidence_sources: [qa_system, audit_repository, process_handbook, training_records, finding_register, metrics]
+    affected_parties: [ALL]
+    approvals: [qa_plan, qa_findings, corrective_action_effectiveness, internal_assessment_package]
+    independence_rule: "QA must not be the sole self-reviewer of the same work product or process activity."
+  - id: M12
+    name: Configuration / Change / Problem Manager
+    domain_scope: configuration items, baselines, version, change impact, problem root cause and closure
+    primary_processes: [SUP.8, SUP.9, SUP.10]
+    secondary_processes: [SPL.2, ALL]
+    evidence_sources: [scm, plm, issue_tracker, change_control_board, baseline_registry, release_system]
+    affected_parties: [ALL]
+    approvals: [baseline, change_request, problem_closure, recovery_plan]
+  - id: M13
+    name: Project / Risk / Measurement Manager
+    domain_scope: scope, schedule, resource, risk, metrics, quantitative control and project status
+    primary_processes: [MAN.3, MAN.5, MAN.6]
+    secondary_processes: [PIM.3, SUP.1, ALL]
+    evidence_sources: [project_planning, risk_register, measurement_database, status_reports, decision_log]
+    affected_parties: [ALL]
+    approvals: [project_plan, risk_treatment, measurement_plan, escalation]
+  - id: M14
+    name: Supplier / Release / Reuse Manager
+    domain_scope: supplier monitoring, external IP/EDA/NAND/PHY, release, reuse qualification and communication
+    primary_processes: [ACQ.4, SPL.2, REU.2]
+    secondary_processes: [SUP.8, SUP.10, MAN.5]
+    evidence_sources: [supplier_portal, contracts, sows, release_system, ip_catalog, qualification_database, vendor_reviews]
+    affected_parties: [M01, M02, M03, M07, M11, M12, M13]
+    approvals: [supplier_status, reuse_qualification, release_package, external_delivery]

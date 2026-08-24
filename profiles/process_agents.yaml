@@ -1,0 +1,335 @@
+schema_version: "1.0"
+aspice_version: "4.0"
+profile_version: "2026.08.24"
+engine: "process_auditor_v1"
+rulepack_root: "knowledge/aspice40/process_rules"
+defaults:
+  human_confirmation_required: true
+  default_unknown_policy: "insufficient_evidence_is_unknown_until_confirmed"
+  default_requirement_types:
+    - pam_explicit
+    - company_rule
+    - customer_specific
+    - product_context
+    - inference
+processes:
+  - id: ACQ.4
+    name: Supplier Monitoring
+    group: ACQ
+    scope_default: conditional
+    primary_managers: [M14]
+    verification_managers: [M11]
+    evidence_domains: [supplier_commitment, supplier_progress, supplier_reviews, communication, deviation, risk]
+    upstream: [MAN.3, MAN.5]
+    downstream: [SPL.2, REU.2, SUP.8]
+    rulepack: ACQ.4.yaml
+  - id: SPL.2
+    name: Product Release
+    group: SPL
+    scope_default: in_scope
+    primary_managers: [M14, M12]
+    verification_managers: [M11]
+    evidence_domains: [release_content, release_package, release_documentation, approval, delivery, baseline]
+    upstream: [SYS.5, SWE.6, HWE.4, VAL.1, SUP.8]
+    downstream: []
+    rulepack: SPL.2.yaml
+  - id: SYS.1
+    name: Requirements Elicitation
+    group: SYS
+    scope_default: in_scope
+    primary_managers: [M01]
+    verification_managers: [M08]
+    evidence_domains: [stakeholder_needs, intended_use, stakeholder_requirements, affected_parties, agreement, communication]
+    upstream: [ACQ.4]
+    downstream: [SYS.2, SYS.3, VAL.1]
+    rulepack: SYS.1.yaml
+  - id: SYS.2
+    name: System Requirements Analysis
+    group: SYS
+    scope_default: in_scope
+    primary_managers: [M01]
+    verification_managers: [M08]
+    evidence_domains: [system_requirements, functional_requirements, nonfunctional_requirements, feasibility, prioritization, traceability]
+    upstream: [SYS.1]
+    downstream: [SYS.3, SWE.1, HWE.1, VAL.1]
+    rulepack: SYS.2.yaml
+  - id: SYS.3
+    name: System Architectural Design
+    group: SYS
+    scope_default: in_scope
+    primary_managers: [M01, M03]
+    verification_managers: [M08, M10]
+    evidence_domains: [system_architecture, interfaces, system_elements, behavior, resource_constraints, traceability]
+    upstream: [SYS.2]
+    downstream: [SYS.4, SWE.2, HWE.2, VAL.1]
+    rulepack: SYS.3.yaml
+  - id: SYS.4
+    name: System Integration and Integration Verification
+    group: SYS
+    scope_default: in_scope
+    primary_managers: [M01, M08]
+    verification_managers: [M08, M06, M10]
+    evidence_domains: [integration_strategy, integration_sequence, integration_measures, integrated_system, results, regression, traceability]
+    upstream: [SYS.3, SWE.5, HWE.3]
+    downstream: [SYS.5, VAL.1, SPL.2]
+    rulepack: SYS.4.yaml
+  - id: SYS.5
+    name: System Verification
+    group: SYS
+    scope_default: in_scope
+    primary_managers: [M01, M08]
+    verification_managers: [M08, M06, M10]
+    evidence_domains: [system_verification_measures, criteria, release_scope, regression, results, traceability, communication]
+    upstream: [SYS.2, SYS.3, SYS.4]
+    downstream: [VAL.1, SPL.2]
+    rulepack: SYS.5.yaml
+  - id: SWE.1
+    name: Software Requirements Analysis
+    group: SWE
+    scope_default: in_scope
+    primary_managers: [M02]
+    verification_managers: [M09]
+    evidence_domains: [software_requirements, functional_requirements, nonfunctional_requirements, feasibility, prioritization, traceability]
+    upstream: [SYS.2, SYS.3]
+    downstream: [SWE.2, VAL.1]
+    rulepack: SWE.1.yaml
+  - id: SWE.2
+    name: Software Architectural Design
+    group: SWE
+    scope_default: in_scope
+    primary_managers: [M02]
+    verification_managers: [M09]
+    evidence_domains: [software_architecture, software_elements, interfaces, behavior, resource_constraints, traceability]
+    upstream: [SWE.1, SYS.3]
+    downstream: [SWE.3, SWE.5, SYS.4]
+    rulepack: SWE.2.yaml
+  - id: SWE.3
+    name: Software Detailed Design and Unit Construction
+    group: SWE
+    scope_default: in_scope
+    primary_managers: [M02]
+    verification_managers: [M09]
+    evidence_domains: [software_detailed_design, software_units, source_code, static_analysis, build, unit_interfaces]
+    upstream: [SWE.2]
+    downstream: [SWE.4, SWE.5, SUP.8]
+    rulepack: SWE.3.yaml
+  - id: SWE.4
+    name: Software Unit Verification
+    group: SWE
+    scope_default: in_scope
+    primary_managers: [M02, M09]
+    verification_managers: [M09]
+    evidence_domains: [unit_verification_measures, unit_tests, stubs_drivers, results, coverage, traceability]
+    upstream: [SWE.3]
+    downstream: [SWE.5, SWE.6]
+    rulepack: SWE.4.yaml
+  - id: SWE.5
+    name: Software Component Verification and Integration Verification
+    group: SWE
+    scope_default: in_scope
+    primary_managers: [M02, M09]
+    verification_managers: [M09, M06]
+    evidence_domains: [component_verification, integration_verification, interfaces, measures, results, regression, traceability]
+    upstream: [SWE.2, SWE.3, SWE.4]
+    downstream: [SWE.6, SYS.4]
+    rulepack: SWE.5.yaml
+  - id: SWE.6
+    name: Software Verification
+    group: SWE
+    scope_default: in_scope
+    primary_managers: [M02, M09]
+    verification_managers: [M09, M08]
+    evidence_domains: [software_verification_strategy, final_software, verification_measures, results, regression, traceability, communication]
+    upstream: [SWE.1, SWE.2, SWE.5]
+    downstream: [SYS.4, SYS.5, VAL.1, SPL.2]
+    rulepack: SWE.6.yaml
+  - id: VAL.1
+    name: Validation
+    group: VAL
+    scope_default: in_scope
+    primary_managers: [M08]
+    verification_managers: [M11]
+    evidence_domains: [intended_use, target_environment, validation_measures, criteria, validation_results, anomalies, communication]
+    upstream: [SYS.1, SYS.2, SYS.3, SYS.5, SPL.2]
+    downstream: [SPL.2, PIM.3]
+    rulepack: VAL.1.yaml
+  - id: MLE.1
+    name: Machine Learning Requirements Analysis
+    group: MLE
+    scope_default: conditional
+    primary_managers: [M02, M05]
+    verification_managers: [M09, M10]
+    evidence_domains: [ml_intended_use, ml_requirements, data_requirements, performance, constraints, traceability]
+    upstream: [SYS.2, SYS.3]
+    downstream: [MLE.2, MLE.3]
+    rulepack: MLE.1.yaml
+  - id: MLE.2
+    name: Machine Learning Architecture
+    group: MLE
+    scope_default: conditional
+    primary_managers: [M02, M05]
+    verification_managers: [M09, M10]
+    evidence_domains: [ml_architecture, model_elements, data_flow, interfaces, resources, traceability]
+    upstream: [MLE.1, SYS.3]
+    downstream: [MLE.3, MLE.4]
+    rulepack: MLE.2.yaml
+  - id: MLE.3
+    name: Machine Learning Training
+    group: MLE
+    scope_default: conditional
+    primary_managers: [M02, M05]
+    verification_managers: [M09]
+    evidence_domains: [training_data, data_quality, training_configuration, model_version, training_results, reproducibility]
+    upstream: [MLE.1, MLE.2]
+    downstream: [MLE.4, SUP.11]
+    rulepack: MLE.3.yaml
+  - id: MLE.4
+    name: Machine Learning Model Testing
+    group: MLE
+    scope_default: conditional
+    primary_managers: [M02, M08]
+    verification_managers: [M09, M10]
+    evidence_domains: [model_test_measures, test_data, robustness, performance, results, regression, traceability]
+    upstream: [MLE.2, MLE.3]
+    downstream: [SYS.5, VAL.1, SPL.2]
+    rulepack: MLE.4.yaml
+  - id: HWE.1
+    name: Hardware Requirements Analysis
+    group: HWE
+    scope_default: in_scope
+    primary_managers: [M03, M04, M05]
+    verification_managers: [M10, M08]
+    evidence_domains: [hardware_requirements, electrical_requirements, interfaces, feasibility, safety, traceability]
+    upstream: [SYS.2, SYS.3]
+    downstream: [HWE.2, HWE.4]
+    rulepack: HWE.1.yaml
+  - id: HWE.2
+    name: Hardware Design
+    group: HWE
+    scope_default: in_scope
+    primary_managers: [M03, M04, M05, M07]
+    verification_managers: [M10, M06]
+    evidence_domains: [hardware_architecture, detailed_design, schematics, rtl, netlist, layout, bom, production_data, interfaces]
+    upstream: [HWE.1, SYS.3]
+    downstream: [HWE.3, HWE.4, SYS.4, SPL.2]
+    rulepack: HWE.2.yaml
+  - id: HWE.3
+    name: Verification against Hardware Design
+    group: HWE
+    scope_default: in_scope
+    primary_managers: [M10]
+    verification_managers: [M06, M07]
+    evidence_domains: [design_verification_measures, simulation, formal, emulation, measurement, characterization, results, traceability]
+    upstream: [HWE.2]
+    downstream: [SYS.4, SYS.5, HWE.4]
+    rulepack: HWE.3.yaml
+  - id: HWE.4
+    name: Verification against Hardware Requirements
+    group: HWE
+    scope_default: in_scope
+    primary_managers: [M10, M07]
+    verification_managers: [M06, M08]
+    evidence_domains: [requirements_verification, production_data, silicon_samples, simulation, measurement, analysis, results, release]
+    upstream: [HWE.1, HWE.2, HWE.3]
+    downstream: [SYS.4, SYS.5, VAL.1, SPL.2]
+    rulepack: HWE.4.yaml
+  - id: SUP.1
+    name: Quality Assurance
+    group: SUP
+    scope_default: in_scope
+    primary_managers: [M11]
+    verification_managers: [M11]
+    evidence_domains: [qa_independence, quality_criteria, work_product_assurance, process_assurance, nonconformance, escalation]
+    upstream: [ALL]
+    downstream: [PIM.3, SUP.9]
+    rulepack: SUP.1.yaml
+  - id: SUP.8
+    name: Configuration Management
+    group: SUP
+    scope_default: in_scope
+    primary_managers: [M12]
+    verification_managers: [M11]
+    evidence_domains: [configuration_items, baselines, versions, status_accounting, change_control, backup_recovery]
+    upstream: [ALL]
+    downstream: [SUP.10, SPL.2, ALL]
+    rulepack: SUP.8.yaml
+  - id: SUP.9
+    name: Problem Resolution Management
+    group: SUP
+    scope_default: in_scope
+    primary_managers: [M12]
+    verification_managers: [M11]
+    evidence_domains: [problem_identification, analysis, root_cause, corrective_action, trend, closure, escalation]
+    upstream: [ALL]
+    downstream: [PIM.3, SUP.10, ALL]
+    rulepack: SUP.9.yaml
+  - id: SUP.10
+    name: Change Request Management
+    group: SUP
+    scope_default: in_scope
+    primary_managers: [M12]
+    verification_managers: [M11, M13]
+    evidence_domains: [change_request, impact_analysis, approval, implementation, verification, closure, traceability]
+    upstream: [ALL]
+    downstream: [ALL]
+    rulepack: SUP.10.yaml
+  - id: SUP.11
+    name: Machine Learning Data Management
+    group: SUP
+    scope_default: conditional
+    primary_managers: [M12, M02]
+    verification_managers: [M11, M09]
+    evidence_domains: [ml_data, data_lineage, data_quality, labeling, versioning, access, retention, change]
+    upstream: [MLE.1, MLE.3]
+    downstream: [MLE.4, SPL.2]
+    rulepack: SUP.11.yaml
+  - id: MAN.3
+    name: Project Management
+    group: MAN
+    scope_default: in_scope
+    primary_managers: [M13]
+    verification_managers: [M11]
+    evidence_domains: [project_scope, schedule, resources, stakeholders, progress, decisions, escalation]
+    upstream: []
+    downstream: [ALL]
+    rulepack: MAN.3.yaml
+  - id: MAN.5
+    name: Risk Management
+    group: MAN
+    scope_default: in_scope
+    primary_managers: [M13]
+    verification_managers: [M11]
+    evidence_domains: [risk_identification, analysis, treatment, monitoring, escalation, residual_risk]
+    upstream: [MAN.3, ALL]
+    downstream: [ALL]
+    rulepack: MAN.5.yaml
+  - id: MAN.6
+    name: Measurement
+    group: MAN
+    scope_default: in_scope
+    primary_managers: [M13]
+    verification_managers: [M11]
+    evidence_domains: [measurement_objectives, measures, data_collection, analysis, reporting, decision_support]
+    upstream: [MAN.3, ALL]
+    downstream: [PIM.3, ALL]
+    rulepack: MAN.6.yaml
+  - id: PIM.3
+    name: Process Improvement
+    group: PIM
+    scope_default: in_scope
+    primary_managers: [M11]
+    verification_managers: [M13]
+    evidence_domains: [improvement_goals, process_assessment, root_cause, action, implementation, effectiveness, lessons_learned]
+    upstream: [SUP.1, SUP.9, MAN.6, ALL]
+    downstream: [ALL]
+    rulepack: PIM.3.yaml
+  - id: REU.2
+    name: Management of Products for Reuse
+    group: REU
+    scope_default: conditional
+    primary_managers: [M14]
+    verification_managers: [M11, M02, M03]
+    evidence_domains: [reuse_candidates, qualification, portability, constraints, ownership, release, communication]
+    upstream: [ACQ.4, SUP.8]
+    downstream: [SYS.2, SWE.2, HWE.2, SPL.2]
+    rulepack: REU.2.yaml

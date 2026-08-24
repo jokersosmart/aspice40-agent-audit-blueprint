@@ -1,0 +1,203 @@
+{
+  "ok": true,
+  "checks": {
+    "required_files": {
+      "expected": 30,
+      "missing": [],
+      "ok": true
+    },
+    "process_ids": {
+      "expected": [
+        "ACQ.4",
+        "SPL.2",
+        "SYS.1",
+        "SYS.2",
+        "SYS.3",
+        "SYS.4",
+        "SYS.5",
+        "SWE.1",
+        "SWE.2",
+        "SWE.3",
+        "SWE.4",
+        "SWE.5",
+        "SWE.6",
+        "VAL.1",
+        "MLE.1",
+        "MLE.2",
+        "MLE.3",
+        "MLE.4",
+        "HWE.1",
+        "HWE.2",
+        "HWE.3",
+        "HWE.4",
+        "SUP.1",
+        "SUP.8",
+        "SUP.9",
+        "SUP.10",
+        "SUP.11",
+        "MAN.3",
+        "MAN.5",
+        "MAN.6",
+        "PIM.3",
+        "REU.2"
+      ],
+      "actual": [
+        "ACQ.4",
+        "SPL.2",
+        "SYS.1",
+        "SYS.2",
+        "SYS.3",
+        "SYS.4",
+        "SYS.5",
+        "SWE.1",
+        "SWE.2",
+        "SWE.3",
+        "SWE.4",
+        "SWE.5",
+        "SWE.6",
+        "VAL.1",
+        "MLE.1",
+        "MLE.2",
+        "MLE.3",
+        "MLE.4",
+        "HWE.1",
+        "HWE.2",
+        "HWE.3",
+        "HWE.4",
+        "SUP.1",
+        "SUP.8",
+        "SUP.9",
+        "SUP.10",
+        "SUP.11",
+        "MAN.3",
+        "MAN.5",
+        "MAN.6",
+        "PIM.3",
+        "REU.2"
+      ],
+      "count": 32,
+      "unique": 32,
+      "ok": true
+    },
+    "manager_ids": {
+      "expected": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M06",
+        "M07",
+        "M08",
+        "M09",
+        "M10",
+        "M11",
+        "M12",
+        "M13",
+        "M14"
+      ],
+      "actual": [
+        "M01",
+        "M02",
+        "M03",
+        "M04",
+        "M05",
+        "M06",
+        "M07",
+        "M08",
+        "M09",
+        "M10",
+        "M11",
+        "M12",
+        "M13",
+        "M14"
+      ],
+      "count": 14,
+      "unique": 14,
+      "ok": true
+    },
+    "logical_agent_total": {
+      "count": 54,
+      "expected": 54,
+      "ok": true
+    },
+    "process_rulepacks": {
+      "expected": 32,
+      "actual": 32,
+      "citation_counts": {
+        "ACQ.4": 10,
+        "HWE.1": 14,
+        "HWE.2": 13,
+        "HWE.3": 13,
+        "HWE.4": 13,
+        "MAN.3": 18,
+        "MAN.5": 13,
+        "MAN.6": 12,
+        "MLE.1": 13,
+        "MLE.2": 15,
+        "MLE.3": 11,
+        "MLE.4": 13,
+        "PIM.3": 15,
+        "REU.2": 13,
+        "SPL.2": 13,
+        "SUP.1": 14,
+        "SUP.10": 13,
+        "SUP.11": 12,
+        "SUP.8": 17,
+        "SUP.9": 13,
+        "SWE.1": 14,
+        "SWE.2": 10,
+        "SWE.3": 10,
+        "SWE.4": 11,
+        "SWE.5": 16,
+        "SWE.6": 11,
+        "SYS.1": 9,
+        "SYS.2": 13,
+        "SYS.3": 10,
+        "SYS.4": 13,
+        "SYS.5": 12,
+        "VAL.1": 10
+      },
+      "errors": [],
+      "ok": true
+    },
+    "cognitive_assignments": {
+      "count": 54,
+      "errors": [],
+      "ok": true
+    },
+    "cognitive_modules": {
+      "count": 10,
+      "ids": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "ok": true
+    },
+    "cognitive_prompt": {
+      "has_required_rules": true,
+      "ok": true
+    },
+    "source_neutrality": {
+      "forbidden_terms_found": [],
+      "ok": true
+    },
+    "example_direct_citation": {
+      "citation_count": 1,
+      "errors": [],
+      "ok": true
+    },
+    "json_syntax": {
+      "errors": [],
+      "ok": true
+    }
+  }
+}
