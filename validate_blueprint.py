@@ -10,7 +10,7 @@ expected_processes = [
     'SUP.1','SUP.8','SUP.9','SUP.10','SUP.11','MAN.3','MAN.5','MAN.6',
     'PIM.3','REU.2'
 ]
-expected_managers = [f'M{i:02d}' for i in range(1, 15)]
+expected_managers = [f'M{i:02d}' for i in range(1, 18)]
 required_files = [
     'README.md',
     'docs/agent_architecture.md',
@@ -37,6 +37,20 @@ required_files = [
     'examples/hwe2_audit_result_with_citations.json',
     'docs/direct_spec_citation_policy.md',
     'docs/cognitive_operating_layer_guide.md',
+    'docs/iso26262_part5_agent_architecture.md',
+    'docs/external_references.md',
+    'config/standards_registry.yaml',
+    'config/iso26262_part5_scope.yaml',
+    'profiles/iso26262_safety_agents.yaml',
+    'prompts/40_iso26262_safety_auditor_template.md',
+    'prompts/41_iso26262_safety_manager_template.md',
+    'knowledge/iso26262/README.md',
+    'knowledge/iso26262/part5_rulepack_template.yaml',
+    'generate_iso26262_part5_runtime_catalog.py',
+    'schemas/safety-finding.schema.json',
+    'schemas/cross-standard-mapping.schema.json',
+    'examples/iso26262_part5_audit_input.json',
+    'examples/aspice_iso26262_crosswalk_example.json',
     'prompts/05_cognitive_operating_layer.md',
     'knowledge/cognitive/cognitive_modules.yaml',
     'config/agent_cognitive_assignments.json',
@@ -53,7 +67,10 @@ checks = {}
 checks['required_files'] = {'expected': len(required_files), 'missing': missing, 'ok': not missing}
 checks['process_ids'] = {'expected': expected_processes, 'actual': process_ids, 'count': len(process_ids), 'unique': len(set(process_ids)), 'ok': process_ids == expected_processes}
 checks['manager_ids'] = {'expected': expected_managers, 'actual': manager_ids, 'count': len(manager_ids), 'unique': len(set(manager_ids)), 'ok': manager_ids == expected_managers}
-checks['logical_agent_total'] = {'count': 8 + len(process_ids) + len(manager_ids), 'expected': 54, 'ok': 8 + len(process_ids) + len(manager_ids) == 54}
+safety_text = (ROOT / 'profiles/iso26262_safety_agents.yaml').read_text(encoding='utf-8')
+safety_ids = re.findall(r'^  - id: (FS\d+)$', safety_text, re.M)
+checks['safety_agent_ids'] = {'expected_count': 15, 'actual': safety_ids, 'count': len(safety_ids), 'unique': len(set(safety_ids)), 'ok': safety_ids == [f'FS{i:02d}' for i in range(1, 16)]}
+checks['logical_agent_total'] = {'count': 8 + len(process_ids) + len(manager_ids) + len(safety_ids), 'expected': 72, 'ok': 8 + len(process_ids) + len(manager_ids) + len(safety_ids) == 72}
 rulepack_dir = ROOT / 'knowledge/aspice40/process_rules'
 rulepack_files = sorted(rulepack_dir.glob('*.yaml'))
 rulepack_errors = []
@@ -80,13 +97,13 @@ try:
     assignments = json.loads(assignment_path.read_text(encoding='utf-8'))
     assignment_ids = [item.get('agent_id') for item in assignments.get('assignments', [])]
     assignment_errors = []
-    if assignments.get('assignment_count') != 54 or len(assignment_ids) != 54 or len(set(assignment_ids)) != 54:
+    if assignments.get('assignment_count') != 72 or len(assignment_ids) != 72 or len(set(assignment_ids)) != 72:
         assignment_errors.append('assignment count or uniqueness mismatch')
     if assignments.get('normative_status') != 'non_normative_support_layer' or assignments.get('source_attribution_in_outputs') is not False:
         assignment_errors.append('missing non-normative or source-neutral marker')
     if any(not item.get('modules') for item in assignments.get('assignments', [])):
         assignment_errors.append('agent without modules')
-    checks['cognitive_assignments'] = {'count': len(assignment_ids), 'errors': assignment_errors, 'ok': not assignment_errors}
+    checks['cognitive_assignments'] = {'count': len(assignment_ids), 'errors': assignment_errors, 'ok': not assignment_errors and set(assignment_ids) == set(['C01','C02','C03','C04','C05','C06','C07','C08'] + process_ids + manager_ids + safety_ids)}
 except Exception as exc:
     checks['cognitive_assignments'] = {'errors': [str(exc)], 'ok': False}
 module_text = (ROOT / 'knowledge/cognitive/cognitive_modules.yaml').read_text(encoding='utf-8')
@@ -97,6 +114,14 @@ checks['cognitive_prompt'] = {'has_required_rules': all(term in cognitive_prompt
 privacy_text = '\\n'.join([module_text, cognitive_prompt, (ROOT / 'docs/cognitive_operating_layer_guide.md').read_text(encoding='utf-8')])
 forbidden_terms = ['你的思考', '個人習慣', '使用者思考', '個人資料庫', '思考決策資料庫']
 checks['source_neutrality'] = {'forbidden_terms_found': [term for term in forbidden_terms if term in privacy_text], 'ok': not any(term in privacy_text for term in forbidden_terms)}
+standards_text = (ROOT / 'config/standards_registry.yaml').read_text(encoding='utf-8')
+scope_text = (ROOT / 'config/iso26262_part5_scope.yaml').read_text(encoding='utf-8')
+runtime_text = (ROOT / 'config/runtime_registry.yaml').read_text(encoding='utf-8')
+checks['iso26262_public_source_boundary'] = {'runtime_only_in_registry': 'public_repository_must_not_store_full_licensed_standard_text: true' in standards_text and 'source_mode: runtime_only' in (ROOT / 'knowledge/iso26262/part5_rulepack_template.yaml').read_text(encoding='utf-8'), 'no_clause_11_in_scope': 'clause_11:' in scope_text and 'not_present_in_provided_part' in scope_text, 'safety_runtimes_present': all(f'runtime_id: R{i:02d}' in runtime_text for i in range(11, 15))}
+checks['iso26262_public_source_boundary']['ok'] = all(checks['iso26262_public_source_boundary'].values())
+runtime_ids = re.findall(r'^  - runtime_id: (R\d+)$', runtime_text, re.M)
+r14_ok = 'logical_agents: [FS14, FS15, M15, M16, M17]' in runtime_text
+checks['runtime_registry'] = {'ids': runtime_ids, 'count': len(runtime_ids), 'unique': len(set(runtime_ids)), 'no_duplicates': len(runtime_ids) == len(set(runtime_ids)), 'r14_safety_coordination_loaded': r14_ok, 'ok': len(runtime_ids) == len(set(runtime_ids)) and r14_ok}
 example_path = ROOT / 'examples/hwe2_audit_result_with_citations.json'
 example = json.loads(example_path.read_text(encoding='utf-8'))
 example_citations = example['checks'][0].get('spec_citations', [])
