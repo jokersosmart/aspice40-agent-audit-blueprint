@@ -83,3 +83,26 @@ ISO/SAE 21434:2021 的擴充包含 CS01–CS15、M18–M20、R15–R18、Cyberse
 ## 版本控制要求
 
 所有 Prompt、Rule Pack、Process profile、Manager profile、Safety／Cybersecurity profile、schema、Scope 設定、runtime registry 與報告模板都應納入 Configuration Management。每一份 audit run 都要記錄其 Git commit／baseline、規範版本、runtime source hash、citation hash、Evidence baseline 與人工決策，否則日後無法重現同一份稽核結論。
+
+## SM2514 專案化設定
+
+本 Blueprint 已以獨立子目錄方式整合到 `SM2514_ISO26262`，定位為現有 HW IP／Owner 文件工作流上方的稽核與證據治理層，不取代 `HW_IP_Flow_Diagrams/` 的 Stage 1–6 管線，也不取代 IP Owner 的技術簽核。
+
+- `config/process_scope.yaml`：SM2514 初期採用範圍；目前先聚焦 SYS.2／SYS.3、HWE.1–HWE.4、SWE.4、SUP.8 與 SUP.10。
+- `config/sm2514_project_adapter.yaml`：現有規格、流程圖、Owner 簽核、SYS2 與 SWE.4 文件的證據對接與排除邊界。
+- `docs/sm2514_integration.md`：資料映射、run snapshot、人工 Gate 與公開 repo 的資料邊界。
+- `validate_sm2514_integration.py`：在目前 Windows 專案 checkout 中驗證專案化設定與來源路徑。
+
+目前的 scope 是 draft profile，不代表正式 assessment scope、N/A 決定或 ASPICE rating。所有 `PROJECT_SCOPE_OWNER`、`QA_REVIEWER` 與 `LEAD_ASSESSOR` 欄位都必須由授權人員補齊。
+
+## HWE.2 第一個可執行 Runtime
+
+目前已完成第一個本機 Runtime vertical slice：`runtime/` 提供 HWE.2
+evidence inventory、固定 rule pack 對照、hash-only snapshot、本機 run
+儲存與人工 Gate queue。它不會修改 SM2514 文件、不會編輯 Stage 1 Golden
+reference，也不會替人員做正式 ASPICE rating。
+
+- 操作說明：`docs/hwe2_runtime.md`
+- CLI：`python -m runtime.cli run --process HWE.2 ...`
+- 測試接縫：`run_hwe2(...)` 與 `runtime.cli`
+- 本機輸出：`runs/<run-id>/result.json`、`runs/<run-id>/report.md`

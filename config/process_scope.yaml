@@ -1,56 +1,70 @@
 schema_version: "1.0"
-project_id: "REPLACE-ME"
+profile_name: "SM2514 initial audit scope"
+project_id: "SM2514_ISO26262"
+project_root: ".."
 assessment_context:
-  assessment_type: "project_self_assessment"
-  assessment_class: "REPLACE-ME"
-  customer_or_oem: "REPLACE-ME"
-  target_capability_profile: "REPLACE-ME"
+  assessment_type: "internal_self_assessment_rehearsal"
+  assessment_class: "documentation_and_evidence_readiness"
+  customer_or_oem: "TO_BE_CONFIRMED"
+  target_capability_profile: "TO_BE_CONFIRMED_BY_LEAD_ASSESSOR"
   rating_method: "lead_assessor_to_confirm"
-  product_scope: "SSD Controller"
-  lifecycle_scope: "REPLACE-ME"
-  release_or_baseline: "REPLACE-ME"
-  scope_owner: "REPLACE-ME"
-  qa_reviewer: "REPLACE-ME"
-  lead_assessor: "REPLACE-ME"
+  product_scope: "SM2514 SSD Controller HW IP and firmware evidence"
+  lifecycle_scope: "system_requirements_to_hw_ip_design_verification_and_owner_signoff"
+  release_or_baseline: "WORKING_TREE_BASELINE"
+  scope_owner: "PROJECT_SCOPE_OWNER"
+  qa_reviewer: "QA_REVIEWER"
+  lead_assessor: "LEAD_ASSESSOR"
+  evidence_policy: "metadata_and_hashes_only_in_public_blueprint"
 
-# Never use missing evidence as a reason for not_in_scope.
+# This is an initial adoption profile, not a formal assessment-scope decision.
+# Every status still requires approval by the project scope owner and, where
+# applicable, QA / Lead Assessor. Missing evidence must never be used as a
+# reason to silently mark a Process not_in_scope.
 # Allowed values: in_scope, conditional, not_in_scope, out_of_scope, unknown.
 process_scope:
-  ACQ.4: {status: conditional, rationale: "Confirm supplier / external IP / EDA / NAND / PHY responsibility", approved_by: "REPLACE-ME"}
-  SPL.2: {status: in_scope, rationale: "Product release package and release approval", approved_by: "REPLACE-ME"}
-  SYS.1: {status: in_scope, rationale: "System stakeholder and intended-use requirements", approved_by: "REPLACE-ME"}
-  SYS.2: {status: in_scope, rationale: "System requirements analysis", approved_by: "REPLACE-ME"}
-  SYS.3: {status: in_scope, rationale: "System architecture and interfaces", approved_by: "REPLACE-ME"}
-  SYS.4: {status: in_scope, rationale: "System integration and integration verification", approved_by: "REPLACE-ME"}
-  SYS.5: {status: in_scope, rationale: "System verification", approved_by: "REPLACE-ME"}
-  SWE.1: {status: in_scope, rationale: "Firmware / software requirements", approved_by: "REPLACE-ME"}
-  SWE.2: {status: in_scope, rationale: "Firmware / software architecture", approved_by: "REPLACE-ME"}
-  SWE.3: {status: in_scope, rationale: "Firmware detailed design and unit construction", approved_by: "REPLACE-ME"}
-  SWE.4: {status: in_scope, rationale: "Software unit verification", approved_by: "REPLACE-ME"}
-  SWE.5: {status: in_scope, rationale: "Software component and integration verification", approved_by: "REPLACE-ME"}
-  SWE.6: {status: in_scope, rationale: "Software verification", approved_by: "REPLACE-ME"}
-  VAL.1: {status: in_scope, rationale: "Validation in intended / target environment", approved_by: "REPLACE-ME"}
-  MLE.1: {status: conditional, rationale: "Confirm whether controller includes ML requirements / model", approved_by: "REPLACE-ME"}
-  MLE.2: {status: conditional, rationale: "Confirm whether controller includes ML architecture", approved_by: "REPLACE-ME"}
-  MLE.3: {status: conditional, rationale: "Confirm whether training data / training exists", approved_by: "REPLACE-ME"}
-  MLE.4: {status: conditional, rationale: "Confirm whether ML model testing exists", approved_by: "REPLACE-ME"}
-  HWE.1: {status: in_scope, rationale: "Hardware requirements analysis", approved_by: "REPLACE-ME"}
-  HWE.2: {status: in_scope, rationale: "Digital / analog / mixed-signal design and production data", approved_by: "REPLACE-ME"}
-  HWE.3: {status: in_scope, rationale: "Hardware design verification", approved_by: "REPLACE-ME"}
-  HWE.4: {status: in_scope, rationale: "Hardware requirements verification", approved_by: "REPLACE-ME"}
-  SUP.1: {status: in_scope, rationale: "Independent QA and process assurance", approved_by: "REPLACE-ME"}
-  SUP.8: {status: in_scope, rationale: "Configuration and baseline management", approved_by: "REPLACE-ME"}
-  SUP.9: {status: in_scope, rationale: "Problem resolution", approved_by: "REPLACE-ME"}
-  SUP.10: {status: in_scope, rationale: "Change request management", approved_by: "REPLACE-ME"}
-  SUP.11: {status: conditional, rationale: "Confirm whether ML data exists", approved_by: "REPLACE-ME"}
-  MAN.3: {status: in_scope, rationale: "Project management", approved_by: "REPLACE-ME"}
-  MAN.5: {status: in_scope, rationale: "Risk management", approved_by: "REPLACE-ME"}
-  MAN.6: {status: in_scope, rationale: "Measurement", approved_by: "REPLACE-ME"}
-  PIM.3: {status: in_scope, rationale: "Process improvement", approved_by: "REPLACE-ME"}
-  REU.2: {status: conditional, rationale: "Confirm reuse of IP / EDA / design / software products", approved_by: "REPLACE-ME"}
+  ACQ.4: {status: conditional, rationale: "Confirm external IP, EDA, NAND, PHY and supplier responsibilities", approved_by: "PROJECT_SCOPE_OWNER"}
+  SPL.2: {status: conditional, rationale: "Release package and release approval are outside the current HW IP authoring focus", approved_by: "PROJECT_SCOPE_OWNER"}
+  SYS.1: {status: conditional, rationale: "Stakeholder and intended-use evidence is referenced but not the primary current work product", approved_by: "PROJECT_SCOPE_OWNER"}
+  SYS.2: {status: in_scope, rationale: "SM2514 system requirements and allocation evidence exist under the AiWorkSpace SYS2 workspace", approved_by: "PROJECT_SCOPE_OWNER"}
+  SYS.3: {status: in_scope, rationale: "HW IP specifications, architecture attributes and interface allocations are current project work products", approved_by: "PROJECT_SCOPE_OWNER"}
+  SYS.4: {status: conditional, rationale: "System integration evidence must be confirmed before expanding beyond document readiness", approved_by: "PROJECT_SCOPE_OWNER"}
+  SYS.5: {status: conditional, rationale: "System verification evidence must be confirmed before formal use", approved_by: "PROJECT_SCOPE_OWNER"}
+  SWE.1: {status: conditional, rationale: "Firmware requirement coverage is present only for selected workspaces and requires scope confirmation", approved_by: "PROJECT_SCOPE_OWNER"}
+  SWE.2: {status: conditional, rationale: "Firmware architecture evidence is present for selected components and requires scope confirmation", approved_by: "PROJECT_SCOPE_OWNER"}
+  SWE.3: {status: conditional, rationale: "Detailed-design and construction evidence is not uniformly represented across the current workspace", approved_by: "PROJECT_SCOPE_OWNER"}
+  SWE.4: {status: in_scope, rationale: "SWE.4 unit-test specifications and traceability blocks are existing evidence types", approved_by: "PROJECT_SCOPE_OWNER"}
+  SWE.5: {status: conditional, rationale: "Component and integration verification evidence requires a project-level baseline", approved_by: "PROJECT_SCOPE_OWNER"}
+  SWE.6: {status: conditional, rationale: "Software verification evidence requires a project-level baseline", approved_by: "PROJECT_SCOPE_OWNER"}
+  VAL.1: {status: conditional, rationale: "Target-environment validation is not the first adoption slice", approved_by: "PROJECT_SCOPE_OWNER"}
+  MLE.1: {status: conditional, rationale: "No ML artifact is assumed; C05 must confirm scope before any N/A decision", approved_by: "PROJECT_SCOPE_OWNER"}
+  MLE.2: {status: conditional, rationale: "No ML artifact is assumed; C05 must confirm scope before any N/A decision", approved_by: "PROJECT_SCOPE_OWNER"}
+  MLE.3: {status: conditional, rationale: "No ML artifact is assumed; C05 must confirm scope before any N/A decision", approved_by: "PROJECT_SCOPE_OWNER"}
+  MLE.4: {status: conditional, rationale: "No ML artifact is assumed; C05 must confirm scope before any N/A decision", approved_by: "PROJECT_SCOPE_OWNER"}
+  HWE.1: {status: in_scope, rationale: "HW requirements and IP specification evidence are core current work products", approved_by: "PROJECT_SCOPE_OWNER"}
+  HWE.2: {status: in_scope, rationale: "HW IP architecture, design, flow and safety-description evidence are core current work products", approved_by: "PROJECT_SCOPE_OWNER"}
+  HWE.3: {status: in_scope, rationale: "Hardware design verification is a required downstream evidence gate for the HW IP flow", approved_by: "PROJECT_SCOPE_OWNER"}
+  HWE.4: {status: in_scope, rationale: "Hardware requirements verification and traceability are required for the current IP specification workflow", approved_by: "PROJECT_SCOPE_OWNER"}
+  SUP.1: {status: conditional, rationale: "Independent QA and process-assurance ownership must be confirmed for the selected evidence set", approved_by: "PROJECT_SCOPE_OWNER"}
+  SUP.8: {status: in_scope, rationale: "Git baselines, Stage 1 immutability and configuration-controlled work products are explicit project controls", approved_by: "PROJECT_SCOPE_OWNER"}
+  SUP.9: {status: conditional, rationale: "Problem-resolution records require a controlled project source before audit use", approved_by: "PROJECT_SCOPE_OWNER"}
+  SUP.10: {status: in_scope, rationale: "Change impact, task tracking and review gates are required to protect staged flow work products", approved_by: "PROJECT_SCOPE_OWNER"}
+  SUP.11: {status: conditional, rationale: "No ML data is assumed; C05 must confirm scope before any N/A decision", approved_by: "PROJECT_SCOPE_OWNER"}
+  MAN.3: {status: conditional, rationale: "Project-management evidence is outside the first HW IP evidence slice", approved_by: "PROJECT_SCOPE_OWNER"}
+  MAN.5: {status: conditional, rationale: "Risk evidence is useful but requires an approved project risk source", approved_by: "PROJECT_SCOPE_OWNER"}
+  MAN.6: {status: conditional, rationale: "Measurement evidence requires agreed project metrics and baselines", approved_by: "PROJECT_SCOPE_OWNER"}
+  PIM.3: {status: conditional, rationale: "Process-improvement evidence will be added after the first audit rehearsal", approved_by: "PROJECT_SCOPE_OWNER"}
+  REU.2: {status: conditional, rationale: "Reuse of IP, EDA, design or software products requires explicit responsibility mapping", approved_by: "PROJECT_SCOPE_OWNER"}
 
 tailoring_rules:
-  - rule_id: TAILOR-001
-    statement: "Any tailoring must identify impacted Process IDs, rationale, substitute control, affected parties, approval and review date."
-    owner: "REPLACE-ME"
+  - rule_id: TAILOR-SM2514-001
+    statement: "The first adoption wave covers evidence readiness for SYS.2/SYS.3, HWE.1-HWE.4, SWE.4, SUP.8 and SUP.10; expansion requires a scope record and review."
+    owner: "PROJECT_SCOPE_OWNER"
+    status: draft
+  - rule_id: TAILOR-SM2514-002
+    statement: "Stage 1 Golden files are immutable reference evidence. The audit layer may hash and reference them, but must not rewrite or regenerate them."
+    owner: "PROJECT_SCOPE_OWNER"
+    status: draft
+  - rule_id: TAILOR-SM2514-003
+    statement: "Public Blueprint commits may contain schemas, rules, prompts and redacted examples only; project evidence remains in the authorized local repository or evidence store."
+    owner: "PROJECT_SCOPE_OWNER"
     status: draft

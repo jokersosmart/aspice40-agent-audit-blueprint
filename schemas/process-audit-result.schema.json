@@ -13,9 +13,55 @@
     "release_or_baseline": {"type": ["string", "null"]},
     "process_id": {"type": "string"},
     "scope_status": {"type": "string", "enum": ["in_scope", "conditional", "not_in_scope", "out_of_scope", "unknown"]},
+    "assessment_mode": {"type": "string", "const": "evidence_inventory_only"},
+    "captured_at": {"type": "string"},
+    "snapshot": {"type": "object", "additionalProperties": true},
+    "evidence_objects": {"type": "array", "items": {"$ref": "evidence_object.schema.json"}},
+    "evidence_inventory": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["item_id", "name", "outcomes", "discovery_status", "review_status", "artifact_ids", "candidate_paths", "rationale"],
+        "properties": {
+          "item_id": {"type": "string"},
+          "name": {"type": "string"},
+          "outcomes": {"type": "array", "items": {"type": "string"}},
+          "discovery_status": {"type": "string", "enum": ["evidence_present", "missing"]},
+          "review_status": {"type": "string", "enum": ["needs_human_review", "missing"]},
+          "artifact_ids": {"type": "array", "items": {"type": "string"}},
+          "candidate_paths": {"type": "array", "items": {"type": "string"}},
+          "rationale": {"type": "string"}
+        }
+      }
+    },
     "checks": {"type": "array", "items": {"$ref": "audit-finding.schema.json"}},
     "cross_domain_issues": {"type": "array", "items": {"type": "string"}},
     "questions_for_owner": {"type": "array", "items": {"type": "string"}},
+    "human_review_queue": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["gate", "reason", "required_action", "related_artifact_ids"],
+        "properties": {
+          "gate": {"type": "string"},
+          "reason": {"type": "string"},
+          "required_action": {"type": "string"},
+          "related_artifact_ids": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    },
+    "evidence_status_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_present", "missing", "needs_human_review"],
+      "properties": {
+        "evidence_present": {"type": "integer", "minimum": 0},
+        "missing": {"type": "integer", "minimum": 0},
+        "needs_human_review": {"type": "integer", "minimum": 0}
+      }
+    },
     "summary": {
       "type": "object",
       "additionalProperties": false,

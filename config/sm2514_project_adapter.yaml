@@ -1,0 +1,66 @@
+schema_version: "1.0"
+adapter_id: "SM2514_LOCAL_EVIDENCE_ADAPTER"
+adapter_version: "2026.08.24"
+project_id: "SM2514_ISO26262"
+project_root: ".."
+public_blueprint_root: "."
+
+# This file describes metadata mappings only. It does not authorize copying
+# project contents into this public Blueprint repository.
+source_roots:
+  - source_id: HW_IP_SPEC
+    path: "../HW_IP_Spec"
+    evidence_domains: [system_requirements, hardware_requirements, hardware_architecture, traceability]
+    artifact_types: [requirement_specification, architecture_specification, traceability_record]
+    confidentiality: local_only
+  - source_id: HW_IP_FLOW_DIAGRAMS
+    path: "../HW_IP_Flow_Diagrams"
+    evidence_domains: [hardware_design, safety_flow, owner_signoff, traceability]
+    artifact_types: [golden_reference, mermaid_flow, flow_description, safety_flow, owner_review]
+    confidentiality: local_only
+    immutable_subpaths:
+      - "1. Golden Normal Function UML Code"
+  - source_id: OWNER_DELIVERABLES
+    path: "../deliverables"
+    evidence_domains: [owner_assignment, review_status, safety_matrix]
+    artifact_types: [owner_matrix, review_record, safety_matrix]
+    confidentiality: local_only
+  - source_id: SYS2_REQUIREMENTS
+    path: "../SM2514_Auto/AiWorkSpace/SYS2_ReqDoc"
+    evidence_domains: [system_requirements, allocation, traceability]
+    artifact_types: [system_requirement, allocation_record, traceability_record]
+    confidentiality: local_only
+  - source_id: SWE4_TEST_SPEC
+    path: "../SM2514_Auto/AiWorkSpace/TestSpec"
+    evidence_domains: [software_unit_verification, test_traceability]
+    artifact_types: [test_specification, traceability_record]
+    confidentiality: local_only
+  - source_id: PROCESS_GUIDANCE
+    path: "../docs"
+    evidence_domains: [company_rule, workflow_control, review_gate]
+    artifact_types: [process_guidance, prompt, checklist]
+    confidentiality: local_only
+
+excluded_sources:
+  - path: "../Source_file"
+    reason: "Imported and potentially NDA-bound source material; reference locally through an approved evidence store only."
+  - path: "../SM2514_Auto/AiWorkSpace/ServiceLayer"
+    reason: "Firmware implementation details are outside the first audit adapter and may contain vendor-sensitive logic."
+  - path: "../SM2514_Auto/AiWorkSpace/coach_sessions"
+    reason: "Working session logs may contain prompts, personal data or sensitive design context."
+  - path: "../tools/graphify-out"
+    reason: "Generated graph/cache output is not an authoritative evidence baseline."
+  - path: "../graphify-out"
+    reason: "Generated graph/cache output is not an authoritative evidence baseline."
+  - path: "./runs"
+    reason: "Generated audit runs must stay local and must not be committed to the public Blueprint."
+
+handling_policy:
+  content_copy: prohibited_by_default
+  allowed_public_outputs: [schemas, redacted_examples, rule_packs, metadata_mapping]
+  local_run_outputs: "../runs/"
+  hash_contents_without_exporting: true
+  preserve_source_anchor: true
+  preserve_revision_and_baseline: true
+  stage_1_golden: "read_only_reference"
+  human_gate_required_for: [scope, N/A, technical_correctness, verification_adequacy, major_finding_closure, release_approval]

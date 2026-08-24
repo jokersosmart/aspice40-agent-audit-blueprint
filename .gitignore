@@ -24,3 +24,10 @@ Thumbs.db
 *.zip
 *.tmp
 *.bak
+
+# SM2514 project-local audit data. Keep evidence snapshots outside this
+# public Blueprint checkout unless an authorized repository is explicitly used.
+runs/
+snapshots/
+local_config/
+*.evidence.jsonl
