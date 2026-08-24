@@ -1,0 +1,3714 @@
+{
+  "standard": "aspice40",
+  "title": "ASPICE 4.0 semantic tables",
+  "table_count": 37,
+  "tables": [
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "Table 14",
+      "title": "Process capability levels",
+      "clause": "3.2.1",
+      "source_anchor": "aspice40_layout.txt lines 815–847",
+      "columns": [
+        "Level",
+        "Name",
+        "Semantic description"
+      ],
+      "rows": [
+        {
+          "Level": "0",
+          "Name": "Incomplete process",
+          "Semantic description": "The process is not implemented or fails to achieve its process purpose."
+        },
+        {
+          "Level": "1",
+          "Name": "Performed process",
+          "Semantic description": "The implemented process achieves its process purpose."
+        },
+        {
+          "Level": "2",
+          "Name": "Managed process",
+          "Semantic description": "The performed process is implemented in a managed fashion and work products are established, controlled and maintained."
+        },
+        {
+          "Level": "3",
+          "Name": "Established process",
+          "Semantic description": "The managed process uses a defined process capable of achieving its process outcomes."
+        },
+        {
+          "Level": "4",
+          "Name": "Predictable process",
+          "Semantic description": "The established process operates predictively within defined limits; quantitative management identifies and addresses variation."
+        },
+        {
+          "Level": "5",
+          "Name": "Innovating process",
+          "Semantic description": "The predictable process is continually improved to respond to organizational change."
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [],
+      "manual_review": []
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "Table 15",
+      "title": "Process attributes",
+      "clause": "3.2.1",
+      "source_anchor": "aspice40_layout.txt lines 849–867",
+      "columns": [
+        "Level",
+        "Attribute ID",
+        "Process attribute"
+      ],
+      "rows": [
+        {
+          "Level": "1",
+          "Attribute ID": "PA 1.1",
+          "Process attribute": "Process performance"
+        },
+        {
+          "Level": "2",
+          "Attribute ID": "PA 2.1",
+          "Process attribute": "Performance management"
+        },
+        {
+          "Level": "2",
+          "Attribute ID": "PA 2.2",
+          "Process attribute": "Work product management"
+        },
+        {
+          "Level": "3",
+          "Attribute ID": "PA 3.1",
+          "Process attribute": "Process definition"
+        },
+        {
+          "Level": "3",
+          "Attribute ID": "PA 3.2",
+          "Process attribute": "Process deployment"
+        },
+        {
+          "Level": "4",
+          "Attribute ID": "PA 4.1",
+          "Process attribute": "Quantitative analysis"
+        },
+        {
+          "Level": "4",
+          "Attribute ID": "PA 4.2",
+          "Process attribute": "Quantitative control"
+        },
+        {
+          "Level": "5",
+          "Attribute ID": "PA 5.1",
+          "Process attribute": "Process innovation"
+        },
+        {
+          "Level": "5",
+          "Attribute ID": "PA 5.2",
+          "Process attribute": "Process innovation implementation"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [],
+      "manual_review": []
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "Table 16",
+      "title": "Rating scale",
+      "clause": "3.2.2.1",
+      "source_anchor": "aspice40_layout.txt lines 887–908",
+      "columns": [
+        "Rating",
+        "Name",
+        "Explicit interpretation"
+      ],
+      "rows": [
+        {
+          "Rating": "N",
+          "Name": "Not achieved",
+          "Explicit interpretation": "Little or no evidence of achievement of the defined process attribute."
+        },
+        {
+          "Rating": "P",
+          "Name": "Partially achieved",
+          "Explicit interpretation": "Some evidence of an approach and some achievement; some aspects may be unpredictable."
+        },
+        {
+          "Rating": "L",
+          "Name": "Largely achieved",
+          "Explicit interpretation": "Evidence of a systematic approach and significant achievement; some weaknesses may exist."
+        },
+        {
+          "Rating": "F",
+          "Name": "Fully achieved",
+          "Explicit interpretation": "Evidence of a complete and systematic approach and full achievement; no significant weaknesses."
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [],
+      "manual_review": []
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "Table 17",
+      "title": "Rating scale percentage values",
+      "clause": "3.2.2.1",
+      "source_anchor": "aspice40_layout.txt lines 909–916",
+      "columns": [
+        "Rating",
+        "Achievement interval"
+      ],
+      "rows": [
+        {
+          "Rating": "N",
+          "Achievement interval": "0 to ≤ 15% achievement"
+        },
+        {
+          "Rating": "P",
+          "Achievement interval": "> 15% to ≤ 50% achievement"
+        },
+        {
+          "Rating": "L",
+          "Achievement interval": "> 50% to ≤ 85% achievement"
+        },
+        {
+          "Rating": "F",
+          "Achievement interval": "> 85% to ≤ 100% achievement"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [],
+      "manual_review": []
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "Table 19",
+      "title": "Refined rating scale percentage values",
+      "clause": "3.2.2",
+      "source_anchor": "aspice40_layout.txt lines 945–950",
+      "columns": [
+        "Rating",
+        "Achievement interval"
+      ],
+      "rows": [
+        {
+          "Rating": "P−",
+          "Achievement interval": "> 15% to ≤ 32.5% achievement"
+        },
+        {
+          "Rating": "P+",
+          "Achievement interval": "> 32.5% to ≤ 50% achievement"
+        },
+        {
+          "Rating": "L−",
+          "Achievement interval": "> 50% to ≤ 67.5% achievement"
+        },
+        {
+          "Rating": "L+",
+          "Achievement interval": "> 67.5% to ≤ 85% achievement"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [],
+      "manual_review": []
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "PIM.3 matrix",
+      "title": "PIM.3 Process Improvement — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 4249",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "02-01",
+          "Name": "Commitment/agreement",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "06-04",
+          "Name": "Training material",
+          "Mapped Outcomes": "O4, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "07-04",
+          "Name": "Process metric",
+          "Mapped Outcomes": "O5, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "10-00",
+          "Name": "Process description",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication evidence",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-16",
+          "Name": "Change request",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis result",
+          "Mapped Outcomes": "O2, O3, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-13",
+          "Name": "Assessment/audit report",
+          "Mapped Outcomes": "O3, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-16",
+          "Name": "Improvement opportunity",
+          "Mapped Outcomes": "O2, O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "16-06",
+          "Name": "Process repository",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Establish commitment",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Identify improvement measures",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Establish process improvement goals",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Prioritize improvements",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Define process improvement measures",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Implement process improvement measures",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Confirm process improvement",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP8",
+          "Name": "Communicate results of improvement",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "REU.2 matrix",
+      "title": "REU.2 Management of Products for Reuse — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 4343",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "04-02",
+          "Name": "Domain architecture",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "12-03",
+          "Name": "Reuse candidate",
+          "Mapped Outcomes": "O1, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication evidence",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-07",
+          "Name": "Reuse analysis evidence",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-53",
+          "Name": "Qualification evidence",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Select products for reuse",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Analyze the reuse capability of the product",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Define limitations for reuse",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Ensure qualification of products for reuse",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Provide products for reuse",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Communicate information about effectiveness of reuse activities",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "ACQ.4 matrix",
+      "title": "ACQ.4 Supplier Monitoring — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 1247",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "02-01",
+          "Name": "Commitment/Agreement",
+          "Mapped Outcomes": "O1, O2, O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication evidence",
+          "Mapped Outcomes": "O1, O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-09",
+          "Name": "Meeting support evidence",
+          "Mapped Outcomes": "O1, O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-14",
+          "Name": "Progress status",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-16",
+          "Name": "Change request",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-19",
+          "Name": "Review evidence",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "14-02",
+          "Name": "Corrective action",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis results",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Agree on and maintain joint processes, joint interfaces, and information to be exchanged",
+          "Mapped Outcomes": "O1, O2, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Exchange all agreed information",
+          "Mapped Outcomes": "O1, O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Review development work products with the supplier",
+          "Mapped Outcomes": "O1, O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Review progress of the supplier",
+          "Mapped Outcomes": "O1, O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Act to correct deviations",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SPL.2 matrix",
+      "title": "SPL.2 Product Release — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 1334",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "11-03",
+          "Name": "Release note",
+          "Mapped Outcomes": "O1, O3, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "11-04",
+          "Name": "Product release package",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-06",
+          "Name": "Delivery evidence",
+          "Mapped Outcomes": "O3, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-13",
+          "Name": "Product release approval",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "18-06",
+          "Name": "Product release criteria",
+          "Mapped Outcomes": "O1, O2, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Define the functional content of releases",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Define release package",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Establish a product release classification and numbering scheme",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Build the release from configured items",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Ensure product release approval before delivery",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Provide a release note",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Communicate the type, service level and duration of support for a release",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP8",
+          "Name": "Deliver the release package to the intended customer",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SYS.1 matrix",
+      "title": "SYS.1 Requirements Elicitation — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 1417",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis Results",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O1, O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-00",
+          "Name": "Requirement",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-54",
+          "Name": "Requirement Attribute",
+          "Mapped Outcomes": "O2, O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Obtain stakeholder expectations and requests",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Agree on requirements",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Analyze stakeholder requirements changes",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Communicate requirements status",
+          "Mapped Outcomes": "O1, O4",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SYS.2 matrix",
+      "title": "SYS.2 System Requirements Analysis — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 1510",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-00",
+          "Name": "Requirement",
+          "Mapped Outcomes": "O1, O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-54",
+          "Name": "Requirement Attribute",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis Results",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify system requirements",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Structure system requirements",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Analyze system requirements",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Analyze the impact on the system context",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Communicate agreed system requirements and impact on the system context",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SYS.3 matrix",
+      "title": "SYS.3 System Architectural Design — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 1598",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "04-06",
+          "Name": "System Architecture",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis Results",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-57",
+          "Name": "Special Characteristics",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify static aspects of system architecture",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Specify dynamic aspects of system architecture",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Analyze the system architecture",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Communicate agreed system architecture",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SYS.4 matrix",
+      "title": "SYS.4 System Integration and Integration Verification — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 1708",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-60",
+          "Name": "Verification Measure",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "06-50",
+          "Name": "Integration Sequence Instruction",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-50",
+          "Name": "Verification Measure Data",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-58",
+          "Name": "Verification Measure Selection Set",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-52",
+          "Name": "Verification Results",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O5, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O7",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "11-06",
+          "Name": "Integrated System",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify verification measures for system integration",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Select verification measures",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Integrate system elements and perform integration verification.",
+          "Mapped Outcomes": "O2, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O5, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Summarize and communicate results",
+          "Mapped Outcomes": "O7",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SYS.5 matrix",
+      "title": "SYS.5 System Verification — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 1805",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-60",
+          "Name": "Verification Measure",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-50",
+          "Name": "Verification Measure Data",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-58",
+          "Name": "Verification Measure Selection Set",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-52",
+          "Name": "Verification Results",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify verification measures for system verification",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Select verification measures",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Perform verification of the integrated system",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Ensure consistency and establish bidirectional traceability.",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Summarize and communicate results",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SWE.1 matrix",
+      "title": "SWE.1 Software Requirements Analysis — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 1916",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-00",
+          "Name": "Requirement",
+          "Mapped Outcomes": "O1, O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-54",
+          "Name": "Requirement Attribute",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis Results",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O5, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O7",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify software requirements",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Structure software requirements",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Analyze software requirements",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Analyze the impact on the operating environment",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Communicate agreed software requirements and impact on the operating environment",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SWE.2 matrix",
+      "title": "SWE.2 Software Architectural Design — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 2008",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "04-04",
+          "Name": "Software Architecture",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis Results",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify static aspects of software architecture",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Specify dynamic aspects of software architecture",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Analyze software architecture",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Communicate agreed software architecture",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SWE.3 matrix",
+      "title": "SWE.3 Software Detailed Design and Unit Construction — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 2105",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "04-05",
+          "Name": "Software Detailed Design",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "11-05",
+          "Name": "Software Unit",
+          "Mapped Outcomes": "O1, O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify the static aspects of the detailed design",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Specify the dynamic aspects of the detailed design",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Develop software units",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Communicate agreed software detailed design and developed software units",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SWE.4 matrix",
+      "title": "SWE.4 Software Unit Verification — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 2190",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-60",
+          "Name": "Verification Measure",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-50",
+          "Name": "Verification Measure Data",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-58",
+          "Name": "Verification Measure Selection Set",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-52",
+          "Name": "Verification Results",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify software unit verification measures",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Select software unit verification measures",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Verify software units",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Ensure consistency and establish bidirectional traceability for software unit verification",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Summarize and communicate results",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SWE.5 matrix",
+      "title": "SWE.5 Software Component Verification and — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 2328",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-60",
+          "Name": "Verification Measure",
+          "Mapped Outcomes": "O1, O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "06-50",
+          "Name": "Integration Sequence Instruction",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-50",
+          "Name": "Verification Measure Data",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-58",
+          "Name": "Verification Measure Selection Set",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-52",
+          "Name": "Verification Results",
+          "Mapped Outcomes": "O5, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O7",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O8",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "01-03",
+          "Name": "Software Component",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "01-50",
+          "Name": "Integrated Software",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify software integration verification measures",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Specify verification measures for verifying software component behavior",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Select verification measures",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Integrate software elements and perform integration verification",
+          "Mapped Outcomes": "O3, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Perform software component verification",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O7",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Summarize and communicate results",
+          "Mapped Outcomes": "O8",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SWE.6 matrix",
+      "title": "SWE.6 Software Verification — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 2435",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-60",
+          "Name": "Verification Measure",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-50",
+          "Name": "Verification Measure Data",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-58",
+          "Name": "Verification Measure Selection Set",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-52",
+          "Name": "Verification Results",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify verification measures for software verification",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Select verification measures",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Verify the integrated software",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Ensure consistency and establish bidirectional traceability.",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Summarize and communicate results",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "VAL.1 matrix",
+      "title": "VAL.1 Validation — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 2542",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-59",
+          "Name": "Validation Measure",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-57",
+          "Name": "Validation Measure Selection Set",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-24",
+          "Name": "Validation Results",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify validation measures",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Select validation measures",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Perform validation and evaluate results",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Ensure consistency and establish traceability.",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Summarize and communicate results",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "MLE.1 matrix",
+      "title": "MLE.1 Machine Learning Requirements Analysis — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 2638",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-00",
+          "Name": "Requirement",
+          "Mapped Outcomes": "O1, O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-54",
+          "Name": "Requirement attribute",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication evidence",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency evidence",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis results",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify ML requirements",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Structure ML requirements",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Analyze ML requirements",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Analyze the impact on the ML operating environment",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Communicate agreed ML requirements",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "MLE.2 matrix",
+      "title": "MLE.2 Machine Learning Architecture — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 2733",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "04-51",
+          "Name": "ML architecture",
+          "Mapped Outcomes": "O1, O2, O3, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication evidence",
+          "Mapped Outcomes": "O7",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency evidence",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "01-54",
+          "Name": "Hyperparameter",
+          "Mapped Outcomes": "O1, O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis results",
+          "Mapped Outcomes": "O1, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Develop ML architecture",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Determine hyperparameter ranges and initial values.",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Evaluate ML architectural elements",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Define interfaces of the ML architectural elements",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Define resource consumption objectives for the ML architectural elements",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Communicate agreed ML architecture",
+          "Mapped Outcomes": "O7",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "MLE.3 matrix",
+      "title": "MLE.3 Machine Learning Training — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 2826",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-65",
+          "Name": "ML training and validation approach",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-51",
+          "Name": "ML data set",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "01-53",
+          "Name": "Trained ML model",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "01-54",
+          "Name": "Hyperparameter",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency evidence",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication evidence",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify ML training and validation approach",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Create ML training and validation data set",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Create and optimize ML model",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Summarize and communicate agreed trained ML model",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "MLE.4 matrix",
+      "title": "MLE.4 Machine Learning Model Testing — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 2932",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-64",
+          "Name": "ML test approach",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-51",
+          "Name": "ML data set",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-50",
+          "Name": "ML test results",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "11-50",
+          "Name": "Deployed ML model",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency evidence",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication evidence",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify an ML test approach",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Create ML test data set",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Test trained ML model",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Derive deployed ML model",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Test deployed ML model",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Summarize and communicate results",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "HWE.1 matrix",
+      "title": "HWE.1 Hardware Requirements Analysis — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 3050",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O7",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O5, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-00",
+          "Name": "Requirement",
+          "Mapped Outcomes": "O1, O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-54",
+          "Name": "Requirement Attribute",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis Results",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify hardware requirements",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Structure hardware requirements",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Analyze hardware requirements",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Analyze the impact on the operating environment",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Communicate agreed hardware requirements",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "HWE.2 matrix",
+      "title": "HWE.2 Hardware Design — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 3157",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "04-52",
+          "Name": "Hardware Architecture",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "04-53",
+          "Name": "Hardware Detailed Design",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis Results",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "17-57",
+          "Name": "Special Characteristics",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "04-54",
+          "Name": "Hardware Schematics",
+          "Mapped Outcomes": "O1, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "14-54",
+          "Name": "Hardware Bill of Materials",
+          "Mapped Outcomes": "O1, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "04-55",
+          "Name": "Hardware Layout",
+          "Mapped Outcomes": "O1, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-54",
+          "Name": "Hardware Production Data",
+          "Mapped Outcomes": "O1, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "04-56",
+          "Name": "Hardware Element Interface",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify the hardware architecture",
+          "Mapped Outcomes": "O1, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Specify the hardware detailed design",
+          "Mapped Outcomes": "O1, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Specify dynamic aspects",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Analyze the hardware architecture and the hardware detailed design",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Communicate agreed hardware architecture and hardware detailed design",
+          "Mapped Outcomes": "O4, O5, O6",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "HWE.3 matrix",
+      "title": "HWE.3 Verification against Hardware Design — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 3271",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-60",
+          "Name": "Verification Measure",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-50",
+          "Name": "Verification Measure Data",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-58",
+          "Name": "Verification Measure Selection Set",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-52",
+          "Name": "Verification Results",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify verification measures for the verification against hardware design",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Ensure use of compliant samples",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Select verification measures",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Verify hardware design",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Summarize and communicate results",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "HWE.4 matrix",
+      "title": "HWE.4 Verification against Hardware Requirements — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 3372",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-60",
+          "Name": "Verification Measure",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-50",
+          "Name": "Verification Measure Data",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-58",
+          "Name": "Verification Measure Selection Set",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-52",
+          "Name": "Verification Results",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication Evidence",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Specify verification measures for the verification against hardware requirements",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Ensure use of compliant samples",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Select verification measures",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Verify hardware",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Ensure consistency and establish bidirectional traceability",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Summarize and communicate results",
+          "Mapped Outcomes": "O6",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SUP.1 matrix",
+      "title": "SUP.1 Quality Assurance — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 3471",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "16-50",
+          "Name": "Organizational structure",
+          "Mapped Outcomes": "O1, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "18-52",
+          "Name": "Escalation path",
+          "Mapped Outcomes": "O5, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "18-07",
+          "Name": "Quality criteria",
+          "Mapped Outcomes": "O2, O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication evidence",
+          "Mapped Outcomes": "O3, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-18",
+          "Name": "Quality conformance evidence",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-19",
+          "Name": "Review evidence",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "14-02",
+          "Name": "Corrective action",
+          "Mapped Outcomes": "O4, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Ensure independence of quality assurance.",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Define criteria for quality assurance.",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Assure quality of work products.",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Assure quality of process activities.",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Summarize and communicate quality assurance activities and results.",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Ensure resolution of non-conformances.",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Escalate non-conformances.",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SUP.8 matrix",
+      "title": "SUP.8 Configuration Management — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 3588",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "18-53",
+          "Name": "Configuration item selection criteria",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "01-52",
+          "Name": "Configuration item list",
+          "Mapped Outcomes": "O1, O2, O7",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "16-03",
+          "Name": "Configuration management system",
+          "Mapped Outcomes": "O3, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-08",
+          "Name": "Baseline",
+          "Mapped Outcomes": "O5, O7",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "14-01",
+          "Name": "Change history",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-56",
+          "Name": "Configuration status",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency Evidence",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "06-52",
+          "Name": "Backup and recovery mechanism information",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Identify configuration items",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Define configuration item properties",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Establish configuration management",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Control modifications",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Establish baselines",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Summarize and communicate configuration status",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Ensure completeness and consistency",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP8",
+          "Name": "Verify backup and recovery mechanisms availability",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SUP.9 matrix",
+      "title": "SUP.9 Problem Resolution Management — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 3683",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-07",
+          "Name": "Problem",
+          "Mapped Outcomes": "O1, O2, O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-55",
+          "Name": "Problem analysis evidence",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-12",
+          "Name": "Problem status",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Identify and record the problem",
+          "Mapped Outcomes": "O1, O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Determine the cause and the impact of the problem",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Authorize urgent resolution action",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Raise alert notifications",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Initiate problem resolution",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Track problems to closure",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Report the status of problem resolution activities",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SUP.10 matrix",
+      "title": "SUP.10 Change Request Management — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 3774",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "18-57",
+          "Name": "Change analysis criteria",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-16",
+          "Name": "Change request",
+          "Mapped Outcomes": "O1, O2, O3, O5, O6",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency evidence",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Identify and record the change requests",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Analyze and assess change requests",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Approve change requests before implementation",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Establish bidirectional traceability",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Confirm the implementation of change requests",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Track change requests to closure",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "SUP.11 matrix",
+      "title": "SUP.11 Machine Learning Data Management — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 3858",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "16-52",
+          "Name": "ML data management system",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "19-50",
+          "Name": "ML data quality approach",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-53",
+          "Name": "ML data",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication evidence",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Establish an ML data management system",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Develop an ML data quality approach",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Collect ML data",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Process ML data",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Assure quality of ML data",
+          "Mapped Outcomes": "O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Communicate agreed processed ML data",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "MAN.3 matrix",
+      "title": "MAN.3 Project Management — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 3970",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-53",
+          "Name": "Scope of work",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-54",
+          "Name": "Feasibility analysis",
+          "Mapped Outcomes": "O2, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "14-10",
+          "Name": "Work package",
+          "Mapped Outcomes": "O3, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-52",
+          "Name": "Communication evidence",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-16",
+          "Name": "Change request",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "13-51",
+          "Name": "Consistency evidence",
+          "Mapped Outcomes": "O1, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "14-02",
+          "Name": "Corrective action",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "18-52",
+          "Name": "Escalation path",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-56",
+          "Name": "Schedule",
+          "Mapped Outcomes": "O1, O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "14-50",
+          "Name": "Stakeholder groups list",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-06",
+          "Name": "Project status",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Define the scope of work",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Define project life cycle",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Evaluate feasibility of the project",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Define and monitor work packages",
+          "Mapped Outcomes": "O1, O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Define and monitor project estimates and resources",
+          "Mapped Outcomes": "O1, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Define and monitor required skills, knowledge, and experience",
+          "Mapped Outcomes": "O1, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Define and monitor project interfaces and agreed commitments",
+          "Mapped Outcomes": "O1, O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP8",
+          "Name": "Define and monitor project schedule",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP9",
+          "Name": "Ensure consistency",
+          "Mapped Outcomes": "O1, O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP10",
+          "Name": "Review and report progress of the project",
+          "Mapped Outcomes": "O3",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "MAN.5 matrix",
+      "title": "MAN.5 Risk Management — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 4070",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis results",
+          "Mapped Outcomes": "O1, O2, O3, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-09",
+          "Name": "Risk status",
+          "Mapped Outcomes": "O1, O3, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "08-55",
+          "Name": "Risk measure",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "14-02",
+          "Name": "Corrective action",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Identify sources of risks",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Identify potential undesirable events",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Determine risks",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Define risk treatment options",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Define and perform risk treatment activities.",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Monitor risks",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP7",
+          "Name": "Take corrective action",
+          "Mapped Outcomes": "O2",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    },
+    {
+      "standard": "ASPICE 4.0",
+      "table_id": "MAN.6 matrix",
+      "title": "MAN.6 Measurement — explicit Outcome mapping",
+      "clause": "Chapter 4",
+      "source_anchor": "aspice40_visual_matrices.json source_layout_line 4152",
+      "columns": [
+        "Row type",
+        "Row ID",
+        "Name",
+        "Mapped Outcomes",
+        "Mapped"
+      ],
+      "rows": [
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-03",
+          "Name": "Benchmarking data",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-04",
+          "Name": "Customer satisfaction data",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "03-06",
+          "Name": "Process performance information",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "07-51",
+          "Name": "Measurement result",
+          "Mapped Outcomes": "O2, O3, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Output Information Item",
+          "Row ID": "15-51",
+          "Name": "Analysis results",
+          "Mapped Outcomes": "O1, O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP1",
+          "Name": "Identify information needs",
+          "Mapped Outcomes": "O1",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP2",
+          "Name": "Specify metrics",
+          "Mapped Outcomes": "O2, O3",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP3",
+          "Name": "Collect and store metrics",
+          "Mapped Outcomes": "O3, O4",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP4",
+          "Name": "Analyze collected metrics",
+          "Mapped Outcomes": "O4, O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP5",
+          "Name": "Communicate measurement information",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        },
+        {
+          "Row type": "Base Practice",
+          "Row ID": "BP6",
+          "Name": "Use metrics for decision-making",
+          "Mapped Outcomes": "O5",
+          "Mapped": "true"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+      ],
+      "manual_review": [
+        "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+      ]
+    }
+  ],
+  "symbol_dictionary": [
+    {
+      "symbol": "X",
+      "context": "Outcome／BP／Output Information Item mapping",
+      "meaning": "mapped = true for the named row and named Outcome column; the X itself is not left as a standalone cell"
+    },
+    {
+      "symbol": "N/P/L/F",
+      "context": "Table 16–17 rating scale",
+      "meaning": "Not, Partially, Largely, Fully achieved"
+    },
+    {
+      "symbol": "P−／P+／L−／L+",
+      "context": "Table 18–19 refined rating",
+      "meaning": "refined sub-level of Partially or Largely achieved"
+    },
+    {
+      "symbol": "—",
+      "context": "table separator or empty／not-applicable cell",
+      "meaning": "render as an explicit empty_or_not_applicable value only when the table defines it; never infer a numeric value"
+    }
+  ]
+}

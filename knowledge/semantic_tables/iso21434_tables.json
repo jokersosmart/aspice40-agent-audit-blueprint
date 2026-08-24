@@ -1,0 +1,449 @@
+{
+  "standard": "iso21434",
+  "title": "ISO/SAE 21434 semantic tables",
+  "table_count": 9,
+  "tables": [
+    {
+      "standard": "ISO/SAE 21434:2021",
+      "table_id": "Table 1",
+      "title": "Attack feasibility ratings and descriptions",
+      "clause": "15.7.2",
+      "source_anchor": "iso21434_layout.txt lines 2826–2833",
+      "columns": [
+        "Attack feasibility rating",
+        "Description"
+      ],
+      "rows": [
+        {
+          "Attack feasibility rating": "High",
+          "Description": "The attack path can be accomplished utilizing low effort."
+        },
+        {
+          "Attack feasibility rating": "Medium",
+          "Description": "The attack path can be accomplished utilizing medium effort."
+        },
+        {
+          "Attack feasibility rating": "Low",
+          "Description": "The attack path can be accomplished utilizing high effort."
+        },
+        {
+          "Attack feasibility rating": "Very low",
+          "Description": "The attack path can be accomplished utilizing very high effort."
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [],
+      "manual_review": []
+    },
+    {
+      "standard": "ISO/SAE 21434:2021",
+      "table_id": "Table E.1",
+      "title": "Example CAL determination based on impact and attack vector",
+      "clause": "Annex E",
+      "source_anchor": "iso21434_layout.txt lines 3392–3401; PDF physical page 65 / printed page 59",
+      "columns": [
+        "Impact rating",
+        "Physical",
+        "Local",
+        "Adjacent",
+        "Network"
+      ],
+      "rows": [
+        {
+          "Impact rating": "Severe",
+          "Physical": "CAL2",
+          "Local": "CAL3",
+          "Adjacent": "CAL4",
+          "Network": "CAL4"
+        },
+        {
+          "Impact rating": "Major",
+          "Physical": "CAL1",
+          "Local": "CAL2",
+          "Adjacent": "CAL3",
+          "Network": "CAL4"
+        },
+        {
+          "Impact rating": "Moderate",
+          "Physical": "CAL1",
+          "Local": "CAL1",
+          "Adjacent": "CAL2",
+          "Network": "CAL3"
+        },
+        {
+          "Impact rating": "Negligible",
+          "Physical": "---",
+          "Local": "---",
+          "Adjacent": "---",
+          "Network": "---"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The `---` values are explicitly defined by footnote a and are not missing numeric cells."
+      ],
+      "manual_review": []
+    },
+    {
+      "standard": "ISO/SAE 21434:2021",
+      "table_id": "Table E.2",
+      "title": "Example CALs and expected rigour in cybersecurity assurance measures",
+      "clause": "Annex E",
+      "source_anchor": "iso21434_layout.txt lines 3435–3457",
+      "columns": [
+        "CAL",
+        "Assurance description",
+        "Confidence that activities are rigorous",
+        "Confidence that vulnerabilities do not remain",
+        "Independence scheme"
+      ],
+      "rows": [
+        {
+          "CAL": "CAL1",
+          "Assurance description": "Low to moderate cybersecurity assurance is required",
+          "Confidence that activities are rigorous": "Requirement-based testing",
+          "Confidence that vulnerabilities do not remain": "Analysis and/or testing based on known information",
+          "Independence scheme": "Not needed"
+        },
+        {
+          "CAL": "CAL2",
+          "Assurance description": "Moderate cybersecurity assurance is required",
+          "Confidence that activities are rigorous": "Requirement-based testing",
+          "Confidence that vulnerabilities do not remain": "Analysis and/or testing based on known information",
+          "Independence scheme": "Assessment by a different person than the originator"
+        },
+        {
+          "CAL": "CAL3",
+          "Assurance description": "Moderate to high cybersecurity assurance is required",
+          "Confidence that activities are rigorous": "All interactions between components are tested",
+          "Confidence that vulnerabilities do not remain": "Exploratory analysis and/or testing",
+          "Independence scheme": "Assessment by a person in a different team"
+        },
+        {
+          "CAL": "CAL4",
+          "Assurance description": "High cybersecurity assurance is required",
+          "Confidence that activities are rigorous": "All combinations of interactions between components are tested",
+          "Confidence that vulnerabilities do not remain": "Exploratory analysis and/or testing",
+          "Independence scheme": "Independent regarding management, resources and release authority"
+        }
+      ],
+      "confidence": "medium",
+      "symbol_dictionary": [],
+      "notes": [],
+      "manual_review": [
+        "The source table uses merged／multi-line cells; verify the full CAL2–CAL4 text against the original page before normative use."
+      ]
+    },
+    {
+      "standard": "ISO/SAE 21434:2021",
+      "table_id": "Table E.3",
+      "title": "Example level of independence of cybersecurity activities",
+      "clause": "Annex E",
+      "source_anchor": "iso21434_layout.txt lines 3493–3511",
+      "columns": [
+        "Activity",
+        "Requirement reference",
+        "CAL1",
+        "CAL2",
+        "CAL3",
+        "CAL4"
+      ],
+      "rows": [
+        {
+          "Activity": "Verification of cybersecurity concept and design activities",
+          "Requirement reference": "[RQ-09-11]; [RQ-10-08]",
+          "CAL1": "I1",
+          "CAL2": "I1",
+          "CAL3": "I2",
+          "CAL4": "I2"
+        },
+        {
+          "Activity": "Verification of implementation and integration of components",
+          "Requirement reference": "[RQ-10-09]",
+          "CAL1": "I1",
+          "CAL2": "I1",
+          "CAL3": "I2",
+          "CAL4": "I2"
+        },
+        {
+          "Activity": "Cybersecurity validation",
+          "Requirement reference": "[RQ-11-01]",
+          "CAL1": "I1",
+          "CAL2": "I1",
+          "CAL3": "I2",
+          "CAL4": "I2"
+        },
+        {
+          "Activity": "Cybersecurity assessment",
+          "Requirement reference": "[RQ-06-27]",
+          "CAL1": "—",
+          "CAL2": "I1",
+          "CAL3": "I2",
+          "CAL4": "I3"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "I1, I2 and I3 are defined by the table footnotes; the dash means no suggestion regarding independence."
+      ],
+      "manual_review": []
+    },
+    {
+      "standard": "ISO/SAE 21434:2021",
+      "table_id": "Table E.4",
+      "title": "Example parameters of testing methods",
+      "clause": "Annex E",
+      "source_anchor": "iso21434_layout.txt lines 3527–3550",
+      "columns": [
+        "Activity",
+        "Requirement reference",
+        "CAL1",
+        "CAL2",
+        "CAL3",
+        "CAL4"
+      ],
+      "rows": [
+        {
+          "Activity": "Functional testing",
+          "Requirement reference": "[RC-10-12]; [RQ-11-01]",
+          "CAL1": "T1",
+          "CAL2": "T1",
+          "CAL3": "T2",
+          "CAL4": "T2"
+        },
+        {
+          "Activity": "Vulnerability scanning",
+          "Requirement reference": "[RC-10-12]; [RQ-11-01]",
+          "CAL1": "T1",
+          "CAL2": "T1",
+          "CAL3": "T1",
+          "CAL4": "T1"
+        },
+        {
+          "Activity": "Fuzz testing",
+          "Requirement reference": "[RC-10-12]; [RQ-11-01]",
+          "CAL1": "—",
+          "CAL2": "T1",
+          "CAL3": "T2",
+          "CAL4": "T2"
+        },
+        {
+          "Activity": "Penetration testing",
+          "Requirement reference": "[RC-10-12]; [RQ-11-01]",
+          "CAL1": "—",
+          "CAL2": "—",
+          "CAL3": "T1",
+          "CAL4": "T2"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "T1／T2 are parameter sets, not pass／fail results."
+      ],
+      "manual_review": []
+    },
+    {
+      "standard": "ISO/SAE 21434:2021",
+      "table_id": "Table H.8",
+      "title": "Risk matrix example",
+      "clause": "Annex H, H.2.7",
+      "source_anchor": "iso21434_layout.txt lines 4369–4376; printed page 77; physical page to be resolved by anchor",
+      "columns": [
+        "Impact rating",
+        "Very Low",
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "rows": [
+        {
+          "Impact rating": "Severe",
+          "Very Low": "2",
+          "Low": "3",
+          "Medium": "4",
+          "High": "5"
+        },
+        {
+          "Impact rating": "Major",
+          "Very Low": "1",
+          "Low": "2",
+          "Medium": "3",
+          "High": "4"
+        },
+        {
+          "Impact rating": "Moderate",
+          "Very Low": "1",
+          "Low": "2",
+          "Medium": "2",
+          "High": "3"
+        },
+        {
+          "Impact rating": "Negligible",
+          "Very Low": "1",
+          "Low": "1",
+          "Medium": "1",
+          "High": "1"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [],
+      "manual_review": []
+    },
+    {
+      "standard": "ISO/SAE 21434:2021",
+      "table_id": "Table H.9",
+      "title": "Examples of determined risk values",
+      "clause": "Annex H, H.2.7",
+      "source_anchor": "iso21434_layout.txt lines 4378–4387",
+      "columns": [
+        "Threat scenario",
+        "Aggregated attack feasibility rating",
+        "Impact rating",
+        "Risk value"
+      ],
+      "rows": [
+        {
+          "Threat scenario": "Spoofing of a signal leads to loss of integrity of the data communication of “Lamp Request” signal for power switch actuator ECU",
+          "Aggregated attack feasibility rating": "High",
+          "Impact rating": "Severe",
+          "Risk value": "S: 5"
+        },
+        {
+          "Threat scenario": "Denial of service of oncoming car information",
+          "Aggregated attack feasibility rating": "Low",
+          "Impact rating": "Moderate",
+          "Risk value": "O: 2"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [],
+      "manual_review": []
+    },
+    {
+      "standard": "ISO/SAE 21434:2021",
+      "table_id": "Table H.10",
+      "title": "Example translation of impact and attack feasibility to numerical values",
+      "clause": "Annex H, H.2.7",
+      "source_anchor": "iso21434_layout.txt lines 4394–4403",
+      "columns": [
+        "Rating type",
+        "Rating",
+        "Numerical value"
+      ],
+      "rows": [
+        {
+          "Rating type": "Impact",
+          "Rating": "Negligible",
+          "Numerical value": "0"
+        },
+        {
+          "Rating type": "Impact",
+          "Rating": "Moderate",
+          "Numerical value": "1"
+        },
+        {
+          "Rating type": "Impact",
+          "Rating": "Major",
+          "Numerical value": "1.5"
+        },
+        {
+          "Rating type": "Impact",
+          "Rating": "Severe",
+          "Numerical value": "2"
+        },
+        {
+          "Rating type": "Attack feasibility",
+          "Rating": "Very low",
+          "Numerical value": "0"
+        },
+        {
+          "Rating type": "Attack feasibility",
+          "Rating": "Low",
+          "Numerical value": "1"
+        },
+        {
+          "Rating type": "Attack feasibility",
+          "Rating": "Medium",
+          "Numerical value": "1.5"
+        },
+        {
+          "Rating type": "Attack feasibility",
+          "Rating": "High",
+          "Numerical value": "2"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [
+        "The source formula is R = 1 + I × F."
+      ],
+      "manual_review": []
+    },
+    {
+      "standard": "ISO/SAE 21434:2021",
+      "table_id": "Table H.11",
+      "title": "Example results of risk treatment decision",
+      "clause": "Annex H, H.2.8",
+      "source_anchor": "iso21434_layout.txt lines 4409–4414",
+      "columns": [
+        "Threat scenario",
+        "Risk value",
+        "Risk treatment option"
+      ],
+      "rows": [
+        {
+          "Threat scenario": "Spoofing of a signal leads to loss of integrity of the data communication of “Lamp Request” signal for power switch actuator ECU",
+          "Risk value": "S: 5",
+          "Risk treatment option": "Reducing the risk"
+        },
+        {
+          "Threat scenario": "Denial of service of oncoming car information",
+          "Risk value": "O: 2",
+          "Risk treatment option": "Reducing the risk"
+        }
+      ],
+      "confidence": "high",
+      "symbol_dictionary": [],
+      "notes": [],
+      "manual_review": []
+    }
+  ],
+  "symbol_dictionary": [
+    {
+      "symbol": "---",
+      "context": "Table E.1, Negligible impact row",
+      "meaning": "not applicable／no CAL assigned for that impact and attack-vector combination, as defined by the table footnote"
+    },
+    {
+      "symbol": "—",
+      "context": "Tables E.3–E.4",
+      "meaning": "no suggestion regarding independence or testing parameters"
+    },
+    {
+      "symbol": "X",
+      "context": "Table H.2",
+      "meaning": "the corresponding cybersecurity property is affected／relevant for that asset or damage scenario"
+    },
+    {
+      "symbol": "―",
+      "context": "Table H.2",
+      "meaning": "the corresponding cybersecurity property is not affected／not relevant"
+    },
+    {
+      "symbol": "I1／I2／I3",
+      "context": "Table E.3",
+      "meaning": "increasing independence level defined by the table notes"
+    },
+    {
+      "symbol": "T1／T2",
+      "context": "Table E.4",
+      "meaning": "testing parameter set 1 or 2, not an unqualified test result"
+    }
+  ]
+}

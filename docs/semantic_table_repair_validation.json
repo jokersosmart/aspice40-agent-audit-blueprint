@@ -1,0 +1,10 @@
+{
+  "ok": true,
+  "table_counts": {
+    "aspice40_tables.json": 37,
+    "iso26262_part5_tables.json": 11,
+    "iso21434_tables.json": 9
+  },
+  "total_tables": 57,
+  "errors": []
+}

@@ -72,6 +72,17 @@
 - `docs/external_references.md`：VDA QMC、intacs 與 DNV 的外部背景來源；normative 結論仍以核准標準原文為準。
 - `examples/`：HWE.2、ISO 26262-5 與 ISO/SAE 21434 SSD Controller 稽核輸入及三規範 Crosswalk 範例。
 
+## Semantic table repair layer
+
+`knowledge/semantic_tables/` contains the table-semantic repair outputs for ASPICE 4.0, ISO 26262-5:2018, and ISO/SAE 21434:2021. The Markdown and HTML files use explicit row and column headers, while the JSON files are long-table data for Runtime retrieval. Standalone `X`, `+`, `++`, `o`, `—`, `---`, percentages, inequalities and units are not emitted without their table context. `manual_review_queue.json` records merged-cell and horizontal-position cases that must be checked against the original PDF before normative use. `tools/validate_semantic_tables.py` and `docs/semantic_table_repair_validation.json` verify that table rows match their headers, symbols have context, and unresolved relations cannot be auto-filled. The original licensed standard text remains outside the public repository and is injected only from a controlled runtime source.
+
+## Semantic table files
+
+- `knowledge/semantic_tables/aspice40_tables.md`、`aspice40_tables.html`、`aspice40_tables.json`：ASPICE rating／capability 與 32 個 Process mapping 的語意化 Table。
+- `knowledge/semantic_tables/iso26262_part5_tables.md`、`iso26262_part5_tables.html`、`iso26262_part5_tables.json`：ISO 26262-5 ASIL、硬體 metric、failure-rate 與 integration test Table。
+- `knowledge/semantic_tables/iso21434_tables.md`、`iso21434_tables.html`、`iso21434_tables.json`：ISO/SAE 21434 CAL、independence、testing 與 risk Table。
+- `knowledge/semantic_tables/manual_review_queue.json`、`table_semantic_repair_report.md`：保留無法由 layout 唯一確認的 merged-cell／水平位置項目。
+
 ## ISO 26262-5 Safety Extension
 
 ISO 26262-5:2018 的擴充包含 FS01–FS15、M15–M17、R11–R14、Safety Finding schema、Cross-Standard Mapping schema、Safety Auditor／Manager Prompt，以及 runtime citation generator。完整 ISO 26262 標準全文不放入 public repository；FS12 在 runtime 從核准本地來源注入完整原文段落或表格列，缺少 ISO 26262-2／-4／-8／-9／-11 等依賴時必須保留 `dependency_missing`。

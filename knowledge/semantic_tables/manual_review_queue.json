@@ -1,0 +1,398 @@
+[
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "PIM.3 matrix",
+    "title": "PIM.3 Process Improvement — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 4249",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "REU.2 matrix",
+    "title": "REU.2 Management of Products for Reuse — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 4343",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "ACQ.4 matrix",
+    "title": "ACQ.4 Supplier Monitoring — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 1247",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SPL.2 matrix",
+    "title": "SPL.2 Product Release — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 1334",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SYS.1 matrix",
+    "title": "SYS.1 Requirements Elicitation — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 1417",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SYS.2 matrix",
+    "title": "SYS.2 System Requirements Analysis — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 1510",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SYS.3 matrix",
+    "title": "SYS.3 System Architectural Design — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 1598",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SYS.4 matrix",
+    "title": "SYS.4 System Integration and Integration Verification — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 1708",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SYS.5 matrix",
+    "title": "SYS.5 System Verification — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 1805",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SWE.1 matrix",
+    "title": "SWE.1 Software Requirements Analysis — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 1916",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SWE.2 matrix",
+    "title": "SWE.2 Software Architectural Design — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 2008",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SWE.3 matrix",
+    "title": "SWE.3 Software Detailed Design and Unit Construction — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 2105",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SWE.4 matrix",
+    "title": "SWE.4 Software Unit Verification — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 2190",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SWE.5 matrix",
+    "title": "SWE.5 Software Component Verification and — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 2328",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SWE.6 matrix",
+    "title": "SWE.6 Software Verification — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 2435",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "VAL.1 matrix",
+    "title": "VAL.1 Validation — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 2542",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "MLE.1 matrix",
+    "title": "MLE.1 Machine Learning Requirements Analysis — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 2638",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "MLE.2 matrix",
+    "title": "MLE.2 Machine Learning Architecture — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 2733",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "MLE.3 matrix",
+    "title": "MLE.3 Machine Learning Training — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 2826",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "MLE.4 matrix",
+    "title": "MLE.4 Machine Learning Model Testing — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 2932",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "HWE.1 matrix",
+    "title": "HWE.1 Hardware Requirements Analysis — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3050",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "HWE.2 matrix",
+    "title": "HWE.2 Hardware Design — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3157",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "HWE.3 matrix",
+    "title": "HWE.3 Verification against Hardware Design — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3271",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "HWE.4 matrix",
+    "title": "HWE.4 Verification against Hardware Requirements — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3372",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SUP.1 matrix",
+    "title": "SUP.1 Quality Assurance — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3471",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SUP.8 matrix",
+    "title": "SUP.8 Configuration Management — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3588",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SUP.9 matrix",
+    "title": "SUP.9 Problem Resolution Management — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3683",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SUP.10 matrix",
+    "title": "SUP.10 Change Request Management — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3774",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "SUP.11 matrix",
+    "title": "SUP.11 Machine Learning Data Management — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3858",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "MAN.3 matrix",
+    "title": "MAN.3 Project Management — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3970",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "MAN.5 matrix",
+    "title": "MAN.5 Risk Management — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 4070",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ASPICE 4.0",
+    "table_id": "MAN.6 matrix",
+    "title": "MAN.6 Measurement — explicit Outcome mapping",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 4152",
+    "confidence": "high",
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  },
+  {
+    "standard": "ISO/SAE 21434:2021",
+    "table_id": "Table E.2",
+    "title": "Example CALs and expected rigour in cybersecurity assurance measures",
+    "source_anchor": "iso21434_layout.txt lines 3435–3457",
+    "confidence": "medium",
+    "manual_review": [
+      "The source table uses merged／multi-line cells; verify the full CAL2–CAL4 text against the original page before normative use."
+    ],
+    "original_source_is_authoritative": true,
+    "auto_fill_prohibited": true
+  }
+]

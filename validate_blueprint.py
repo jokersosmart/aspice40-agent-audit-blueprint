@@ -46,6 +46,8 @@ required_files = [
     'workflows/example_three_standard_runtime_dag.yaml',
     'tools/runtime_context_builder.py',
     'tools/citation_validator.py',
+    'tools/validate_semantic_tables.py',
+    'docs/semantic_table_repair_validation.json',
     'docs/external_references.md',
     'config/standards_registry.yaml',
     'config/iso26262_part5_scope.yaml',
@@ -81,7 +83,20 @@ required_files = [
     'knowledge/iso21434/part_rulepack_template.yaml',
     'generate_iso21434_runtime_catalog.py',
     'examples/iso21434_audit_input.json',
-    'examples/aspice_iso26262_iso21434_crosswalk_example.json'
+    'examples/aspice_iso26262_iso21434_crosswalk_example.json',
+    'knowledge/semantic_tables/README.md',
+    'knowledge/semantic_tables/aspice40_tables.md',
+    'knowledge/semantic_tables/aspice40_tables.html',
+    'knowledge/semantic_tables/aspice40_tables.json',
+    'knowledge/semantic_tables/iso26262_part5_tables.md',
+    'knowledge/semantic_tables/iso26262_part5_tables.html',
+    'knowledge/semantic_tables/iso26262_part5_tables.json',
+    'knowledge/semantic_tables/iso21434_tables.md',
+    'knowledge/semantic_tables/iso21434_tables.html',
+    'knowledge/semantic_tables/iso21434_tables.json',
+    'knowledge/semantic_tables/manual_review_queue.json',
+    'knowledge/semantic_tables/table_semantic_repair_report.md',
+    'knowledge/semantic_tables/table_semantic_repair_summary.json'
 ]
 missing = [p for p in required_files if not (ROOT / p).exists()]
 process_text = (ROOT / 'profiles/process_agents.yaml').read_text(encoding='utf-8')
@@ -145,6 +160,27 @@ forbidden_terms = ['你的思考', '個人習慣', '使用者思考', '個人資
 checks['source_neutrality'] = {'forbidden_terms_found': [term for term in forbidden_terms if term in privacy_text], 'ok': not any(term in privacy_text for term in forbidden_terms)}
 standards_text = (ROOT / 'config/standards_registry.yaml').read_text(encoding='utf-8')
 scope_text = (ROOT / 'config/iso26262_part5_scope.yaml').read_text(encoding='utf-8')
+semantic_table_errors = []
+semantic_dir = ROOT / 'knowledge/semantic_tables'
+try:
+    semantic_summary = json.loads((semantic_dir / 'table_semantic_repair_summary.json').read_text(encoding='utf-8'))
+    semantic_queue = json.loads((semantic_dir / 'manual_review_queue.json').read_text(encoding='utf-8'))
+    expected_standard_table_files = [
+        semantic_dir / 'aspice40_tables.json', semantic_dir / 'iso26262_part5_tables.json', semantic_dir / 'iso21434_tables.json'
+    ]
+    if semantic_summary.get('standalone_symbol_count_in_rendered_rows') != 0:
+        semantic_table_errors.append('standalone symbol remains in rendered rows')
+    if semantic_summary.get('table_count', 0) < 1:
+        semantic_table_errors.append('no semantic tables generated')
+    if not isinstance(semantic_queue, list):
+        semantic_table_errors.append('manual review queue is not a list')
+    for path in expected_standard_table_files:
+        payload = json.loads(path.read_text(encoding='utf-8'))
+        if not payload.get('tables'):
+            semantic_table_errors.append(f'{path.name}: no tables')
+except Exception as exc:
+    semantic_table_errors.append(str(exc))
+checks['semantic_tables'] = {'errors': semantic_table_errors, 'manual_review_count': len(semantic_queue) if 'semantic_queue' in locals() and isinstance(semantic_queue, list) else None, 'ok': not semantic_table_errors}
 runtime_text = (ROOT / 'config/runtime_registry.yaml').read_text(encoding='utf-8')
 checks['iso26262_public_source_boundary'] = {'runtime_only_in_registry': 'public_repository_must_not_store_full_licensed_standard_text: true' in standards_text and 'source_mode: runtime_only' in (ROOT / 'knowledge/iso26262/part5_rulepack_template.yaml').read_text(encoding='utf-8'), 'no_clause_11_in_scope': 'clause_11:' in scope_text and 'not_present_in_provided_part' in scope_text, 'safety_runtimes_present': all(f'runtime_id: R{i:02d}' in runtime_text for i in range(11, 15)), 'cybersecurity_runtimes_present': all(f'runtime_id: R{i:02d}' in runtime_text for i in range(15, 19))}
 checks['iso26262_public_source_boundary']['ok'] = all(checks['iso26262_public_source_boundary'].values())

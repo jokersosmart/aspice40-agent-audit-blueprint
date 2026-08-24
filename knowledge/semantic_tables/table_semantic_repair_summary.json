@@ -1,0 +1,14 @@
+{
+  "standards": [
+    "ASPICE 4.0",
+    "ISO 26262-5:2018",
+    "ISO/SAE 21434:2021"
+  ],
+  "table_count": 57,
+  "high_confidence_count": 56,
+  "medium_confidence_count": 1,
+  "low_confidence_count": 0,
+  "standalone_symbol_count_in_rendered_rows": 0,
+  "unresolved_manual_review_count": 33,
+  "policy": "No isolated symbol is emitted without an explicit table column or semantic field. Low-confidence relations remain manual_review/table_structure_uncertain and are not filled by inference."
+}
