@@ -56,6 +56,27 @@ manager_assignments = {
     'M12': ['COM-01','COM-02','COM-04','COM-05','COM-07','COM-08','COM-09','COM-10'],
     'M13': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
     'M14': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
+    'M15': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
+    'M16': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'M17': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+}
+
+safety_assignments = {
+    'FS01': ['COM-01','COM-02','COM-05','COM-06','COM-09','COM-10'],
+    'FS02': ['COM-01','COM-02','COM-04','COM-06','COM-07','COM-09','COM-10'],
+    'FS03': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'FS04': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'FS05': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'FS06': ['COM-01','COM-02','COM-03','COM-05','COM-07','COM-09','COM-10'],
+    'FS07': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'FS08': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
+    'FS09': ['COM-01','COM-02','COM-03','COM-05','COM-07','COM-09','COM-10'],
+    'FS10': ['COM-01','COM-02','COM-03','COM-05','COM-07','COM-09','COM-10'],
+    'FS11': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'FS12': ['COM-01','COM-02','COM-05','COM-08','COM-09'],
+    'FS13': ['COM-01','COM-02','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'FS14': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
+    'FS15': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
 }
 
 manager_emphasis = {
@@ -73,6 +94,9 @@ manager_emphasis = {
     'M12': 'baseline integrity, change impact, problem cause, recovery and re-verification',
     'M13': 'scope, constraints, risks, resources, metrics, trade-offs and decision gates',
     'M14': 'supplier/reuse evidence, external commitments, release communication and qualification',
+    'M15': 'functional safety lifecycle, safety plan, ASIL context, safety case and residual-risk governance',
+    'M16': 'hardware safety requirements, safety mechanisms, safety analysis, metrics, PMHF/EEC and qualification',
+    'M17': 'independent safety verification, confirmation measures, anomaly disposition, re-verification and safety release evidence',
 }
 
 entries = []
@@ -82,6 +106,8 @@ for pid, info in process_assignments.items():
     entries.append({'agent_id': pid, 'agent_class': 'process_auditor', 'modules': info['modules'], 'operating_mode': 'normative_check_plus_contextual_analysis', 'emphasis': info['emphasis'], 'mandatory_gates': ['direct_spec_citation','scope_status','unknown_and_conflict_preservation','technical_human_review']})
 for mid, modules in manager_assignments.items():
     entries.append({'agent_id': mid, 'agent_class': 'manager', 'modules': modules, 'operating_mode': 'responsibility_and_action_planning', 'emphasis': manager_emphasis[mid], 'mandatory_gates': ['citation_inheritance','owner_and_verifier_separation','resource_commitment','closure_authority']})
+for sid, modules in safety_assignments.items():
+    entries.append({'agent_id': sid, 'agent_class': 'safety', 'modules': modules, 'operating_mode': 'safety_evidence_and_human_gate_preparation', 'emphasis': 'direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review', 'mandatory_gates': ['direct_spec_citation','ASIL_or_scope_review','independent_safety_review','human_safety_gate']})
 
 output = {
     'schema_version': '1.0',

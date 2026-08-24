@@ -1,0 +1,37 @@
+{
+  "run_id": "iso26262-demo-001",
+  "project_id": "ssd-controller-demo",
+  "release_or_baseline": "HW-R2.3-SAFETY-CANDIDATE",
+  "standard_context": {
+    "standard_id": "ISO26262",
+    "edition": "ISO 26262-5:2018(E)",
+    "part": 5,
+    "source_mode": "approved_local_runtime_source",
+    "source_path": "<configure-local-approved-source>",
+    "source_sha256": "<runtime-computed-sha256>",
+    "clauses_in_scope": ["5", "6", "7", "8", "9", "10", "Annex C", "Annex D", "Annex E", "Annex F", "Annex G", "Annex H"],
+    "missing_dependencies": ["ISO 26262-2:2018", "ISO 26262-4:2018", "ISO 26262-8:2018", "ISO 26262-9:2018", "ISO 26262-11:2018"]
+  },
+  "product_context": {
+    "item": "SSD Controller for road-vehicle E/E system",
+    "hardware_domains": ["digital_rtl", "analog_mixed_signal", "nand_phy_interface", "clock_reset_power_domains"],
+    "development_stages": ["simulation", "formal", "emulation", "tape_out", "silicon_characterization", "qualification"],
+    "asil_context": "to_be_confirmed_by_safety_authority"
+  },
+  "evidence_objects": [
+    {"evidence_id": "EV-HSR-001", "type": "hardware_safety_requirements", "owner": "M16", "baseline": "HSR-R2.3", "status": "pending_review"},
+    {"evidence_id": "EV-ARCH-001", "type": "hardware_architecture_and_ASIL_allocation", "owner": "M16", "baseline": "ARCH-R2.3", "status": "pending_review"},
+    {"evidence_id": "EV-FMEDA-001", "type": "SPFM_LFM_diagnostic_coverage", "owner": "M16", "baseline": "FMEDA-R2.3", "status": "pending_independent_recalculation"},
+    {"evidence_id": "EV-PMHF-001", "type": "PMHF_or_EEC_evaluation", "owner": "M16", "baseline": "PMHF-R2.3", "status": "dependency_review_required"},
+    {"evidence_id": "EV-SIM-001", "type": "digital_and_analog_simulation", "owner": "M06", "baseline": "SIM-R2.3", "status": "available"},
+    {"evidence_id": "EV-SIL-001", "type": "tape_out_and_silicon_characterization", "owner": "M07", "baseline": "SIL-R2.3", "status": "available"},
+    {"evidence_id": "EV-QUAL-001", "type": "hardware_qualification_and_stress_test", "owner": "M10", "baseline": "QUAL-R2.3", "status": "pending_safety_review"}
+  ],
+  "requested_agents": ["FS03", "FS04", "FS05", "FS06", "FS07", "FS09", "FS10", "FS11", "FS13", "FS14"],
+  "required_output": {
+    "direct_spec_citation": true,
+    "citation_missing_behavior": "stop_and_route_to_human_safety_review",
+    "dependency_missing_behavior": "do_not_claim_compliance",
+    "human_gates": ["HSR_HSI", "ASIL_context", "metric_result", "PMHF_or_EEC", "qualification", "final_safety_conclusion"]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/safety-finding.schema.json",
+  "title": "ISO 26262 Safety Finding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["finding_id", "standard_context", "scope", "claim", "status", "spec_citations", "evidence_refs", "human_safety_gate"],
+  "properties": {
+    "finding_id": {"type": "string"},
+    "standard_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["standard_id", "edition", "part", "clause_scope", "source_status"],
+      "properties": {
+        "standard_id": {"const": "ISO26262"},
+        "edition": {"const": "ISO 26262-5:2018(E)"},
+        "part": {"const": 5},
+        "clause_scope": {"type": "array", "items": {"type": "string"}},
+        "source_status": {"enum": ["approved_runtime_source", "source_structure_uncertain", "citation_missing", "dependency_missing"]}
+      }
+    },
+    "scope": {"type": "object", "additionalProperties": true},
+    "claim": {"type": "string", "minLength": 1},
+    "status": {"enum": ["satisfied", "partial", "gap", "unknown", "conflict", "not_in_scope", "citation_missing", "dependency_missing"]},
+    "spec_citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["standard_id", "edition", "part", "clause", "verbatim_text", "source_anchor", "verbatim_text_sha256", "why_this_text_applies", "interpretation", "human_verification_status"],
+        "properties": {
+          "standard_id": {"const": "ISO26262"},
+          "edition": {"const": "ISO 26262-5:2018(E)"},
+          "part": {"const": 5},
+          "clause": {"type": "string"},
+          "requirement_id": {"type": "string"},
+          "verbatim_text": {"type": "string", "minLength": 1},
+          "source_anchor": {"type": "string"},
+          "source_page_or_line": {"type": "string"},
+          "verbatim_text_sha256": {"pattern": "^[a-f0-9]{64}$", "type": "string"},
+          "why_this_text_applies": {"type": "string", "minLength": 1},
+          "interpretation": {"type": "string", "minLength": 1},
+          "human_verification_status": {"enum": ["pending", "verified", "rejected", "not_required"]},
+          "correction_record": {"type": ["object", "null"]}
+        }
+      }
+    },
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "asil_context": {"type": "object", "additionalProperties": true},
+    "quantitative_evidence": {"type": "object", "additionalProperties": true},
+    "cross_standard_links": {"type": "array", "items": {"type": "string"}},
+    "owner": {"type": "string"},
+    "independent_verifier": {"type": "string"},
+    "human_safety_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "gate_type", "authority", "status"],
+      "properties": {
+        "required": {"const": true},
+        "gate_type": {"type": "string"},
+        "authority": {"type": "array", "items": {"type": "string"}},
+        "status": {"enum": ["pending", "approved", "rejected", "not_applicable"]}
+      }
+    },
+    "reverification_plan": {"type": "object", "additionalProperties": true},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "conflicts": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"enum": ["satisfied", "partial", "gap", "conflict"]}}},
+      "then": {"properties": {"spec_citations": {"minItems": 1}}}
+    },
+    {
+      "if": {"properties": {"status": {"enum": ["citation_missing", "dependency_missing", "unknown"]}}},
+      "then": {"properties": {"spec_citations": {"minItems": 0}}}
+    }
+  ]
+}

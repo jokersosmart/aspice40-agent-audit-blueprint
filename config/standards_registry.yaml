@@ -1,0 +1,29 @@
+version: "1.0"
+policy:
+  normative_sources_are_separate: true
+  source_precedence: "The applicable approved standard clause and customer/OEM requirement outrank all cognitive, model-generated or company convenience rules."
+  direct_citation_required_at_runtime: true
+  public_repository_must_not_store_full_licensed_standard_text: true
+  local_runtime_source_required_for_verbatim_text: true
+  missing_source_behavior: citation_missing
+standards:
+  - standard_id: ASPICE
+    edition: "Automotive SPICE PAM 4.0 / December 2023"
+    source_status: approved_user_provided
+    local_source: "/knowledge/aspice40/approved_source/Automotive-SPICE-PAM-v40.pdf"
+    citation_policy: "Direct quotation required for every normative finding."
+    scope_role: "Process capability assessment and evidence evaluation."
+  - standard_id: ISO26262
+    edition: "ISO 26262-5:2018(E), Second edition"
+    part: 5
+    source_status: approved_user_provided
+    local_source: "/knowledge/iso26262/approved_source/ISO26262-Roadvehicles_Functionalsafety_Part5-Productdevelopmentatthehardwarelevel.pdf"
+    citation_policy: "Direct quotation required at runtime; public repository stores only clause anchors and templates, not the licensed source text."
+    scope_role: "Functional-safety product development at the hardware level."
+    dependency_parts:
+      - "ISO 26262-2:2018"
+      - "ISO 26262-4:2018"
+      - "ISO 26262-8:2018"
+      - "ISO 26262-9:2018"
+      - "ISO 26262-11:2018"
+    dependency_behavior: "If a conclusion depends on a missing Part, output dependency_missing and route to human safety review."

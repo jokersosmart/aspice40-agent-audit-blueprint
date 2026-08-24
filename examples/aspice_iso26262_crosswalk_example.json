@@ -1,0 +1,24 @@
+{
+  "mapping_id": "CROSSWALK-HW-001",
+  "project_id": "ssd-controller-demo",
+  "release_or_baseline": "HW-R2.3-SAFETY-CANDIDATE",
+  "aspice_context": {
+    "process_ids": ["HWE.1", "HWE.2", "HWE.3", "HWE.4", "SUP.1", "SUP.8", "SUP.10"],
+    "spec_citation_ids": ["ASPICE-runtime-citation-required"]
+  },
+  "iso26262_context": {
+    "part": 5,
+    "clause_ids": ["6", "7.4.1", "7.4.3", "8", "9", "10"],
+    "spec_citation_ids": ["ISO26262-runtime-citation-required"]
+  },
+  "relationship": "complementary",
+  "relationship_explanation": "The same hardware architecture, safety analysis, verification and change evidence may be shared as project evidence, but the ASPICE Process claim and ISO 26262 safety claim remain separate. Each claim requires its own approved direct quotation and human review.",
+  "evidence_refs": ["EV-HSR-001", "EV-ARCH-001", "EV-FMEDA-001", "EV-SIM-001", "EV-SIL-001", "EV-QUAL-001"],
+  "gaps": ["The provided Part 5 refers to other ISO 26262 Parts; those dependency sources are not yet loaded."],
+  "conflicts": [],
+  "human_review": {
+    "required": true,
+    "authority": ["Functional_Safety_Manager", "Hardware_Safety_Assurance_Manager", "QA_or_Safety_Assessor", "Lead_Assessor"],
+    "status": "pending"
+  }
+}

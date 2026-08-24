@@ -1,0 +1,117 @@
+standard: ISO26262
+part: 5
+edition: "2018"
+profile_version: "1.0"
+common_contract:
+  direct_spec_citation_required: true
+  citation_fields: [standard_id, edition, clause, requirement_id, verbatim_text, source_anchor, verbatim_text_sha256, interpretation, human_verification_status]
+  missing_source_status: citation_missing
+  missing_dependency_status: dependency_missing
+  normative_boundary: "The Agent may prepare evidence and findings; it may not declare functional-safety compliance, approve a safety case, accept residual risk, or replace an independent safety assessor."
+  required_human_roles: [Functional_Safety_Manager, Hardware_Safety_Manager, Independent_Safety_Reviewer, QA_or_Safety_Assessor]
+agents:
+  - id: FS01
+    name: ISO26262-5 Scope and Compliance Auditor
+    focus: [Clause_1, Clause_2, Clause_3, Clause_4]
+    responsibilities: [scope_applicability, compliance_claims, tailoring_rationale, ASIL_table_interpretation, clause_dependency_identification]
+    evidence_domains: [item_definition, safety_lifecycle_scope, tailoring_record, compliance_claim, ASIL_context]
+    aspice_interfaces: [C05, C08, SYS.1, SYS.2, HWE.1, SUP.1]
+    human_gates: [scope_approval, tailoring_acceptance, compliance_claim_review]
+  - id: FS02
+    name: Hardware Safety Planning Agent
+    focus: [Clause_5]
+    responsibilities: [hardware_safety_activity_planning, lifecycle_subphase_planning, hardware_software_coordination, safety_activity_dependency_map]
+    evidence_domains: [safety_plan, project_plan, hardware_software_interface_plan, milestone_plan]
+    aspice_interfaces: [MAN.3, MAN.5, SYS.3, HWE.1, SUP.1]
+    human_gates: [safety_plan_approval, responsibility_assignment]
+  - id: FS03
+    name: Hardware Safety Requirements Agent
+    focus: [Clause_6]
+    responsibilities: [derive_HSR, refine_HSR, identify_transient_fault_requirements, define_verification_criteria, HSI_refinement]
+    evidence_domains: [hardware_safety_requirements_specification, technical_safety_requirements, HSI_specification, verification_criteria]
+    aspice_interfaces: [SYS.2, SYS.3, HWE.1, HWE.2, HWE.4, SWE.1]
+    human_gates: [HSR_approval, HSI_approval, requirement_allocation_review]
+  - id: FS04
+    name: Hardware Architectural Safety Agent
+    focus: [Clause_7_4_1]
+    responsibilities: [allocate_HSR_to_hardware, ASIL_allocation, ASIL_decomposition_check, traceability_to_architecture, modularity_and_simplicity_review]
+    evidence_domains: [hardware_architecture, safety_requirement_allocation, ASIL_allocation, decomposition_record, HSI]
+    aspice_interfaces: [SYS.3, HWE.1, HWE.2, C06]
+    human_gates: [architecture_safety_review, ASIL_decomposition_approval]
+  - id: FS05
+    name: Hardware Detailed Design Safety Agent
+    focus: [Clause_7_4_2]
+    responsibilities: [detailed_design_safety_measures, mission_profile_review, operating_condition_review, common_design_fault_lessons]
+    evidence_domains: [RTL_design, analog_design, IP_design, safety_mechanism_design, mission_profile, design_review]
+    aspice_interfaces: [HWE.2, HWE.3, HWE.4, SWE.3, C06]
+    human_gates: [detailed_design_review, safety_mechanism_acceptance]
+  - id: FS06
+    name: Hardware Safety Analysis Agent
+    focus: [Clause_7_4_3]
+    responsibilities: [FMEA_FTA_DFA_or_equivalent, failure_mode_classification, single_point_and_latent_fault_analysis, dependent_failure_analysis, new_hazard_review]
+    evidence_domains: [safety_analysis, FMEDA, FMEA, FTA, DFA, failure_mode_classification, fault_injection]
+    aspice_interfaces: [HWE.3, HWE.4, SUP.10, C06]
+    human_gates: [analysis_method_approval, dependent_failure_disposition, residual_risk_review]
+  - id: FS07
+    name: Hardware Design Verification Safety Agent
+    focus: [Clause_7_4_4]
+    responsibilities: [design_verification_coverage, safety_requirement_verification, verification_independence, assumption_validity, design_change_reverification]
+    evidence_domains: [verification_plan, test_specification, formal_results, simulation_results, review_records, change_reverification]
+    aspice_interfaces: [HWE.4, SYS.4, SWE.4, VAL.1, SUP.1]
+    human_gates: [verification_adequacy, independent_review, unresolved_anomaly_disposition]
+  - id: FS08
+    name: Hardware Lifecycle Safety Agent
+    focus: [Clause_7_4_5]
+    responsibilities: [production_safety_requirements, operation_service_decommissioning_safety, safety_related_special_characteristics, field_feedback_loop]
+    evidence_domains: [production_control_plan, service_information, decommissioning_requirements, special_characteristics, field_issue_records]
+    aspice_interfaces: [SUP.8, SUP.9, SUP.10, MAN.6, HWE.4]
+    human_gates: [production_release, service_safety_approval, decommissioning_review]
+  - id: FS09
+    name: Hardware Architectural Metrics Agent
+    focus: [Clause_8, Annex_C, Annex_D, Annex_E]
+    responsibilities: [SPFM_calculation, LFM_calculation, diagnostic_coverage_assessment, metric_target_check, calculation_assumption_review]
+    evidence_domains: [SPFM_calculation, LFM_calculation, diagnostic_coverage, safety_mechanism_data, failure_rate_data]
+    aspice_interfaces: [HWE.3, HWE.4, VAL.1, MAN.6]
+    human_gates: [metric_method_approval, input_data_approval, metric_result_review]
+  - id: FS10
+    name: Random Hardware Failure and PMHF Agent
+    focus: [Clause_9, Annex_F, Annex_G, Annex_H]
+    responsibilities: [PMHF_evaluation, EEC_evaluation, safety_goal_violation_analysis, PMHF_budget_allocation, latent_fault_handling]
+    evidence_domains: [PMHF_analysis, EEC_analysis, PMHF_budget, latent_fault_analysis, fault_rate_model]
+    aspice_interfaces: [HWE.3, HWE.4, SUP.10, MAN.5, MAN.6]
+    human_gates: [failure_rate_model_approval, PMHF_budget_approval, residual_risk_acceptance]
+  - id: FS11
+    name: Hardware Integration and Qualification Agent
+    focus: [Clause_10]
+    responsibilities: [hardware_integration_strategy, integration_test_derivation, qualification, environmental_stress, operational_stress, durability_robustness]
+    evidence_domains: [integration_test_specification, test_case_derivation, AEC_Q_or_equivalent_qualification, environmental_test, EMC_ESD, durability_test]
+    aspice_interfaces: [HWE.4, SYS.4, VAL.1, SUP.8, SUP.9]
+    human_gates: [test_strategy_approval, qualification_acceptance, stress_test_disposition]
+  - id: FS12
+    name: Functional Safety Evidence and Citation Librarian
+    focus: [all_clauses, Annex_A_to_H]
+    responsibilities: [licensed_source_ingestion, direct_citation_catalog, citation_hashing, table_row_preservation, corrected_text_audit, dependency_source_registry]
+    evidence_domains: [approved_standard_source, citation_catalog, source_hash_manifest, OCR_correction_log, table_image_manifest]
+    aspice_interfaces: [C01, C02, C03, C04, C08]
+    human_gates: [source_version_approval, citation_correction_approval, table_reconstruction_review]
+  - id: FS13
+    name: Cross-Standard Traceability Agent
+    focus: [ASPICE_to_ISO26262_crosswalk]
+    responsibilities: [cross_standard_mapping, duplicate_evidence_detection, missing_safety_evidence, conflict_detection, claim_boundary_check]
+    evidence_domains: [crosswalk_matrix, traceability_graph, shared_work_product_map, conflict_register]
+    aspice_interfaces: [C06, C08, SYS.2, SYS.3, HWE.1, HWE.4, SUP.1]
+    human_gates: [crosswalk_approval, conflict_disposition, claim_boundary_review]
+  - id: FS14
+    name: Safety Assessment Orchestrator
+    focus: [all_in_scope_iso26262_5]
+    responsibilities: [assessment_plan, clause_agent_routing, evidence_completeness, safety_review_queue, dependency_escalation, safety_case_draft_assembly]
+    evidence_domains: [assessment_scope, agent_results, finding_register, safety_case_index, human_review_queue]
+    aspice_interfaces: [C08, C07, SUP.1, MAN.3, MAN.5, MAN.6]
+    human_gates: [assessment_scope, safety_case_release, formal_conclusion]
+  - id: FS15
+    name: Safety Verification Evidence Agent
+    focus: [independent_review_and_confirmation_evidence]
+    responsibilities: [independence_evidence_check, confirmation_measure_evidence, reviewer_assignment_evidence, unresolved_risk_evidence, re_verification_tracking]
+    evidence_domains: [independent_review_record, confirmation_measure_record, anomaly_disposition, safety_approval_record]
+    aspice_interfaces: [SUP.1, HWE.4, VAL.1, MAN.6]
+    human_gates: [independent_confirmation, residual_risk_acceptance, release_authority]

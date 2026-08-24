@@ -1,0 +1,60 @@
+standard_id: ISO26262
+edition: "ISO 26262-5:2018(E)"
+part: 5
+source_mode: runtime_only
+citation_mode: direct_verbatim_runtime_injection
+public_repository_text_policy: "No full licensed standard text in this public repository."
+required_citation_fields:
+  - standard_id
+  - edition
+  - part
+  - clause
+  - requirement_id
+  - verbatim_text
+  - source_anchor
+  - source_page_or_line
+  - verbatim_text_sha256
+  - why_this_text_applies
+  - interpretation
+  - human_verification_status
+required_statuses:
+  - satisfied
+  - partial
+  - gap
+  - unknown
+  - conflict
+  - not_in_scope
+  - citation_missing
+  - dependency_missing
+clause_groups:
+  - group_id: ISO26262-5-C1-C4
+    clauses: ["1", "2", "3", "4"]
+    purpose: scope_terms_compliance_and_ASIL_table_interpretation
+    agent_ids: [FS01]
+  - group_id: ISO26262-5-C5
+    clauses: ["5"]
+    purpose: hardware_level_safety_activity_planning
+    agent_ids: [FS02]
+  - group_id: ISO26262-5-C6
+    clauses: ["6"]
+    purpose: hardware_safety_requirements_and_HSI
+    agent_ids: [FS03]
+  - group_id: ISO26262-5-C7
+    clauses: ["7"]
+    purpose: hardware_architecture_detailed_design_analysis_verification_and_lifecycle
+    agent_ids: [FS04, FS05, FS06, FS07, FS08]
+  - group_id: ISO26262-5-C8-C9
+    clauses: ["8", "9"]
+    purpose: SPFM_LFM_diagnostic_coverage_PMHF_EEC_and_latent_fault_evaluation
+    agent_ids: [FS09, FS10]
+  - group_id: ISO26262-5-C10
+    clauses: ["10"]
+    purpose: hardware_integration_verification_qualification_and_stress_testing
+    agent_ids: [FS11]
+  - group_id: ISO26262-5-ANNEX
+    clauses: ["Annex A", "Annex B", "Annex C", "Annex D", "Annex E", "Annex F", "Annex G", "Annex H"]
+    purpose: workflow_failure_modes_metrics_diagnostic_coverage_and_examples
+    agent_ids: [FS09, FS10, FS12]
+aspice_interface_policy:
+  relationship_values: [shared_evidence, complementary, insufficient, conflict, dependency_missing, no_direct_equivalence]
+  rule: "An ASPICE result does not automatically prove an ISO 26262 claim, and an ISO 26262 result does not automatically prove an ASPICE outcome."

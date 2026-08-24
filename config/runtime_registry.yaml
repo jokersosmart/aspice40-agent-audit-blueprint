@@ -84,6 +84,46 @@ runtimes:
     output_schemas: [schemas/manager-work-package.schema.json]
     write_permissions: [runs/work_packages, runs/escalations]
     human_gate: [owner_assignment, resource_commitment, closure_authority]
+  - runtime_id: R11
+    name: ISO 26262-5 Clause Audit Runtime
+    logical_agents: [FS01, FS02, FS03, FS04, FS05, FS06, FS07, FS08, FS11]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/40_iso26262_safety_auditor_template.md]
+    profile_files: [profiles/iso26262_safety_agents.yaml]
+    scope_file: config/iso26262_part5_scope.yaml
+    standards_registry: config/standards_registry.yaml
+    input_types: [safety_scope, safety_plan, hardware_safety_requirements, hardware_architecture, safety_analysis, verification_evidence]
+    output_schemas: [schemas/safety-finding.schema.json, schemas/direct-spec-citation.schema.json]
+    human_gate: [scope_and_asil, HSR_HSI_approval, architecture_safety_review, analysis_method, verification_adequacy, qualification_acceptance]
+  - runtime_id: R12
+    name: ISO 26262-5 Quantitative Safety Analysis Runtime
+    logical_agents: [FS09, FS10]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/40_iso26262_safety_auditor_template.md]
+    profile_files: [profiles/iso26262_safety_agents.yaml]
+    scope_file: config/iso26262_part5_scope.yaml
+    standards_registry: config/standards_registry.yaml
+    input_types: [ASIL_context, failure_rate_data, diagnostic_coverage, SPFM_LFM_inputs, PMHF_inputs, EEC_inputs, latent_fault_evidence]
+    output_schemas: [schemas/safety-finding.schema.json]
+    human_gate: [calculation_method, input_data, independent_recalculation, metric_result, residual_risk]
+  - runtime_id: R13
+    name: Functional Safety Evidence and Cross-Standard Runtime
+    logical_agents: [FS12, FS13]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/40_iso26262_safety_auditor_template.md]
+    profile_files: [profiles/iso26262_safety_agents.yaml]
+    scope_file: config/iso26262_part5_scope.yaml
+    standards_registry: config/standards_registry.yaml
+    input_types: [approved_standard_source, citation_catalog, evidence_objects, ASPICE_results, traceability_graph, conflict_register]
+    output_schemas: [schemas/direct-spec-citation.schema.json, schemas/cross-standard-mapping.schema.json]
+    human_gate: [source_version, citation_correction, crosswalk_approval, conflict_disposition]
+  - runtime_id: R14
+    name: Functional Safety Coordination Runtime
+    logical_agents: [FS14, FS15, M15, M16, M17]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/41_iso26262_safety_manager_template.md]
+    profile_files: [profiles/iso26262_safety_agents.yaml, profiles/manager_agents.yaml]
+    scope_file: config/iso26262_part5_scope.yaml
+    standards_registry: config/standards_registry.yaml
+    input_types: [safety_findings, evidence_objects, cross_standard_mappings, responsibility_matrix, project_constraints]
+    output_schemas: [schemas/manager-work-package.schema.json, schemas/safety-finding.schema.json]
+    human_gate: [safety_plan, independent_confirmation, residual_risk, tapeout_or_release, final_safety_conclusion]
   - runtime_id: R10
     name: Human Review and Approval Gateway
     logical_agents: []

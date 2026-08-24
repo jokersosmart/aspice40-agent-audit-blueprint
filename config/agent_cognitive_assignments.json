@@ -5,7 +5,7 @@
   "visibility": "standard_agent_behavior",
   "source_attribution_in_outputs": false,
   "precedence": "below_approved_spec_company_customer_rules_and_human_approvals",
-  "assignment_count": 54,
+  "assignment_count": 72,
   "assignments": [
     {
       "agent_id": "C01",
@@ -1160,6 +1160,395 @@
         "owner_and_verifier_separation",
         "resource_commitment",
         "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M15",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "functional safety lifecycle, safety plan, ASIL context, safety case and residual-risk governance",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M16",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "hardware safety requirements, safety mechanisms, safety analysis, metrics, PMHF/EEC and qualification",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M17",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "independent safety verification, confirmation measures, anomaly disposition, re-verification and safety release evidence",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "FS01",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-05",
+        "COM-06",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS02",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS03",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS04",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS05",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS06",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS07",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS08",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS09",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS10",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS11",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS12",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-05",
+        "COM-08",
+        "COM-09"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS13",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS14",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "FS15",
+      "agent_class": "safety",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "safety_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "ASIL_or_scope_review",
+        "independent_safety_review",
+        "human_safety_gate"
       ]
     }
   ]

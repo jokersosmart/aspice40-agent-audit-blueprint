@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/cross-standard-mapping.schema.json",
+  "title": "ASPICE and ISO 26262 Cross-Standard Mapping",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mapping_id", "project_id", "release_or_baseline", "aspice_context", "iso26262_context", "relationship", "evidence_refs", "human_review"],
+  "properties": {
+    "mapping_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "release_or_baseline": {"type": "string"},
+    "aspice_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["process_ids", "spec_citation_ids"],
+      "properties": {
+        "process_ids": {"type": "array", "items": {"type": "string"}},
+        "spec_citation_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "iso26262_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["part", "clause_ids", "spec_citation_ids"],
+      "properties": {
+        "part": {"const": 5},
+        "clause_ids": {"type": "array", "items": {"type": "string"}},
+        "spec_citation_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "relationship": {"enum": ["shared_evidence", "complementary", "insufficient", "conflict", "dependency_missing", "no_direct_equivalence"]},
+    "relationship_explanation": {"type": "string"},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "gaps": {"type": "array", "items": {"type": "string"}},
+    "conflicts": {"type": "array", "items": {"type": "string"}},
+    "human_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "authority", "status"],
+      "properties": {
+        "required": {"const": true},
+        "authority": {"type": "array", "items": {"type": "string"}},
+        "status": {"enum": ["pending", "approved", "rejected"]}
+      }
+    }
+  }
+}

@@ -121,3 +121,30 @@ managers:
     evidence_sources: [supplier_portal, contracts, sows, release_system, ip_catalog, qualification_database, vendor_reviews]
     affected_parties: [M01, M02, M03, M07, M11, M12, M13]
     approvals: [supplier_status, reuse_qualification, release_package, external_delivery]
+  - id: M15
+    name: Functional Safety Manager
+    domain_scope: functional safety lifecycle, safety plan, safety requirements, ASIL context, safety case coordination and residual-risk governance
+    primary_processes: [ISO26262-5]
+    secondary_processes: [SYS.1, SYS.2, SYS.3, HWE.1, HWE.2, HWE.3, HWE.4, SUP.1, MAN.5, MAN.6]
+    evidence_sources: [safety_plan, HSR, HSI, ASIL_records, safety_case, safety_review_queue, residual_risk_register]
+    affected_parties: [M01, M03, M04, M05, M06, M07, M08, M10, M11, M12, M13, M14]
+    approvals: [safety_scope, safety_plan, ASIL_context, safety_case_release, residual_risk_escalation]
+    safety_gates: [scope_and_tailoring, ASIL_applicability, final_safety_conclusion]
+  - id: M16
+    name: Hardware Safety Assurance Manager
+    domain_scope: hardware safety requirements, architecture, safety mechanisms, safety analyses, metrics, PMHF/EEC and hardware qualification
+    primary_processes: [ISO26262-5]
+    secondary_processes: [HWE.1, HWE.2, HWE.3, HWE.4, SUP.8, SUP.9, SUP.10]
+    evidence_sources: [hardware_safety_requirements, HSI, hardware_architecture, FMEDA, FMEA, FTA, DFA, SPFM, LFM, PMHF, EEC, qualification]
+    affected_parties: [M03, M04, M05, M06, M07, M10, M11, M12]
+    approvals: [HSR_HSI, safety_mechanism, analysis_method, metric_result, qualification_acceptance]
+    safety_gates: [independent_safety_review, metric_approval, dependent_failure_disposition]
+  - id: M17
+    name: Safety Verification and Confirmation Manager
+    domain_scope: safety verification independence, confirmation measures, anomaly disposition, re-verification, tape-out and release safety evidence
+    primary_processes: [ISO26262-5]
+    secondary_processes: [HWE.3, HWE.4, SYS.4, SYS.5, VAL.1, SUP.1, SUP.10]
+    evidence_sources: [verification_plan, test_results, formal_results, simulation, lab, silicon_characterization, confirmation_measures, anomaly_register]
+    affected_parties: [M08, M09, M10, M11, M12, M15, M16]
+    approvals: [verification_adequacy, independent_confirmation, anomaly_closure, tapeout_safety_readiness, safety_release_evidence]
+    safety_gates: [independent_confirmation, residual_risk, tapeout_or_production_release]

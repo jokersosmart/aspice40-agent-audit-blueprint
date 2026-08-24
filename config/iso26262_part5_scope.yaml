@@ -1,0 +1,72 @@
+standard_id: ISO26262
+edition: "ISO 26262-5:2018(E)"
+product_context: SSD Controller for road-vehicle E/E systems
+scope_status: requires_project_confirmation
+clauses:
+  clause_1_4:
+    status: in_scope
+    purpose: scope_and_compliance_interpretation
+  clause_5:
+    status: in_scope
+    purpose: hardware_level_development_planning_and_general_topics
+  clause_6:
+    status: in_scope
+    purpose: hardware_safety_requirements_specification
+  clause_7:
+    status: in_scope
+    purpose: hardware_architectural_and_detailed_design_safety_analysis_and_verification
+  clause_8:
+    status: conditional
+    condition: ASIL_B_C_or_D_safety_goal_and_hardware_architectural_metrics_applicable
+    purpose: SPFM_LFM_evaluation
+  clause_9:
+    status: conditional
+    condition: random_hardware_failure_safety_goal_violation_evaluation_applicable
+    purpose: PMHF_EEC_and_verification_review
+  clause_10:
+    status: in_scope
+    purpose: hardware_integration_verification_qualification_and_stress_testing
+  clause_11:
+    status: not_present_in_provided_part
+    note: "Do not invent Clause 11. Production, operation, service and decommissioning content is addressed in Clause 7.4.5 and related work products in this provided Part 5."
+annexes:
+  annex_a: informative_workflow_overview
+  annex_b: informative_failure_mode_classification
+  annex_c: normative_hardware_architectural_metrics
+  annex_d: informative_diagnostic_coverage
+  annex_e: informative_metric_calculation_examples
+  annex_f: informative_clause_9_objective_rationale_example
+  annex_g: informative_pmhf_budget_assignment_example
+  annex_h: informative_latent_fault_handling_example
+evidence_domains:
+  - safety_plan
+  - item_definition_and_hardware_scope
+  - hardware_safety_requirements_specification
+  - hardware_architecture_and_allocation
+  - HSI_specification
+  - ASIL_allocation_or_decomposition_record
+  - safety_analysis_FMEA_FTA_DFA_or_equivalent
+  - safety_mechanism_specification
+  - SPFM_LFM_calculation
+  - PMHF_or_EEC_evaluation
+  - diagnostic_coverage_evidence
+  - hardware_integration_test_specification_and_results
+  - qualification_environmental_and_operational_stress_results
+  - tape_out_change_and_silicon_characterization_records
+  - production_operation_service_decommissioning_safety_information
+dependencies:
+  - standard_id: ISO26262-2
+    required_for: safety_management_tailoring_and_confirmation_measures
+    missing_status: dependency_missing
+  - standard_id: ISO26262-4
+    required_for: technical_safety_requirements_and_system_integration_interfaces
+    missing_status: dependency_missing
+  - standard_id: ISO26262-8
+    required_for: supporting_processes_and_verification_clause_references
+    missing_status: dependency_missing
+  - standard_id: ISO26262-9
+    required_for: ASIL_decomposition_and_dependent_failure_analysis_references
+    missing_status: dependency_missing
+  - standard_id: ISO26262-11
+    required_for: semiconductor_specific_guidance_and_fault_injection_references
+    missing_status: dependency_missing

@@ -21,12 +21,13 @@
 6. Process Audit Runtime，載入 32 個 Process rule pack。
 7. C07 Capability & Rating Preparation Runtime。
 8. C08 Audit Orchestrator & Report Runtime。
-9. Manager Coordination Runtime，載入 14 個部門／治理 profile。
-10. Human Review／Approval Gateway；這是控制與簽核介面，不應讓 LLM 自行關閉重大 finding。
+9. Manager Coordination Runtime，載入 17 個部門／治理 profile。
+10. Functional Safety runtimes R11–R14，載入 FS01–FS15、M15–M17 與 ISO 26262-5 runtime citation source。
+11. Human Review／Approval Gateway；這是控制與簽核介面，不應讓 LLM 自行關閉重大 finding。
 
 ## 使用順序
 
-第一期先完成規範入庫、證據標準化、Scope、追溯與 28 個非 MLE Process 的 rule pack。第二期導入系統、韌體、硬體與驗證的跨領域稽核。第三期再將 14 個 Manager profile 與能力等級準備納入。若產品沒有 Machine Learning，MLE.1–MLE.4 與 SUP.11 應由 C05 產生有依據的 out-of-scope／not-in-scope rationale，不應被靜默忽略。
+第一期先完成規範入庫、證據標準化、Scope、追溯與 28 個非 MLE Process 的 rule pack。第二期導入系統、韌體、硬體與驗證的跨領域稽核。第三期再將 17 個 Manager profile、ISO 26262-5 Safety role 與能力等級準備納入。若產品沒有 Machine Learning，MLE.1–MLE.4 與 SUP.11 應由 C05 產生有依據的 out-of-scope／not-in-scope rationale，不應被靜默忽略。
 
 ## 重要使用原則
 
@@ -39,13 +40,15 @@
 - `docs/agent_architecture.md`：完整架構、職責、流程與建置順序。
 - `prompts/00_global_policy.md`：所有 Agent 共用的安全與證據政策。
 - `prompts/10_process_auditor_template.md`：32 個 Process Agent 共用 Prompt。
-- `prompts/20_manager_template.md`：14 個 Manager Agent 共用 Prompt。
+- `prompts/20_manager_template.md`：17 個 ASPICE／Safety Manager Agent 共用 Prompt。
+- `prompts/40_iso26262_safety_auditor_template.md`、`prompts/41_iso26262_safety_manager_template.md`：ISO 26262-5 Safety Auditor／Manager Prompt。
 - `prompts/30_control_agents_template.md`：C01–C08 控制 Agent Prompt 邊界。
 - `prompts/05_cognitive_operating_layer.md`：所有 Agent 共用的中性化 Cognitive Operating Layer，不屬於 ASPICE requirement。
 - `knowledge/cognitive/cognitive_modules.yaml`：10 個可部署的分析與協作模組，以及 76 個中性能力索引。
-- `config/agent_cognitive_assignments.json`：54 個邏輯 Agent 的模組配置、強調事項與人工 Gate。
+- `config/agent_cognitive_assignments.json`：72 個邏輯 Agent 的模組配置、強調事項與人工 Gate。
 - `profiles/process_agents.yaml`：32 個 Process profile 與 manager routing。
-- `profiles/manager_agents.yaml`：14 個 Manager profile、輸入與輸出責任。
+- `profiles/manager_agents.yaml`：17 個 Manager profile、輸入與輸出責任。
+- `profiles/iso26262_safety_agents.yaml`：FS01–FS15 的 ISO 26262-5 Safety／Hardware profile。
 - `knowledge/aspice40/spec_citation_catalog.jsonl`：直接引用 catalog，每筆包含完整原文與 SHA-256。
 - `knowledge/aspice40/spec_citation_catalog.md`：供人工閱讀的原文引用庫。
 - `knowledge/aspice40/process_rules/`：32 份逐 Process rule pack，每份含 purpose、outcomes、BP 與 direct spec citations。
@@ -55,6 +58,16 @@
 - `docs/cognitive_operating_layer_guide.md`：Cognitive Layer 的採用、優先順序、模組分配與維護方式。
 - `examples/`：HWE.2 等 SSD Controller 情境的範例，包含 `hwe2_audit_result_with_citations.json` 的完整原文引用輸出。
 - `docs/direct_spec_citation_policy.md`：逐項原文引用政策、缺引用處理與版權／人工 Gate 邊界。
+- `docs/iso26262_part5_agent_architecture.md`：ISO 26262-5 的 15 個 Safety role、M15–M17 Manager、Runtime、ASPICE interface 與 Safety Gate。
+- `docs/external_references.md`：VDA QMC、intacs 與 DNV 的外部背景來源；normative 結論仍以核准標準原文為準。
+
+## ISO 26262-5 Safety Extension
+
+The Blueprint also contains an ISO 26262-5:2018 hardware functional-safety extension for SSD Controller development. It adds 15 logical Safety／Hardware roles and 3 Safety Manager profiles, four Safety runtimes (R11–R14; R10 remains the Human Review and Approval Gateway), ISO 26262-5 Scope／dependency configuration, safety finding and cross-standard mapping schemas, Safety Auditor／Manager Prompt templates, and a runtime citation generator.
+
+The public repository stores integration metadata and runtime extraction tools only. It does not store the licensed ISO 26262 PDF or a full ISO quotation catalog. At runtime, FS12 loads the approved local source and injects the complete authorized paragraph or table row into `spec_citations`. Missing ISO 26262-2／-4／-8／-9／-11 dependencies must remain `dependency_missing`.
+
+The combined logical-role count is now **72**: 8 ASPICE control roles + 32 ASPICE Process roles + 17 Manager roles + 15 ISO 26262 Safety roles. These are logical responsibilities, not 72 independent services.
 
 ## 版本控制要求
 

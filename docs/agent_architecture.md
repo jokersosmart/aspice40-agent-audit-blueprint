@@ -2,19 +2,21 @@
 
 ## 1. 建議結論
 
-建議保留 **54 個邏輯 Agent 角色**，但第一版只部署約 **10 個共用 Runtime**。54 個角色是稽核責任與輸出邊界的數量；10 個 Runtime 是實際運算與維護單位。這個區分很重要，因為如果只建立一個 ASPICE chatbot，系統無法穩定追蹤 32 個 Process；如果真的建立 54 個完全獨立服務，則容易出現 prompt 漂移、規則重複、版本不一致與維運成本過高。
+建議保留 **72 個邏輯 Agent 角色**，但實際部署約 **14 個共用 Runtime**，另保留 1 個 Human Review／Approval Gateway。72 個角色是 ASPICE 與 ISO 26262-5 的稽核責任與輸出邊界數量；Runtime 是實際運算與維護單位。這個區分很重要，因為如果只建立一個混合規範 chatbot，系統無法穩定追蹤 32 個 ASPICE Process 與 ISO 26262-5 的安全活動；如果真的建立 72 個完全獨立服務，則容易出現 Prompt 漂移、規則重複、版本不一致與維運成本過高。
 
 | 層級 | 邏輯角色 | 第一版部署方式 | 目的 |
 |---|---:|---|---|
-| 規範／證據控制 | 8 | 6 個主要 Runtime，其中 C03／C04 共用 | 把規範、證據、Information Item、scope、追溯與報告的共通規則固定下來 |
-| Process 稽核 | 32 | 1 個 Process Audit Runtime + 32 個 rule pack | 以 ASPICE Process ID 作為最小可稽核單位 |
-| 部門／治理 Manager | 14 | 1 個 Manager Coordination Runtime + 14 個 profile | 將稽核結果轉成責任、接口、action、資源與重新驗證 |
-| 人工控制 | 不計入 LLM Agent | 1 個 Human Review／Approval Gateway | 由 Process Owner、Verification Owner、QA 與 Lead Assessor 做最後確認 |
-| **總計** | **54** | **約 10 個 Runtime** | 兼顧稽核粒度與可維護性 |
+| ASPICE 規範／證據控制 | 8 | 共用控制 Runtime | 固定 ASPICE 規範、Evidence、Information Item、Scope、追溯與報告規則 |
+| ASPICE Process 稽核 | 32 | 1 個 Process Audit Runtime + 32 個 Rule Pack | 以 ASPICE Process ID 作為最小可稽核單位 |
+| ASPICE／組織 Manager | 14 | 1 個 Manager Coordination Runtime + 14 個 profile | 將稽核結果轉成責任、接口、action、資源與重新驗證 |
+| ISO 26262-5 Safety／Hardware | 15 | 4 個 Safety Runtime + 15 個 profile | 對硬體安全需求、設計、安全分析、指標、PMHF／EEC、驗證與引用分工 |
+| ISO 26262 Safety Manager | 3 | 與 Safety Coordination Runtime 共用 | Functional Safety、Hardware Safety Assurance、Safety Verification／Confirmation |
+| 人工控制 | 不計入 LLM Agent | 1 個 Human Review／Approval Gateway | 由 Process Owner、Verification Owner、QA、Safety Reviewer 與 Lead Assessor 做最後確認 |
+| **總計** | **72** | **約 14 個 Runtime + 1 個人工 Gateway** | 兼顧稽核粒度、跨規範邊界與可維護性 |
 
 ## 2. Cognitive Operating Layer
 
-所有 54 個邏輯 Agent 都載入同一個 `prompts/05_cognitive_operating_layer.md`，再由 `config/agent_cognitive_assignments.json` 指定角色應啟用的模組。這些模組是非規範性的工程協作能力，不是 ASPICE 4.0 requirement，且永遠低於核准的 PAM 原文、客戶／OEM 要求、公司規則、Evidence Object、assessment scope 與人工核准。
+所有 72 個邏輯 Agent 都載入同一個 `prompts/05_cognitive_operating_layer.md`，再由 `config/agent_cognitive_assignments.json` 指定角色應啟用的模組。這些模組是非規範性的工程協作能力，不是 ASPICE 4.0 requirement，且永遠低於核准的 PAM 原文、客戶／OEM 要求、公司規則、Evidence Object、assessment scope 與人工核准。
 
 它們提供十類標準行為：問題定義與 Scope、證據／來源與量化完整性、假說／模型與受控驗證、決策／優先級與最佳化、反方／偏誤與一致性、利害關係人／介面與溝通、系統與多層因果、學習／重用與知識連續性、責任／倫理與權限、可逆試驗／停損與升級。這些能力會影響 Agent 的提問順序、證據檢查、選項比較、工作包拆解與人工佇列分流，但不會改寫規範原文。
 
@@ -51,7 +53,7 @@ ASPICE 4.0 Chapter 4 的最小稽核單位是 Process ID。每個 Process Agent 
 | PIM | PIM.3 | process improvement、effectiveness、lessons learned |
 | REU | REU.2 | IP／設計／軟體 reuse、qualification、portability、constraints |
 
-## 5. 14 個 Manager Agent
+## 5. 17 個 Manager Agent
 
 | ID | Manager | 責任範圍 | 主要 Process |
 |---|---|---|---|
@@ -69,6 +71,9 @@ ASPICE 4.0 Chapter 4 的最小稽核單位是 Process ID。每個 Process Agent 
 | M12 | Configuration／Change／Problem | configuration item、baseline、change impact、problem root cause、closure | SUP.8–SUP.10 |
 | M13 | Project／Risk／Measurement | scope、schedule、resource、risk、metrics、status、quantitative control | MAN.3、MAN.5、MAN.6 |
 | M14 | Supplier／Release／Reuse | supplier monitoring、external IP／EDA／NAND／PHY、release、reuse qualification | ACQ.4、SPL.2、REU.2 |
+| M15 | Functional Safety | functional safety lifecycle、safety plan、ASIL context、safety case、residual-risk governance | ISO 26262-5；交叉 SYS／HWE／SUP／MAN |
+| M16 | Hardware Safety Assurance | HSR／HSI、safety mechanisms、safety analysis、SPFM／LFM、PMHF／EEC、qualification | ISO 26262-5；HWE.1–HWE.4、SUP.8–SUP.10 |
+| M17 | Safety Verification／Confirmation | independent safety verification、confirmation measures、anomaly disposition、re-verification、safety release evidence | ISO 26262-5；HWE.3–HWE.4、SYS.4–SYS.5、VAL.1 |
 
 > Digital、Analog／Mixed-Signal、Simulation／Emulation、Tape-out／Silicon 是 SSD Controller 的責任分流，不是 ASPICE 新 Process。所有結果仍必須回接 HWE、SYS、VAL、SUP、MAN 或 SPL 的正式 Process。
 
@@ -87,9 +92,19 @@ ASPICE 4.0 Chapter 4 的最小稽核單位是 Process ID。每個 Process Agent 
 
 ## 7. 建置順序
 
-第一階段先建立 C01、C02、C03、C04、C05、C06、C08，以及 SYS／SWE／HWE／VAL、SUP.8、SUP.9、SUP.10 的 Process rule pack。第二階段導入 M01–M10，將系統、韌體、硬體、驗證、simulation、tape-out／silicon 的責任接到同一張 evidence graph。第三階段導入 M11–M14、C07、MAN、PIM、ACQ、SPL、REU，形成完整的稽核改善閉環。MLE.1–MLE.4 與 SUP.11 則依產品 scope 條件式啟用。
+第一階段先建立 C01、C02、C03、C04、C05、C06、C08，以及 SYS／SWE／HWE／VAL、SUP.8、SUP.9、SUP.10 的 Process rule pack。第二階段導入 M01–M10，將系統、韌體、硬體、驗證、simulation、tape-out／silicon 的責任接到同一張 evidence graph。第三階段導入 M11–M14、M15–M17、C07、MAN、PIM、ACQ、SPL、REU，形成完整的稽核改善與功能安全閉環。MLE.1–MLE.4 與 SUP.11 則依產品 scope 條件式啟用。
 
-## 8. 最重要的設計原則
+## 8. ISO 26262-5 Safety Extension
+
+For an SSD Controller used in a road-vehicle E/E system, the Blueprint adds 15 logical ISO 26262-5 Safety／Hardware roles: FS01–FS11 for clause-focused activities, FS12 for licensed-source citation and evidence, FS13 for cross-standard traceability, FS14 for safety assessment orchestration, and FS15 for independent verification and confirmation evidence. It also adds M15 Functional Safety Manager, M16 Hardware Safety Assurance Manager and M17 Safety Verification and Confirmation Manager.
+
+The ISO extension is deployed through four additional Safety runtimes: R11 Clause Audit, R12 Quantitative Safety Analysis, R13 Functional Safety Evidence and Cross-Standard, and R14 Functional Safety Coordination. R10 remains the Human Review and Approval Gateway. These runtimes are not substitutes for ASPICE Process Agents; they operate on a separate normative layer and create explicit interfaces to SYS, HWE, SWE, VAL, SUP and MAN evidence.
+
+The ISO 26262-5 clause boundary in the provided source is Clauses 1–10 plus Annex A–H. The provided Part 5 does not contain an independent Clause 11. Production, operation, service and decommissioning content is handled through Clause 7.4.5 and related work products. Agents must not invent a Clause 11 or silently treat a missing dependency Part as satisfied.
+
+The public repository contains metadata, profiles, schemas and a runtime citation generator, but not the licensed ISO source PDF or a full quotation catalog. FS12 must load the authorized local source at runtime and inject the complete approved paragraph or table row into `spec_citations`. Missing ISO 26262-2, -4, -8, -9 or -11 content becomes `dependency_missing` when a conclusion depends on it.
+
+## 9. 最重要的設計原則
 
 Agent 的輸出不是「通過／不通過」聊天答案，而是可重現的 Evidence-based finding。每筆 finding 必須有規範來源、**直接複製的完整 ASPICE 原文段落／完整表格列**、原文 SHA-256、段落意義、適用原因、證據來源、版本／baseline、狀態、理由、缺口、owner、verification owner、推薦 action、信心與人工確認旗標。只留下 reference link、Process ID、BP ID 或頁碼是不合格的輸出。找不到資料要輸出 `unknown`；找不到核准原文要輸出 `citation_missing`，而不是猜測 `gap` 或 `satisfied`。
 
