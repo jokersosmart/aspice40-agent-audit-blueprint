@@ -2,7 +2,7 @@
   "ok": true,
   "checks": {
     "required_files": {
-      "expected": 58,
+      "expected": 69,
       "missing": [],
       "ok": true
     },

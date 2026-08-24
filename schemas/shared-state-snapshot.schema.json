@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/shared-state-snapshot.schema.json",
+  "title": "Cross-Runtime Shared State Snapshot",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["snapshot_id", "run_id", "baseline_id", "created_at", "immutable", "evidence_refs", "citation_verification_refs", "traceability_refs", "finding_refs", "decision_refs"],
+  "properties": {
+    "snapshot_id": {"type": "string"},
+    "run_id": {"type": "string"},
+    "parent_snapshot_id": {"type": ["string", "null"]},
+    "baseline_id": {"type": "string"},
+    "created_at": {"type": "string", "format": "date-time"},
+    "immutable": {"const": true},
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["evidence_id", "artifact_type", "baseline_id", "content_hash", "status"],
+        "properties": {
+          "evidence_id": {"type": "string"},
+          "artifact_type": {"type": "string"},
+          "baseline_id": {"type": "string"},
+          "content_hash": {"pattern": "^[a-fA-F0-9]{64}$", "type": "string"},
+          "status": {"enum": ["available", "partial", "superseded", "unknown", "access_denied"]},
+          "digest_ref": {"type": ["string", "null"]},
+          "artifact_pointer": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "citation_verification_refs": {"type": "array", "items": {"type": "string"}},
+    "traceability_refs": {"type": "array", "items": {"type": "string"}},
+    "finding_refs": {"type": "array", "items": {"type": "string"}},
+    "decision_refs": {"type": "array", "items": {"type": "string"}},
+    "cross_standard_mapping_ref": {"type": ["string", "null"]},
+    "change_summary": {"type": "string"}
+  }
+}

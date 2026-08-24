@@ -1,0 +1,84 @@
+policy_version: "1.0"
+objective: "Prevent context overload while keeping every normative citation complete and verifiable."
+context_policy:
+  default_mode: routine
+  modes:
+    routine:
+      max_input_context_tokens: 16000
+      target_input_context_tokens: 12000
+      reserved_output_tokens: 3000
+      reserved_validation_tokens: 1000
+      max_parallel_work_items_per_runtime: 4
+    complex:
+      max_input_context_tokens: 32000
+      target_input_context_tokens: 24000
+      reserved_output_tokens: 5000
+      reserved_validation_tokens: 2000
+      max_parallel_work_items_per_runtime: 2
+  hard_rule: "Never use more than 70 percent of the model context window for input; the remaining space is reserved for output, validation, errors and human-review metadata. If the provider context window is smaller, scale these budgets down proportionally."
+context_layers:
+  - layer_id: L0
+    name: global_policy
+    loading: always
+    content: "Global Policy and Cognitive Operating Layer only."
+    token_target: 800
+  - layer_id: L1
+    name: role_profile
+    loading: one_active_logical_role
+    content: "One selected role profile and its Cognitive assignment. Do not load all 90 role profiles."
+    token_target: 700
+  - layer_id: L2
+    name: scope_and_baseline
+    loading: task_scope_and_current_baseline
+    content: "Only the applicable standard Scope, tailoring decision, release/baseline and dependency state."
+    token_target: 1200
+  - layer_id: L3
+    name: targeted_rulepack_and_citations
+    loading: target_clause_or_process_only
+    content: "Only the selected Rule Pack records and complete approved paragraphs or table rows required for this task."
+    token_target: 5000
+    hard_rule: "Citation text is never truncated, paraphrased or generated from memory. If complete citations do not fit, split the task into multiple invocations."
+  - layer_id: L4
+    name: evidence_digest
+    loading: evidence_refs_and_relevant_excerpts
+    content: "Evidence metadata, status, baseline, owner, verifier and small relevant excerpts. Raw artifacts stay outside the prompt and are fetched on demand."
+    token_target: 3500
+  - layer_id: L5
+    name: shared_state_refs
+    loading: immutable_ids_and_snapshots
+    content: "IDs and hashes for traceability graph, prior findings, decisions and dependency records; not full duplicated documents."
+    token_target: 1000
+  - layer_id: L6
+    name: task_output_contract
+    loading: always
+    content: "Output schema, status vocabulary, human Gate and error states."
+    token_target: 1200
+
+default_budget_formula:
+  input_context: "min(target_input_context_tokens, floor(0.60 * model_context_window))"
+  output_reserve: "max(reserved_output_tokens, floor(0.15 * model_context_window))"
+  validation_reserve: "max(reserved_validation_tokens, floor(0.05 * model_context_window))"
+  safety_margin: "0.10 * model_context_window"
+
+compression_rules:
+  allowed:
+    - "Replace repeated documents with immutable evidence IDs and snapshot hashes."
+    - "Use one-hop or task-bounded traceability subgraphs; fetch additional nodes only when a rule requires them."
+    - "Use evidence digests for navigation, while preserving raw artifact pointers for verification."
+    - "Deduplicate identical citation records by citation hash, not by semantic similarity alone."
+    - "Load one standard's targeted citations at a time when the task is standard-specific."
+  forbidden:
+    - "Truncate a normative quotation."
+    - "Replace a quotation with a model-generated summary in the final finding."
+    - "Merge ASPICE, ISO 26262 or ISO/SAE 21434 clauses into one undifferentiated requirement."
+    - "Load the full PDF or every Rule Pack into every Runtime invocation."
+    - "Treat a summary, embedding, citation ID or page number as a substitute for the required verbatim text."
+
+over_budget_behavior:
+  status: context_over_budget
+  actions:
+    - "Stop before LLM analysis if deterministic token estimation exceeds the hard budget."
+    - "Split by standard, Clause, Process, Evidence domain or work package."
+    - "Preserve the same run_id and create child task IDs with parent_task_id."
+    - "Never drop the direct citation block to make the prompt fit."
+    - "Route unresolved cases to R08 and, when normative authority is affected, R10."

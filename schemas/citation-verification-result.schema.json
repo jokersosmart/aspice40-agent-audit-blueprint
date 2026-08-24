@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/citation-verification-result.schema.json",
+  "title": "Deterministic Citation Verification Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["verification_id", "standard_id", "edition", "source_hash", "anchor", "verbatim_text", "verbatim_text_sha256", "checks", "verdict", "human_gate"],
+  "properties": {
+    "verification_id": {"type": "string"},
+    "standard_id": {"enum": ["ASPICE", "ISO26262", "ISO21434"]},
+    "edition": {"type": "string"},
+    "source_hash": {"pattern": "^[a-fA-F0-9]{64}$", "type": "string"},
+    "anchor": {"type": "string", "minLength": 1},
+    "verbatim_text": {"type": "string", "minLength": 1},
+    "verbatim_text_sha256": {"pattern": "^[a-fA-F0-9]{64}$", "type": "string"},
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_version_match", "anchor_resolved", "complete_boundary", "hash_match", "no_placeholder", "no_truncation", "table_structure_verified"],
+      "properties": {
+        "source_version_match": {"type": "boolean"},
+        "anchor_resolved": {"type": "boolean"},
+        "complete_boundary": {"type": "boolean"},
+        "hash_match": {"type": "boolean"},
+        "no_placeholder": {"type": "boolean"},
+        "no_truncation": {"type": "boolean"},
+        "table_structure_verified": {"type": "boolean"}
+      }
+    },
+    "retrieval_metadata": {"type": "object", "additionalProperties": true},
+    "verdict": {"enum": ["verified", "source_version_mismatch", "anchor_unresolved", "quote_incomplete", "hash_mismatch", "placeholder_detected", "table_structure_uncertain", "human_review_required"]},
+    "human_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "authority", "status"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "authority": {"type": "array", "items": {"type": "string"}},
+        "status": {"enum": ["pending", "approved", "rejected", "not_applicable"]}
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/runtime-execution-envelope.schema.json",
+  "title": "Shared Runtime Execution Envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "task_id", "runtime_id", "agent_id", "standard_scope", "question", "context_refs", "citation_request", "evidence_refs", "budget", "human_gate"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "parent_task_id": {"type": ["string", "null"]},
+    "task_id": {"type": "string"},
+    "runtime_id": {"pattern": "^R(0[1-9]|1[0-8])$", "type": "string"},
+    "agent_id": {"pattern": "^(C0[1-8]|[A-Z]{3}\\.\\d+|M\\d{2}|FS\\d{2}|CS\\d{2})$", "type": "string"},
+    "standard_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["standards", "scope_state", "baseline_id"],
+      "properties": {
+        "standards": {"type": "array", "minItems": 1, "items": {"enum": ["ASPICE", "ISO26262", "ISO21434"]}},
+        "scope_state": {"enum": ["in_scope", "conditional", "out_of_scope", "not_in_scope", "unknown", "dependency_missing"]},
+        "baseline_id": {"type": "string"},
+        "process_or_clause_ids": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "question": {"type": "string", "minLength": 1},
+    "context_refs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role_profile_ref", "rulepack_refs", "scope_ref", "evidence_snapshot_ref", "traceability_snapshot_ref"],
+      "properties": {
+        "role_profile_ref": {"type": "string"},
+        "rulepack_refs": {"type": "array", "items": {"type": "string"}},
+        "scope_ref": {"type": "string"},
+        "evidence_snapshot_ref": {"type": "string"},
+        "traceability_snapshot_ref": {"type": "string"},
+        "prior_finding_refs": {"type": "array", "items": {"type": "string"}},
+        "decision_record_refs": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "citation_request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["retrieval_mode", "anchors", "require_complete_verbatim", "source_version", "deduplicate_by_hash"],
+      "properties": {
+        "retrieval_mode": {"enum": ["exact_anchor", "clause_window", "provision_id", "table_row", "human_source_review"]},
+        "anchors": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "require_complete_verbatim": {"const": true},
+        "source_version": {"type": "string"},
+        "deduplicate_by_hash": {"const": true},
+        "max_citations": {"type": "integer", "minimum": 1}
+      }
+    },
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["model_context_window", "input_token_limit", "output_token_reserve", "validation_token_reserve", "estimated_input_tokens"],
+      "properties": {
+        "model_context_window": {"type": "integer", "minimum": 1},
+        "input_token_limit": {"type": "integer", "minimum": 1},
+        "output_token_reserve": {"type": "integer", "minimum": 1},
+        "validation_token_reserve": {"type": "integer", "minimum": 1},
+        "estimated_input_tokens": {"type": "integer", "minimum": 0},
+        "overflow_action": {"enum": ["proceed", "split_task", "route_to_orchestrator", "human_review"]}
+      }
+    },
+    "human_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "gate_type", "authority", "status"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "gate_type": {"type": "string"},
+        "authority": {"type": "array", "items": {"type": "string"}},
+        "status": {"enum": ["pending", "approved", "rejected", "not_applicable"]}
+      }
+    }
+  }
+}

@@ -1,0 +1,116 @@
+run_id: SSDCTRL-HWE2-SECURITY-001
+project_id: SSDCTRL-A
+baseline_id: HW-BL-042
+objective: "Check one SSD Controller hardware design work item across process, functional-safety and cybersecurity perspectives without mixing normative claims."
+shared_contracts:
+  token_budget_policy: config/token_budget_policy.yaml
+  dispatch_policy: config/runtime_dispatch_policy.yaml
+  execution_envelope_schema: schemas/runtime-execution-envelope.schema.json
+  shared_state_schema: schemas/shared-state-snapshot.schema.json
+  citation_verification_schema: schemas/citation-verification-result.schema.json
+
+nodes:
+  - task_id: T01
+    runtime_id: R04
+    agent_id: C05
+    standard_scope: [ASPICE, ISO26262, ISO21434]
+    question: "Confirm whether the SSD Controller hardware design item and its safety/security activities are in scope."
+    context: [project_scope, customer_contract_summary, item_boundary_summary, dependency_registry]
+    output: scope_snapshot
+    human_gate: "Safety/Security Manager approves tailoring and applicability rationale."
+
+  - task_id: T02
+    runtime_id: R03
+    agent_id: C03
+    parent_task_id: T01
+    standard_scope: [ASPICE]
+    question: "Index the HWE.2 design evidence and produce an immutable digest."
+    context: [scope_snapshot_ref, artifact_metadata, evidence_registry]
+    output: evidence_snapshot
+    human_gate: "Evidence owner confirms artifact identity and baseline."
+
+  - task_id: T03
+    runtime_id: R05
+    agent_id: C06
+    parent_task_id: T02
+    standard_scope: [ASPICE, ISO26262, ISO21434]
+    question: "Extract the one-hop traceability subgraph for this design item."
+    context: [scope_snapshot_ref, evidence_snapshot_ref, target_requirement_ids, target_design_ids]
+    output: traceability_snapshot
+    human_gate: "Traceability owner reviews missing and conflicting links."
+
+  - task_id: T04
+    runtime_id: R06
+    agent_id: HWE.2
+    parent_task_id: T03
+    standard_scope: [ASPICE]
+    question: "Audit ASPICE HWE.2 outcomes, BP, work products and evidence."
+    rulepack: knowledge/aspice40/process_rules/HWE.2.yaml
+    citations: "Retrieve only HWE.2 citations and validate before LLM injection."
+    context: [scope_snapshot_ref, evidence_snapshot_ref, traceability_snapshot_ref]
+    output: aspice_process_audit_result
+    human_gate: "Lead Assessor owns formal rating and closure."
+
+  - task_id: T05
+    runtime_id: R11
+    agent_id: FS04
+    parent_task_id: T03
+    standard_scope: [ISO26262]
+    question: "Audit the relevant hardware safety architecture allocation and design evidence."
+    rulepack: knowledge/iso26262/part5_rulepack_template.yaml
+    citations: "Retrieve only approved ISO 26262-5 Clause 6/7 records required by the Safety task."
+    context: [scope_snapshot_ref, evidence_snapshot_ref, traceability_snapshot_ref, asil_snapshot_ref]
+    output: safety_audit_result
+    human_gate: "Functional Safety authority owns ASIL, safety architecture and residual-risk decisions."
+
+  - task_id: T06
+    runtime_id: R16
+    agent_id: CS07
+    parent_task_id: T03
+    standard_scope: [ISO21434]
+    question: "Audit the target item, assets, attack paths and TARA evidence for the design item."
+    rulepack: knowledge/iso21434/part_rulepack_template.yaml
+    citations: "Retrieve only approved ISO/SAE 21434 Clause/RQ records required by the TARA task."
+    context: [scope_snapshot_ref, evidence_snapshot_ref, traceability_snapshot_ref, asset_inventory_ref]
+    output: cybersecurity_tara_result
+    human_gate: "Cybersecurity authority owns TARA impact, attack-feasibility and risk treatment decisions."
+
+  - task_id: T07
+    runtime_id: R13
+    agent_id: FS14
+    parent_task_id: T04
+    depends_on: [T05, T06]
+    standard_scope: [ISO26262, ISO21434]
+    question: "Map shared facts and identify complementary, insufficient or conflicting safety/security evidence."
+    context: [T04.output_ref, T05.output_ref, T06.output_ref, cross_standard_mapping_rules]
+    output: cross_standard_mapping
+    human_gate: "Safety and Cybersecurity authorities jointly resolve conflicts."
+
+  - task_id: T08
+    runtime_id: R08
+    agent_id: C08
+    parent_task_id: T07
+    depends_on: [T04, T05, T06, T07]
+    standard_scope: [ASPICE, ISO26262, ISO21434]
+    question: "Assemble an assessment rehearsal package and route unresolved findings."
+    context: [child_output_refs, finding_refs, citation_verification_refs, decision_record_refs]
+    output: review_package
+    human_gate: "R10 receives the package; no formal conclusion is generated automatically."
+
+  - task_id: T09
+    runtime_id: R10
+    agent_id: HUMAN
+    parent_task_id: T08
+    depends_on: [T08]
+    standard_scope: [ASPICE, ISO26262, ISO21434]
+    question: "Review evidence, citations, conflicts, residual risk and final authority decisions."
+    context: [review_package_ref, immutable_snapshot_refs]
+    output: human_decisions
+    human_gate: "Mandatory; human decision only."
+
+rules:
+  - "Never pass the full output of one node into every downstream node; pass IDs, hashes and task-bounded excerpts."
+  - "Never merge T04/T05/T06 citations into a single normative claim."
+  - "If any citation verifier fails, block the affected node and create a child retrieval or human review task."
+  - "If a task exceeds its budget, preserve parent_task_id and split by standard, clause/process, evidence domain or work package."
+  - "T09 cannot be replaced by an LLM output."

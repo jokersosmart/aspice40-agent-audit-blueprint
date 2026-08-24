@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/runtime-observation.schema.json",
+  "title": "Shared Runtime Observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "task_id", "runtime_id", "agent_id", "model_id", "prompt_commit", "rulepack_hash", "source_hashes", "token_usage", "citation_verdict", "status", "human_gate_status", "timestamps"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "task_id": {"type": "string"},
+    "parent_task_id": {"type": ["string", "null"]},
+    "runtime_id": {"pattern": "^R(0[1-9]|1[0-8])$", "type": "string"},
+    "agent_id": {"type": "string"},
+    "model_id": {"type": "string"},
+    "prompt_commit": {"type": "string"},
+    "profile_commit": {"type": "string"},
+    "rulepack_hash": {"pattern": "^[a-fA-F0-9]{64}$", "type": "string"},
+    "source_hashes": {"type": "array", "items": {"pattern": "^[a-fA-F0-9]{64}$", "type": "string"}},
+    "citation_hashes": {"type": "array", "items": {"pattern": "^[a-fA-F0-9]{64}$", "type": "string"}},
+    "evidence_snapshot_hash": {"pattern": "^[a-fA-F0-9]{64}$", "type": "string"},
+    "token_usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["estimated_input", "actual_input", "actual_output", "input_limit", "split_count", "cache_hits"],
+      "properties": {
+        "estimated_input": {"type": "integer", "minimum": 0},
+        "actual_input": {"type": "integer", "minimum": 0},
+        "actual_output": {"type": "integer", "minimum": 0},
+        "input_limit": {"type": "integer", "minimum": 1},
+        "split_count": {"type": "integer", "minimum": 0},
+        "cache_hits": {"type": "integer", "minimum": 0}
+      }
+    },
+    "citation_verdict": {"enum": ["verified", "citation_missing", "source_version_mismatch", "anchor_unresolved", "quote_incomplete", "hash_mismatch", "placeholder_detected", "table_structure_uncertain", "human_review_required"]},
+    "status": {"enum": ["ready_for_llm", "completed", "partial", "unknown", "conflict", "gap", "not_in_scope", "citation_missing", "dependency_missing", "context_over_budget", "human_decision_required", "failed"]},
+    "retry_count": {"type": "integer", "minimum": 0},
+    "human_gate_status": {"enum": ["not_required", "pending", "approved", "rejected"]},
+    "timestamps": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["started_at", "completed_at"],
+      "properties": {
+        "started_at": {"type": "string", "format": "date-time"},
+        "completed_at": {"type": "string", "format": "date-time"}
+      }
+    },
+    "error_codes": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -56,6 +56,22 @@ Manager Agent 不重新逐句稽核 PAM。它讀取 Process Audit Result、Evide
 
 C01 只能寫入規範來源、頁面 manifest 與抽取 QA；C03／C04 只能寫入 evidence index；C05 可以提出 scope draft 但不能自己批准；C06 可以更新 graph candidate 與 conflict；Process Agent 只能產生 audit result；Manager Agent 只能產生 work package；C08 只能建立 report draft 與 human review queue；Human Gateway 才能寫入 approval、正式 rating 或 finding closure。這種最小權限設計比在 Prompt 中單純寫「請小心」更可靠。
 
-## 5. 執行後的可重現性
+## 5. Runtime 與 Token Budget
 
-每一筆輸出都要記錄 `run_id`、runtime version、prompt commit、profile commit、rule pack commit、schema version、scope snapshot、evidence snapshot、model identifier 與執行時間。若日後資料更新，應建立新的 run，而不是覆蓋舊結果。
+90 個邏輯角色不是一次要載入的 90 份 Prompt。Runtime 先依任務選出一個 `agent_id`，再只載入該角色 profile、該標準與 Clause／Process 的 Rule Pack、Scope snapshot、Evidence digest、有限的 traceability subgraph 與 output schema。所有輸入以 `schemas/runtime-execution-envelope.schema.json` 表達，Token 配額由 `config/token_budget_policy.yaml` 控制。
+
+預設 routine mode 的 input context target 為 12,000 tokens、hard limit 為 16,000 tokens，另保留 output、validation、error 與 human Gate 空間。這些是 Runtime policy 的預設值，實際執行需依模型 context window 按比例縮放。不得載入整本 PDF、所有 Rule Pack、全部 90 個 profile 或完整原始證據；大型證據只能以 Evidence ID、baseline、hash、摘要與原始 pointer 進入 Context。
+
+若估算輸入超過 hard limit，Runtime 必須在 LLM 呼叫前產生 `context_over_budget`，將任務按標準、Clause／Process、Evidence domain 或 work package 拆成 child tasks。不可為了讓 Prompt 變短而刪除或截斷完整 Spec 引用。
+
+## 6. Citation Service 與 deterministic verification
+
+LLM 不直接從大型 PDF 自由複製條文。LLM 只能提出結構化 citation query，包含 `standard_id`、edition、Clause／Process、RQ／RC／PM／WP 或 table row anchor。受控 Citation Service 依 query 讀取本地核准來源，回傳完整 `verbatim_text`、source anchor、source hash 與 quotation hash。接著 `schemas/citation-verification-result.schema.json` 所描述的 Validator 執行 source version match、anchor resolution、complete boundary、hash match、no placeholder、no truncation 與 table structure verification。
+
+只有 Validator verdict 為 `verified` 的引用才可以進入 normative LLM Context。若為 `source_version_mismatch`、`anchor_unresolved`、`quote_incomplete`、`hash_mismatch`、`placeholder_detected` 或 `table_structure_uncertain`，就停止該次結論並路由人工審查。若來源本身不存在，輸出 `citation_missing`；若跨 Part／跨標準前置資料不存在，輸出 `dependency_missing`。任何模型自行生成的引用都必須被拒絕。
+
+三套規範的引用不可混成一個引用。ASPICE、ISO 26262-5 與 ISO/SAE 21434 共享同一個 Evidence Object 時，仍需為各自的 claim 取得各自的完整原文、版本與 hash；Cross-Standard Mapping 只描述 shared、complementary、insufficient、conflict、dependency_missing 或 no_direct_equivalence，不宣稱等價合規。
+
+## 7. 執行後的可重現性
+
+每一筆輸出都要記錄 `run_id`、task_id、parent／child task 關係、runtime version、prompt commit、profile commit、rule pack commit、schema version、scope snapshot、evidence snapshot、model identifier、input／output token、split count、cache hit、source hash、verbatim hash、citation validation verdict 與執行時間。若日後資料更新，應建立新的 run，而不是覆蓋舊結果。

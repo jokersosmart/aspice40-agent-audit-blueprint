@@ -1,5 +1,19 @@
 schema_version: "1.0"
 registry_version: "2026.08.24"
+shared_execution_contract:
+  token_budget_policy: config/token_budget_policy.yaml
+  execution_envelope_schema: schemas/runtime-execution-envelope.schema.json
+  citation_verification_schema: schemas/citation-verification-result.schema.json
+  shared_state_snapshot_schema: schemas/shared-state-snapshot.schema.json
+  context_builder: tools/runtime_context_builder.py
+  citation_validator: tools/citation_validator.py
+  mandatory_context_layers: [global_policy, role_profile, scope_and_baseline, targeted_rulepack_and_citations, evidence_digest, shared_state_refs, task_output_contract]
+  hard_rules:
+    - never_load_all_90_profiles_into_one_context
+    - never_load_all_standards_or_all_rulepacks_into_one_context
+    - never_truncate_or_paraphrase_normative_citations
+    - split_task_when_context_over_budget
+    - persist_source_hash_quote_hash_rulepack_hash_and_evidence_snapshot_hash
 runtimes:
   - runtime_id: R01
     name: Spec Text Integrity Runtime
@@ -176,3 +190,6 @@ runtimes:
     output_schemas: [schemas/human-decision.schema.json]
     write_permissions: [runs/approvals]
     human_gate: [all]
+    token_budget_policy: config/token_budget_policy.yaml
+    execution_envelope_schema: schemas/runtime-execution-envelope.schema.json
+    citation_verification_schema: schemas/citation-verification-result.schema.json

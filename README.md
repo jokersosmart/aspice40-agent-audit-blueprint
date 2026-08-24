@@ -52,12 +52,22 @@
 - `knowledge/aspice40/spec_citation_catalog.*`：ASPICE 4.0 direct citation catalog；規範原文限受控來源使用。
 - `knowledge/iso26262/`：ISO 26262-5 的 runtime-only source policy 與 Rule Pack template。
 - `knowledge/iso21434/`：ISO/SAE 21434 的 runtime-only source policy 與 Rule Pack template。
-- `schemas/`：Evidence、Direct Citation、Audit Finding、Safety Finding、Cybersecurity Finding、Cybersecurity Case、Cross-Standard Mapping 與三規範 Mapping 契約。
+- `schemas/`：Evidence、Direct Citation、Audit Finding、Safety Finding、Cybersecurity Finding、Cybersecurity Case、Cross-Standard Mapping、Runtime Execution Envelope、Citation Verification 與三規範 Mapping 契約。
 - `config/standards_registry.yaml`：三套規範的版本、優先級、dependency 與來源限制。
 - `config/process_scope.yaml`、`config/iso26262_part5_scope.yaml`、`config/iso21434_scope.yaml`：各規範 Scope、tailoring 與 dependency 設定。
 - `config/runtime_registry.yaml`：R01–R18 Runtime 與 Human Review Gateway 的部署映射。
+- `config/token_budget_policy.yaml`：Context layer、Token budget、compression 與 over-budget policy。
+- `config/runtime_dispatch_policy.yaml`：90 個邏輯角色到 R01–R18 的路由、並行上限、快取、拆分與優先級。
 - `workflows/audit_workflow.md`：三規範從來源入庫、證據整理到人工 Gate 的稽核流程。
+- `workflows/runtime_token_citation_sop.md`：共用 Runtime、Token preflight、Citation verification、分批與人工 Gate SOP。
+- `workflows/example_three_standard_runtime_dag.yaml`：SSD Controller HWE.2、功能安全與 TARA 的三規範 child-task／Runtime DAG 範例。
 - `docs/cognitive_operating_layer_guide.md`、`docs/cognitive_integration_report.md`：Cognitive Layer 的採用、分配、優先級與驗證。
+- `docs/runtime_token_citation_architecture.md`：90 個邏輯角色如何由共用 Runtime 執行，以及 Token／Citation／Shared State 設計。
+- `tools/runtime_context_builder.py`：LLM 呼叫前的最小 Context 與 direct citation deterministic preflight 範例。
+- `tools/citation_validator.py`：獨立於 LLM 的 source version、anchor、boundary、hash、placeholder、截斷與表格結構驗證器。
+- `schemas/runtime-execution-envelope.schema.json`、`schemas/citation-verification-result.schema.json`：共用 Runtime 輸入與 Citation 驗證契約。
+- `schemas/shared-state-snapshot.schema.json`：跨 Runtime 的 immutable Evidence／Citation／Traceability／Finding／Decision ID 快照契約。
+- `schemas/runtime-observation.schema.json`：Token、Cache、Split、Citation verdict、Retry 與 Human Gate 的執行觀測契約。
 - `docs/direct_spec_citation_policy.md`：逐項完整原文引用政策與 public repository 邊界。
 - `docs/external_references.md`：VDA QMC、intacs 與 DNV 的外部背景來源；normative 結論仍以核准標準原文為準。
 - `examples/`：HWE.2、ISO 26262-5 與 ISO/SAE 21434 SSD Controller 稽核輸入及三規範 Crosswalk 範例。

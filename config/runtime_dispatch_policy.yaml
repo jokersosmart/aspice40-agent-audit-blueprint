@@ -1,0 +1,95 @@
+policy_version: "1.0"
+role_to_runtime:
+  controls:
+    C01: R01
+    C02: R02
+    C03: R03
+    C04: R04
+    C05: R05
+    C06: R06
+    C07: R07
+    C08: R08
+  aspice_processes: R06
+  aspice_managers: R09
+  safety_agents: R11
+  safety_quantitative_agents: R12
+  safety_cross_standard_agents: R13
+  safety_coordination_agents: R14
+  cybersecurity_governance_agents: R15
+  cybersecurity_product_agents: R16
+  cybersecurity_operations_agents: R17
+  cybersecurity_coordination_agents: R18
+  safety_managers: R14
+  cybersecurity_managers: R18
+  human_approval: R10
+routing_order:
+  - validate_agent_id_and_runtime_mapping
+  - load_one_active_role_profile
+  - resolve_standard_scope_and_dependencies
+  - create_citation_query
+  - run_deterministic_citation_validation
+  - estimate_context_tokens
+  - split_if_over_budget
+  - run_llm_analysis
+  - validate_output_schema
+  - route_human_gate
+  - persist_immutable_snapshot
+concurrency:
+  default_max_inflight_per_runtime: 4
+  high_density_runtimes: [R06, R11, R12, R15, R16]
+  high_density_max_inflight: 2
+  human_gateway_max_inflight: 1
+  same_evidence_baseline_parallelism: 2
+  lock_key: "project_id + baseline_id + artifact_id + standard_id"
+
+cache:
+  immutable_cache_keys:
+    - source_hash
+    - verbatim_text_sha256
+    - rulepack_hash
+    - evidence_snapshot_hash
+    - traceability_snapshot_hash
+  cacheable_layers: [standard_index, citation_record, role_profile, rulepack, evidence_digest, traceability_subgraph]
+  never_cache_as_truth: [model_answer, unverified_quote, inferred_requirement, stale_evidence_summary]
+  invalidation_events: [standard_source_change, project_baseline_change, evidence_hash_change, rulepack_change, scope_change]
+
+split_triggers:
+  - multi_standard_task
+  - multiple_unrelated_processes_or_clauses
+  - context_over_budget
+  - citation_block_does_not_fit_complete
+  - traceability_graph_exceeds_one_hop_task_window
+  - evidence_domain_mix_exceeds_task_scope
+  - unresolved_conflict_requires_independent_review
+
+split_strategy:
+  priority: [standard, clause_or_process, evidence_domain, work_package]
+  preserve_fields: [run_id, parent_task_id, baseline_id, scope_snapshot_id, source_hashes, decision_record_refs]
+  forbidden: [drop_citation,_truncate_citation,merge_standards,replace_raw_evidence_with_unverified_summary]
+
+priority:
+  P0: [human_safety_gate, human_security_gate, source_version_mismatch, hash_mismatch, major_finding_closure, production_release, tape_out_release]
+  P1: [citation_missing, dependency_missing, context_over_budget, cross_standard_conflict, TARA_high_risk, PMHF_high_risk]
+  P2: [routine_process_audit, traceability_gap, evidence_digest_refresh, manager_work_package]
+
+observability_required:
+  - run_id
+  - task_id
+  - parent_task_id
+  - runtime_id
+  - agent_id
+  - model_id
+  - prompt_commit
+  - profile_commit
+  - rulepack_hash
+  - source_hashes
+  - citation_hashes
+  - evidence_snapshot_hash
+  - estimated_input_tokens
+  - actual_input_tokens
+  - actual_output_tokens
+  - cache_hits
+  - split_count
+  - retry_count
+  - citation_verdict
+  - human_gate_status
