@@ -148,3 +148,30 @@ managers:
     affected_parties: [M08, M09, M10, M11, M12, M15, M16]
     approvals: [verification_adequacy, independent_confirmation, anomaly_closure, tapeout_safety_readiness, safety_release_evidence]
     safety_gates: [independent_confirmation, residual_risk, tapeout_or_production_release]
+  - id: M18
+    name: Cybersecurity Governance Manager
+    domain_scope: organizational and project cybersecurity governance, policy, resources, roles, supplier interface and cybersecurity plan
+    primary_processes: [ISO21434-5, ISO21434-6, ISO21434-7]
+    secondary_processes: [ACQ.4, SPL.2, SUP.1, SUP.8, SUP.10, MAN.3, MAN.5, M14, M15]
+    evidence_sources: [cybersecurity_policy, cybersecurity_plan, role_matrix, RFQ, contracts, supplier_capability_assessment, interface_agreement, training_records]
+    affected_parties: [M01, M03, M11, M12, M13, M14, M15, M19, M20]
+    approvals: [cybersecurity_policy, project_cybersecurity_plan, supplier_responsibility, resource_commitment]
+    security_gates: [scope_and_relevance, tailoring, supplier_agreement, governance_audit]
+  - id: M19
+    name: Product Cybersecurity Assurance Manager
+    domain_scope: item definition, TARA, cybersecurity goals, cybersecurity concept, cybersecurity requirements, architecture, implementation and validation
+    primary_processes: [ISO21434-9, ISO21434-10, ISO21434-11]
+    secondary_processes: [SYS.1, SYS.2, SYS.3, SYS.4, SYS.5, SWE.1, SWE.2, SWE.3, HWE.1, HWE.2, HWE.3, HWE.4, VAL.1, M01, M02, M03, M08, M10, M16]
+    evidence_sources: [item_definition, asset_inventory, TARA, damage_scenarios, threat_scenarios, cybersecurity_goals, cybersecurity_concept, cybersecurity_requirements, security_architecture, implementation, validation]
+    affected_parties: [M01, M02, M03, M04, M05, M06, M07, M08, M09, M10, M16, M17]
+    approvals: [item_definition, TARA_scope, risk_treatment, cybersecurity_goals, concept, requirements, architecture, validation_strategy]
+    security_gates: [TARA_approval, cybersecurity_concept, requirement_baseline, validation_adequacy]
+  - id: M20
+    name: Cybersecurity Operations and Assurance Manager
+    domain_scope: continual monitoring, vulnerability management, incident response, production security, updates, end of support, cybersecurity case, audit and assessment
+    primary_processes: [ISO21434-8, ISO21434-12, ISO21434-13, ISO21434-14]
+    secondary_processes: [SUP.1, SUP.8, SUP.9, SUP.10, MAN.6, M11, M12, M14, M17]
+    evidence_sources: [monitoring, vulnerability_database, incident_response, security_update, production_security, support_lifecycle, cybersecurity_case, audit_report, assessment_report]
+    affected_parties: [M07, M08, M09, M10, M11, M12, M14, M17, M18, M19]
+    approvals: [vulnerability_severity, remediation, update_release, incident_disposition, cybersecurity_case, assessment_readiness, end_of_support]
+    security_gates: [major_vulnerability, incident_response, security_update, cybersecurity_case_release, final_security_conclusion]

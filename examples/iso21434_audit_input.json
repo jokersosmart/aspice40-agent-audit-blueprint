@@ -1,0 +1,41 @@
+{
+  "run_id": "iso21434-demo-001",
+  "project_id": "ssd-controller-demo",
+  "release_or_baseline": "HW-R2.3-SAFETY-CYBER-CANDIDATE",
+  "standard_context": {
+    "standard_id": "ISO21434",
+    "edition": "ISO/SAE 21434:2021(E)",
+    "source_mode": "approved_local_runtime_source",
+    "source_path": "<configure-local-approved-source>",
+    "source_sha256": "<runtime-computed-sha256>",
+    "clauses_in_scope": ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "Annex A", "Annex B", "Annex C", "Annex D", "Annex E", "Annex F", "Annex G", "Annex H"],
+    "missing_dependencies": ["ISO 26262-3:2018", "other customer-required ISO/SAE 21434 context sources"]
+  },
+  "product_context": {
+    "item": "SSD Controller for road-vehicle E/E system",
+    "interfaces": ["PCIe_or_host_interface", "NAND_interface", "JTAG_or_debug_interface", "firmware_update_interface", "telemetry_and_service_interface"],
+    "security_controls": ["secure_boot", "firmware_authentication", "key_storage_or_key_management", "access_control", "debug_lock_or_lifecycle_control", "memory_and_DMA_protection", "rollback_protection", "secure_update"],
+    "hardware_domains": ["digital_rtl", "analog_mixed_signal", "nand_phy", "clock_reset_power_domains"],
+    "development_stages": ["simulation", "formal", "emulation", "tape_out", "silicon_characterization", "qualification", "production_provisioning"],
+    "customer_context": "to_be_confirmed",
+    "vehicle_level_context": "to_be_confirmed"
+  },
+  "evidence_objects": [
+    {"evidence_id": "EV-ITEM-001", "type": "item_definition_and_operational_environment", "owner": "M19", "baseline": "ITEM-R2.3", "status": "pending_review"},
+    {"evidence_id": "EV-TARA-001", "type": "TARA_assets_threat_scenarios_attack_paths_risk_treatment", "owner": "M19", "baseline": "TARA-R2.3", "status": "pending_human_scope_and_risk_review"},
+    {"evidence_id": "EV-CYBER-REQ-001", "type": "cybersecurity_requirements_and_concept", "owner": "M19", "baseline": "CYBER-REQ-R2.3", "status": "pending_baseline"},
+    {"evidence_id": "EV-SEC-ARCH-001", "type": "secure_architecture_and_control_allocation", "owner": "M19", "baseline": "SEC-ARCH-R2.3", "status": "pending_review"},
+    {"evidence_id": "EV-SEC-IMPL-001", "type": "secure_boot_key_management_debug_control_and_update_implementation", "owner": "M19", "baseline": "SEC-IMPL-R2.3", "status": "available"},
+    {"evidence_id": "EV-VULN-001", "type": "vulnerability_analysis_and_management", "owner": "M20", "baseline": "VULN-R2.3", "status": "pending_triage"},
+    {"evidence_id": "EV-CYBER-VAL-001", "type": "penetration_fuzz_abuse_case_integration_and_target_validation", "owner": "M19", "baseline": "CYBER-VAL-R2.3", "status": "pending_independent_review"},
+    {"evidence_id": "EV-CYBER-CASE-001", "type": "cybersecurity_case_and_assessment_report", "owner": "M20", "baseline": "CYBER-CASE-R2.3", "status": "draft"}
+  ],
+  "requested_agents": ["CS01", "CS02", "CS03", "CS04", "CS05", "CS06", "CS07", "CS08", "CS09", "CS10", "CS11", "CS12", "CS13", "CS14", "CS15"],
+  "required_output": {
+    "direct_spec_citation": true,
+    "citation_missing_behavior": "stop_and_route_to_human_security_review",
+    "dependency_missing_behavior": "do_not_claim_compliance",
+    "cross_standard_behavior": "classify_shared_complementary_insufficient_conflict_or_dependency_missing",
+    "human_gates": ["item_definition", "TARA_scope", "risk_treatment", "cybersecurity_concept", "requirements_baseline", "architecture", "validation", "vulnerability_remediation", "production_or_update_release", "cybersecurity_case", "final_security_conclusion"]
+  }
+}

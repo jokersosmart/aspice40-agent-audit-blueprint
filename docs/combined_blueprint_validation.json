@@ -2,7 +2,7 @@
   "ok": true,
   "checks": {
     "required_files": {
-      "expected": 44,
+      "expected": 58,
       "missing": [],
       "ok": true
     },
@@ -97,7 +97,10 @@
         "M14",
         "M15",
         "M16",
-        "M17"
+        "M17",
+        "M18",
+        "M19",
+        "M20"
       ],
       "actual": [
         "M01",
@@ -116,10 +119,52 @@
         "M14",
         "M15",
         "M16",
-        "M17"
+        "M17",
+        "M18",
+        "M19",
+        "M20"
       ],
-      "count": 17,
-      "unique": 17,
+      "count": 20,
+      "unique": 20,
+      "ok": true
+    },
+    "cybersecurity_agent_ids": {
+      "expected": [
+        "CS01",
+        "CS02",
+        "CS03",
+        "CS04",
+        "CS05",
+        "CS06",
+        "CS07",
+        "CS08",
+        "CS09",
+        "CS10",
+        "CS11",
+        "CS12",
+        "CS13",
+        "CS14",
+        "CS15"
+      ],
+      "actual": [
+        "CS01",
+        "CS02",
+        "CS03",
+        "CS04",
+        "CS05",
+        "CS06",
+        "CS07",
+        "CS08",
+        "CS09",
+        "CS10",
+        "CS11",
+        "CS12",
+        "CS13",
+        "CS14",
+        "CS15"
+      ],
+      "count": 15,
+      "unique": 15,
       "ok": true
     },
     "safety_agent_ids": {
@@ -146,8 +191,8 @@
       "ok": true
     },
     "logical_agent_total": {
-      "count": 72,
-      "expected": 72,
+      "count": 90,
+      "expected": 90,
       "ok": true
     },
     "process_rulepacks": {
@@ -191,7 +236,7 @@
       "ok": true
     },
     "cognitive_assignments": {
-      "count": 72,
+      "count": 90,
       "errors": [],
       "ok": true
     },
@@ -223,6 +268,14 @@
       "runtime_only_in_registry": true,
       "no_clause_11_in_scope": true,
       "safety_runtimes_present": true,
+      "cybersecurity_runtimes_present": true,
+      "ok": true
+    },
+    "iso21434_public_source_boundary": {
+      "runtime_only_in_scope": true,
+      "public_repository_boundary": true,
+      "cybersecurity_runtime_generator_present": true,
+      "cybersecurity_prompts_present": true,
       "ok": true
     },
     "runtime_registry": {
@@ -240,12 +293,17 @@
         "R12",
         "R13",
         "R14",
+        "R15",
+        "R16",
+        "R17",
+        "R18",
         "R10"
       ],
-      "count": 14,
-      "unique": 14,
+      "count": 18,
+      "unique": 18,
       "no_duplicates": true,
       "r14_safety_coordination_loaded": true,
+      "r18_cybersecurity_coordination_loaded": true,
       "ok": true
     },
     "example_direct_citation": {

@@ -1,0 +1,116 @@
+standard: ISO21434
+edition: "ISO/SAE 21434:2021"
+profile_version: "1.0"
+common_contract:
+  direct_spec_citation_required: true
+  citation_fields: [standard_id, edition, clause, provision_id, provision_type, verbatim_text, source_anchor, verbatim_text_sha256, why_this_text_applies, interpretation, human_verification_status]
+  provision_types: [requirement, recommendation, permission, work_product]
+  missing_source_status: citation_missing
+  normative_boundary: "The Agent prepares cybersecurity evidence and findings; it may not declare cybersecurity compliance, accept residual cyber risk, close a major vulnerability, approve a cybersecurity case, or replace an independent cybersecurity assessor."
+  required_human_roles: [Cybersecurity_Manager, Security_Architect, Product_Owner, Independent_Security_Reviewer, QA_or_Security_Assessor]
+agents:
+  - id: CS01
+    name: Cybersecurity Scope and Terminology Auditor
+    focus: [Clause_1, Clause_2, Clause_3, Clause_4]
+    responsibilities: [scope_applicability, item_or_component_boundary, terminology_consistency, normative_reference_dependency, compliance_claim_boundary]
+    evidence_domains: [item_definition, component_boundary, cybersecurity_scope, terminology_register, compliance_claim]
+    aspice_iso26262_interfaces: [C01, C08, SYS.1, SYS.2, HWE.1, FS01]
+    human_gates: [scope_approval, claim_boundary_review]
+  - id: CS02
+    name: Organizational Cybersecurity Governance Agent
+    focus: [Clause_5]
+    responsibilities: [cybersecurity_policy, organizational_rules_and_processes, roles_and_responsibilities, cybersecurity_culture, quality_management, tool_management, organizational_audit]
+    evidence_domains: [cybersecurity_policy, process_handbook, role_matrix, training_records, tool_register, audit_plan]
+    aspice_iso26262_interfaces: [C01, C05, SUP.1, MAN.3, MAN.5, M15]
+    human_gates: [policy_approval, resource_commitment, organizational_audit_plan]
+  - id: CS03
+    name: Project Cybersecurity Management Agent
+    focus: [Clause_6]
+    responsibilities: [project_cybersecurity_plan, activity_relevance, tailoring, reuse_analysis, out_of_context_component, off_the_shelf_component, cybersecurity_case_decision, assessment_decision]
+    evidence_domains: [cybersecurity_plan, tailoring_rationale, reuse_analysis, OTS_analysis, cybersecurity_case, assessment_decision]
+    aspice_iso26262_interfaces: [MAN.3, MAN.5, SUP.8, SUP.10, REU.2, FS02]
+    human_gates: [project_plan, tailoring, reuse_or_OTS_acceptance, assessment_decision]
+  - id: CS04
+    name: Distributed Cybersecurity Responsibility Agent
+    focus: [Clause_7]
+    responsibilities: [customer_supplier_responsibility, RFQ_cybersecurity_requirements, capability_evaluation, cybersecurity_interface_agreement, distributed_work_product_exchange]
+    evidence_domains: [RFQ, contract, cybersecurity_interface_agreement, supplier_capability_assessment, responsibility_matrix]
+    aspice_iso26262_interfaces: [ACQ.4, SPL.2, SUP.8, SUP.10, M14, FS13]
+    human_gates: [supplier_selection, responsibility_agreement, external_commitment]
+  - id: CS05
+    name: Continual Cybersecurity Monitoring Agent
+    focus: [Clause_8_1_to_8_4]
+    responsibilities: [cybersecurity_information_sources, trigger_definition, information_triage, event_evaluation, incident_trigger, monitoring_metrics]
+    evidence_domains: [monitoring_source_register, triage_rules, event_records, incident_records, monitoring_reports]
+    aspice_iso26262_interfaces: [SUP.1, SUP.9, SUP.10, M12, M14]
+    human_gates: [source_approval, trigger_approval, event_severity_disposition]
+  - id: CS06
+    name: Vulnerability Analysis and Management Agent
+    focus: [Clause_8_5, Clause_8_6]
+    responsibilities: [vulnerability_analysis, vulnerability_tracking, remediation, disclosure_coordination, cybersecurity_update_impact, end_of_support_tracking]
+    evidence_domains: [vulnerability_database, CVE_or_vendor_advisory, remediation_plan, patch_record, vulnerability_status_report]
+    aspice_iso26262_interfaces: [SUP.9, SUP.10, SWE.6, HWE.4, M12, M14]
+    human_gates: [vulnerability_severity, remediation_acceptance, disclosure_decision, patch_release]
+  - id: CS07
+    name: Item Definition and TARA Agent
+    focus: [Clause_9_2, Clause_9_3, Clause_15_3, Clause_15_4]
+    responsibilities: [asset_identification, item_boundary, operational_environment, damage_scenario, threat_scenario, attack_path, TARA_scope]
+    evidence_domains: [item_definition, asset_inventory, operational_environment, damage_scenarios, threat_scenarios, attack_paths]
+    aspice_iso26262_interfaces: [SYS.1, SYS.2, SYS.3, FS01, FS02]
+    human_gates: [item_definition, asset_scope, TARA_scope]
+  - id: CS08
+    name: Cybersecurity Goals and Concept Agent
+    focus: [Clause_9_4, Clause_9_5, Clause_15_5_to_15_9]
+    responsibilities: [impact_rating, attack_feasibility, risk_value, risk_treatment, cybersecurity_goals, cybersecurity_concept, operational_environment_controls]
+    evidence_domains: [impact_rating, attack_feasibility_rating, risk_value, risk_treatment, cybersecurity_goals, cybersecurity_concept]
+    aspice_iso26262_interfaces: [SYS.2, SYS.3, HWE.1, HWE.2, FS03, FS04]
+    human_gates: [impact_rating, risk_acceptance, cybersecurity_goal, concept_approval]
+  - id: CS09
+    name: Cybersecurity Requirements and Architecture Agent
+    focus: [Clause_10_1, Clause_10_2, Clause_10_3, Clause_10_4_1]
+    responsibilities: [derive_cybersecurity_specifications, cybersecurity_requirements, control_selection, architecture_weakness_analysis, interface_and_assumption_traceability]
+    evidence_domains: [cybersecurity_requirements, security_architecture, cybersecurity_controls, weakness_analysis, interface_specification]
+    aspice_iso26262_interfaces: [SYS.2, SYS.3, SWE.1, SWE.2, HWE.1, HWE.2, FS03, FS04]
+    human_gates: [cybersecurity_requirement_approval, architecture_approval, weakness_disposition]
+  - id: CS10
+    name: Cybersecurity Implementation and Integration Agent
+    focus: [Clause_10_4_1, Clause_10_4_2]
+    responsibilities: [control_implementation, secure_coding_or_RTL_practice, component_integration, integration_verification, penetration_testing_inputs, vulnerability_retest]
+    evidence_domains: [firmware_security, RTL_security, crypto_or_key_management, secure_boot, access_control, integration_test, penetration_test]
+    aspice_iso26262_interfaces: [SWE.3, SWE.4, SWE.5, SWE.6, HWE.2, HWE.3, HWE.4, SUP.10, FS05, FS07, FS11]
+    human_gates: [implementation_review, integration_result, penetration_test_disposition]
+  - id: CS11
+    name: Cybersecurity Validation Agent
+    focus: [Clause_11]
+    responsibilities: [vehicle_or_target_environment_validation, validation_strategy, abuse_case_testing, attack_path_validation, validation_anomaly_disposition]
+    evidence_domains: [validation_plan, target_environment, abuse_case, penetration_test, fuzzing, red_team_or_security_test, validation_report]
+    aspice_iso26262_interfaces: [SYS.4, SYS.5, VAL.1, HWE.4, FS11, M08]
+    human_gates: [validation_strategy, validation_adequacy, unresolved_security_anomaly]
+  - id: CS12
+    name: Production Cybersecurity Agent
+    focus: [Clause_12]
+    responsibilities: [manufacturing_security, assembly_security, production_configuration, secure_provisioning, production_traceability]
+    evidence_domains: [production_security_plan, provisioning, manufacturing_access_control, production_configuration, traceability_records]
+    aspice_iso26262_interfaces: [SUP.8, SUP.10, HWE.4, M07, M12]
+    human_gates: [production_security_release, provisioning_approval]
+  - id: CS13
+    name: Operations Maintenance and Incident Response Agent
+    focus: [Clause_13]
+    responsibilities: [incident_response, field_monitoring, update_management, patch_validation, customer_communication, postdevelopment_support]
+    evidence_domains: [incident_response_plan, field_event, security_update, patch_validation, customer_notice, postdevelopment_record]
+    aspice_iso26262_interfaces: [SUP.9, SUP.10, MAN.6, M12, M14, FS08]
+    human_gates: [incident_classification, update_release, customer_notification]
+  - id: CS14
+    name: End of Support and Decommissioning Agent
+    focus: [Clause_14]
+    responsibilities: [end_of_support_planning, decommissioning, data_erasure, credential_revocation, residual_exposure_review]
+    evidence_domains: [support_lifecycle, decommissioning_plan, credential_revocation, data_erasure, residual_exposure]
+    aspice_iso26262_interfaces: [SUP.8, SUP.9, SUP.10, M12, FS08]
+    human_gates: [end_of_support, decommissioning_approval, residual_exposure_acceptance]
+  - id: CS15
+    name: Cybersecurity Case Audit and Evidence Agent
+    focus: [Clause_5_3, Clause_6_4, Clause_10_5, Clause_11_5, Annex_A]
+    responsibilities: [cybersecurity_case_argument, evidence_completeness, cybersecurity_audit, cybersecurity_assessment_readiness, direct_citation_catalog, claim_and_risk_traceability]
+    evidence_domains: [cybersecurity_case, evidence_graph, audit_report, assessment_report, claim_register, citation_catalog]
+    aspice_iso26262_interfaces: [C02, C06, C08, SUP.1, FS12, FS13, FS14]
+    human_gates: [case_argument_review, assessment_readiness, final_security_conclusion]

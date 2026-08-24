@@ -5,7 +5,7 @@
   "visibility": "standard_agent_behavior",
   "source_attribution_in_outputs": false,
   "precedence": "below_approved_spec_company_customer_rules_and_human_approvals",
-  "assignment_count": 72,
+  "assignment_count": 90,
   "assignments": [
     {
       "agent_id": "C01",
@@ -1230,6 +1230,76 @@
       ]
     },
     {
+      "agent_id": "M18",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "cybersecurity policy, project governance, supplier responsibility, resources and organizational security culture",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M19",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "item definition, TARA, cybersecurity goals, concept, requirements, architecture, implementation and validation",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
+      "agent_id": "M20",
+      "agent_class": "manager",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "responsibility_and_action_planning",
+      "emphasis": "continuous monitoring, vulnerability management, incident response, updates, support lifecycle, case and assessment readiness",
+      "mandatory_gates": [
+        "citation_inheritance",
+        "owner_and_verifier_separation",
+        "resource_commitment",
+        "closure_authority"
+      ]
+    },
+    {
       "agent_id": "FS01",
       "agent_class": "safety",
       "modules": [
@@ -1549,6 +1619,353 @@
         "ASIL_or_scope_review",
         "independent_safety_review",
         "human_safety_gate"
+      ]
+    },
+    {
+      "agent_id": "CS01",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-05",
+        "COM-06",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS02",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS03",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS04",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS05",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS06",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-04",
+        "COM-05",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS07",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS08",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS09",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS10",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS11",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS12",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS13",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-03",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS14",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-04",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
+      ]
+    },
+    {
+      "agent_id": "CS15",
+      "agent_class": "cybersecurity",
+      "modules": [
+        "COM-01",
+        "COM-02",
+        "COM-05",
+        "COM-06",
+        "COM-07",
+        "COM-08",
+        "COM-09",
+        "COM-10"
+      ],
+      "operating_mode": "cybersecurity_evidence_and_human_gate_preparation",
+      "emphasis": "direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review",
+      "mandatory_gates": [
+        "direct_spec_citation",
+        "item_and_asset_scope",
+        "TARA_or_risk_review",
+        "independent_security_review",
+        "human_security_gate"
       ]
     }
   ]

@@ -1,0 +1,45 @@
+standard_id: ISO21434
+edition: "ISO/SAE 21434:2021(E)"
+source_mode: runtime_only
+public_repository_must_not_store_full_licensed_standard_text: true
+profile_id: CSxx
+rulepack_version: "1.0"
+clause_scope: []
+provision_scope:
+  requirement_ids: []
+  recommendation_ids: []
+  permission_ids: []
+  work_product_ids: []
+  clause_text_anchors: []
+required_runtime_citation_fields:
+  - standard_id
+  - edition
+  - clause
+  - provision_id
+  - provision_type
+  - verbatim_text
+  - source_anchor
+  - source_page_or_line
+  - verbatim_text_sha256
+  - why_this_text_applies
+  - interpretation
+  - human_verification_status
+evidence_domains: []
+ssd_controller_context:
+  required_checks: [item_boundary, asset, interface, operational_environment, firmware, digital_hardware, analog_or_mixed_signal, simulation_or_emulation, tape_out_or_silicon, production, field_operation, update, vulnerability, incident_response]
+aspice_interfaces: []
+iso26262_interfaces: []
+output_contract:
+  schema: schemas/cybersecurity-finding.schema.json
+  statuses: [satisfied, partial, gap, unknown, conflict, not_in_scope, citation_missing, dependency_missing]
+  cross_standard_relationships: [shared, complementary, insufficient, conflict, dependency_missing]
+human_security_gates: []
+stop_conditions:
+  - missing_approved_runtime_source
+  - citation_hash_mismatch
+  - uncertain_table_or_paragraph_boundary
+  - missing_item_or_asset_scope
+  - missing_TARA_or_risk_treatment_context
+  - missing_owner_or_independent_reviewer
+  - unresolved_major_vulnerability
+  - proposed_final_cybersecurity_claim

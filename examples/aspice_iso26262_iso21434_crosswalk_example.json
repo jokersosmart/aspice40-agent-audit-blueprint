@@ -1,0 +1,31 @@
+{
+  "mapping_id": "TRIPLE-CROSSWALK-SSD-HW-001",
+  "project_id": "ssd-controller-demo",
+  "release_or_baseline": "HW-R2.3-SAFETY-CYBER-CANDIDATE",
+  "standards": {
+    "aspice": {
+      "process_ids": ["SYS.2", "SYS.3", "HWE.2", "HWE.4", "SUP.1", "SUP.8", "SUP.9", "SUP.10", "VAL.1"],
+      "direct_citations": ["ASPICE-runtime-citation-required"]
+    },
+    "iso26262": {
+      "part": 5,
+      "clause_ids": ["6", "7.4.1", "7.4.3", "8", "9", "10"],
+      "direct_citations": ["ISO26262-runtime-citation-required"]
+    },
+    "iso21434": {
+      "edition": "ISO/SAE 21434:2021(E)",
+      "clause_ids": ["5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"],
+      "direct_citations": ["ISO21434-runtime-citation-required"]
+    }
+  },
+  "relationship": "complementary",
+  "relationship_explanation": "A controlled hardware architecture baseline, requirements set, simulation result, silicon characterization result, change record or verification result may be shared as a factual Evidence Object. The same Evidence Object does not automatically satisfy an ASPICE Process, an ISO 26262 safety provision and an ISO/SAE 21434 cybersecurity provision. Each claim requires its own direct quotation, applicability interpretation and human approval.",
+  "evidence_refs": ["EV-ARCH-001", "EV-SIM-001", "EV-SIL-001", "EV-HSR-001", "EV-CYBER-REQ-001", "EV-TARA-001", "EV-FMEDA-001", "EV-QUAL-001"],
+  "gaps": ["Vehicle-level cybersecurity context is not loaded.", "Complete ISO 26262 and ISO/SAE 21434 dependencies are not all loaded in this example.", "Final ASIL and cybersecurity risk acceptance authorities remain to be confirmed."],
+  "conflicts": [],
+  "human_review": {
+    "required": true,
+    "authority": ["System_Manager", "Functional_Safety_Manager", "Cybersecurity_Governance_Manager", "Product_Cybersecurity_Assurance_Manager", "QA_or_Safety_Assessor", "Lead_Assessor"],
+    "status": "pending"
+  }
+}

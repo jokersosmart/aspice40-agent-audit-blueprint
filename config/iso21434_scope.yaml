@@ -1,0 +1,81 @@
+standard_id: ISO21434
+edition: "ISO/SAE 21434:2021"
+source_mode: runtime_only
+public_repository_must_not_store_full_licensed_standard_text: true
+local_runtime_source_required: true
+provided_document:
+  title: "ISO/SAE 21434:2021(E)"
+  pages: 88
+  clauses_present: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+  annexes_present: ["A", "B", "C", "D", "E", "F", "G", "H"]
+  clause_coverage_note: "Clauses 5 through 15 have their own objectives, provisions and work products; Annex A summarizes cybersecurity activities and work products."
+  extraction_status: approved_for_runtime_after_human_source_check
+assessment_scope:
+  in_scope_candidates:
+    - item_definition_and_operational_environment
+    - organizational_cybersecurity_management
+    - project_cybersecurity_management
+    - customer_supplier_cybersecurity_interface
+    - continual_cybersecurity_monitoring
+    - vulnerability_management
+    - TARA
+    - cybersecurity_goals_and_concept
+    - cybersecurity_requirements_and_architecture
+    - firmware_and_hardware_security_controls
+    - cybersecurity_validation
+    - production_security
+    - operations_maintenance_and_incident_response
+    - end_of_support_and_decommissioning
+    - cybersecurity_case_and_assessment_readiness
+  conditional:
+    - name: series_production_item_or_component
+      condition: "The SSD Controller is a cybersecurity-relevant item or component in a series-production road vehicle context or is contractually required to follow ISO/SAE 21434."
+      human_gate: product_owner_and_cybersecurity_manager
+    - name: customer_supplier_distribution
+      condition: "Customer and supplier responsibilities are distributed for the item or component."
+      human_gate: customer_supplier_interface_owner
+    - name: vehicle_level_validation
+      condition: "The supplier has responsibility for or receives sufficient vehicle-level validation context."
+      human_gate: validation_owner_and_customer
+    - name: postdevelopment
+      condition: "The supplier retains production, operations, maintenance, update or end-of-support responsibilities."
+      human_gate: operations_owner_and_customer
+  out_of_scope_candidates:
+    - prototype_only_activity_without_series_production_relevance
+    - non_automotive_product_with_no_customer_cybersecurity_requirement
+  unknown_until_confirmed:
+    - vehicle_item_boundary
+    - customer_security_goals_and_requirements
+    - cybersecurity_claim_and_risk_acceptance_authority
+    - supplier_responsibility_after_delivery
+    - required_vehicle_level_test_environment
+    - required_security_update_and_support_period
+dependencies:
+  required_for_complete_vehicle_cybersecurity_claim:
+    - standard_id: ISO26262
+      parts: ["3:2018"]
+      reason: "ISO/SAE 21434 Clause 2 includes ISO 26262-3:2018 as a normative reference."
+    - standard_id: ISO21434
+      parts: ["2021"]
+      reason: "Primary cybersecurity engineering source provided by the user."
+  likely_needed_for_complete_product_safety_or_security_case:
+    - standard_id: ISO26262
+      parts: ["2", "4", "5", "8", "9", "11"]
+      reason: "Functional safety interfaces, hardware safety, supporting processes and semiconductor guidance may be needed depending on the customer claim and item scope."
+    - standard_id: ISO21434
+      parts: ["2021"]
+      reason: "Complete Part 1 terminology and the full 21434 document are required for a complete claim."
+  missing_dependency_behavior: "Do not declare compliance or close a cybersecurity finding; emit dependency_missing and route to M18/M19/M20 plus human review."
+required_human_gates:
+  - scope_and_relevance
+  - item_definition_and_asset_scope
+  - TARA_scope_and_method
+  - impact_and_attack_feasibility_rating
+  - risk_treatment_and_residual_risk
+  - cybersecurity_goal_and_concept
+  - cybersecurity_requirement_baseline
+  - architecture_and_control_approval
+  - validation_adequacy
+  - vulnerability_severity_and_remediation
+  - production_or_update_release
+  - cybersecurity_case_and_final_assessment

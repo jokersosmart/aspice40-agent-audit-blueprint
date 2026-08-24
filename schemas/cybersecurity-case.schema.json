@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/cybersecurity-case.schema.json",
+  "title": "ISO/SAE 21434 Cybersecurity Case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["case_id", "standard_context", "scope_state", "claim", "argument", "spec_citations", "evidence_refs", "risk_disposition", "human_security_gate"],
+  "properties": {
+    "case_id": {"type": "string"},
+    "standard_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["standard_id", "edition", "clause_scope", "source_status"],
+      "properties": {
+        "standard_id": {"const": "ISO21434"},
+        "edition": {"const": "ISO/SAE 21434:2021"},
+        "clause_scope": {"type": "array", "items": {"type": "string"}},
+        "source_status": {"enum": ["approved_runtime_source", "source_structure_uncertain", "citation_missing", "dependency_missing"]}
+      }
+    },
+    "scope_state": {"enum": ["in_scope", "conditional", "out_of_scope", "not_in_scope", "unknown", "dependency_missing"]},
+    "claim": {"type": "string", "minLength": 1},
+    "argument": {"type": "string", "minLength": 1},
+    "spec_citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["standard_id", "edition", "clause", "provision_type", "verbatim_text", "source_anchor", "verbatim_text_sha256", "why_this_text_applies", "interpretation", "human_verification_status"],
+        "properties": {
+          "standard_id": {"const": "ISO21434"},
+          "edition": {"const": "ISO/SAE 21434:2021"},
+          "clause": {"type": "string"},
+          "provision_id": {"type": "string"},
+          "provision_type": {"enum": ["requirement", "recommendation", "permission", "work_product", "clause_text", "table_row"]},
+          "verbatim_text": {"type": "string", "minLength": 1},
+          "source_anchor": {"type": "string", "minLength": 1},
+          "source_page_or_line": {"type": "string"},
+          "verbatim_text_sha256": {"pattern": "^[a-f0-9]{64}$", "type": "string"},
+          "why_this_text_applies": {"type": "string", "minLength": 1},
+          "interpretation": {"type": "string", "minLength": 1},
+          "human_verification_status": {"enum": ["pending", "verified", "rejected", "not_required"]}
+        }
+      }
+    },
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "traceability_refs": {"type": "array", "items": {"type": "string"}},
+    "tara_results": {"type": "array", "items": {"type": "object", "additionalProperties": true}},
+    "cybersecurity_goals": {"type": "array", "items": {"type": "string"}},
+    "cybersecurity_requirements": {"type": "array", "items": {"type": "string"}},
+    "security_controls": {"type": "array", "items": {"type": "string"}},
+    "verification_summary": {"type": "object", "additionalProperties": true},
+    "risk_disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["residual_risk_state", "acceptance_authority", "status"],
+      "properties": {
+        "residual_risk_state": {"enum": ["none_identified", "reduced", "retained", "unknown", "unresolved"]},
+        "acceptance_authority": {"type": "string"},
+        "status": {"enum": ["draft", "under_review", "accepted", "rejected", "blocked"]}
+      }
+    },
+    "cross_standard_links": {"type": "array", "items": {"type": "string"}},
+    "human_security_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "gate_type", "authority", "status"],
+      "properties": {
+        "required": {"const": true},
+        "gate_type": {"type": "string"},
+        "authority": {"type": "array", "items": {"type": "string"}},
+        "status": {"enum": ["pending", "approved", "rejected", "not_applicable"]}
+      }
+    },
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "unknowns": {"type": "array", "items": {"type": "string"}},
+    "dependency_missing": {"type": "array", "items": {"type": "string"}}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"risk_disposition": {"properties": {"status": {"enum": ["accepted"]}}}}},
+      "then": {"properties": {"spec_citations": {"minItems": 1}, "evidence_refs": {"minItems": 1}}}
+    }
+  ]
+}

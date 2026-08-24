@@ -27,3 +27,14 @@ standards:
       - "ISO 26262-9:2018"
       - "ISO 26262-11:2018"
     dependency_behavior: "If a conclusion depends on a missing Part, output dependency_missing and route to human safety review."
+  - standard_id: ISO21434
+    edition: "ISO/SAE 21434:2021(E)"
+    source_status: approved_user_provided_runtime_only
+    local_source: "/knowledge/iso21434/approved_source/ISO_SAE_21434_2021(en).pdf"
+    citation_policy: "Direct quotation required at runtime; public repository stores only clause anchors, templates and runtime citation generator, not the licensed source text."
+    scope_role: "Automotive cybersecurity engineering for road-vehicle E/E systems, components and interfaces across organization, project, concept, product development, validation, production, operations, maintenance and decommissioning."
+    normative_reference: "ISO/SAE 21434 Clause 2 identifies ISO 26262-3:2018 as a normative reference."
+    dependency_parts:
+      - "ISO 26262-3:2018"
+      - "ISO/SAE 21434:2021 terminology and complete source"
+    dependency_behavior: "If a conclusion depends on a missing dependency, output dependency_missing and route to M18/M19/M20 plus the Human Review Gateway."

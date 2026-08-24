@@ -59,7 +59,30 @@ manager_assignments = {
     'M15': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
     'M16': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
     'M17': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'M18': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
+    'M19': ['COM-01','COM-02','COM-03','COM-04','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'M20': ['COM-01','COM-02','COM-03','COM-04','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
 }
+
+cybersecurity_assignments = {
+    'CS01': ['COM-01','COM-02','COM-05','COM-06','COM-09','COM-10'],
+    'CS02': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'CS03': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'CS04': ['COM-01','COM-02','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'CS05': ['COM-01','COM-02','COM-03','COM-05','COM-07','COM-08','COM-09','COM-10'],
+    'CS06': ['COM-01','COM-02','COM-03','COM-04','COM-05','COM-07','COM-08','COM-09','COM-10'],
+    'CS07': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'CS08': ['COM-01','COM-02','COM-03','COM-04','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'CS09': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'CS10': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'CS11': ['COM-01','COM-02','COM-03','COM-05','COM-06','COM-07','COM-09','COM-10'],
+    'CS12': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-08','COM-09','COM-10'],
+    'CS13': ['COM-01','COM-02','COM-03','COM-04','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
+    'CS14': ['COM-01','COM-02','COM-04','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
+    'CS15': ['COM-01','COM-02','COM-05','COM-06','COM-07','COM-08','COM-09','COM-10'],
+}
+
+cybersecurity_emphasis = 'direct ISO/SAE 21434 citation, item and asset scope, TARA or cybersecurity evidence, dependency awareness, alternative explanations and mandatory human security review'
 
 safety_assignments = {
     'FS01': ['COM-01','COM-02','COM-05','COM-06','COM-09','COM-10'],
@@ -97,6 +120,9 @@ manager_emphasis = {
     'M15': 'functional safety lifecycle, safety plan, ASIL context, safety case and residual-risk governance',
     'M16': 'hardware safety requirements, safety mechanisms, safety analysis, metrics, PMHF/EEC and qualification',
     'M17': 'independent safety verification, confirmation measures, anomaly disposition, re-verification and safety release evidence',
+    'M18': 'cybersecurity policy, project governance, supplier responsibility, resources and organizational security culture',
+    'M19': 'item definition, TARA, cybersecurity goals, concept, requirements, architecture, implementation and validation',
+    'M20': 'continuous monitoring, vulnerability management, incident response, updates, support lifecycle, case and assessment readiness',
 }
 
 entries = []
@@ -108,6 +134,8 @@ for mid, modules in manager_assignments.items():
     entries.append({'agent_id': mid, 'agent_class': 'manager', 'modules': modules, 'operating_mode': 'responsibility_and_action_planning', 'emphasis': manager_emphasis[mid], 'mandatory_gates': ['citation_inheritance','owner_and_verifier_separation','resource_commitment','closure_authority']})
 for sid, modules in safety_assignments.items():
     entries.append({'agent_id': sid, 'agent_class': 'safety', 'modules': modules, 'operating_mode': 'safety_evidence_and_human_gate_preparation', 'emphasis': 'direct ISO 26262-5 citation, safety evidence, dependency awareness, alternative explanation and mandatory human safety review', 'mandatory_gates': ['direct_spec_citation','ASIL_or_scope_review','independent_safety_review','human_safety_gate']})
+for cid, modules in cybersecurity_assignments.items():
+    entries.append({'agent_id': cid, 'agent_class': 'cybersecurity', 'modules': modules, 'operating_mode': 'cybersecurity_evidence_and_human_gate_preparation', 'emphasis': cybersecurity_emphasis, 'mandatory_gates': ['direct_spec_citation','item_and_asset_scope','TARA_or_risk_review','independent_security_review','human_security_gate']})
 
 output = {
     'schema_version': '1.0',

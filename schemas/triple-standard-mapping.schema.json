@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/triple-standard-mapping.schema.json",
+  "title": "ASPICE ISO 26262 ISO/SAE 21434 Cross-Standard Mapping",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mapping_id", "project_id", "release_or_baseline", "standards", "relationship", "relationship_explanation", "evidence_refs", "human_review"],
+  "properties": {
+    "mapping_id": {"type": "string"},
+    "project_id": {"type": "string"},
+    "release_or_baseline": {"type": "string"},
+    "standards": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["aspice", "iso26262", "iso21434"],
+      "properties": {
+        "aspice": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["process_ids", "direct_citations"],
+          "properties": {
+            "process_ids": {"type": "array", "items": {"type": "string"}},
+            "direct_citations": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "iso26262": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["part", "clause_ids", "direct_citations"],
+          "properties": {
+            "part": {"const": 5},
+            "clause_ids": {"type": "array", "items": {"type": "string"}},
+            "direct_citations": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "iso21434": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["edition", "clause_ids", "direct_citations"],
+          "properties": {
+            "edition": {"const": "ISO/SAE 21434:2021(E)"},
+            "clause_ids": {"type": "array", "items": {"type": "string"}},
+            "direct_citations": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    },
+    "relationship": {"enum": ["shared", "complementary", "insufficient", "conflict", "dependency_missing", "no_direct_equivalence"]},
+    "relationship_explanation": {"type": "string", "minLength": 1},
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "gaps": {"type": "array", "items": {"type": "string"}},
+    "conflicts": {"type": "array", "items": {"type": "string"}},
+    "human_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "authority", "status"],
+      "properties": {
+        "required": {"const": true},
+        "authority": {"type": "array", "items": {"type": "string"}},
+        "status": {"enum": ["pending", "approved", "rejected"]}
+      }
+    }
+  }
+}

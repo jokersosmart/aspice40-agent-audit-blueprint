@@ -2,9 +2,9 @@
 
 ## Executive summary
 
-The combined ASPICE 4.0 and ISO 26262-5 Agent Blueprint now contains a **Cognitive Operating Layer** that is loaded by all 72 logical Agent roles. The layer provides standard engineering behavior for problem framing, evidence analysis, system reasoning, decision support, communication, risk escalation and knowledge continuity. It is explicitly marked as `non_normative_support_layer` and cannot add, remove or reinterpret an ASPICE requirement.
+The combined ASPICE 4.0, ISO 26262-5 and ISO/SAE 21434 Agent Blueprint now contains a **Cognitive Operating Layer** that is loaded by all 90 logical Agent roles. The layer provides standard engineering behavior for problem framing, evidence analysis, system reasoning, decision support, communication, risk escalation and knowledge continuity. It is explicitly marked as `non_normative_support_layer` and cannot add, remove or reinterpret an ASPICE requirement.
 
-The implementation uses 10 reusable modules and a role-specific assignment file. The 8 ASPICE control roles, 32 Process Auditors, 17 Managers and 15 ISO 26262 Safety roles retain their existing scope and accountability boundaries; the Cognitive Operating Layer changes how they ask questions, challenge evidence, compare options and route uncertainty.
+The implementation uses 10 reusable modules and a role-specific assignment file. The 8 ASPICE control roles, 32 Process Auditors, 20 Managers, 15 ISO 26262 Safety roles and 15 ISO/SAE 21434 Cybersecurity roles retain their existing scope and accountability boundaries; the Cognitive Operating Layer changes how they ask questions, challenge evidence, compare options and route uncertainty.
 
 ## Layer precedence
 
@@ -33,19 +33,19 @@ The implementation uses 10 reusable modules and a role-specific assignment file.
 
 ## Agent assignment
 
-The file `config/agent_cognitive_assignments.json` contains exactly 72 assignments. Process Auditors are grouped by the type of work they perform: requirements/design, verification, management/support and conditional machine-learning processes. Managers receive domain emphasis for System, Firmware, Digital Hardware, Analog/Mixed-Signal, Simulation/Emulation, Tape-out/Silicon, Verification, QA, Configuration/Change, Project/Risk, Supplier/Release/Reuse, Functional Safety, Hardware Safety Assurance and Safety Verification／Confirmation. ISO 26262 Safety roles receive additional emphasis on direct safety citation, ASIL／Scope dependency, safety evidence, quantitative assumptions, alternative explanations and mandatory human safety review.
+The file `config/agent_cognitive_assignments.json` contains exactly 90 assignments. Process Auditors are grouped by the type of work they perform: requirements/design, verification, management/support and conditional machine-learning processes. Managers receive domain emphasis for System, Firmware, Digital Hardware, Analog/Mixed-Signal, Simulation/Emulation, Tape-out/Silicon, Verification, QA, Configuration/Change, Project/Risk, Supplier/Release/Reuse, Functional Safety, Hardware Safety Assurance, Safety Verification／Confirmation, Cybersecurity Governance, Product Cybersecurity Assurance and Cybersecurity Operations／Assurance. ISO 26262 Safety roles receive additional emphasis on direct safety citation, ASIL／Scope dependency, safety evidence, quantitative assumptions, alternative explanations and mandatory human safety review. ISO/SAE 21434 Cybersecurity roles receive additional emphasis on direct cybersecurity citation, item／asset scope, TARA, risk treatment, vulnerability／incident handling, security controls, cybersecurity case evidence and mandatory human security review.
 
 The assignments do not expose personal attribution or source metadata in user-visible Agent outputs. They use neutral engineering names and are loaded by the Runtime Registry.
 
 ## Required behavior for normative findings
 
-A Process or Manager Agent may use the Cognitive Operating Layer to structure analysis, but each normative conclusion must still include the complete approved ASPICE source paragraph or complete table row in `spec_citations`, together with location, hash, interpretation, evidence references, status and human confirmation state. A module cannot substitute for a missing citation or make a product practice into a PAM requirement.
+A Process, Manager, Safety or Cybersecurity Agent may use the Cognitive Operating Layer to structure analysis, but each normative conclusion must still include the complete approved ASPICE, ISO 26262-5 or ISO/SAE 21434 source paragraph or complete table row in `spec_citations`, together with location, hash, interpretation, evidence references, status and human confirmation state. A module cannot substitute for a missing citation or make a product practice into a standard requirement.
 
-When evidence is incomplete, the Agent must preserve `unknown`, `partial`, `conflict`, `gap`, `not_in_scope` and `citation_missing` as distinct states. It must not fill an unknown field from model memory. When a change affects a release, tape-out, production data, customer delivery, formal rating, assessment scope or major finding closure, the Agent must route the action to a human Gate.
+When evidence is incomplete, the Agent must preserve `unknown`, `partial`, `conflict`, `gap`, `not_in_scope` and `citation_missing` as distinct states. It must not fill an unknown field from model memory. When a change affects a release, tape-out, production data, customer delivery, security update, vulnerability disposition, formal rating, assessment scope, Safety Case, Cybersecurity Case or major finding closure, the Agent must route the action to a human Gate.
 
 ## Verification result
 
-The static Blueprint validation passed after integration. The verification covers 32 ASPICE Process IDs, 17 Manager IDs, 15 ISO 26262 Safety IDs, 72 unique assignments, 10 Cognitive Modules, required Prompt／Guide／schema files, 32 ASPICE direct-citation Rule Packs, ISO 26262-5 runtime-only source boundaries, JSON syntax and source-neutrality checks. The combined validation output is stored in `docs/combined_blueprint_validation.json`.
+The static Blueprint validation passed after integration. The verification covers 32 ASPICE Process IDs, 20 Manager IDs, 15 ISO 26262 Safety IDs, 15 ISO/SAE 21434 Cybersecurity IDs, 90 unique assignments, 10 Cognitive Modules, required Prompt／Guide／schema files, 32 ASPICE direct-citation Rule Packs, ISO 26262-5 and ISO/SAE 21434 runtime-only source boundaries, JSON syntax and source-neutrality checks. The combined validation output is stored in `docs/combined_blueprint_validation.json`.
 
 ## Files to load in production
 
@@ -57,10 +57,11 @@ The static Blueprint validation passed after integration. The verification cover
 | 4 | Agent profile |
 | 5 | ASPICE Process Rule Pack and Direct Spec Citation Catalog |
 | 6 | ISO 26262-5 Scope, dependency and runtime citation configuration |
-| 7 | Agent profile and Safety profile |
-| 8 | Scope and tailoring snapshot |
-| 9 | Evidence Object and traceability snapshot |
-| 10 | Existing findings and human decisions |
+| 7 | ISO/SAE 21434 Scope, dependency and runtime citation configuration |
+| 8 | Agent profile, Safety profile and Cybersecurity profile |
+| 9 | Scope and tailoring snapshot |
+| 10 | Evidence Object and traceability snapshot |
+| 11 | Existing findings, human decisions and Security Gates |
 
 ## Maintenance rule
 

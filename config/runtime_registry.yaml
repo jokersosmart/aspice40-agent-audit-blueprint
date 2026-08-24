@@ -124,6 +124,50 @@ runtimes:
     input_types: [safety_findings, evidence_objects, cross_standard_mappings, responsibility_matrix, project_constraints]
     output_schemas: [schemas/manager-work-package.schema.json, schemas/safety-finding.schema.json]
     human_gate: [safety_plan, independent_confirmation, residual_risk, tapeout_or_release, final_safety_conclusion]
+  - runtime_id: R15
+    name: ISO/SAE 21434 Clause and Governance Audit Runtime
+    logical_agents: [CS01, CS02, CS03, CS04, CS15]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/42_iso21434_cybersecurity_auditor_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    profile_files: [profiles/iso21434_cybersecurity_agents.yaml]
+    scope_file: config/iso21434_scope.yaml
+    standards_registry: config/standards_registry.yaml
+    input_types: [cybersecurity_scope, policy, cybersecurity_plan, tailoring, RFQ, supplier_agreement, cybersecurity_case, assessment_decision]
+    output_schemas: [schemas/cybersecurity-finding.schema.json, schemas/direct-spec-citation.schema.json]
+    human_gate: [scope_and_relevance, policy_approval, project_plan, supplier_agreement, assessment_decision, cybersecurity_case_review]
+  - runtime_id: R16
+    name: ISO/SAE 21434 TARA and Product Development Runtime
+    logical_agents: [CS07, CS08, CS09, CS10, CS11]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/42_iso21434_cybersecurity_auditor_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    profile_files: [profiles/iso21434_cybersecurity_agents.yaml]
+    scope_file: config/iso21434_scope.yaml
+    standards_registry: config/standards_registry.yaml
+    input_types: [item_definition, asset_inventory, operational_environment, TARA, cybersecurity_goals, cybersecurity_concept, cybersecurity_requirements, security_architecture, implementation, validation]
+    output_schemas: [schemas/cybersecurity-finding.schema.json, schemas/direct-spec-citation.schema.json]
+    human_gate: [item_definition, TARA_scope, impact_rating, risk_treatment, cybersecurity_goal, concept_approval, architecture_approval, validation_adequacy]
+  - runtime_id: R17
+    name: ISO/SAE 21434 Continual Security Operations Runtime
+    logical_agents: [CS05, CS06, CS12, CS13]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/42_iso21434_cybersecurity_auditor_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    profile_files: [profiles/iso21434_cybersecurity_agents.yaml]
+    scope_file: config/iso21434_scope.yaml
+    standards_registry: config/standards_registry.yaml
+    input_types: [monitoring, event_records, vulnerability_database, remediation, production_security, update, incident_response, support_lifecycle]
+    output_schemas: [schemas/cybersecurity-finding.schema.json, schemas/direct-spec-citation.schema.json]
+    human_gate: [event_severity, vulnerability_severity, remediation, patch_release, incident_disposition, end_of_support]
+  - runtime_id: R18
+    name: Cybersecurity Coordination and Assurance Runtime
+    logical_agents: [CS14, CS15, M18, M19, M20]
+    prompt_files: [prompts/00_global_policy.md, prompts/05_cognitive_operating_layer.md, prompts/43_iso21434_cybersecurity_manager_template.md]
+    assignment_file: config/agent_cognitive_assignments.json
+    profile_files: [profiles/iso21434_cybersecurity_agents.yaml, profiles/manager_agents.yaml]
+    scope_file: config/iso21434_scope.yaml
+    standards_registry: config/standards_registry.yaml
+    input_types: [cybersecurity_findings, evidence_objects, TARA, cybersecurity_case, cross_standard_mappings, responsibility_matrix, project_constraints]
+    output_schemas: [schemas/manager-work-package.schema.json, schemas/cybersecurity-finding.schema.json, schemas/cybersecurity-case.schema.json]
+    human_gate: [major_vulnerability, cybersecurity_case_release, security_update, assessment_readiness, final_security_conclusion]
   - runtime_id: R10
     name: Human Review and Approval Gateway
     logical_agents: []

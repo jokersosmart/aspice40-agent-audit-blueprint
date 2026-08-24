@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.invalid/aspice/direct-spec-citation.schema.json",
-  "title": "Direct ASPICE Specification Citation",
+  "title": "Direct Controlled Standard Citation",
   "description": "A citation must contain the verbatim source paragraph, not merely a reference link or identifier.",
   "type": "object",
   "additionalProperties": false,
@@ -10,7 +10,7 @@
     "citation_id": {"type": "string", "pattern": "^SPEC-[A-Za-z0-9._-]+$"},
     "document_id": {"type": "string", "minLength": 1},
     "document_version": {"type": "string", "minLength": 1},
-    "citation_kind": {"type": "string", "enum": ["purpose", "outcome", "base_practice", "generic_practice", "process_attribute", "information_item", "definition", "assessment_guidance", "annex_guidance", "table_or_figure_caption", "source_conflict"]},
+    "citation_kind": {"type": "string", "enum": ["purpose", "outcome", "base_practice", "generic_practice", "process_attribute", "information_item", "definition", "assessment_guidance", "annex_guidance", "table_or_figure_caption", "requirement", "recommendation", "permission", "work_product", "clause_text", "standard_table", "source_conflict"]},
     "source_anchor": {
       "type": "object",
       "additionalProperties": false,
@@ -33,7 +33,7 @@
     "why_this_text_applies": {"type": "string", "minLength": 1},
     "interpretation": {"type": "string", "minLength": 1},
     "interpretation_type": {"type": "string", "enum": ["literal_requirement_meaning", "evidence_mapping", "scope_mapping", "traceability_mapping", "quality_explanation", "product_context_application", "conflict_explanation"]},
-    "requirement_type": {"type": "string", "enum": ["pam_explicit", "company_rule", "customer_specific", "product_context", "inference"]},
+    "requirement_type": {"type": "string", "enum": ["standard_explicit", "pam_explicit", "company_rule", "customer_specific", "product_context", "inference"]},
     "applies_to": {"type": "array", "items": {"type": "string"}},
     "not_implied": {"type": "array", "items": {"type": "string"}},
     "verified_status": {"type": "string", "enum": ["verified_against_pdf", "verified_against_approved_text", "ocr_pending", "human_review_required", "conflict_pending"]},

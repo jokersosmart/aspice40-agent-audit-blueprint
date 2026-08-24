@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://internal.example/schemas/cybersecurity-finding.schema.json",
+  "title": "ISO/SAE 21434 Cybersecurity Finding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["finding_id", "agent_id", "standard_context", "scope_state", "question", "status", "spec_citations", "evidence_refs", "human_security_gate"],
+  "properties": {
+    "finding_id": {"type": "string"},
+    "agent_id": {"pattern": "^(CS|M)\\d+$", "type": "string"},
+    "standard_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["standard_id", "edition", "clause_scope", "source_status"],
+      "properties": {
+        "standard_id": {"const": "ISO21434"},
+        "edition": {"const": "ISO/SAE 21434:2021"},
+        "clause_scope": {"type": "array", "items": {"type": "string"}},
+        "source_status": {"enum": ["approved_runtime_source", "source_structure_uncertain", "citation_missing", "dependency_missing"]}
+      }
+    },
+    "scope_state": {"enum": ["in_scope", "conditional", "out_of_scope", "not_in_scope", "unknown", "dependency_missing"]},
+    "question": {"type": "string", "minLength": 1},
+    "status": {"enum": ["satisfied", "partial", "gap", "unknown", "conflict", "not_in_scope", "citation_missing", "dependency_missing"]},
+    "spec_citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["standard_id", "edition", "clause", "provision_type", "verbatim_text", "source_anchor", "verbatim_text_sha256", "why_this_text_applies", "interpretation", "human_verification_status"],
+        "properties": {
+          "standard_id": {"const": "ISO21434"},
+          "edition": {"const": "ISO/SAE 21434:2021"},
+          "clause": {"type": "string"},
+          "provision_id": {"pattern": "^(RQ|RC|PM|WP)-[0-9]{2}-[0-9]{2}$", "type": "string"},
+          "provision_type": {"enum": ["requirement", "recommendation", "permission", "work_product", "clause_text", "table_row"]},
+          "verbatim_text": {"type": "string", "minLength": 1},
+          "source_anchor": {"type": "string", "minLength": 1},
+          "source_page_or_line": {"type": "string"},
+          "verbatim_text_sha256": {"pattern": "^[a-f0-9]{64}$", "type": "string"},
+          "why_this_text_applies": {"type": "string", "minLength": 1},
+          "interpretation": {"type": "string", "minLength": 1},
+          "human_verification_status": {"enum": ["pending", "verified", "rejected", "not_required"]},
+          "correction_record": {"type": ["object", "null"]}
+        }
+      }
+    },
+    "evidence_refs": {"type": "array", "items": {"type": "string"}},
+    "traceability_refs": {"type": "array", "items": {"type": "string"}},
+    "tara_context": {"type": "object", "additionalProperties": true},
+    "cybersecurity_case_context": {"type": "object", "additionalProperties": true},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "alternative_explanations": {"type": "array", "items": {"type": "string"}},
+    "owner_candidate": {"type": "string"},
+    "independent_verifier_candidate": {"type": "string"},
+    "recommended_action": {"type": "string"},
+    "success_criteria": {"type": "array", "items": {"type": "string"}},
+    "reverification_method": {"type": "string"},
+    "cross_standard_links": {"type": "array", "items": {"type": "string"}},
+    "source_conflicts": {"type": "array", "items": {"type": "string"}},
+    "human_security_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "gate_type", "authority", "status"],
+      "properties": {
+        "required": {"const": true},
+        "gate_type": {"type": "string"},
+        "authority": {"type": "array", "items": {"type": "string"}},
+        "status": {"enum": ["pending", "approved", "rejected", "not_applicable"]}
+      }
+    },
+    "human_decision_required": {"type": "boolean"},
+    "escalation_reason": {"type": "string"},
+    "created_at": {"type": "string"},
+    "agent_version": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"status": {"enum": ["satisfied", "partial", "gap", "conflict"]}}},
+      "then": {"properties": {"spec_citations": {"minItems": 1}}}
+    },
+    {
+      "if": {"properties": {"status": {"enum": ["citation_missing", "dependency_missing", "unknown", "not_in_scope"]}}},
+      "then": {"properties": {"spec_citations": {"minItems": 0}}}
+    }
+  ]
+}

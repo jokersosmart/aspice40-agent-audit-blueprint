@@ -2,25 +2,27 @@
 
 ## 1. 建議結論
 
-建議保留 **72 個邏輯 Agent 角色**，但實際部署約 **14 個共用 Runtime**，另保留 1 個 Human Review／Approval Gateway。72 個角色是 ASPICE 與 ISO 26262-5 的稽核責任與輸出邊界數量；Runtime 是實際運算與維護單位。這個區分很重要，因為如果只建立一個混合規範 chatbot，系統無法穩定追蹤 32 個 ASPICE Process 與 ISO 26262-5 的安全活動；如果真的建立 72 個完全獨立服務，則容易出現 Prompt 漂移、規則重複、版本不一致與維運成本過高。
+建議保留 **90 個邏輯 Agent 角色**，但實際部署約 **18 個共用 Runtime**，另保留 1 個 Human Review／Approval Gateway。90 個角色是 ASPICE、ISO 26262-5 與 ISO/SAE 21434 的稽核責任與輸出邊界數量；Runtime 是實際運算與維護單位。這個區分很重要，因為如果只建立一個混合規範 chatbot，系統無法穩定追蹤 32 個 ASPICE Process、15 個 ISO 26262-5 Safety role 與 15 個 ISO/SAE 21434 Cybersecurity role；如果真的建立 90 個完全獨立服務，則容易出現 Prompt 漂移、規則重複、版本不一致與維運成本過高。
 
 | 層級 | 邏輯角色 | 第一版部署方式 | 目的 |
 |---|---:|---|---|
 | ASPICE 規範／證據控制 | 8 | 共用控制 Runtime | 固定 ASPICE 規範、Evidence、Information Item、Scope、追溯與報告規則 |
 | ASPICE Process 稽核 | 32 | 1 個 Process Audit Runtime + 32 個 Rule Pack | 以 ASPICE Process ID 作為最小可稽核單位 |
-| ASPICE／組織 Manager | 14 | 1 個 Manager Coordination Runtime + 14 個 profile | 將稽核結果轉成責任、接口、action、資源與重新驗證 |
-| ISO 26262-5 Safety／Hardware | 15 | 4 個 Safety Runtime + 15 個 profile | 對硬體安全需求、設計、安全分析、指標、PMHF／EEC、驗證與引用分工 |
-| ISO 26262 Safety Manager | 3 | 與 Safety Coordination Runtime 共用 | Functional Safety、Hardware Safety Assurance、Safety Verification／Confirmation |
-| 人工控制 | 不計入 LLM Agent | 1 個 Human Review／Approval Gateway | 由 Process Owner、Verification Owner、QA、Safety Reviewer 與 Lead Assessor 做最後確認 |
-| **總計** | **72** | **約 14 個 Runtime + 1 個人工 Gateway** | 兼顧稽核粒度、跨規範邊界與可維護性 |
+| ASPICE／組織 Manager | 14 | Manager Coordination Runtime + 14 個 profile | 將稽核結果轉成責任、接口、action、資源與重新驗證 |
+| ISO 26262-5 Safety／Hardware | 15 | R11–R14 + 15 個 profile | 硬體安全需求、設計、安全分析、指標、PMHF／EEC、驗證與引用 |
+| ISO 26262 Safety Manager | 3 | Functional Safety Coordination Runtime | Functional Safety、Hardware Safety Assurance、Safety Verification／Confirmation |
+| ISO/SAE 21434 Cybersecurity | 15 | R15–R18 + 15 個 profile | Cybersecurity governance、TARA、Concept、漏洞、驗證、營運與 Cybersecurity Case |
+| ISO/SAE 21434 Cybersecurity Manager | 3 | Cybersecurity Coordination Runtime | Cybersecurity Governance、Product Cybersecurity Assurance、Operations／Assurance |
+| 人工控制 | 不計入 LLM Agent | 1 個 Human Review／Approval Gateway | 由 Process Owner、Verification Owner、QA、Safety／Cybersecurity Reviewer 與 Lead Assessor 做最後確認 |
+| **總計** | **90** | **約 18 個 Runtime + 1 個人工 Gateway** | 兼顧稽核粒度、跨規範邊界與可維護性 |
 
 ## 2. Cognitive Operating Layer
 
-所有 72 個邏輯 Agent 都載入同一個 `prompts/05_cognitive_operating_layer.md`，再由 `config/agent_cognitive_assignments.json` 指定角色應啟用的模組。這些模組是非規範性的工程協作能力，不是 ASPICE 4.0 requirement，且永遠低於核准的 PAM 原文、客戶／OEM 要求、公司規則、Evidence Object、assessment scope 與人工核准。
+所有 90 個邏輯 Agent 都載入同一個 `prompts/05_cognitive_operating_layer.md`，再由 `config/agent_cognitive_assignments.json` 指定角色應啟用的模組。這些模組是非規範性的工程協作能力，不是 ASPICE 4.0 requirement，且永遠低於核准的 PAM 原文、客戶／OEM 要求、公司規則、Evidence Object、assessment scope 與人工核准。
 
 它們提供十類標準行為：問題定義與 Scope、證據／來源與量化完整性、假說／模型與受控驗證、決策／優先級與最佳化、反方／偏誤與一致性、利害關係人／介面與溝通、系統與多層因果、學習／重用與知識連續性、責任／倫理與權限、可逆試驗／停損與升級。這些能力會影響 Agent 的提問順序、證據檢查、選項比較、工作包拆解與人工佇列分流，但不會改寫規範原文。
 
-所有 ASPICE normative finding 仍必須直接攜帶 `spec_citations`，包含完整原文段落／完整表格列、定位、原文 hash、適用原因、解讀與人工確認狀態。Cognitive Layer 不可代替 direct citation，也不可用通用推理直接產生 PAM 結論。
+所有 ASPICE、ISO 26262-5 與 ISO/SAE 21434 normative finding 仍必須直接攜帶 `spec_citations`，包含完整原文段落／完整表格列、定位、原文 hash、適用原因、解讀與人工確認狀態。Cognitive Layer 不可代替 direct citation，也不可用通用推理直接產生 PAM 結論。
 
 ## 3. 8 個規範／證據控制角色
 
@@ -53,7 +55,7 @@ ASPICE 4.0 Chapter 4 的最小稽核單位是 Process ID。每個 Process Agent 
 | PIM | PIM.3 | process improvement、effectiveness、lessons learned |
 | REU | REU.2 | IP／設計／軟體 reuse、qualification、portability、constraints |
 
-## 5. 17 個 Manager Agent
+## 5. 20 個 Manager Agent
 
 | ID | Manager | 責任範圍 | 主要 Process |
 |---|---|---|---|
@@ -74,6 +76,9 @@ ASPICE 4.0 Chapter 4 的最小稽核單位是 Process ID。每個 Process Agent 
 | M15 | Functional Safety | functional safety lifecycle、safety plan、ASIL context、safety case、residual-risk governance | ISO 26262-5；交叉 SYS／HWE／SUP／MAN |
 | M16 | Hardware Safety Assurance | HSR／HSI、safety mechanisms、safety analysis、SPFM／LFM、PMHF／EEC、qualification | ISO 26262-5；HWE.1–HWE.4、SUP.8–SUP.10 |
 | M17 | Safety Verification／Confirmation | independent safety verification、confirmation measures、anomaly disposition、re-verification、safety release evidence | ISO 26262-5；HWE.3–HWE.4、SYS.4–SYS.5、VAL.1 |
+| M18 | Cybersecurity Governance | policy、cybersecurity plan、roles、resources、customer／supplier responsibility、security culture | ISO/SAE 21434 Clauses 5–7；ACQ.4、SPL.2、SUP.1、SUP.8、SUP.10 | 
+| M19 | Product Cybersecurity Assurance | item definition、TARA、goals、concept、requirements、architecture、implementation、validation | ISO/SAE 21434 Clauses 9–11；SYS、SWE、HWE、VAL | 
+| M20 | Cybersecurity Operations／Assurance | monitoring、vulnerability、incident、production、updates、support lifecycle、Cybersecurity Case、assessment readiness | ISO/SAE 21434 Clauses 8、12–14；SUP.9、SUP.10、MAN.6 |
 
 > Digital、Analog／Mixed-Signal、Simulation／Emulation、Tape-out／Silicon 是 SSD Controller 的責任分流，不是 ASPICE 新 Process。所有結果仍必須回接 HWE、SYS、VAL、SUP、MAN 或 SPL 的正式 Process。
 
@@ -92,7 +97,7 @@ ASPICE 4.0 Chapter 4 的最小稽核單位是 Process ID。每個 Process Agent 
 
 ## 7. 建置順序
 
-第一階段先建立 C01、C02、C03、C04、C05、C06、C08，以及 SYS／SWE／HWE／VAL、SUP.8、SUP.9、SUP.10 的 Process rule pack。第二階段導入 M01–M10，將系統、韌體、硬體、驗證、simulation、tape-out／silicon 的責任接到同一張 evidence graph。第三階段導入 M11–M14、M15–M17、C07、MAN、PIM、ACQ、SPL、REU，形成完整的稽核改善與功能安全閉環。MLE.1–MLE.4 與 SUP.11 則依產品 scope 條件式啟用。
+第一階段先建立 C01、C02、C03、C04、C05、C06、C08，以及 SYS／SWE／HWE／VAL、SUP.8、SUP.9、SUP.10 的 Process Rule Pack。第二階段導入 M01–M10，將系統、韌體、硬體、驗證、simulation、tape-out／silicon 的責任接到同一張 Evidence Graph。第三階段導入 M11–M17、C07、MAN、PIM、ACQ、SPL、REU，形成完整的 ASPICE 與功能安全閉環。第四階段導入 CS01–CS15、M18–M20、R15–R18，建立 TARA、Cybersecurity Concept、vulnerability、incident、security update 與 Cybersecurity Case 閉環。MLE.1–MLE.4 與 SUP.11 則依產品 Scope 條件式啟用。
 
 ## 8. ISO 26262-5 Safety Extension
 
@@ -104,8 +109,18 @@ The ISO 26262-5 clause boundary in the provided source is Clauses 1–10 plus An
 
 The public repository contains metadata, profiles, schemas and a runtime citation generator, but not the licensed ISO source PDF or a full quotation catalog. FS12 must load the authorized local source at runtime and inject the complete approved paragraph or table row into `spec_citations`. Missing ISO 26262-2, -4, -8, -9 or -11 content becomes `dependency_missing` when a conclusion depends on it.
 
-## 9. 最重要的設計原則
+## 9. ISO/SAE 21434 Cybersecurity Extension
 
-Agent 的輸出不是「通過／不通過」聊天答案，而是可重現的 Evidence-based finding。每筆 finding 必須有規範來源、**直接複製的完整 ASPICE 原文段落／完整表格列**、原文 SHA-256、段落意義、適用原因、證據來源、版本／baseline、狀態、理由、缺口、owner、verification owner、推薦 action、信心與人工確認旗標。只留下 reference link、Process ID、BP ID 或頁碼是不合格的輸出。找不到資料要輸出 `unknown`；找不到核准原文要輸出 `citation_missing`，而不是猜測 `gap` 或 `satisfied`。
+For an SSD Controller used in a road-vehicle E/E system, the Blueprint adds 15 logical ISO/SAE 21434 Cybersecurity roles: CS01–CS04 for scope, governance, project and distributed responsibility; CS05–CS06 for continual monitoring and vulnerability management; CS07–CS08 for item definition, TARA, cybersecurity goals and concept; CS09–CS10 for cybersecurity requirements, architecture, implementation and integration; CS11 for cybersecurity validation; CS12–CS14 for production, operations, incident response, updates, end of support and decommissioning; and CS15 for Cybersecurity Case, audit, assessment readiness and evidence integrity. It also adds M18 Cybersecurity Governance, M19 Product Cybersecurity Assurance and M20 Cybersecurity Operations／Assurance.
+
+The ISO/SAE 21434 extension is deployed through R15 Clause and Governance Audit, R16 TARA and Product Development, R17 Continual Security Operations and R18 Cybersecurity Coordination and Assurance. These runtimes operate on a separate cybersecurity normative layer and create explicit interfaces to SYS, SWE, HWE, VAL, SUP, MAN, FS and the existing Human Review／Approval Gateway.
+
+The provided ISO/SAE 21434:2021(E) source covers Clauses 1–15 and Annex A–H. Clause 2 identifies ISO 26262-3:2018 as a normative reference. If a finding depends on missing vehicle context, missing customer／supplier responsibility, missing dependency Parts, missing TARA input or missing approved source text, the Agent must emit `dependency_missing`, `citation_missing` or `unknown`; it must not claim compliance from memory or from a secondary summary.
+
+The public repository stores only cybersecurity metadata, Scope, profiles, Prompt templates, schemas, examples and the runtime citation generator. It does not store the licensed ISO/SAE 21434 source or a full runtime quotation catalog. At execution time, the Agent loads the approved local source and injects the complete authorized paragraph or table row into `spec_citations` with its source and quotation hash.
+
+## 10. 最重要的設計原則
+
+Agent 的輸出不是「通過／不通過」聊天答案，而是可重現的 Evidence-based finding。每筆 finding 必須有規範來源、**直接複製的完整 ASPICE、ISO 26262-5 或 ISO/SAE 21434 原文段落／完整表格列**、原文 SHA-256、段落意義、適用原因、證據來源、版本／baseline、狀態、理由、缺口、owner、verification owner、推薦 action、信心與人工確認旗標。只留下 reference link、Process ID、BP ID 或頁碼是不合格的輸出。找不到資料要輸出 `unknown`；找不到核准原文要輸出 `citation_missing`，而不是猜測 `gap` 或 `satisfied`。
 
 Manager Agent 若將 finding 轉成工作包，也必須攜帶原始 `spec_citations`，不能把規範原文壓縮成只剩一個 BP 編號。每次執行要記錄 Prompt、Rule Pack、citation catalog、scope 與 evidence snapshot 的版本，讓人員可以重新取得同一段原文並比對 hash。
