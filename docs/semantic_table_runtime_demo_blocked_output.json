@@ -1,0 +1,60 @@
+{
+  "status": "table_query_ready_but_llm_blocked_without_citation",
+  "query": {
+    "table_file": "/home/ubuntu/aspice_agent_blueprint/knowledge/semantic_tables/aspice40_tables.json",
+    "table_id": "HWE.2 matrix",
+    "row_contains": [
+      "BP5"
+    ],
+    "columns": [
+      "Row ID",
+      "Name",
+      "Mapped Outcomes",
+      "Mapped"
+    ],
+    "limit": 3
+  },
+  "token_measurement": {
+    "tokenizer": "gpt-4o-mini",
+    "full_aspice40_tables_json_tokens": 19700,
+    "targeted_table_query_tokens": 172,
+    "table_only_reduction_ratio": 0.9913,
+    "table_only_reduction_percent": 99.13
+  },
+  "targeted_table": {
+    "standard": "ASPICE 4.0",
+    "table_id": "HWE.2 matrix",
+    "title": "HWE.2 Hardware Design — explicit Outcome mapping",
+    "clause": "Chapter 4",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3157",
+    "confidence": "high",
+    "columns": [
+      "Row ID",
+      "Name",
+      "Mapped Outcomes",
+      "Mapped"
+    ],
+    "rows": [
+      {
+        "Row ID": "BP5",
+        "Name": "Ensure consistency and establish bidirectional traceability",
+        "Mapped Outcomes": "O3",
+        "Mapped": "true"
+      }
+    ],
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "notes": [
+      "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+    ]
+  },
+  "evidence_digest": [
+    {
+      "artifact_id": "HW-ARCH-001",
+      "baseline": "HW-BL-042",
+      "status": "approved",
+      "full_artifact_is_pointer_only": true
+    }
+  ]
+}

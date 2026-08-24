@@ -82,6 +82,9 @@
 - `knowledge/semantic_tables/iso26262_part5_tables.md`、`iso26262_part5_tables.html`、`iso26262_part5_tables.json`：ISO 26262-5 ASIL、硬體 metric、failure-rate 與 integration test Table。
 - `knowledge/semantic_tables/iso21434_tables.md`、`iso21434_tables.html`、`iso21434_tables.json`：ISO/SAE 21434 CAL、independence、testing 與 risk Table。
 - `knowledge/semantic_tables/manual_review_queue.json`、`table_semantic_repair_report.md`：保留無法由 layout 唯一確認的 merged-cell／水平位置項目。
+- `tools/semantic_table_runtime_demo.py`、`docs/semantic_table_runtime_demo.md`：共用 Runtime 查詢語意化 Table、建立最小 LLM Context、執行 citation gate 與量測 token 節省。
+- `examples/hwe2_runtime_citations_demo.jsonl`、`docs/semantic_table_runtime_demo_output.json`：HWE.2 BP5 direct citation demo 與實際 Runtime 量測結果。
+- `docs/semantic_table_runtime_demo_blocked_output.json`：沒有完整 Citation 時的阻擋測試；此狀態不得進入 LLM。
 
 ## ISO 26262-5 Safety Extension
 

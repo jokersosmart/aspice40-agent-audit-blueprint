@@ -1,0 +1,160 @@
+{
+  "status": "ready_for_llm",
+  "query": {
+    "table_file": "/home/ubuntu/aspice_agent_blueprint/knowledge/semantic_tables/aspice40_tables.json",
+    "table_id": "HWE.2 matrix",
+    "row_contains": [
+      "BP5"
+    ],
+    "columns": [
+      "Row ID",
+      "Name",
+      "Mapped Outcomes",
+      "Mapped"
+    ],
+    "limit": 3
+  },
+  "token_measurement": {
+    "tokenizer": "gpt-4o-mini",
+    "full_aspice40_tables_json_tokens": 19700,
+    "targeted_table_query_tokens": 172,
+    "table_only_reduction_ratio": 0.9913,
+    "table_only_reduction_percent": 99.13
+  },
+  "targeted_table": {
+    "standard": "ASPICE 4.0",
+    "table_id": "HWE.2 matrix",
+    "title": "HWE.2 Hardware Design — explicit Outcome mapping",
+    "clause": "Chapter 4",
+    "source_anchor": "aspice40_visual_matrices.json source_layout_line 3157",
+    "confidence": "high",
+    "columns": [
+      "Row ID",
+      "Name",
+      "Mapped Outcomes",
+      "Mapped"
+    ],
+    "rows": [
+      {
+        "Row ID": "BP5",
+        "Name": "Ensure consistency and establish bidirectional traceability",
+        "Mapped Outcomes": "O3",
+        "Mapped": "true"
+      }
+    ],
+    "manual_review": [
+      "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+    ],
+    "notes": [
+      "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+    ]
+  },
+  "evidence_digest": [
+    {
+      "artifact_id": "HW-ARCH-001",
+      "baseline": "HW-BL-042",
+      "status": "approved",
+      "full_artifact_is_pointer_only": true
+    }
+  ],
+  "ready_context": {
+    "status": "ready_for_llm",
+    "estimated_input_tokens": 609,
+    "context": {
+      "policy": {
+        "one_active_role": true,
+        "one_task": true,
+        "llm_must_not_rewrite_citations": true
+      },
+      "task": {
+        "role_id": "HWE.2",
+        "runtime_id": "R06",
+        "question": "Check whether the hardware requirement-to-design mapping is bidirectional and consistent."
+      },
+      "scope": {
+        "standards": [
+          "ASPICE"
+        ],
+        "scope_state": "in_scope",
+        "baseline_id": "HW-BL-042"
+      },
+      "targeted_semantic_table": {
+        "standard": "ASPICE 4.0",
+        "table_id": "HWE.2 matrix",
+        "title": "HWE.2 Hardware Design — explicit Outcome mapping",
+        "clause": "Chapter 4",
+        "source_anchor": "aspice40_visual_matrices.json source_layout_line 3157",
+        "confidence": "high",
+        "columns": [
+          "Row ID",
+          "Name",
+          "Mapped Outcomes",
+          "Mapped"
+        ],
+        "rows": [
+          {
+            "Row ID": "BP5",
+            "Name": "Ensure consistency and establish bidirectional traceability",
+            "Mapped Outcomes": "O3",
+            "Mapped": "true"
+          }
+        ],
+        "manual_review": [
+          "Verify horizontal X positions against the original PDF before using this mapping as normative assessment evidence."
+        ],
+        "notes": [
+          "The original standalone X marks are represented as explicit mapped=true plus a named outcome list."
+        ]
+      },
+      "verified_spec_citations": [
+        {
+          "verification_id": "demo-verify-HWE2-BP5",
+          "standard_id": "ASPICE",
+          "edition": "4.0",
+          "source_hash": "49a7716ce46be211e78139a1fbcdc4e17c011d7d8e429c94d6ddffd2221f7c5a",
+          "anchor": {
+            "section": "4.7.2",
+            "process_id": "HWE.2",
+            "indicator_id": "BP5",
+            "source_file": "aspice40_clean_plain.txt",
+            "source_line_start": 4735,
+            "source_line_end": 4738
+          },
+          "boundary": {
+            "start": "aspice40_clean_plain.txt:4735",
+            "end": "aspice40_clean_plain.txt:4738"
+          },
+          "verbatim_text": "HWE.2.BP5: Ensure consistency and establish bidirectional traceability. Ensure consistency and establish traceability between hardware elements and hardware requirements. Ensure consistency and establish traceability between the hardware detailed design and components of the hardware architecture.",
+          "verbatim_text_sha256": "e9cbbf56a2ab2bff378a22db8f386ec2a3bcf1af5d0aff5879b12746434dd847",
+          "table_structure_verified": true,
+          "checks": {
+            "source_version_match": true,
+            "anchor_resolved": true,
+            "complete_boundary": true,
+            "hash_match": true,
+            "no_placeholder": true,
+            "no_truncation": true,
+            "table_structure_verified": true
+          }
+        }
+      ],
+      "evidence_digest": [
+        {
+          "artifact_id": "HW-ARCH-001",
+          "baseline": "HW-BL-042",
+          "status": "approved",
+          "full_artifact_is_pointer_only": true
+        }
+      ],
+      "output_contract": {
+        "required": [
+          "finding_status",
+          "spec_citations",
+          "evidence_refs",
+          "human_gate"
+        ],
+        "unknown_is_allowed": true
+      }
+    }
+  }
+}
